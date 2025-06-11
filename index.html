@@ -6,39 +6,41 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>FilmPsych - Psychology Through Creative Arts</title>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <nav class="navbar">
         <div class="nav-container">
             <div class="nav-logo">
+                <i class="fas fa-brain"></i>
                 <h1>FilmPsych</h1>
             </div>
             <ul class="nav-menu">
                 <li class="nav-item">
-                    <a href="#home" class="nav-link active">Home</a>
+                    <a href="#home" class="nav-link active"><i class="fas fa-home"></i> Home</a>
                 </li>
                 <li class="nav-item dropdown">
-                    <a href="#about" class="nav-link">About</a>
+                    <a href="#about" class="nav-link"><i class="fas fa-users"></i> About</a>
                     <div class="dropdown-content">
-                        <a href="#about">About Us</a>
-                        <a href="#writers">Writer Biographies</a>
+                        <a href="#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="#writers"><i class="fas fa-pen"></i> Writer Biographies</a>
                     </div>
                 </li>
                 <li class="nav-item">
-                    <a href="#blogs" class="nav-link">Blogs</a>
+                    <a href="#blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#animations" class="nav-link">Socials</a>
+                    <a href="#animations" class="nav-link"><i class="fas fa-share-alt"></i> Socials</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#partnerships" class="nav-link">Partnerships</a>
+                    <a href="#partnerships" class="nav-link"><i class="fas fa-handshake"></i> Partnerships</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#join" class="nav-link">Join</a>
+                    <a href="#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
                 </li>
                 <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
+                    <a href="#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
                 </li>
             </ul>
         </div>
@@ -48,17 +50,23 @@
         <!-- Home Section -->
         <section id="home" class="section active">
             <div class="hero">
+                <div class="hero-background">
+                    <div class="floating-shapes">
+                        <div class="shape shape-1"></div>
+                        <div class="shape shape-2"></div>
+                        <div class="shape shape-3"></div>
+                        <div class="shape shape-4"></div>
+                    </div>
+                </div>
                 <div class="hero-content">
-                    <div class="hero-icons">
-                        <span class="floating-icon">🎬</span>
-                        <span class="floating-icon">🧠</span>
-                        <span class="floating-icon">📚</span>
-                        <span class="floating-icon">🎨</span>
+                    <div class="hero-badge">
+                        <i class="fas fa-star"></i>
+                        <span>Psychology Through Creative Arts</span>
                     </div>
                     <h1 class="hero-title">Welcome to FilmPsych</h1>
                     <p class="hero-subtitle">Exploring the intricate psychology behind books, films, movies, art pieces, and more</p>
                     <div class="hero-image-placeholder">
-                        <img src="https://via.placeholder.com/400x200/B19CD9/FFFFFF?text=Hero+Image" alt="FilmPsych Hero" class="hero-image">
+                        <img src="https://via.placeholder.com/500x250/B19CD9/FFFFFF?text=Hero+Image" alt="FilmPsych Hero" class="hero-image">
                     </div>
                     <p class="hero-description">
                         At FilmPsych, we delve deeply into the intricate relationship between psychology and the arts. 
@@ -66,50 +74,100 @@
                         dissecting their impact on the human psyche.
                     </p>
                     <div class="hero-buttons">
-                        <a href="#blogs" class="btn btn-primary">📖 Read Our Blogs</a>
-                        <a href="#animations" class="btn btn-secondary">🌐 Visit Our Socials</a>
+                        <a href="#blogs" class="btn btn-primary">
+                            <i class="fas fa-book-open"></i>
+                            Read Our Blogs
+                        </a>
+                        <a href="#animations" class="btn btn-secondary">
+                            <i class="fas fa-globe"></i>
+                            Visit Our Socials
+                        </a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="features-section">
+                <div class="container">
+                    <h2>What We Offer</h2>
+                    <div class="features-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-microscope"></i>
+                            </div>
+                            <h3>Deep Analysis</h3>
+                            <p>In-depth psychological analysis of creative works and their impact on the human mind.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-heart"></i>
+                            </div>
+                            <h3>Mental Health Awareness</h3>
+                            <p>Raising awareness about psychological disorders through creative mediums and art.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon">
+                                <i class="fas fa-users"></i>
+                            </div>
+                            <h3>Community Impact</h3>
+                            <p>Building understanding and empathy through our partnerships and workshops.</p>
+                        </div>
                     </div>
                 </div>
             </div>
             
             <div class="mission-section">
-                <h2>🎯 Our Mission</h2>
-                <div class="mission-icons">
-                    <span class="mission-icon">💚</span>
-                    <span class="mission-icon">🤝</span>
-                    <span class="mission-icon">✨</span>
+                <div class="container">
+                    <div class="mission-content">
+                        <div class="mission-text">
+                            <h2><i class="fas fa-bullseye"></i> Our Mission</h2>
+                            <p>
+                                In our blogs, we aim to raise awareness about psychological disorders through creative mediums 
+                                such as animations, short films, and art. Our primary goal is to destigmatize mental health 
+                                issues and promote understanding and empathy.
+                            </p>
+                        </div>
+                        <div class="mission-image">
+                            <img src="https://via.placeholder.com/400x300/87CEEB/FFFFFF?text=Our+Mission" alt="Our Mission" class="section-image">
+                        </div>
+                    </div>
                 </div>
-                <p>
-                    In our blogs, we aim to raise awareness about psychological disorders through creative mediums 
-                    such as animations, short films, and art. Our primary goal is to destigmatize mental health 
-                    issues and promote understanding and empathy.
-                </p>
             </div>
         </section>
 
         <!-- About Section -->
         <section id="about" class="section">
             <div class="container">
-                <h1>🎭 About FilmPsych</h1>
+                <div class="section-header">
+                    <h1><i class="fas fa-info-circle"></i> About FilmPsych</h1>
+                    <p class="section-subtitle">Understanding psychology through the lens of creative arts</p>
+                </div>
                 <div class="about-content">
-                    <div class="about-image-placeholder">
-                        <img src="https://via.placeholder.com/300x200/87CEEB/FFFFFF?text=About+Us" alt="About FilmPsych" class="section-image">
+                    <div class="about-grid">
+                        <div class="about-text">
+                            <div class="text-block">
+                                <h3><i class="fas fa-eye"></i> Our Vision</h3>
+                                <p>
+                                    Welcome to FilmPsych, your go-to space for exploring the intricate psychology behind books, 
+                                    films, movies, art pieces, and more. At FilmPsych, we delve into the depths of creative 
+                                    works to uncover the psychological themes, theories, and insights that lie beneath the surface.
+                                </p>
+                            </div>
+                            <div class="text-block">
+                                <h3><i class="fas fa-search"></i> Our Approach</h3>
+                                <p>
+                                    Join us as we analyze narratives and concepts, unearthing psychological themes that resonate 
+                                    within each medium. Our exploration covers the spectrum of cinematic masterpieces, literary 
+                                    works, and artistic expressions, dissecting their impact on the human psyche.
+                                </p>
+                            </div>
+                        </div>
+                        <div class="about-image-section">
+                            <img src="https://via.placeholder.com/400x300/B19CD9/FFFFFF?text=About+Us" alt="About FilmPsych" class="section-image">
+                            <div class="image-caption">
+                                <p><i class="fas fa-quote-left"></i> Bridging psychology and creative arts</p>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-icons">
-                        <span class="content-icon">🎪</span>
-                        <span class="content-icon">💭</span>
-                        <span class="content-icon">🎯</span>
-                    </div>
-                    <p>
-                        Welcome to FilmPsych, your go-to space for exploring the intricate psychology behind books, 
-                        films, movies, art pieces, and more. At FilmPsych, we delve into the depths of creative 
-                        works to uncover the psychological themes, theories, and insights that lie beneath the surface.
-                    </p>
-                    <p>
-                        Join us as we analyze narratives and concepts, unearthing psychological themes that resonate 
-                        within each medium. Our exploration covers the spectrum of cinematic masterpieces, literary 
-                        works, and artistic expressions, dissecting their impact on the human psyche.
-                    </p>
                 </div>
             </div>
         </section>
@@ -117,11 +175,22 @@
         <!-- Writers Section -->
         <section id="writers" class="section">
             <div class="container">
-                <h1>Writer Biographies</h1>
+                <div class="section-header">
+                    <h1><i class="fas fa-pen"></i> Writer Biographies</h1>
+                    <p class="section-subtitle">Meet our talented team of writers</p>
+                </div>
                 <div class="writers-grid">
                     <div class="writer-card">
+                        <div class="writer-avatar">
+                            <i class="fas fa-user-circle"></i>
+                        </div>
                         <h3>Coming Soon</h3>
                         <p>Meet our talented team of writers who bring psychological insights to creative works.</p>
+                        <div class="writer-social">
+                            <i class="fas fa-envelope"></i>
+                            <i class="fas fa-linkedin"></i>
+                            <i class="fas fa-twitter"></i>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -130,28 +199,73 @@
         <!-- Blogs Section -->
         <section id="blogs" class="section">
             <div class="container">
-                <h1>📝 Our Blogs</h1>
-                <div class="blogs-image-placeholder">
-                    <img src="https://via.placeholder.com/400x150/FFB6C1/FFFFFF?text=Our+Blogs" alt="Our Blogs" class="section-image">
+                <div class="section-header">
+                    <h1><i class="fas fa-blog"></i> Our Blogs</h1>
+                    <p class="section-subtitle">Exploring psychology through creative mediums</p>
+                </div>
+                <div class="blogs-featured">
+                    <img src="https://via.placeholder.com/800x200/FFB6C1/FFFFFF?text=Featured+Blog+Content" alt="Featured Blogs" class="featured-image">
                 </div>
                 <div class="blogs-grid">
                     <article class="blog-card">
-                        <h3>Understanding Mental Health Through Film</h3>
-                        <p class="blog-meta">Published on March 15, 2024</p>
-                        <p>Exploring how cinema portrays psychological disorders and their impact on audience perception...</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-image">
+                            <img src="https://via.placeholder.com/300x150/B19CD9/FFFFFF?text=Blog+1" alt="Blog 1">
+                            <div class="blog-category">
+                                <i class="fas fa-film"></i>
+                                Film Psychology
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Understanding Mental Health Through Film</h3>
+                            <p class="blog-meta">
+                                <i class="fas fa-calendar"></i> March 15, 2024
+                                <i class="fas fa-clock"></i> 5 min read
+                            </p>
+                            <p>Exploring how cinema portrays psychological disorders and their impact on audience perception...</p>
+                            <a href="#" class="read-more">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
                     </article>
                     <article class="blog-card">
-                        <h3>The Psychology of Character Development</h3>
-                        <p class="blog-meta">Published on March 10, 2024</p>
-                        <p>Analyzing how psychological principles shape memorable characters in literature and film...</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-image">
+                            <img src="https://via.placeholder.com/300x150/87CEEB/FFFFFF?text=Blog+2" alt="Blog 2">
+                            <div class="blog-category">
+                                <i class="fas fa-book"></i>
+                                Literature
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>The Psychology of Character Development</h3>
+                            <p class="blog-meta">
+                                <i class="fas fa-calendar"></i> March 10, 2024
+                                <i class="fas fa-clock"></i> 7 min read
+                            </p>
+                            <p>Analyzing how psychological principles shape memorable characters in literature and film...</p>
+                            <a href="#" class="read-more">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
                     </article>
                     <article class="blog-card">
-                        <h3>Art Therapy and Creative Expression</h3>
-                        <p class="blog-meta">Published on March 5, 2024</p>
-                        <p>Examining the therapeutic benefits of creative arts in mental health treatment...</p>
-                        <a href="#" class="read-more">Read More</a>
+                        <div class="blog-image">
+                            <img src="https://via.placeholder.com/300x150/FFB6C1/FFFFFF?text=Blog+3" alt="Blog 3">
+                            <div class="blog-category">
+                                <i class="fas fa-palette"></i>
+                                Art Therapy
+                            </div>
+                        </div>
+                        <div class="blog-content">
+                            <h3>Art Therapy and Creative Expression</h3>
+                            <p class="blog-meta">
+                                <i class="fas fa-calendar"></i> March 5, 2024
+                                <i class="fas fa-clock"></i> 4 min read
+                            </p>
+                            <p>Examining the therapeutic benefits of creative arts in mental health treatment...</p>
+                            <a href="#" class="read-more">
+                                <i class="fas fa-arrow-right"></i> Read More
+                            </a>
+                        </div>
                     </article>
                 </div>
             </div>
@@ -160,22 +274,42 @@
         <!-- Socials Section -->
         <section id="animations" class="section">
             <div class="container">
-                <h1>Our Socials</h1>
-                <p class="section-subtitle">Follow us on social media for psychology content, news, and updates</p>
-                <div class="videos-grid">
-                    <div class="video-card" onclick="openVideo('https://www.tiktok.com/@filmpsychologee')">
-                        <div class="video-thumbnail">
-                            <div class="social-icon">📱</div>
-                            <h3>Visit Our TikTok</h3>
+                <div class="section-header">
+                    <h1><i class="fas fa-share-alt"></i> Our Socials</h1>
+                    <p class="section-subtitle">Follow us on social media for psychology content, news, and updates</p>
+                </div>
+                <div class="socials-grid">
+                    <div class="social-card" onclick="openVideo('https://www.tiktok.com/@filmpsychologee')">
+                        <div class="social-header">
+                            <i class="fab fa-tiktok"></i>
+                            <h3>TikTok</h3>
                         </div>
-                        <p>Explore our psychology content on TikTok</p>
+                        <div class="social-preview">
+                            <img src="https://via.placeholder.com/300x200/B19CD9/FFFFFF?text=TikTok+Content" alt="TikTok Preview">
+                        </div>
+                        <div class="social-content">
+                            <p>Explore our psychology content on TikTok</p>
+                            <div class="social-stats">
+                                <span><i class="fas fa-heart"></i> Psychology Content</span>
+                                <span><i class="fas fa-play"></i> Short Videos</span>
+                            </div>
+                        </div>
                     </div>
-                    <div class="video-card" onclick="openVideo('https://www.instagram.com/film.psychologee/?hl=en')">
-                        <div class="video-thumbnail">
-                            <div class="social-icon">📸</div>
+                    <div class="social-card" onclick="openVideo('https://www.instagram.com/film.psychologee/?hl=en')">
+                        <div class="social-header">
+                            <i class="fab fa-instagram"></i>
                             <h3>FilmPsych News</h3>
                         </div>
-                        <p>Stay updated with our latest news on Instagram</p>
+                        <div class="social-preview">
+                            <img src="https://via.placeholder.com/300x200/FFB6C1/FFFFFF?text=Instagram+News" alt="Instagram Preview">
+                        </div>
+                        <div class="social-content">
+                            <p>Stay updated with our latest news on Instagram</p>
+                            <div class="social-stats">
+                                <span><i class="fas fa-newspaper"></i> Latest Updates</span>
+                                <span><i class="fas fa-camera"></i> Behind Scenes</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -184,21 +318,44 @@
         <!-- Partnerships Section -->
         <section id="partnerships" class="section">
             <div class="container">
-                <h1>Our Partnerships</h1>
-                <div class="partnerships-content">
+                <div class="section-header">
+                    <h1><i class="fas fa-handshake"></i> Our Partnerships</h1>
+                    <p class="section-subtitle">Collaborating to make a difference in mental health awareness</p>
+                </div>
+                <div class="partnerships-grid">
                     <div class="partnership-card">
-                        <div class="partnership-image-placeholder">
-                            <img src="https://via.placeholder.com/200x100/B19CD9/FFFFFF?text=Global+Youth+Mission" alt="Global Youth Mission" class="partnership-image">
+                        <div class="partnership-header">
+                            <img src="https://via.placeholder.com/200x100/B19CD9/FFFFFF?text=Global+Youth+Mission" alt="Global Youth Mission" class="partnership-logo">
+                            <div class="partnership-badge">
+                                <i class="fas fa-globe"></i>
+                                Global Partner
+                            </div>
                         </div>
-                        <h3>🌍 Global Youth Mission</h3>
-                        <p>We are partnered with NPO organization Global Youth Mission to spread our purpose to more people around the world!</p>
+                        <div class="partnership-content">
+                            <h3>Global Youth Mission</h3>
+                            <p>We are partnered with NPO organization Global Youth Mission to spread our purpose to more people around the world!</p>
+                            <div class="partnership-features">
+                                <span><i class="fas fa-users"></i> Worldwide Reach</span>
+                                <span><i class="fas fa-heart"></i> Youth Focus</span>
+                            </div>
+                        </div>
                     </div>
                     <div class="partnership-card">
-                        <div class="partnership-image-placeholder">
-                            <img src="https://via.placeholder.com/200x100/87CEEB/FFFFFF?text=Orangewood+Foundation" alt="Orangewood Foundation" class="partnership-image">
+                        <div class="partnership-header">
+                            <img src="https://via.placeholder.com/200x100/87CEEB/FFFFFF?text=Orangewood+Foundation" alt="Orangewood Foundation" class="partnership-logo">
+                            <div class="partnership-badge">
+                                <i class="fas fa-chalkboard-teacher"></i>
+                                Workshop Partner
+                            </div>
                         </div>
-                        <h3>🧡 Orangewood Foundation</h3>
-                        <p>We will be hosting mental health workshops with Orangewood Foundation to support youth in our community.</p>
+                        <div class="partnership-content">
+                            <h3>Orangewood Foundation</h3>
+                            <p>We will be hosting mental health workshops with Orangewood Foundation to support youth in our community.</p>
+                            <div class="partnership-features">
+                                <span><i class="fas fa-graduation-cap"></i> Workshops</span>
+                                <span><i class="fas fa-hands-helping"></i> Community Support</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -207,21 +364,55 @@
         <!-- Join Section -->
         <section id="join" class="section">
             <div class="container">
-                <h1>Join FilmPsych</h1>
+                <div class="section-header">
+                    <h1><i class="fas fa-user-plus"></i> Join FilmPsych</h1>
+                    <p class="section-subtitle">Be part of our mission to bridge psychology and creative arts</p>
+                </div>
                 <div class="join-content">
-                    <p>Interested in contributing to our mission? We're always looking for passionate writers, researchers, and creatives.</p>
+                    <div class="join-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-pen-fancy"></i>
+                            <h3>Creative Writing</h3>
+                            <p>Contribute to our blog with your psychological insights</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-search"></i>
+                            <h3>Research</h3>
+                            <p>Help us analyze and understand creative works</p>
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-paint-brush"></i>
+                            <h3>Creative Content</h3>
+                            <p>Design and create visual content for our platform</p>
+                        </div>
+                    </div>
                     <form class="join-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <select required>
-                            <option value="">Select Your Interest</option>
-                            <option value="writing">Writing</option>
-                            <option value="research">Research</option>
-                            <option value="creative">Creative Content</option>
-                            <option value="other">Other</option>
-                        </select>
-                        <textarea placeholder="Tell us about yourself and your interest in psychology and arts" required></textarea>
-                        <button type="submit" class="btn btn-primary">Submit Application</button>
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" placeholder="Enter your full name" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" placeholder="Enter your email address" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tags"></i> Your Interest</label>
+                            <select required>
+                                <option value="">Select Your Interest</option>
+                                <option value="writing">Writing</option>
+                                <option value="research">Research</option>
+                                <option value="creative">Creative Content</option>
+                                <option value="other">Other</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> About You</label>
+                            <textarea placeholder="Tell us about yourself and your interest in psychology and arts" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Submit Application
+                        </button>
                     </form>
                 </div>
             </div>
@@ -230,15 +421,49 @@
         <!-- Contact Section -->
         <section id="contact" class="section">
             <div class="container">
-                <h1>Contact Us</h1>
+                <div class="section-header">
+                    <h1><i class="fas fa-envelope"></i> Contact Us</h1>
+                    <p class="section-subtitle">Get in touch with the FilmPsych team</p>
+                </div>
                 <div class="contact-content">
-                    <p>Get in touch with the FilmPsych team</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <h3>Location</h3>
+                            <p>Available Worldwide</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-clock"></i>
+                            <h3>Response Time</h3>
+                            <p>Within 24 hours</p>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-globe"></i>
+                            <h3>Social Media</h3>
+                            <p>Follow us for updates</p>
+                        </div>
+                    </div>
                     <form class="contact-form">
-                        <input type="text" placeholder="Your Name" required>
-                        <input type="email" placeholder="Your Email" required>
-                        <input type="text" placeholder="Subject" required>
-                        <textarea placeholder="Your Message" required></textarea>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
+                        <div class="form-group">
+                            <label><i class="fas fa-user"></i> Your Name</label>
+                            <input type="text" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-envelope"></i> Your Email</label>
+                            <input type="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-tag"></i> Subject</label>
+                            <input type="text" placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label><i class="fas fa-comment"></i> Your Message</label>
+                            <textarea placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            <i class="fas fa-paper-plane"></i>
+                            Send Message
+                        </button>
                     </form>
                 </div>
             </div>
@@ -247,10 +472,34 @@
 
     <footer>
         <div class="container">
-            <p>&copy; 2024 FilmPsych. All rights reserved.</p>
-            <div class="social-links">
-                <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">TikTok</a>
-                <a href="https://filmspsychologee.com" target="_blank">Website</a>
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="#about">About Us</a>
+                    <a href="#blogs">Blogs</a>
+                    <a href="#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://filmspsychologee.com" target="_blank">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
             </div>
         </div>
     </footer>
