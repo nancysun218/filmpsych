@@ -1,0 +1,465 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Turning Red - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(255, 107, 138, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/red 1.jpg') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .floating-blog-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 15px;
+            opacity: 0.08;
+            animation: floatBlogImage 15s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .floating-image.img-1 {
+            width: 120px;
+            height: 80px;
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-image.img-2 {
+            width: 100px;
+            height: 150px;
+            top: 60%;
+            right: 8%;
+            animation-delay: 4s;
+        }
+
+        .floating-image.img-3 {
+            width: 140px;
+            height: 90px;
+            top: 35%;
+            left: 85%;
+            animation-delay: 8s;
+        }
+
+        .floating-image.img-4 {
+            width: 110px;
+            height: 110px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 12s;
+        }
+
+        .floating-image.img-5 {
+            width: 130px;
+            height: 85px;
+            top: 45%;
+            right: 2%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatBlogImage {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.08;
+            }
+            25% {
+                transform: translateY(-20px) rotate(2deg) scale(1.05);
+                opacity: 0.12;
+            }
+            50% {
+                transform: translateY(15px) rotate(-1deg) scale(0.95);
+                opacity: 0.15;
+            }
+            75% {
+                transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+                opacity: 0.1;
+            }
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .inline-image {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-blog-images">
+        <img src="attached_assets/red 2.png" alt="" class="floating-image img-1">
+        <img src="attached_assets/red 3.png" alt="" class="floating-image img-2">
+        <img src="attached_assets/red 4.png" alt="" class="floating-image img-3">
+        <img src="attached_assets/red 5.png" alt="" class="floating-image img-4">
+        <img src="attached_assets/red 6.png" alt="" class="floating-image img-5">
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link"><i class="fas fa-users"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#animations" class="nav-link"><i class="fas fa-share-alt"></i> Socials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#partnerships" class="nav-link"><i class="fas fa-handshake"></i> Partnerships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-film"></i> Film Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: Turning Red</h1>
+            <p class="blog-subtitle">Exploring identity crisis through Turning Red.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>January 10, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>6 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Emily Gao</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>Turning Red, the story of Meilin Lee, is a Pixar animation directed by Domee Shi. Meilin Lee was a 13-year-old Chinese-Canadian girl who experienced an internal conflict with her sense of identity. The dramatic change in her life all started when Mei showed signs of inheriting her family's red panda transformation ability.</p>
+
+            <p>Before her powers activated, she was confident, carefree, and reckless. Mei would often dramatically and proudly enter school with her three close best friends. In contrast to her easygoing social life, she felt pressure to meet her parents' expectations.</p>
+
+            <img src="attached_assets/red 2.png" alt="Mei with her friends" class="article-image">
+
+            <h2>The Transformation</h2>
+
+            <p>However, one day, Mei suddenly transformed into a giant red panda. Initially, after Mei's power activated, she was cautious about how she acted, afraid that she would unleash her red panda form at the wrong time. With the red panda within her, she was unable to accept herself and was stuck between which identity was her true self. Throughout the story, she goes through multiple challenges with two conflicting identities.</p>
+
+            <img src="attached_assets/red 3.png" alt="Mei's red panda transformation" class="inline-image">
+
+            <p>Ultimately, when Mei was in the bamboo forest for the separation ritual, she hesitated. After living with the red panda spirit in her body for a while, it felt like a part of her now. During the separation between her and the red panda, she ultimately decided to embrace it. Instead of hiding away the red panda, she embraces the red panda within her. During this process, she demonstrated the courage to find her true self rather than acting as the "perfect daughter" her parents wanted.</p>
+
+            <h2>Understanding Identity Crisis</h2>
+
+            <p>The movie Turning Red showcased an example of a teenage girl facing an identity crisis, conflicting between her "perfect daughter" self and her true self. An identity crisis refers to a period in which an individual experiences confusion while trying to establish a well-defined sense of self-identity.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-user-friends"></i> What is Identity Crisis?</h4>
+                <p>Identity crisis, unlike in TV shows, may last for years. Erik Erikson, an American-German psychologist, believed that an identity crisis occurs when an individual goes through the fifth stage of psychosocial development, during adolescence. While it is most common during this stage, an identity crisis can happen at any age, at any time.</p>
+            </div>
+
+            <h3>Causes of Identity Crisis</h3>
+
+            <p>Various factors are associated with an identity crisis, including social influences, significant events, and internal conflicts. Cultural, societal, and peer pressures, like in Turning Red, can cause an individual to feel lost about their sense of identity. Mei felt the pressure from her family to become the ideal daughter they wanted, which added to her identity crisis. Similarly, in our daily lives, pressure from parents, family, and friends may be the cause of an identity crisis.</p>
+
+            <img src="attached_assets/red 4.png" alt="Mei facing family pressure" class="article-image">
+
+            <p>Another cause illustrated in Turning Red was the occurrence of a significant event, which in her case was the transformation into a red panda. The transformation introduced Mei to a new identity, allowing her to see a new perspective of the world beyond her mother's restrictions. This encouraged her to explore and develop her own identity but also added to the question of which side was her true self. On the other hand, in our daily lives, significant events such as the death of a loved one, going through a breakup or divorce, having financial difficulties, being seriously ill, or losing a job could trigger an identity crisis.</p>
+
+            <h3>Signs and Symptoms</h3>
+
+            <p>When going through an identity crisis, individuals often feel lost or uncertain about their goals, interests, or beliefs. They may also question their role in society or purpose in life. During this period, the feeling of internal struggle can lead to heightened emotions like anxiety, frustration, or sadness. Some individuals may attempt to try different identities or personas to find a sense of belonging. Additional signs include avoiding social interactions due to insecurity, sudden changes in behavior or interests, and difficulty making decisions due to conflicting desires. These symptoms are especially common in adolescence as individuals during that phase are still selecting their future paths and deciding what type of people they wish to become.</p>
+
+            <h2>Types of Identity Crisis in Adolescence</h2>
+
+            <p>Many teenagers commonly experience identity crises during their adolescent years, often related to occupational identity and sexual identity.</p>
+
+            <img src="attached_assets/red 5.png" alt="Adolescent challenges" class="inline-image">
+
+            <p><strong>Occupational Identity Crisis:</strong> As teenagers apply for high school and college, the question of "What do I want to be in the future?" often comes up. These adolescents may try different majors and paths in hopes of finding the most suitable one.</p>
+
+            <p><strong>Sexual Identity Crisis:</strong> Due to natural curiosity, individuals may question their sexuality, wondering whether they like females, males, or both. Some display their feelings of uncertainty and curiosity through dating various people in hopes of finding the most appropriate partner.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Important Note:</h4>
+                <p>Although identity crisis is not an official psychological diagnosis or mental illness, it can sometimes be connected with dissociative identity disorder, where someone has two or more distinct identities or personalities.</p>
+            </div>
+
+            <h2>Coping with Identity Crisis</h2>
+
+            <p>The process of navigating an identity crisis can feel uncomfortable and challenging, but there are ways to cope. If the experience is creating significant distress or interfering with daily life, seeking help from others can be valuable. It is important to learn to accept changes in life and how you yourself have changed. Giving yourself time to reflect through meditation, journaling, yoga, or quiet walks in nature can be a great way to cope with an identity crisis. Talking to trusted friends or family members about your feelings may also help provide perspective and support. Additionally, exploring new hobbies or activities can give you the time and space to discover answers to your questions.</p>
+
+            <img src="attached_assets/red 6.png" alt="Finding peace and identity" class="article-image">
+
+            <blockquote>
+                "Embracing change and accepting every facet of ourselves—no matter how complex—can lead to personal growth and fulfillment."
+            </blockquote>
+
+            <p>Ultimately, identity crises are a natural part of human development, often emerging during adolescence but capable of arising at any stage in life. By recognizing the symptoms, understanding the underlying causes, and taking proactive steps to reflect and grow, individuals can navigate this period of uncertainty and emerge with a stronger sense of self. Mei's journey in Turning Red is a reminder that embracing change and accepting every facet of ourselves—no matter how complex—can lead to personal growth and fulfillment.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://filmspsychologee.com" target="_blank">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
