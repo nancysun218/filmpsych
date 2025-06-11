@@ -629,7 +629,54 @@ main {
 
 .writer-card h3 {
     color: var(--primary-purple);
+    margin-bottom: 0.5rem;
+}
+
+.writer-role {
+    color: var(--primary-pink);
+    font-weight: 600;
+    font-size: 0.9rem;
     margin-bottom: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.writer-achievements {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: center;
+    margin: 1.5rem 0;
+}
+
+.writer-achievements span {
+    background: var(--light-purple);
+    color: var(--primary-purple);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+}
+
+.featured-writer {
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
+    border: 2px solid var(--primary-purple);
+}
+
+.featured-writer .writer-avatar {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2.5rem;
 }
 
 .writer-social {
@@ -639,15 +686,23 @@ main {
     margin-top: 1.5rem;
 }
 
-.writer-social i {
+.writer-social a {
     color: var(--primary-pink);
     font-size: 1.2rem;
-    cursor: pointer;
-    transition: color 0.3s ease;
+    transition: all 0.3s ease;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--light-pink);
 }
 
-.writer-social i:hover {
-    color: var(--primary-purple);
+.writer-social a:hover {
+    color: white;
+    background: var(--primary-purple);
+    transform: scale(1.1);
 }
 
 /* Blogs Section */

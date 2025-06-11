@@ -25,6 +25,30 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle dropdown navigation clicks
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', function(e) {
+            e.preventDefault();
+            
+            // Remove active class from all nav links and sections
+            navLinks.forEach(l => l.classList.remove('active'));
+            sections.forEach(s => s.classList.remove('active'));
+            
+            // Show corresponding section
+            const targetId = this.getAttribute('href').substring(1);
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                targetSection.classList.add('active');
+                
+                // Update corresponding nav link - for dropdown items, activate the parent nav link
+                const parentNavLink = this.closest('.dropdown').querySelector('.nav-link');
+                if (parentNavLink) {
+                    parentNavLink.classList.add('active');
+                }
+            }
+        });
+    });
+
     // Handle hero button clicks
     const heroButtons = document.querySelectorAll('.hero-buttons .btn');
     heroButtons.forEach(button => {
