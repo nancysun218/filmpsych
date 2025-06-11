@@ -1014,6 +1014,21 @@ main {
 }
 
 /* Blogs Section */
+.blog-header-image,
+.blog-footer-image {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.blog-section-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-height: 400px;
+    object-fit: cover;
+}
+
 .blogs-featured {
     text-align: center;
     margin-bottom: 4rem;
