@@ -305,156 +305,11 @@ main {
     font-weight: 300;
 }
 
-.hero-icons-banner {
+.hero-image-placeholder {
     margin: 3rem 0;
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
 }
 
-.icon-flow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 3rem;
-    width: 100%;
-    position: relative;
-    animation: iconFloat 10s ease-in-out infinite;
-}
-
-.hero-icon {
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 2.5rem;
-    color: white;
-    position: relative;
-    animation: iconBounce 3s ease-in-out infinite;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
-}
-
-.brain-icon {
-    background: linear-gradient(135deg, var(--primary-purple), #9370DB);
-    animation-delay: 0s;
-}
-
-.book-icon {
-    background: linear-gradient(135deg, var(--primary-blue), #4682B4);
-    animation-delay: 1s;
-}
-
-.palette-icon {
-    background: linear-gradient(135deg, var(--primary-pink), #FF69B4);
-    animation-delay: 2s;
-    position: relative;
-}
-
-.paint-drops {
-    position: absolute;
-    top: -10px;
-    right: -10px;
-}
-
-.drop {
-    width: 8px;
-    height: 8px;
-    border-radius: 50%;
-    position: absolute;
-    animation: dropFall 2s ease-in-out infinite;
-}
-
-.drop-1 {
-    background: var(--primary-purple);
-    top: 0;
-    right: 0;
-    animation-delay: 0.5s;
-}
-
-.drop-2 {
-    background: var(--primary-blue);
-    top: 8px;
-    right: 8px;
-    animation-delay: 1s;
-}
-
-.drop-3 {
-    background: var(--primary-pink);
-    top: 16px;
-    right: 16px;
-    animation-delay: 1.5s;
-}
-
-.film-strip {
-    display: flex;
-    align-items: center;
-    gap: 4px;
-    background: linear-gradient(135deg, #4A4A4A, #2C2C2C);
-    padding: 8px 12px;
-    border-radius: 8px;
-    position: relative;
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
-    animation: filmRoll 4s linear infinite;
-}
-
-.film-frame {
-    width: 12px;
-    height: 16px;
-    background: rgba(255, 255, 255, 0.9);
-    border-radius: 2px;
-    position: relative;
-    animation: frameFlicker 2s ease-in-out infinite;
-}
-
-.film-frame:nth-child(2) { animation-delay: 0.2s; }
-.film-frame:nth-child(3) { animation-delay: 0.4s; }
-.film-frame:nth-child(4) { animation-delay: 0.6s; }
-.film-frame:nth-child(5) { animation-delay: 0.8s; }
-
-@keyframes iconFloat {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-10px); }
-}
-
-@keyframes iconBounce {
-    0%, 100% { 
-        transform: scale(1) rotate(0deg);
-    }
-    50% { 
-        transform: scale(1.1) rotate(5deg);
-    }
-}
-
-@keyframes dropFall {
-    0% { 
-        opacity: 0;
-        transform: translateY(-5px);
-    }
-    50% { 
-        opacity: 1;
-        transform: translateY(2px);
-    }
-    100% { 
-        opacity: 0;
-        transform: translateY(8px);
-    }
-}
-
-@keyframes filmRoll {
-    0% { transform: rotateY(0deg); }
-    100% { transform: rotateY(360deg); }
-}
-
-@keyframes frameFlicker {
-    0%, 100% { opacity: 0.9; }
-    50% { opacity: 1; }
-}
-
+.hero-image,
 .section-image,
 .partnership-logo,
 .featured-image {
@@ -465,6 +320,7 @@ main {
     transition: transform 0.3s ease;
 }
 
+.hero-image:hover,
 .section-image:hover,
 .featured-image:hover {
     transform: scale(1.02);
@@ -1269,30 +1125,6 @@ footer {
     .hero-buttons {
         flex-direction: column;
         align-items: center;
-    }
-
-    .hero-icons-banner {
-        height: 150px;
-        margin: 2rem 0;
-    }
-
-    .icon-flow {
-        gap: 1.5rem;
-    }
-
-    .hero-icon {
-        width: 60px;
-        height: 60px;
-        font-size: 1.8rem;
-    }
-
-    .film-strip {
-        padding: 6px 8px;
-    }
-
-    .film-frame {
-        width: 8px;
-        height: 12px;
     }
 
     .features-grid,
