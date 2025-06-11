@@ -1,0 +1,490 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Honor Killings - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(139, 0, 0, 0.9), rgba(75, 0, 0, 0.9)), 
+                        url('attached_assets/honor_killing_hero.jpg') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(255, 193, 7, 0.1));
+            border-left: 4px solid #dc3545;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .warning-box h4 {
+            color: #dc3545;
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .floating-blog-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 15px;
+            opacity: 0.08;
+            animation: floatBlogImage 15s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .floating-image.img-1 {
+            width: 120px;
+            height: 80px;
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-image.img-2 {
+            width: 100px;
+            height: 150px;
+            top: 60%;
+            right: 8%;
+            animation-delay: 4s;
+        }
+
+        .floating-image.img-3 {
+            width: 140px;
+            height: 90px;
+            top: 35%;
+            left: 85%;
+            animation-delay: 8s;
+        }
+
+        .floating-image.img-4 {
+            width: 110px;
+            height: 110px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 12s;
+        }
+
+        .floating-image.img-5 {
+            width: 130px;
+            height: 85px;
+            top: 45%;
+            right: 2%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatBlogImage {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.08;
+            }
+            25% {
+                transform: translateY(-20px) rotate(2deg) scale(1.05);
+                opacity: 0.12;
+            }
+            50% {
+                transform: translateY(15px) rotate(-1deg) scale(0.95);
+                opacity: 0.15;
+            }
+            75% {
+                transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+                opacity: 0.1;
+            }
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .inline-image {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-blog-images">
+        <img src="https://via.placeholder.com/120x80/8B0000/FFFFFF?text=Art" alt="" class="floating-image img-1">
+        <img src="https://via.placeholder.com/100x150/4B0000/FFFFFF?text=Culture" alt="" class="floating-image img-2">
+        <img src="https://via.placeholder.com/140x90/8B0000/FFFFFF?text=Violence" alt="" class="floating-image img-3">
+        <img src="https://via.placeholder.com/110x110/4B0000/FFFFFF?text=Honor" alt="" class="floating-image img-4">
+        <img src="https://via.placeholder.com/130x85/8B0000/FFFFFF?text=Trauma" alt="" class="floating-image img-5">
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link"><i class="fas fa-users"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#animations" class="nav-link"><i class="fas fa-share-alt"></i> Socials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#partnerships" class="nav-link"><i class="fas fa-handshake"></i> Partnerships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-paint-brush"></i> Art Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: Honor Killings</h1>
+            <p class="blog-subtitle">Understanding trauma and violence through artistic expression.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>June 10, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>6 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Nainika Tumu</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Content Warning</h4>
+                <p>This article discusses sensitive topics including violence, trauma, and honor-based violence. Reader discretion is advised.</p>
+            </div>
+
+            <p>Have you heard of a honor killing?</p>
+
+            <p>Honor killings are often hidden away, not talked about. They are accepted by some cultures, ignored by authorities, and disguised as traditions. The painting "Honor Killing" reveals a horrifying reality: it represents a tree without fruit, bearing bodies instead.</p>
+
+            <h2>The Symbolism of Decay</h2>
+
+            <p>This tree represents decay and rot, not life. Twisted and exhausted, it bears the weight of the victims of honor killings. Each branch supports a person whose life was taken in the name of honor. There are no personal stories here, only the collective erasure due to patriarchal customs.</p>
+
+            <p>Honor-based violence, such as honor killings, stems from traumatic societal pressure to conform. These acts of violence are usually committed by family members, leaving survivors and communities emotionally scarred. Victims are often those who break cultural norms, creating deep "shame" in societies where reputation is valued more than life. These murders are a testament to distorted sense of morals, loyalty, and control.</p>
+
+            <h2>The Psychology of Depersonalization</h2>
+
+            <p>The faceless bodies in the painting symbolize the depersonalization of victims, both in death and in the cultural narratives that erase them. This artwork, like trauma, refuses to be silenced.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-brain"></i> Understanding Honor-Based Violence</h4>
+                <p>Honor-based violence is rooted in deeply ingrained cultural beliefs about family reputation, gender roles, and social standing. The psychological impact extends far beyond the immediate victims, affecting entire communities and perpetuating cycles of trauma.</p>
+            </div>
+
+            <h2>A Global Mental Health Crisis</h2>
+
+            <p>"Honor" violence is a worldwide mental health crisis. Survivors often suffer from PTSD, detachment, and profound grief. Breaking this cycle requires systemic change and increased awareness.</p>
+
+            <h3>The Psychological Impact on Survivors</h3>
+
+            <p>Survivors of honor-based violence often experience:</p>
+            <ul>
+                <li>Post-Traumatic Stress Disorder (PTSD)</li>
+                <li>Severe anxiety and depression</li>
+                <li>Feelings of guilt and shame</li>
+                <li>Social isolation and detachment</li>
+                <li>Complex grief and loss</li>
+            </ul>
+
+            <h3>Community Trauma</h3>
+
+            <p>The effects of honor killings extend beyond individual victims to entire communities. When violence is normalized or justified through cultural practices, it creates an environment where fear and control dominate human relationships. This collective trauma can persist for generations, affecting how communities understand concepts of autonomy, safety, and human dignity.</p>
+
+            <h2>Art as a Voice for the Voiceless</h2>
+
+            <p>Art like "Honor Killing" does more than just strike horror; it demands empathy. We must remember those who have been forgotten. Let us speak for them until their silence is broken and no longer revered.</p>
+
+            <blockquote>
+                "Art has the power to make the invisible visible, to give voice to those who have been silenced, and to challenge systems of oppression through the universal language of human emotion."
+            </blockquote>
+
+            <h2>Breaking the Cycle</h2>
+
+            <p>Understanding the psychological mechanisms behind honor-based violence is crucial for prevention and healing. This requires:</p>
+
+            <ul>
+                <li>Education about human rights and gender equality</li>
+                <li>Mental health support for survivors and communities</li>
+                <li>Legal protections and enforcement</li>
+                <li>Cultural dialogue and transformation</li>
+                <li>International cooperation and advocacy</li>
+            </ul>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-heart"></i> Supporting Survivors</h4>
+                <p>If you or someone you know is at risk of honor-based violence, please reach out to local authorities, domestic violence hotlines, or international organizations that specialize in protecting vulnerable individuals. Remember that everyone deserves safety, dignity, and the right to make their own choices.</p>
+            </div>
+
+            <p>The painting "Honor Killing" serves as a powerful reminder that art can be a catalyst for social change. By confronting uncomfortable truths and challenging societal norms, creative expression becomes a form of resistance against systems that perpetuate violence and oppression.</p>
+
+            <p>We must continue to amplify the voices of survivors, support organizations working to end honor-based violence, and use our platforms—whether through art, writing, or advocacy—to create a world where honor is defined by respect for human dignity, not by control over others' lives.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://filmspsychologee.com" target="_blank">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
