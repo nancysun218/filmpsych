@@ -10,8 +10,7 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .blog-hero {
-            background: linear-gradient(135deg, rgba(70, 130, 180, 0.9), rgba(72, 61, 139, 0.9)), 
-                        url('attached_assets/white nights 1.jpg') center/cover;
+            background: linear-gradient(135deg, rgba(70, 130, 180, 0.9), rgba(72, 61, 139, 0.9));
             color: white;
             padding: 6rem 0 4rem;
             text-align: center;
@@ -31,11 +30,35 @@
         }
 
         .blog-container {
-            max-width: 800px;
+            max-width: 1200px;
             margin: 0 auto;
             padding: 0 2rem;
             position: relative;
             z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .blog-header-image {
+            flex: 0 0 400px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            object-fit: cover;
         }
 
         .blog-category-badge {
@@ -272,12 +295,24 @@
             }
 
             .blog-container {
+                flex-direction: column;
                 padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
             }
 
             .blog-meta-info {
                 flex-direction: column;
                 gap: 1rem;
+                justify-content: center;
             }
 
             .inline-image {
@@ -331,24 +366,29 @@
 
     <header class="blog-hero">
         <div class="blog-container">
-            <div class="blog-category-badge">
-                <i class="fas fa-book"></i> Literary Psychology
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-book"></i> Literary Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: White Nights</h1>
+                <p class="blog-subtitle">Exploring romantic idealization and emotional dependency through Dostoevsky's masterpiece.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>June 10, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>8 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Vioreal Fadzia Sitepu</span>
+                    </div>
+                </div>
             </div>
-            <h1 class="blog-title">Psychology Behind: The Psychology of Isolated Love in Fyodor Dostoevsky's 'White Nights'</h1>
-            <p class="blog-subtitle">Exploring romantic idealization and emotional dependency through Dostoevsky's masterpiece.</p>
-            <div class="blog-meta-info">
-                <div class="meta-item">
-                    <i class="fas fa-calendar"></i>
-                    <span>June 10, 2025</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-clock"></i>
-                    <span>8 min read</span>
-                </div>
-                <div class="meta-item">
-                    <i class="fas fa-user"></i>
-                    <span>Vioreal Fadzia Sitepu</span>
-                </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/white nights 1.jpg" alt="White Nights by Fyodor Dostoevsky">
             </div>
         </div>
     </header>
