@@ -170,8 +170,75 @@ window.addEventListener('scroll', function() {
     }
 });
 
+// Blog filtering functionality
+function initializeBlogFiltering() {
+    const blogFilter = document.getElementById('blog-filter');
+    const blogsContainer = document.getElementById('blogs-container');
+    
+    if (!blogFilter || !blogsContainer) return;
+    
+    // Store original blog cards
+    const originalBlogCards = Array.from(blogsContainer.querySelectorAll('.blog-card'));
+    
+    function sortBlogs(sortType) {
+        let sortedCards = [...originalBlogCards];
+        
+        switch(sortType) {
+            case 'most-viewed':
+                sortedCards.sort((a, b) => {
+                    const viewsA = parseInt(a.dataset.views) || 0;
+                    const viewsB = parseInt(b.dataset.views) || 0;
+                    return viewsB - viewsA;
+                });
+                break;
+                
+            case 'latest':
+                sortedCards.sort((a, b) => {
+                    const dateA = new Date(a.dataset.date);
+                    const dateB = new Date(b.dataset.date);
+                    return dateB - dateA;
+                });
+                break;
+                
+            case 'oldest':
+                sortedCards.sort((a, b) => {
+                    const dateA = new Date(a.dataset.date);
+                    const dateB = new Date(b.dataset.date);
+                    return dateA - dateB;
+                });
+                break;
+        }
+        
+        // Clear container and add sorted cards with animation
+        blogsContainer.innerHTML = '';
+        
+        sortedCards.forEach((card, index) => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(20px)';
+            blogsContainer.appendChild(card);
+            
+            setTimeout(() => {
+                card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+                card.style.opacity = '1';
+                card.style.transform = 'translateY(0)';
+            }, index * 100);
+        });
+    }
+    
+    // Handle filter change
+    blogFilter.addEventListener('change', function() {
+        sortBlogs(this.value);
+    });
+    
+    // Initialize with most viewed
+    sortBlogs('most-viewed');
+}
+
 // Add hover effects for better interactivity
 document.addEventListener('DOMContentLoaded', function() {
+    // Initialize blog filtering
+    initializeBlogFiltering();
+    
     // Add hover effect to navigation items
     const navItems = document.querySelectorAll('.nav-item');
     navItems.forEach(item => {

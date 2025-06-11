@@ -648,6 +648,16 @@
             <div class="blog-header-image">
                 <img src="attached_assets/website image 2_1749614729417.jpg" alt="Blog Header" class="blog-section-image">
             </div>
+            <div class="blog-filter-section">
+                <div class="filter-dropdown">
+                    <label for="blog-filter"><i class="fas fa-filter"></i> Sort by:</label>
+                    <select id="blog-filter">
+                        <option value="most-viewed">Most Viewed</option>
+                        <option value="latest">Latest to Oldest</option>
+                        <option value="oldest">Oldest to Latest</option>
+                    </select>
+                </div>
+            </div>
             <div class="blogs-featured">
                 <div class="spiral-decoration"></div>
                 <div class="spiral-decoration"></div>
@@ -655,8 +665,8 @@
                 <div class="spiral-decoration"></div>
                 <div class="spiral-decoration"></div>
             </div>
-            <div class="blogs-grid">
-                <article class="blog-card">
+            <div class="blogs-grid" id="blogs-container">
+                <article class="blog-card" data-date="2024-09-20" data-views="1250">
                     <div class="blog-image">
                         <img src="attached_assets/wallflower_1749618243657.png" alt="The Perks of Being a Wallflower">
                         <div class="blog-category">
@@ -677,9 +687,9 @@
                         </a>
                     </div>
                 </article>
-                <article class="blog-card">
+                <article class="blog-card" data-date="2025-01-10" data-views="890">
                     <div class="blog-image">
-                        <img src="https://via.placeholder.com/300x150/FF6B8A/FFFFFF?text=Turning+Red" alt="Turning Red">
+                        <img src="attached_assets/red 1.jpg" alt="Turning Red">
                         <div class="blog-category">
                             <i class="fas fa-film"></i>
                             Film Psychology
@@ -698,7 +708,7 @@
                         </a>
                     </div>
                 </article>
-                <article class="blog-card">
+                <article class="blog-card" data-date="2024-03-05" data-views="2100">
                     <div class="blog-image">
                         <img src="https://via.placeholder.com/300x150/FFB6C1/FFFFFF?text=Blog+3" alt="Blog 3">
                         <div class="blog-category">

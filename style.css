@@ -1019,6 +1019,54 @@ main {
     margin: 2rem 0;
 }
 
+.blog-filter-section {
+    text-align: center;
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 15px;
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.filter-dropdown {
+    display: inline-flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.filter-dropdown label {
+    font-weight: 600;
+    color: var(--primary-purple);
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 1.1rem;
+}
+
+.filter-dropdown select {
+    padding: 0.8rem 1.2rem;
+    border: 2px solid var(--light-purple);
+    border-radius: 12px;
+    background: white;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 1rem;
+    color: var(--text-dark);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    min-width: 180px;
+}
+
+.filter-dropdown select:focus {
+    outline: none;
+    border-color: var(--primary-purple);
+    box-shadow: 0 0 0 3px rgba(177, 156, 217, 0.1);
+}
+
+.filter-dropdown select:hover {
+    border-color: var(--primary-pink);
+}
+
 .blog-section-image {
     width: 90%;
     height: auto;
