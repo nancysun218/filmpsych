@@ -705,7 +705,198 @@ main {
     transform: scale(1.1);
 }
 
-/* Spiral Decorations */
+/* Universal Background Patterns */
+.section {
+    position: relative;
+    overflow: hidden;
+}
+
+.section::before,
+.section::after {
+    content: '';
+    position: absolute;
+    pointer-events: none;
+    z-index: 0;
+}
+
+/* Floating Pattern Elements */
+.floating-patterns {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 0;
+}
+
+.pattern-element {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.15;
+    animation: floatPattern 12s ease-in-out infinite;
+}
+
+.pattern-element.spiral-1 {
+    width: 60px;
+    height: 60px;
+    border: 2px dashed var(--primary-purple);
+    top: 10%;
+    left: 5%;
+    animation-delay: 0s;
+    animation-duration: 15s;
+}
+
+.pattern-element.spiral-2 {
+    width: 90px;
+    height: 90px;
+    border: 3px dotted var(--primary-pink);
+    top: 20%;
+    right: 8%;
+    animation-delay: 2s;
+    animation-duration: 18s;
+}
+
+.pattern-element.spiral-3 {
+    width: 75px;
+    height: 75px;
+    border: 2px solid var(--primary-blue);
+    bottom: 15%;
+    left: 10%;
+    animation-delay: 4s;
+    animation-duration: 20s;
+}
+
+.pattern-element.spiral-4 {
+    width: 100px;
+    height: 100px;
+    border: 2px double var(--primary-purple);
+    bottom: 25%;
+    right: 12%;
+    animation-delay: 6s;
+    animation-duration: 16s;
+}
+
+.pattern-element.spiral-5 {
+    width: 50px;
+    height: 50px;
+    border: 3px solid var(--primary-pink);
+    top: 40%;
+    left: 3%;
+    animation-delay: 8s;
+    animation-duration: 14s;
+}
+
+.pattern-element.spiral-6 {
+    width: 110px;
+    height: 110px;
+    border: 2px dashed var(--primary-blue);
+    top: 60%;
+    right: 5%;
+    animation-delay: 10s;
+    animation-duration: 22s;
+}
+
+.pattern-element.spiral-7 {
+    width: 65px;
+    height: 65px;
+    border: 3px dotted var(--primary-purple);
+    bottom: 5%;
+    left: 50%;
+    animation-delay: 12s;
+    animation-duration: 17s;
+}
+
+.pattern-element.spiral-8 {
+    width: 85px;
+    height: 85px;
+    border: 2px solid var(--primary-pink);
+    top: 5%;
+    left: 30%;
+    animation-delay: 14s;
+    animation-duration: 19s;
+}
+
+/* Decorative Geometric Shapes */
+.pattern-element.triangle-1 {
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 52px solid var(--primary-purple);
+    border-radius: 0;
+    top: 30%;
+    right: 25%;
+    opacity: 0.1;
+    animation-delay: 1s;
+}
+
+.pattern-element.triangle-2 {
+    width: 0;
+    height: 0;
+    border: none;
+    border-left: 25px solid transparent;
+    border-right: 25px solid transparent;
+    border-bottom: 43px solid var(--primary-pink);
+    border-radius: 0;
+    bottom: 40%;
+    left: 25%;
+    opacity: 0.12;
+    animation-delay: 7s;
+}
+
+.pattern-element.square-1 {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-blue);
+    border-radius: 8px;
+    top: 70%;
+    left: 20%;
+    opacity: 0.1;
+    animation-delay: 3s;
+}
+
+.pattern-element.square-2 {
+    width: 35px;
+    height: 35px;
+    background: var(--primary-purple);
+    border-radius: 6px;
+    top: 15%;
+    right: 40%;
+    opacity: 0.11;
+    animation-delay: 9s;
+}
+
+/* Complex Spiral Animations */
+@keyframes floatPattern {
+    0%, 100% {
+        transform: rotate(0deg) translateY(0px) scale(1);
+        opacity: 0.15;
+    }
+    16% {
+        transform: rotate(60deg) translateY(-25px) scale(1.1);
+        opacity: 0.25;
+    }
+    33% {
+        transform: rotate(120deg) translateY(-15px) scale(0.9);
+        opacity: 0.35;
+    }
+    50% {
+        transform: rotate(180deg) translateY(20px) scale(1.15);
+        opacity: 0.3;
+    }
+    66% {
+        transform: rotate(240deg) translateY(10px) scale(0.85);
+        opacity: 0.4;
+    }
+    83% {
+        transform: rotate(300deg) translateY(-30px) scale(1.05);
+        opacity: 0.2;
+    }
+}
+
+/* Additional Spiral Decorations */
 .spiral-decoration {
     position: absolute;
     width: 80px;
@@ -714,6 +905,7 @@ main {
     border-radius: 50%;
     opacity: 0.2;
     animation: spiralFloat 6s ease-in-out infinite;
+    z-index: 1;
 }
 
 .spiral-decoration:nth-child(1) {
@@ -739,6 +931,26 @@ main {
     animation-delay: 5s;
 }
 
+.spiral-decoration:nth-child(4) {
+    top: 50%;
+    right: 30%;
+    border-color: var(--primary-blue);
+    border-style: double;
+    animation-delay: 7s;
+    width: 60px;
+    height: 60px;
+}
+
+.spiral-decoration:nth-child(5) {
+    bottom: 40%;
+    left: 40%;
+    border-color: var(--primary-purple);
+    border-style: solid;
+    animation-delay: 9s;
+    width: 90px;
+    height: 90px;
+}
+
 @keyframes spiralFloat {
     0%, 100% {
         transform: rotate(0deg) translateY(0px) scale(1);
@@ -752,6 +964,53 @@ main {
         transform: rotate(240deg) translateY(10px) scale(0.85);
         opacity: 0.6;
     }
+}
+
+/* Pulsing Pattern Animation */
+@keyframes pulseGlow {
+    0%, 100% {
+        transform: scale(1);
+        opacity: 0.15;
+        box-shadow: 0 0 0 0 rgba(177, 156, 217, 0.3);
+    }
+    50% {
+        transform: scale(1.1);
+        opacity: 0.25;
+        box-shadow: 0 0 0 10px rgba(177, 156, 217, 0);
+    }
+}
+
+.pattern-element.pulse-1 {
+    width: 20px;
+    height: 20px;
+    background: var(--primary-purple);
+    border-radius: 50%;
+    top: 25%;
+    left: 80%;
+    animation: pulseGlow 3s ease-in-out infinite;
+    animation-delay: 0s;
+}
+
+.pattern-element.pulse-2 {
+    width: 15px;
+    height: 15px;
+    background: var(--primary-pink);
+    border-radius: 50%;
+    bottom: 20%;
+    right: 35%;
+    animation: pulseGlow 4s ease-in-out infinite;
+    animation-delay: 1.5s;
+}
+
+.pattern-element.pulse-3 {
+    width: 18px;
+    height: 18px;
+    background: var(--primary-blue);
+    border-radius: 50%;
+    top: 80%;
+    left: 70%;
+    animation: pulseGlow 2.5s ease-in-out infinite;
+    animation-delay: 3s;
 }
 
 /* Blogs Section */
