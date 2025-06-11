@@ -152,6 +152,122 @@ main {
     padding: 6rem 2rem 4rem;
     background: linear-gradient(135deg, var(--light-purple) 0%, var(--light-pink) 100%);
     margin: 0 -2rem 4rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-icons {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.floating-icon {
+    position: absolute;
+    font-size: 2rem;
+    opacity: 0.3;
+    animation: float 6s ease-in-out infinite;
+}
+
+.floating-icon:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-icon:nth-child(2) {
+    top: 30%;
+    right: 15%;
+    animation-delay: 1.5s;
+}
+
+.floating-icon:nth-child(3) {
+    bottom: 30%;
+    left: 15%;
+    animation-delay: 3s;
+}
+
+.floating-icon:nth-child(4) {
+    bottom: 20%;
+    right: 10%;
+    animation-delay: 4.5s;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero-image-placeholder {
+    margin: 2rem 0;
+}
+
+.hero-image,
+.section-image,
+.partnership-image {
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.hero-image:hover,
+.section-image:hover,
+.partnership-image:hover {
+    transform: scale(1.05);
+}
+
+.about-icons,
+.mission-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 2rem 0;
+}
+
+.content-icon,
+.mission-icon {
+    font-size: 2.5rem;
+    opacity: 0.7;
+    animation: bounce 2s infinite;
+}
+
+.content-icon:nth-child(2),
+.mission-icon:nth-child(2) {
+    animation-delay: 0.3s;
+}
+
+.content-icon:nth-child(3),
+.mission-icon:nth-child(3) {
+    animation-delay: 0.6s;
+}
+
+@keyframes bounce {
+    0%, 20%, 50%, 80%, 100% { transform: translateY(0); }
+    40% { transform: translateY(-10px); }
+    60% { transform: translateY(-5px); }
+}
+
+.about-image-placeholder,
+.blogs-image-placeholder {
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.partnership-image-placeholder {
+    text-align: center;
+    margin-bottom: 1.5rem;
+}
+
+.partnership-image {
+    width: 100%;
+    max-width: 200px;
+    height: 100px;
+    object-fit: cover;
 }
 
 .hero-content {
@@ -351,6 +467,12 @@ main {
 }
 
 .play-button {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    opacity: 0.8;
+}
+
+.social-icon {
     font-size: 3rem;
     margin-bottom: 1rem;
     opacity: 0.8;
