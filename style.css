@@ -305,8 +305,105 @@ main {
     font-weight: 300;
 }
 
-.hero-image-placeholder {
+.hero-icons-banner {
     margin: 3rem 0;
+    position: relative;
+    height: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.icon-element {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 2.5rem;
+    opacity: 0.8;
+    transition: all 0.3s ease;
+    animation: iconFloat 6s ease-in-out infinite;
+}
+
+.icon-element:hover {
+    transform: scale(1.2);
+    opacity: 1;
+}
+
+.icon-element.brain {
+    background: linear-gradient(135deg, var(--primary-purple), #9370DB);
+    top: 20%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.icon-element.film-strip {
+    background: linear-gradient(135deg, var(--primary-pink), #FF69B4);
+    top: 10%;
+    right: 20%;
+    animation-delay: 1s;
+}
+
+.icon-element.book {
+    background: linear-gradient(135deg, var(--primary-blue), #4682B4);
+    bottom: 30%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+.icon-element.palette {
+    background: linear-gradient(135deg, #FFD700, #FFA500);
+    top: 30%;
+    right: 10%;
+    animation-delay: 3s;
+}
+
+.icon-element.heart {
+    background: linear-gradient(135deg, #FF6B6B, #FF1744);
+    bottom: 20%;
+    right: 25%;
+    animation-delay: 4s;
+}
+
+.icon-element.microscope {
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    top: 40%;
+    left: 5%;
+    animation-delay: 5s;
+}
+
+.icon-element.camera {
+    background: linear-gradient(135deg, #795548, #5D4037);
+    bottom: 10%;
+    left: 30%;
+    animation-delay: 2.5s;
+}
+
+.icon-element.theater {
+    background: linear-gradient(135deg, #9C27B0, #7B1FA2);
+    top: 15%;
+    left: 50%;
+    animation-delay: 1.5s;
+}
+
+@keyframes iconFloat {
+    0%, 100% { 
+        transform: translateY(0px) rotate(0deg); 
+    }
+    25% { 
+        transform: translateY(-15px) rotate(5deg); 
+    }
+    50% { 
+        transform: translateY(-25px) rotate(-3deg); 
+    }
+    75% { 
+        transform: translateY(-10px) rotate(2deg); 
+    }
 }
 
 .hero-image,
