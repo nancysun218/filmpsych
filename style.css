@@ -786,15 +786,159 @@ main {
 
 /* Join Section */
 .join-content {
-    max-width: 800px;
+    max-width: 1200px;
     margin: 0 auto;
 }
 
-.join-benefits {
+.positions-section {
+    margin-bottom: 5rem;
+}
+
+.positions-section h2 {
+    text-align: center;
+    color: var(--primary-purple);
+    font-size: 2.2rem;
+    margin-bottom: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.positions-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+.position-card {
+    background: white;
+    padding: 2.5rem 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px var(--shadow-light);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.position-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px var(--shadow-medium);
+}
+
+.position-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    color: white;
+    font-size: 2rem;
+}
+
+.position-card h3 {
+    color: var(--primary-purple);
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.position-card p {
+    color: var(--text-light);
+    margin-bottom: 1.5rem;
+    flex-grow: 1;
+    line-height: 1.6;
+}
+
+.position-requirements {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 2rem;
+}
+
+.position-requirements span {
+    background: var(--light-purple);
+    color: var(--primary-purple);
+    padding: 0.4rem 1rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.board-positions-section {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 3rem;
+    border-radius: 20px;
     margin-bottom: 4rem;
+}
+
+.board-positions-section h2 {
+    text-align: center;
+    color: var(--primary-blue);
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.board-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 3rem;
+    align-items: center;
+}
+
+.board-text p {
+    font-size: 1.1rem;
+    margin-bottom: 1.5rem;
+    color: var(--text-dark);
+}
+
+.board-list {
+    list-style: none;
+    margin-bottom: 2rem;
+}
+
+.board-list li {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.7rem 0;
+    font-size: 1.05rem;
+    color: var(--text-dark);
+}
+
+.board-list li i {
+    color: var(--primary-blue);
+    width: 20px;
+}
+
+.board-status {
+    background: var(--light-blue);
+    color: var(--primary-blue);
+    padding: 1rem 1.5rem;
+    border-radius: 15px;
+    display: flex;
+    align-items: flex-start;
+    gap: 1rem;
+    font-weight: 500;
+}
+
+.board-status i {
+    margin-top: 0.2rem;
+    flex-shrink: 0;
 }
 
 .benefit-item {
@@ -1008,8 +1152,13 @@ footer {
         margin: 0 -1rem;
     }
 
-    .join-benefits {
+    .positions-grid {
         grid-template-columns: 1fr;
+    }
+    
+    .board-info {
+        grid-template-columns: 1fr;
+        text-align: center;
     }
 }
 
