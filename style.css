@@ -1,4 +1,3 @@
-
 * {
     margin: 0;
     padding: 0;
@@ -1686,7 +1685,7 @@ footer {
     .positions-grid {
         grid-template-columns: 1fr;
     }
-    
+
     .board-info {
         grid-template-columns: 1fr;
         text-align: center;
@@ -1718,4 +1717,17 @@ footer {
     .contact-item {
         padding: 1.5rem;
     }
+}
+
+.board-image {
+    text-align: center;
+}
+
+.board-image .section-image {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
 }
