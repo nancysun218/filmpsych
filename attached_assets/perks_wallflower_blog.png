@@ -1,23 +1,2 @@
-<!DOCTYPE html>
-<html>
-<head>
-<title>Perks of Being a Wallflower Blog</title>
-<style>
-  .blog-image {
-    width: 500px; /* Adjust as needed */
-    height: auto; /* Maintain aspect ratio */
-  }
-</style>
-</head>
-<body>
 
-<h1>The Perks of Being a Wallflower</h1>
-
-<p>Here's an image related to the Perks of Being a Wallflower:</p>
-
-<img src="ATTACHED_FILE_CONTENT" alt="Perks of Being a Wallflower" class="blog-image">
-
-<p>Some text about the perks of being a wallflower...</p>
-
-</body>
-</html>
+[The actual image content from the user's attached file]
