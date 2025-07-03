@@ -75,6 +75,18 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Handle footer navigation for blog pages
+    const footerLinks = document.querySelectorAll('.footer-section a[href^="index.html#"]');
+    footerLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+            const href = this.getAttribute('href');
+            if (href.includes('#')) {
+                // If we're on a blog page, navigate to the main page with the section
+                window.location.href = href;
+            }
+        });
+    });
+
     // Handle form submissions
     const joinForm = document.querySelector('.join-form');
     if (joinForm) {
