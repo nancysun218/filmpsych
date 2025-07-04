@@ -173,11 +173,55 @@ window.addEventListener('load', function() {
     }, 100);
 });
 
-// Mobile menu toggle (for future enhancement)
+// Mobile menu toggle
 function toggleMobileMenu() {
     const navMenu = document.querySelector('.nav-menu');
-    navMenu.style.display = navMenu.style.display === 'flex' ? 'none' : 'flex';
+    const navToggle = document.querySelector('.nav-toggle');
+    const toggleIcon = navToggle.querySelector('i');
+    
+    navMenu.classList.toggle('active');
+    
+    // Change hamburger to X when open
+    if (navMenu.classList.contains('active')) {
+        toggleIcon.classList.remove('fa-bars');
+        toggleIcon.classList.add('fa-times');
+    } else {
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+    }
 }
+
+// Close mobile menu when clicking outside
+document.addEventListener('click', function(event) {
+    const navMenu = document.querySelector('.nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    const navContainer = document.querySelector('.nav-container');
+    
+    if (!navContainer.contains(event.target) && navMenu.classList.contains('active')) {
+        navMenu.classList.remove('active');
+        const toggleIcon = navToggle.querySelector('i');
+        toggleIcon.classList.remove('fa-times');
+        toggleIcon.classList.add('fa-bars');
+    }
+});
+
+// Close mobile menu when clicking on a nav link
+document.addEventListener('DOMContentLoaded', function() {
+    const navLinks = document.querySelectorAll('.nav-link');
+    const navMenu = document.querySelector('.nav-menu');
+    const navToggle = document.querySelector('.nav-toggle');
+    
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                navMenu.classList.remove('active');
+                const toggleIcon = navToggle.querySelector('i');
+                toggleIcon.classList.remove('fa-times');
+                toggleIcon.classList.add('fa-bars');
+            }
+        });
+    });
+});
 
 // Add scroll effect to navbar
 window.addEventListener('scroll', function() {
