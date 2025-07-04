@@ -1526,11 +1526,19 @@ main {
     gap: 2.5rem;
 }
 
+.editorial-leads-grid .member-card {
+    background: white;
+}
+
 /* Writers Grid */
 .writers-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+}
+
+.writers-grid .member-card {
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
 }
 
 /* Graphic Designer Grid */
@@ -1543,6 +1551,7 @@ main {
 .graphic-designer-grid .member-card {
     max-width: 400px;
     width: 100%;
+    background: white;
 }
 
 /* Artists Grid */
@@ -1550,6 +1559,10 @@ main {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 2rem;
+}
+
+.artists-grid .member-card {
+    background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
 }
 
 /* Staff Volunteers specific styling */
