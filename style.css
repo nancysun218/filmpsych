@@ -1503,42 +1503,104 @@ main {
     box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
 }
 
+/* Volunteer Subsections */
+.volunteer-subsection {
+    margin-bottom: 5rem;
+}
+
+.subsection-title {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    margin-bottom: 2.5rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+/* Editorial Leads Grid */
+.editorial-leads-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+/* Writers Grid */
+.writers-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+/* Graphic Designer Grid */
+.graphic-designer-grid {
+    display: flex;
+    justify-content: center;
+}
+
+.graphic-designer-grid .member-card {
+    max-width: 400px;
+    width: 100%;
+}
+
+/* Artists Grid */
+.artists-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
 /* Staff Volunteers specific styling */
 .staff-volunteers-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 }
 
-.staff-volunteers-grid .member-card {
+.staff-volunteers-grid .member-card,
+.writers-grid .member-card,
+.artists-grid .member-card {
     padding: 2rem 1.5rem;
 }
 
-.staff-volunteers-grid .member-image i {
+.staff-volunteers-grid .member-image i,
+.writers-grid .member-image i,
+.artists-grid .member-image i {
     font-size: 4rem;
     width: 100px;
     height: 100px;
     padding: 1.2rem;
 }
 
-.staff-volunteers-grid .member-image img {
+.staff-volunteers-grid .member-image img,
+.writers-grid .member-image img,
+.artists-grid .member-image img {
     width: 100px;
     height: 100px;
 }
 
-.staff-volunteers-grid .member-content h3 {
+.staff-volunteers-grid .member-content h3,
+.writers-grid .member-content h3,
+.artists-grid .member-content h3 {
     font-size: 1.2rem;
 }
 
-.staff-volunteers-grid .member-position {
+.staff-volunteers-grid .member-position,
+.writers-grid .member-position,
+.artists-grid .member-position {
     font-size: 0.9rem;
     padding: 0.4rem 0.8rem;
 }
 
-.staff-volunteers-grid .member-bio {
+.staff-volunteers-grid .member-bio,
+.writers-grid .member-bio,
+.artists-grid .member-bio {
     font-size: 0.9rem;
     margin-bottom: 1.5rem;
 }
 
-.staff-volunteers-grid .social-link {
+.staff-volunteers-grid .social-link,
+.writers-grid .social-link,
+.artists-grid .social-link {
     width: 40px;
     height: 40px;
     font-size: 1.1rem;
