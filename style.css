@@ -1068,12 +1068,13 @@ main {
 }
 
 .blog-section-image {
-    width: 90%;
+    width: 100vw;
     height: auto;
-    border-radius: 15px;
+    border-radius: 0;
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     max-height: 500px;
     object-fit: cover;
+    margin-left: calc(-50vw + 50%);
 }
 
 .blogs-featured {
