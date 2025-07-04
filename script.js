@@ -3,32 +3,6 @@
 document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
-    
-    // Handle dropdown toggle clicks
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const dropdown = this.closest('.dropdown');
-            const isActive = dropdown.classList.contains('active');
-            
-            // Close all dropdowns
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-            
-            // Toggle current dropdown
-            if (!isActive) {
-                dropdown.classList.add('active');
-            }
-        });
-    });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-        }
-    });
 
     // Handle navigation clicks
     navLinks.forEach(link => {
