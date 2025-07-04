@@ -1535,8 +1535,9 @@ main {
 
 /* Graphic Designer Grid */
 .graphic-designer-grid {
-    display: flex;
-    justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
 }
 
 .graphic-designer-grid .member-card {
