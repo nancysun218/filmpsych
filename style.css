@@ -1423,10 +1423,11 @@ main {
 }
 
 .member-image img {
-    width: 120px;
-    height: 120px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
+    object-position: center;
     box-shadow: 0 8px 25px var(--shadow-light);
     border: 4px solid white;
 }
@@ -1588,8 +1589,8 @@ main {
 .staff-volunteers-grid .member-image img,
 .writers-grid .member-image img,
 .artists-grid .member-image img {
-    width: 100px;
-    height: 100px;
+    width: 120px;
+    height: 120px;
 }
 
 .staff-volunteers-grid .member-content h3,
