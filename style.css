@@ -1372,6 +1372,12 @@ main {
     margin-top: 3rem;
 }
 
+/* Board Members specific styling */
+.board-member-card {
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink)) !important;
+    border: 2px solid var(--primary-purple);
+}
+
 .member-card {
     background: white;
     padding: 2.5rem 2rem;
