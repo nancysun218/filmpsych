@@ -1,0 +1,680 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Staff Volunteers - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .staff-hero {
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/website image 1_1749618240361.jpg') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .staff-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .staff-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .staff-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .staff-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .staff-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 1200px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+            padding: 4rem;
+        }
+
+        .staff-intro {
+            text-align: center;
+            margin-bottom: 4rem;
+        }
+
+        .staff-intro h2 {
+            color: var(--primary-purple);
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .staff-intro p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.6;
+        }
+
+        .staff-sections {
+            display: flex;
+            flex-direction: column;
+            gap: 4rem;
+        }
+
+        .staff-section h3 {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 2rem;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 1rem;
+        }
+
+        .staff-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+        }
+
+        .staff-card {
+            background: white;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px var(--shadow-light);
+            text-align: center;
+            transition: transform 0.3s ease;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .staff-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .staff-avatar {
+            font-size: 3.5rem;
+            color: var(--primary-purple);
+            margin-bottom: 1.5rem;
+        }
+
+        .staff-card h4 {
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+            font-size: 1.2rem;
+        }
+
+        .staff-role {
+            color: var(--primary-pink);
+            font-weight: 600;
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .staff-card p {
+            color: var(--text-dark);
+            line-height: 1.6;
+            margin-bottom: 1.5rem;
+            font-size: 0.95rem;
+        }
+
+        .staff-achievements {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            justify-content: center;
+            margin: 1.5rem 0;
+        }
+
+        .staff-achievements span {
+            background: var(--light-purple);
+            color: var(--primary-purple);
+            padding: 0.3rem 0.8rem;
+            border-radius: 15px;
+            font-size: 0.8rem;
+            font-weight: 500;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .featured-staff {
+            background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
+            border: 2px solid var(--primary-purple);
+        }
+
+        .featured-staff .staff-avatar {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1.5rem;
+            font-size: 2.5rem;
+        }
+
+        .staff-social {
+            display: flex;
+            justify-content: center;
+            gap: 1rem;
+            margin-top: 1.5rem;
+        }
+
+        .staff-social a {
+            color: var(--primary-pink);
+            font-size: 1.2rem;
+            transition: all 0.3s ease;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--light-pink);
+        }
+
+        .staff-social a:hover {
+            color: white;
+            background: var(--primary-purple);
+            transform: scale(1.1);
+        }
+
+        .back-to-home {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .staff-title {
+                font-size: 2.2rem;
+            }
+
+            .staff-content {
+                padding: 2rem;
+            }
+
+            .staff-container {
+                padding: 0 1rem;
+            }
+
+            .staff-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#about" class="nav-link"><i class="fas fa-users"></i> About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#animations" class="nav-link"><i class="fas fa-share-alt"></i> Socials</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#partnerships" class="nav-link"><i class="fas fa-handshake"></i> Partnerships</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="staff-hero">
+        <div class="staff-container">
+            <h1 class="staff-title">Staff Volunteers</h1>
+            <p class="staff-subtitle">Meet our talented team members who bring psychological insights to creative works</p>
+        </div>
+    </header>
+
+    <main class="staff-content">
+        <div class="staff-intro">
+            <h2><i class="fas fa-users"></i> Our Amazing Team</h2>
+            <p>FilmPsych is powered by a passionate group of volunteers who share a common mission: exploring psychology through the lens of creative arts. Our diverse team brings together expertise in psychology, writing, design, video editing, and leadership to create meaningful content that bridges the gap between mental health awareness and popular culture.</p>
+        </div>
+
+        <div class="staff-sections">
+            <!-- Editorial Leadership -->
+            <div class="staff-section">
+                <h3><i class="fas fa-crown"></i> Editorial Leadership</h3>
+                <div class="staff-grid">
+                    <div class="staff-card featured-staff">
+                        <div class="staff-avatar">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h4>Ladima Halder</h4>
+                        <p class="staff-role">Editorial Lead</p>
+                        <p>Experienced editorial lead overseeing content quality and editorial direction. Ensures our content maintains high standards while effectively communicating psychological insights.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-crown"></i> Editorial Leadership</span>
+                            <span><i class="fas fa-check-circle"></i> Quality Assurance</span>
+                            <span><i class="fas fa-compass"></i> Content Direction</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="staff-card featured-staff">
+                        <div class="staff-avatar">
+                            <i class="fas fa-edit"></i>
+                        </div>
+                        <h4>Aimee Pan</h4>
+                        <p class="staff-role">Editorial Lead</p>
+                        <p>Dedicated editorial lead with expertise in psychology communication. Guides our writing team in creating compelling, accurate, and accessible content about mental health.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-users"></i> Team Leadership</span>
+                            <span><i class="fas fa-brain"></i> Psychology Expertise</span>
+                            <span><i class="fas fa-bullhorn"></i> Clear Communication</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative Team -->
+            <div class="staff-section">
+                <h3><i class="fas fa-palette"></i> Creative Team</h3>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-laptop"></i>
+                        </div>
+                        <h4>Lily Hoffman</h4>
+                        <p class="staff-role">Graphic Designer</p>
+                        <p>Creative graphic designer crafting visually compelling designs that communicate psychological concepts effectively. Specializes in creating engaging visual content for our social media platforms.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-palette"></i> Visual Storytelling</span>
+                            <span><i class="fas fa-brain"></i> Psychology-Art Fusion</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-dribbble"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pencil-ruler"></i>
+                        </div>
+                        <h4>Aarna Guha Thakurta</h4>
+                        <p class="staff-role">Graphic Designer</p>
+                        <p>Innovative graphic designer specializing in digital media and visual storytelling for psychological content. Creates impactful graphics that help destigmatize mental health issues.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-mobile-alt"></i> Digital Media Expert</span>
+                            <span><i class="fas fa-eye"></i> Visual Impact</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-film"></i>
+                        </div>
+                        <h4>Sonia Knot</h4>
+                        <p class="staff-role">Video Editor</p>
+                        <p>Skilled video editor bringing psychological insights to life through engaging video content and storytelling. Creates compelling TikTok and social media content that educates and inspires.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-video"></i> Content Creation</span>
+                            <span><i class="fas fa-share-alt"></i> Social Media Expert</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Writing Team -->
+            <div class="staff-section">
+                <h3><i class="fas fa-pen"></i> Writing Team</h3>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Aakanksha Harkar</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Passionate writer exploring the intersection of psychology and creative arts. Contributes insightful articles that help readers understand psychological concepts through familiar mediums.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-brain"></i> Psychology Analysis</span>
+                            <span><i class="fas fa-book"></i> Creative Writing</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Edzes Angmo</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Dedicated writer with a keen interest in psychological themes in literature and film. Brings unique perspectives to mental health discussions through creative analysis.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-film"></i> Film Analysis</span>
+                            <span><i class="fas fa-heart"></i> Mental Health Advocacy</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Iqra Bintey Tabassum</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Insightful writer specializing in psychological interpretations of contemporary media. Focuses on destigmatizing mental health through accessible and engaging content.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-lightbulb"></i> Creative Insights</span>
+                            <span><i class="fas fa-users"></i> Community Engagement</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Nafisa Ahmed</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Talented writer exploring psychological themes in various art forms. Contributes thoughtful analysis that bridges academic psychology with popular culture.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-palette"></i> Art Psychology</span>
+                            <span><i class="fas fa-search"></i> Deep Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Sofia Ericeira</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Creative writer with expertise in psychological storytelling. Focuses on analyzing character development and psychological narratives in film and literature.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-user"></i> Character Analysis</span>
+                            <span><i class="fas fa-book-open"></i> Narrative Psychology</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Nainika Tumu</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Passionate writer dedicated to exploring psychological concepts through creative mediums. Specializes in making complex psychological theories accessible to general audiences.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-graduation-cap"></i> Educational Content</span>
+                            <span><i class="fas fa-star"></i> Accessible Writing</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Candilla Stanly</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Innovative writer with a passion for psychological research and creative expression. Contributes unique perspectives on mental health representation in media.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-microscope"></i> Research Skills</span>
+                            <span><i class="fas fa-tv"></i> Media Analysis</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Keya Shah</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Dedicated writer focusing on the psychological impact of visual arts and cinema. Brings fresh insights to discussions about mental health in creative contexts.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-eye"></i> Visual Analysis</span>
+                            <span><i class="fas fa-comments"></i> Discussion Leader</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Isabelle Quek</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Thoughtful writer exploring psychological themes in contemporary media. Specializes in analyzing the therapeutic potential of creative arts and storytelling.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-hand-holding-heart"></i> Therapeutic Focus</span>
+                            <span><i class="fas fa-story"></i> Storytelling Expert</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Triya Basuroy</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Analytical writer with expertise in psychological interpretations of art and literature. Focuses on cultural psychology and cross-cultural mental health perspectives.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-globe"></i> Cultural Psychology</span>
+                            <span><i class="fas fa-chart-line"></i> Analytical Skills</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Kiori Connley</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Creative writer passionate about mental health advocacy through artistic expression. Contributes engaging content that promotes psychological awareness and understanding.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-paint-brush"></i> Artistic Expression</span>
+                            <span><i class="fas fa-megaphone"></i> Mental Health Advocacy</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Shreyas Jay</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Insightful writer specializing in psychological analysis of contemporary cinema and literature. Brings academic rigor to accessible mental health discussions.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-university"></i> Academic Approach</span>
+                            <span><i class="fas fa-film"></i> Cinema Psychology</span>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-pen"></i>
+                        </div>
+                        <h4>Shareen Zubedi</h4>
+                        <p class="staff-role">Staff Writer</p>
+                        <p>Passionate writer dedicated to exploring psychological themes through diverse creative mediums. Focuses on promoting mental health awareness through engaging storytelling.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-diversity"></i> Diverse Perspectives</span>
+                            <span><i class="fas fa-story"></i> Engaging Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Art Team -->
+            <div class="staff-section">
+                <h3><i class="fas fa-paint-brush"></i> Art Team</h3>
+                <div class="staff-grid">
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Tara Lee</h4>
+                        <p class="staff-role">Staff Artist</p>
+                        <p>Talented artist creating visual content that complements our psychological insights. Specializes in illustrations that help visualize complex mental health concepts.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-palette"></i> Visual Arts</span>
+                            <span><i class="fas fa-lightbulb"></i> Concept Visualization</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Jyothsna</h4>
+                        <p class="staff-role">Staff Artist</p>
+                        <p>Creative artist bringing psychological concepts to life through visual storytelling. Creates artwork that enhances understanding of mental health topics.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-image"></i> Visual Storytelling</span>
+                            <span><i class="fas fa-heart"></i> Mental Health Art</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-behance"></i></a>
+                        </div>
+                    </div>
+
+                    <div class="staff-card">
+                        <div class="staff-avatar">
+                            <i class="fas fa-paint-brush"></i>
+                        </div>
+                        <h4>Sochi Pham</h4>
+                        <p class="staff-role">Staff Artist</p>
+                        <p>Innovative artist specializing in digital art and creative expression for psychological content. Creates engaging visuals that support our mental health advocacy mission.</p>
+                        <div class="staff-achievements">
+                            <span><i class="fas fa-laptop"></i> Digital Art</span>
+                            <span><i class="fas fa-heart"></i> Mental Health Advocacy</span>
+                        </div>
+                        <div class="staff-social">
+                            <a href="mailto:contact@filmpsych.com"><i class="fas fa-envelope"></i></a>
+                            <a href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div class="back-to-home">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="staff-volunteers.html">Staff Volunteers</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
