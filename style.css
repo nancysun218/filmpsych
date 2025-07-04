@@ -144,7 +144,7 @@ h1, h2, h3 {
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.dropdown:hover .dropdown-content {
+.dropdown.active .dropdown-content {
     display: block;
     animation: fadeInDown 0.3s ease;
 }
