@@ -2518,10 +2518,20 @@ footer {
         background: var(--light-purple);
         border-radius: 0;
         margin-top: 0;
+        min-width: 100%;
     }
 
     .dropdown.active .dropdown-content {
         display: block;
+    }
+
+    .dropdown-content a {
+        padding: 1rem 2rem;
+        border-bottom: 1px solid rgba(177, 156, 217, 0.2);
+    }
+
+    .dropdown-content a:last-child {
+        border-bottom: none;
     }
 
     @keyframes slideDown {
