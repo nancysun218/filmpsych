@@ -10,13 +10,26 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .blog-hero {
-            background: linear-gradient(135deg, rgba(255, 105, 180, 0.9), rgba(138, 43, 226, 0.9)), 
-                        url('attached_assets/silent voice 1.avif') center/cover;
+            background: linear-gradient(135deg, #FF69B4, #DA70D6, #9370DB);
             color: white;
-            padding: 6rem 0 4rem;
+            padding: 6rem 0 2rem;
             text-align: center;
             position: relative;
             overflow: hidden;
+        }
+
+        .blog-header-image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
         }
 
         .blog-hero::before {
@@ -78,7 +91,7 @@
 
         .blog-content {
             background: white;
-            margin: -2rem auto 0;
+            margin: 2rem auto 0;
             max-width: 900px;
             border-radius: 25px;
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
@@ -240,6 +253,15 @@
                 flex-direction: column;
                 gap: 1rem;
             }
+
+            .header-image {
+                max-width: 100%;
+                margin: 1rem 0;
+            }
+
+            .blog-header-image {
+                margin: 1.5rem 0;
+            }
         }
     </style>
 </head>
@@ -285,6 +307,9 @@
                 <i class="fas fa-music"></i> Music Psychology
             </div>
             <h1 class="blog-title">Psychology Behind: Manchild</h1>
+            <div class="blog-header-image">
+                <img src="attached_assets/manchild header.png" alt="Manchild Header" class="header-image">
+            </div>
             <p class="blog-subtitle">Analyzing psychological themes in Sabrina Carpenter's feminist critique through music.</p>
             <div class="blog-meta-info">
                 <div class="meta-item">
