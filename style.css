@@ -2524,10 +2524,11 @@ footer {
         margin-top: 0;
         min-width: 100%;
         animation: none;
+        z-index: 1001;
     }
 
     .dropdown.active .dropdown-content {
-        display: block;
+        display: block !important;
         animation: slideDown 0.3s ease;
     }
 

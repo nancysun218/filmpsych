@@ -13,12 +13,13 @@ document.addEventListener('DOMContentLoaded', function() {
             const dropdown = this.closest('.dropdown');
             const isActive = dropdown.classList.contains('active');
             
-            // Close all dropdowns
+            // Close all dropdowns first
             document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
             
-            // Always show dropdown first, don't navigate to about section
+            // Toggle dropdown - show if it wasn't active, hide if it was
             if (!isActive) {
                 dropdown.classList.add('active');
+                console.log('Dropdown activated'); // Debug log
             }
         });
     });
