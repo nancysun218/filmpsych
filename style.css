@@ -1584,6 +1584,227 @@ main {
     background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
 }
 
+/* Competitions Section */
+.competitions-content {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.competition-intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 3rem;
+    align-items: center;
+    margin-bottom: 4rem;
+}
+
+.intro-text h2 {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.current-competitions h2,
+.past-winners h2,
+.submission-guidelines h2 {
+    color: var(--primary-purple);
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.competitions-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.competition-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.competition-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+.competition-header {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    color: white;
+    padding: 1.5rem;
+    position: relative;
+}
+
+.competition-badge {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.upcoming-badge {
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.competition-header h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0;
+    margin-top: 0.5rem;
+}
+
+.competition-content-card {
+    padding: 2rem;
+}
+
+.competition-details {
+    margin: 1.5rem 0;
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 0.8rem;
+    color: var(--text-dark);
+}
+
+.detail-item i {
+    color: var(--primary-purple);
+    width: 20px;
+}
+
+.winners-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-bottom: 4rem;
+}
+
+.winner-card {
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.winner-card:hover {
+    transform: translateY(-3px);
+}
+
+.winner-position {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.winner-position .gold {
+    color: #FFD700;
+    font-size: 1.5rem;
+}
+
+.winner-position .silver {
+    color: #C0C0C0;
+    font-size: 1.5rem;
+}
+
+.winner-position .bronze {
+    color: #CD7F32;
+    font-size: 1.5rem;
+}
+
+.winner-card h3 {
+    color: var(--primary-purple);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.winner-work {
+    font-style: italic;
+    color: var(--primary-pink);
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.winner-description {
+    color: var(--text-dark);
+    line-height: 1.6;
+}
+
+.submission-guidelines {
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
+    padding: 3rem;
+    border-radius: 20px;
+    margin-bottom: 2rem;
+}
+
+.guidelines-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+}
+
+.guideline-section h3 {
+    color: var(--primary-purple);
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.guideline-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.guideline-section li {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.8rem 1rem;
+    margin-bottom: 0.5rem;
+    border-radius: 10px;
+    border-left: 4px solid var(--primary-purple);
+}
+
+@media (max-width: 768px) {
+    .competition-intro {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    
+    .competitions-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .guidelines-content {
+        grid-template-columns: 1fr;
+    }
+}
+
 /* Staff Volunteers specific styling */
 .staff-volunteers-grid {
     grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
