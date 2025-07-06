@@ -280,14 +280,6 @@ function initializeBlogFiltering() {
         let sortedCards = [...originalBlogCards];
         
         switch(sortType) {
-            case 'most-viewed':
-                sortedCards.sort((a, b) => {
-                    const viewsA = parseInt(a.dataset.views) || 0;
-                    const viewsB = parseInt(b.dataset.views) || 0;
-                    return viewsB - viewsA;
-                });
-                break;
-                
             case 'latest':
                 sortedCards.sort((a, b) => {
                     const dateA = new Date(a.dataset.date);
@@ -326,8 +318,8 @@ function initializeBlogFiltering() {
         sortBlogs(this.value);
     });
     
-    // Initialize with most viewed
-    sortBlogs('most-viewed');
+    // Initialize with latest posts first
+    sortBlogs('latest');
 }
 
 // Add hover effects for better interactivity
