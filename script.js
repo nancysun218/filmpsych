@@ -16,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function() {
             // Close all dropdowns
             document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
             
-            // Toggle current dropdown
+            // Always show dropdown first, don't navigate to about section
             if (!isActive) {
                 dropdown.classList.add('active');
             }
@@ -33,6 +33,11 @@ document.addEventListener('DOMContentLoaded', function() {
     // Handle navigation clicks
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
+            // Skip navigation for dropdown toggles - they only show the dropdown
+            if (this.classList.contains('dropdown-toggle')) {
+                return;
+            }
+            
             e.preventDefault();
             
             // Remove active class from all links and sections
