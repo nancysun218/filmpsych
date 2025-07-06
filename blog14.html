@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,22 +9,27 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .blog-hero {
-            background: linear-gradient(135deg, #8B0000, #CD853F, #2F4F4F);
+            /* Old background: linear-gradient(135deg, #8B0000, #CD853F, #2F4F4F); */
+            background-color: #333; /* Dark background related to the images */
             color: white;
-            padding: 6rem 0 2rem;
-            text-align: center;
+            padding: 2rem 0; /* Reduced padding */
+            text-align: left; /* Align text to the left */
             position: relative;
             overflow: hidden;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Space between title and image */
         }
 
         .blog-header-image {
-            margin: 2rem 0;
-            text-align: center;
+            margin: 0; /* Remove default margin */
+            text-align: right; /* Align image to the right */
+            max-width: 40%; /* Limit image width */
         }
 
         .header-image {
             width: 100%;
-            max-width: 600px;
+            max-width: 100%; /* Make sure image fits container */
             height: auto;
             border-radius: 15px;
             box-shadow: 0 10px 30px rgba(0,0,0,0.3);
@@ -33,9 +37,9 @@
         }
 
         .blog-container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 0 2rem;
+            max-width: 60%; /* Adjust container width */
+            margin: 0 0 0 2rem; /* Add left margin */
+            padding: 0;
             position: relative;
             z-index: 2;
         }
@@ -65,7 +69,7 @@
 
         .blog-meta-info {
             display: flex;
-            justify-content: center;
+            justify-content: flex-start; /* Align meta info to the left */
             gap: 2rem;
             flex-wrap: wrap;
         }
@@ -229,6 +233,8 @@
 
             .blog-container {
                 padding: 0 1rem;
+                max-width: 100%;
+                margin: 0 1rem;
             }
 
             .blog-meta-info {
@@ -242,13 +248,25 @@
             }
 
             .blog-header-image {
-                margin: 1.5rem 0;
+                max-width: 40%;
+                margin: 0;
             }
 
             .inline-image {
                 float: none;
                 width: 100%;
                 margin: 1rem 0;
+            }
+
+            .blog-hero {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .blog-container {
+                max-width: 100%;
+                margin: 0 1rem;
             }
         }
     </style>
@@ -311,6 +329,9 @@
                     <span>Shareen Zubedi</span>
                 </div>
             </div>
+        </div>
+        <div class="blog-header-image">
+            <img src="attached_assets/poets header.png" alt="Dead Poets Society Header" class="header-image">
         </div>
     </header>
 
@@ -399,11 +420,13 @@
 
             <p>The film also focuses on identity and masculinity among the group of boys. Keating and the boys challenge traditional masculinity and gender roles, encouraging students to express themselves with authenticity. In this way, Keating encourages students to find their "barbaric yawp," a way to freely express themselves and find their unique voice which is core to their identity and masculinity.</p>
 
-            <p>Erik Erikson's Psychosocial theory shows how identity and role confusion impact the characters in the film. According to Erikson, adolescents must face the critical task of discovering their personal identity. If they fail to do so, they fall into what is called "role confusion," which is a state of uncertainty in regards to an individual's social roles and their identity.</p>
-
             <h3>Case Study: Todd's Transformation</h3>
 
             <p>Todd Anderson is a prime example, living in the shadows of his brother, he shows low self-worth. Under Keating's guidance, he explores his own voice and selfhood, a symbol of identity. His transformation from a timid, anxious boy to someone who stands on his desk in defiance represents the successful resolution of Erikson's identity vs. role confusion stage.</p>
+
+            <img src="attached_assets/poets 3.png" alt="Students in Keating's unconventional classroom" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            <img src="attached_assets/poets 4.png" alt="Students standing on desks" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
 
             <h2>The Psychology of Collective Resistance</h2>
 
