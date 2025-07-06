@@ -2525,22 +2525,33 @@ footer {
         min-width: 100%;
         animation: none;
         z-index: 1001;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        padding: 1rem;
     }
 
     .dropdown.active .dropdown-content {
-        display: block !important;
+        display: flex !important;
         animation: slideDown 0.3s ease;
     }
 
     .dropdown-content a {
-        padding: 1rem 2rem 1rem 3rem;
-        border-bottom: 1px solid rgba(177, 156, 217, 0.2);
+        padding: 0.8rem 1rem;
+        border: 1px solid rgba(177, 156, 217, 0.3);
+        border-radius: 15px;
         color: var(--primary-purple);
-        font-size: 0.95rem;
+        font-size: 0.85rem;
+        background: rgba(255, 255, 255, 0.7);
+        text-align: center;
+        flex: 1;
+        min-width: 120px;
+        white-space: nowrap;
+        transition: all 0.3s ease;
     }
 
     .dropdown-content a:last-child {
-        border-bottom: none;
+        border-bottom: 1px solid rgba(177, 156, 217, 0.3);
     }
 
     .dropdown-content a:hover {
