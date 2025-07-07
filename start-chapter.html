@@ -1,0 +1,329 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start a Chapter - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .chapter-hero {
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/website image 1_1749618240361.jpg') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .chapter-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .chapter-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .chapter-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .chapter-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+            padding: 4rem;
+        }
+
+        .info-section {
+            margin-bottom: 3rem;
+        }
+
+        .info-section h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .info-section p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .requirements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .requirement-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .requirement-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .action-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-large {
+            padding: 1.2rem 2.5rem;
+            font-size: 1.1rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary-large {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+        }
+
+        .btn-secondary-large {
+            background: white;
+            color: var(--primary-purple);
+            border: 2px solid var(--primary-purple);
+        }
+
+        .btn-large:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .chapter-title {
+                font-size: 2.2rem;
+            }
+
+            .chapter-content {
+                padding: 2rem;
+                margin: -1rem auto 0;
+            }
+
+            .requirements-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .action-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle active"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="chapter-hero">
+        <div class="chapter-container">
+            <h1 class="chapter-title">Start a FilmPsych Chapter</h1>
+            <p class="chapter-subtitle">Lead mental health awareness in your community</p>
+        </div>
+    </header>
+
+    <main class="chapter-content">
+        <div class="info-section">
+            <h2><i class="fas fa-info-circle"></i> What is a FilmPsych Chapter?</h2>
+            <p>
+                Chapters are local student-led branches of FilmPsych that operate in schools or communities. Each chapter spreads awareness about psychology and mental health through blog writing, art workshops, fundraisers, and more. They follow our core mission but have the flexibility to organize their own events, recruit members, and run campaigns that fit their local audience.
+            </p>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i class="fas fa-crown"></i> Regional Coordinators</h3>
+            <p>
+                Regional Coordinators lead these chapters, serving as a liaison between chapters and the main team. They help with recruiting, onboarding, and checking in with chapters. This is a great leadership opportunity for students passionate about mental health, psychology, and creative media. You'll gain communication, management, and coordination skills.
+            </p>
+        </div>
+
+        <div class="info-section">
+            <h2><i class="fas fa-user-check"></i> Who We're Looking For</h2>
+            <div class="requirements-grid">
+                <div class="requirement-card">
+                    <h3><i class="fas fa-graduation-cap"></i> Students</h3>
+                    <p>Organized, reliable high school or college students who are passionate about making a difference in their communities.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3><i class="fas fa-comments"></i> Communication Skills</h3>
+                    <p>Good communication skills and the ability to work with diverse groups of people effectively.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3><i class="fas fa-heart"></i> Passion</h3>
+                    <p>Must be passionate about FilmPsych's mission of bridging psychology and creative arts for mental health awareness.</p>
+                </div>
+                <div class="requirement-card">
+                    <h3><i class="fas fa-tasks"></i> Leadership</h3>
+                    <p>Ready to take on leadership responsibilities and coordinate local initiatives in your area.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="info-section">
+            <h2><i class="fas fa-lightbulb"></i> What You'll Do</h2>
+            <p>As a chapter leader, you'll have the opportunity to:</p>
+            <ul style="color: var(--text-dark); font-size: 1.1rem; line-height: 1.7;">
+                <li>Organize blog writing workshops and creative arts sessions</li>
+                <li>Plan and execute mental health awareness events</li>
+                <li>Coordinate fundraising activities for mental health causes</li>
+                <li>Recruit and onboard new chapter members</li>
+                <li>Collaborate with the main FilmPsych team</li>
+                <li>Develop leadership and project management skills</li>
+            </ul>
+        </div>
+
+        <div class="action-buttons">
+            <a href="https://docs.google.com/forms/d/1k0CShhrk2YrxsWOfE367Der6IGol9OBEsXxwZYmKPv4/edit" target="_blank" class="btn-large btn-primary-large">
+                <i class="fas fa-external-link-alt"></i>
+                Apply to Start a Chapter
+            </a>
+            <a href="https://drive.google.com/file/d/1Uo9DiPLrsSpk1T43JP5Fl4qLP9EPC5-8/view?usp=share_link" target="_blank" class="btn-large btn-secondary-large">
+                <i class="fas fa-book"></i>
+                Chapter Leaders Guide
+            </a>
+        </div>
+    </main>
+
+    <div style="text-align: center; padding: 2rem 0;">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

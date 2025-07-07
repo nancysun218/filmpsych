@@ -1,0 +1,383 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Internship Programs - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .internship-hero {
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/website image 2_1749614729417.jpg') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .internship-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .internship-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .internship-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .internship-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .internship-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+            padding: 4rem;
+        }
+
+        .program-section {
+            margin-bottom: 3rem;
+        }
+
+        .program-section h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .program-section p {
+            color: var(--text-dark);
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+        }
+
+        .programs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .program-card {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+            transition: transform 0.3s ease;
+        }
+
+        .program-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-card h3 {
+            color: var(--primary-purple);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .program-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .program-card li {
+            background: rgba(255, 255, 255, 0.7);
+            padding: 0.8rem 1rem;
+            margin-bottom: 0.5rem;
+            border-radius: 10px;
+            border-left: 4px solid var(--primary-purple);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .timeline-section {
+            background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
+            padding: 3rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .timeline-section h3 {
+            color: var(--primary-purple);
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .coming-soon-badge {
+            background: var(--primary-purple);
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-top: 1rem;
+        }
+
+        .notify-section {
+            text-align: center;
+            margin-top: 3rem;
+        }
+
+        .notify-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1.2rem 2.5rem;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            transition: all 0.3s ease;
+            font-size: 1.1rem;
+        }
+
+        .notify-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        @media (max-width: 768px) {
+            .internship-title {
+                font-size: 2.2rem;
+            }
+
+            .internship-content {
+                padding: 2rem;
+                margin: -1rem auto 0;
+            }
+
+            .programs-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle active"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="internship-hero">
+        <div class="internship-container">
+            <h1 class="internship-title">6-Week Internship Programs</h1>
+            <p class="internship-subtitle">Hands-on experience in psychology and creative arts</p>
+        </div>
+    </header>
+
+    <main class="internship-content">
+        <div class="program-section">
+            <h2><i class="fas fa-info-circle"></i> About Our Internship Programs</h2>
+            <p>
+                FilmPsych offers comprehensive 6-week internship programs designed to provide hands-on experience in the intersection of psychology and creative arts. Our internships combine practical learning with creative expression, allowing participants to develop professional skills while contributing to meaningful mental health awareness initiatives.
+            </p>
+        </div>
+
+        <div class="program-section">
+            <h2><i class="fas fa-briefcase"></i> Available Tracks</h2>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3><i class="fas fa-pen-fancy"></i> Editorial Track</h3>
+                    <p>Focus on content creation, blog writing, and editorial processes in psychology communication.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Blog writing and editing</li>
+                        <li><i class="fas fa-check"></i> Content strategy development</li>
+                        <li><i class="fas fa-check"></i> Research and fact-checking</li>
+                        <li><i class="fas fa-check"></i> Psychology communication skills</li>
+                    </ul>
+                </div>
+                <div class="program-card">
+                    <h3><i class="fas fa-palette"></i> Art Track</h3>
+                    <p>Combine artistic skills with psychological concepts to create meaningful visual content.</p>
+                    <ul>
+                        <li><i class="fas fa-check"></i> Digital art and illustration</li>
+                        <li><i class="fas fa-check"></i> Animation and motion graphics</li>
+                        <li><i class="fas fa-check"></i> Visual storytelling techniques</li>
+                        <li><i class="fas fa-check"></i> Art therapy concepts</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="program-section">
+            <h2><i class="fas fa-trophy"></i> Final Projects</h2>
+            <p>At the end of your internship, you'll complete one of several final projects to showcase your skills:</p>
+            <div class="programs-grid">
+                <div class="program-card">
+                    <h3><i class="fas fa-blog"></i> Blog Creation</h3>
+                    <p>Research, write, and publish a comprehensive blog article analyzing psychology in creative media.</p>
+                </div>
+                <div class="program-card">
+                    <h3><i class="fas fa-paint-brush"></i> Artwork/Animation</h3>
+                    <p>Create original artwork or animation that explores psychological concepts and mental health themes.</p>
+                </div>
+                <div class="program-card">
+                    <h3><i class="fas fa-book"></i> Children's Book</h3>
+                    <p>Design and create an educational children's book that teaches psychology concepts in an age-appropriate way.</p>
+                </div>
+                <div class="program-card">
+                    <h3><i class="fas fa-search"></i> Research Project</h3>
+                    <p>Conduct research and create a literature review on a specific topic in psychology and creative arts.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="timeline-section">
+            <h3><i class="fas fa-calendar"></i> Program Timeline</h3>
+            <p>Our internship programs are starting this fall! Applications will be released soon.</p>
+            <div class="coming-soon-badge">
+                <i class="fas fa-clock"></i>
+                Applications Coming Soon
+            </div>
+        </div>
+
+        <div class="program-section">
+            <h2><i class="fas fa-graduation-cap"></i> What You'll Gain</h2>
+            <ul style="color: var(--text-dark); font-size: 1.1rem; line-height: 1.7;">
+                <li>Professional experience in psychology communication and creative arts</li>
+                <li>Portfolio pieces to showcase your skills</li>
+                <li>Mentorship from experienced FilmPsych team members</li>
+                <li>Certificate of completion for your internship</li>
+                <li>Networking opportunities with professionals in the field</li>
+                <li>Potential for continued involvement with FilmPsych</li>
+            </ul>
+        </div>
+
+        <div class="notify-section">
+            <h3 style="color: var(--primary-purple); margin-bottom: 1rem;">Stay Updated</h3>
+            <p style="color: var(--text-dark); margin-bottom: 2rem;">
+                Be the first to know when applications open! Contact us to join our notification list.
+            </p>
+            <a href="index.html#contact" class="notify-btn">
+                <i class="fas fa-bell"></i>
+                Get Notified About Applications
+            </a>
+        </div>
+    </main>
+
+    <div style="text-align: center; padding: 2rem 0;">
+        <a href="index.html" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to Home
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
