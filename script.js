@@ -132,18 +132,43 @@ document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('.contact-form');
     if (contactForm) {
         contactForm.addEventListener('submit', function(e) {
-            // Let the form submit naturally to Formspree
-            // Show a loading state
+            e.preventDefault();
+            
             const submitBtn = this.querySelector('button[type="submit"]');
             const originalText = submitBtn.innerHTML;
+            const formData = new FormData(this);
+            
+            // Show loading state
             submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Sending...';
             submitBtn.disabled = true;
             
-            // Reset button after a delay (form will redirect or show success)
-            setTimeout(() => {
+            // Submit form using fetch
+            fetch(this.action, {
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            }).then(response => {
+                if (response.ok) {
+                    alert('Thank you! Your message has been sent successfully. We will get back to you within 24 hours.');
+                    this.reset();
+                } else {
+                    response.json().then(data => {
+                        if (data.errors) {
+                            alert('Oops! There was a problem: ' + data.errors.map(error => error.message).join(', '));
+                        } else {
+                            alert('Oops! There was a problem sending your message. Please try again.');
+                        }
+                    });
+                }
+            }).catch(error => {
+                alert('Oops! There was a problem sending your message. Please try again.');
+            }).finally(() => {
+                // Reset button
                 submitBtn.innerHTML = originalText;
                 submitBtn.disabled = false;
-            }, 3000);
+            });
         });
     }
 
