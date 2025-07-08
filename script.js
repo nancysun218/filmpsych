@@ -348,10 +348,80 @@ function initializeBlogFiltering() {
     sortBlogs('latest');
 }
 
+// Blog Carousel Functionality
+let currentSlideIndex = 0;
+const totalSlides = 5;
+let autoSlideInterval;
+
+function showSlide(index) {
+    const carousel = document.getElementById('homepage-blog-carousel');
+    const dots = document.querySelectorAll('.dot');
+    
+    if (!carousel) return;
+    
+    // Ensure index is within bounds
+    if (index >= totalSlides) currentSlideIndex = 0;
+    else if (index < 0) currentSlideIndex = totalSlides - 1;
+    else currentSlideIndex = index;
+    
+    // Calculate transform
+    const slideWidth = 320; // 300px + 20px gap
+    const offset = currentSlideIndex * slideWidth;
+    carousel.style.transform = `translateX(-${offset}px)`;
+    
+    // Update dots
+    dots.forEach((dot, i) => {
+        dot.classList.toggle('active', i === currentSlideIndex);
+    });
+}
+
+function nextSlide() {
+    showSlide(currentSlideIndex + 1);
+}
+
+function previousSlide() {
+    showSlide(currentSlideIndex - 1);
+}
+
+function currentSlide(index) {
+    showSlide(index - 1);
+}
+
+function startAutoSlide() {
+    autoSlideInterval = setInterval(() => {
+        nextSlide();
+    }, 4000); // Change slide every 4 seconds
+}
+
+function stopAutoSlide() {
+    if (autoSlideInterval) {
+        clearInterval(autoSlideInterval);
+    }
+}
+
+// Initialize carousel when page loads
+function initializeCarousel() {
+    const carouselContainer = document.querySelector('.blog-carousel-container');
+    if (carouselContainer) {
+        // Start auto-sliding
+        startAutoSlide();
+        
+        // Pause auto-slide on hover
+        carouselContainer.addEventListener('mouseenter', stopAutoSlide);
+        carouselContainer.addEventListener('mouseleave', startAutoSlide);
+        
+        // Initialize first slide
+        showSlide(0);
+    }
+}
+
 // Add hover effects for better interactivity
 document.addEventListener('DOMContentLoaded', function() {
     // Initialize blog filtering
     initializeBlogFiltering();
+    
+    // Initialize homepage carousel
+    initializeCarousel();
     
     // Add hover effect to navigation items
     const navItems = document.querySelectorAll('.nav-item');

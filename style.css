@@ -2790,6 +2790,211 @@ footer {
     color: var(--text-light);
 }
 
+/* Homepage Impact Section */
+.homepage-impact-section {
+    padding: 5rem 0;
+    background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
+    margin: 4rem -2rem;
+}
+
+.homepage-impact-section .section-header h2 {
+    color: var(--primary-purple);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.homepage-impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.impact-stat-card {
+    background: white;
+    padding: 2rem 1.5rem;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.impact-stat-card:hover {
+    transform: translateY(-5px);
+}
+
+.impact-stat-card .stat-number {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-purple);
+    margin-bottom: 0.5rem;
+}
+
+.impact-stat-card .stat-label {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--primary-purple);
+}
+
+/* Homepage Blogs Carousel */
+.homepage-blogs-section {
+    padding: 5rem 0;
+    background: rgba(255, 255, 255, 0.7);
+    margin: 4rem -2rem;
+}
+
+.homepage-blogs-section .section-header h2 {
+    color: var(--primary-purple);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.blog-carousel-container {
+    position: relative;
+    max-width: 100%;
+    margin: 3rem 0;
+    overflow: hidden;
+}
+
+.blog-carousel {
+    display: flex;
+    transition: transform 0.5s ease;
+    gap: 2rem;
+}
+
+.blog-slide {
+    min-width: 300px;
+    flex: 0 0 300px;
+}
+
+.homepage-blog-card {
+    background: white;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    height: 100%;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.homepage-blog-card:hover {
+    transform: translateY(-5px);
+}
+
+.homepage-blog-card .blog-image {
+    position: relative;
+    height: 200px;
+    overflow: hidden;
+}
+
+.homepage-blog-card .blog-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.homepage-blog-card:hover .blog-image img {
+    transform: scale(1.05);
+}
+
+.homepage-blog-card .blog-content {
+    padding: 1.5rem;
+}
+
+.homepage-blog-card .blog-content h4 {
+    color: var(--primary-purple);
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.homepage-blog-card .blog-content p {
+    color: var(--text-dark);
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+.read-more-btn {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 15px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.read-more-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(177, 156, 217, 0.4);
+}
+
+.carousel-nav {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 -1rem;
+    pointer-events: none;
+}
+
+.carousel-btn {
+    background: rgba(177, 156, 217, 0.9);
+    color: white;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    pointer-events: all;
+    font-size: 1rem;
+}
+
+.carousel-btn:hover {
+    background: var(--primary-purple);
+    transform: scale(1.1);
+}
+
+.carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-top: 2rem;
+}
+
+.dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: rgba(177, 156, 217, 0.3);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.dot.active,
+.dot:hover {
+    background: var(--primary-purple);
+    transform: scale(1.2);
+}
+
+.view-all-blogs {
+    text-align: center;
+    margin-top: 3rem;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-toggle {
@@ -2929,6 +3134,20 @@ footer {
     .board-info {
         grid-template-columns: 1fr;
         text-align: center;
+    }
+
+    .homepage-impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1.5rem;
+    }
+
+    .blog-slide {
+        min-width: 280px;
+        flex: 0 0 280px;
+    }
+
+    .carousel-nav {
+        padding: 0 1rem;
     }
 }
 
