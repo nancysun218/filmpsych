@@ -85,17 +85,18 @@
 
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
             gap: 2rem;
             margin: 2rem 0;
         }
 
         .program-card {
             background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
-            padding: 2rem;
+            padding: 2.5rem;
             border-radius: 20px;
             border: 1px solid rgba(177, 156, 217, 0.2);
             transition: transform 0.3s ease;
+            height: 100%;
         }
 
         .program-card:hover {
@@ -104,39 +105,112 @@
 
         .program-card h3 {
             color: var(--primary-purple);
-            margin-bottom: 1rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             gap: 0.5rem;
-            font-size: 1.3rem;
+            font-size: 1.4rem;
+            font-weight: 600;
+        }
+
+        .program-card .program-subtitle {
+            color: var(--text-dark);
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            font-size: 1rem;
         }
 
         .program-card ul {
             list-style: none;
             padding: 0;
+            margin-bottom: 1.5rem;
         }
 
         .program-card li {
-            background: rgba(255, 255, 255, 0.7);
-            padding: 0.8rem 1rem;
-            margin-bottom: 0.5rem;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1rem;
+            margin-bottom: 0.8rem;
             border-radius: 10px;
             border-left: 4px solid var(--primary-purple);
             display: flex;
-            align-items: center;
-            gap: 0.5rem;
+            align-items: flex-start;
+            gap: 0.8rem;
+            font-size: 0.95rem;
+            line-height: 1.5;
         }
 
-        .timeline-section {
+        .program-card .perfect-for {
+            background: var(--primary-purple);
+            color: white;
+            padding: 1rem 1.5rem;
+            border-radius: 15px;
+            font-weight: 600;
+            text-align: center;
+            font-size: 0.9rem;
+        }
+
+        .highlight-box {
             background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
-            padding: 3rem;
+            padding: 2.5rem;
             border-radius: 20px;
             margin: 3rem 0;
             text-align: center;
         }
 
-        .timeline-section h3 {
+        .highlight-box h3 {
             color: var(--primary-purple);
+            font-size: 1.8rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .highlight-box p {
+            font-size: 1.1rem;
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .program-details {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 1.5rem;
+            margin: 2rem 0;
+        }
+
+        .detail-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 1.5rem;
+            border-radius: 15px;
+            text-align: center;
+            border: 2px solid var(--primary-purple);
+        }
+
+        .detail-item i {
+            font-size: 2rem;
+            color: var(--primary-purple);
+            margin-bottom: 0.5rem;
+        }
+
+        .detail-item strong {
+            display: block;
+            color: var(--primary-purple);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .application-timeline {
+            background: var(--primary-purple);
+            color: white;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 3rem 0;
+            text-align: center;
+        }
+
+        .application-timeline h3 {
             font-size: 1.8rem;
             margin-bottom: 1rem;
             display: flex;
@@ -146,7 +220,7 @@
         }
 
         .coming-soon-badge {
-            background: var(--primary-purple);
+            background: rgba(255, 255, 255, 0.2);
             color: white;
             padding: 1rem 2rem;
             border-radius: 25px;
@@ -181,6 +255,23 @@
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
         }
 
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
         @media (max-width: 768px) {
             .internship-title {
                 font-size: 2.2rem;
@@ -194,6 +285,11 @@
             .programs-grid {
                 grid-template-columns: 1fr;
                 gap: 1.5rem;
+            }
+
+            .program-details {
+                grid-template-columns: 1fr;
+                gap: 1rem;
             }
         }
     </style>
@@ -243,92 +339,123 @@
     <header class="internship-hero">
         <div class="internship-container">
             <h1 class="internship-title">6-Week Internship Programs</h1>
-            <p class="internship-subtitle">Hands-on experience in psychology and creative arts</p>
+            <p class="internship-subtitle">Three highly selective programs for creative, driven high school students</p>
         </div>
     </header>
 
     <main class="internship-content">
         <div class="program-section">
-            <h2><i class="fas fa-info-circle"></i> About Our Internship Programs</h2>
+            <h2><i class="fas fa-graduation-cap"></i> Still Looking for a Meaningful Internship?</h2>
             <p>
-                FilmPsych offers comprehensive 6-week internship programs designed to provide hands-on experience in the intersection of psychology and creative arts. Our internships combine practical learning with creative expression, allowing participants to develop professional skills while contributing to meaningful mental health awareness initiatives.
+                We know many students are still searching for internships that are actually impactful — ones that let you create, lead, and grow. That's why FilmPsych is launching three highly selective, 6-week internship programs this early October.
             </p>
         </div>
 
-        <div class="program-section">
-            <h2><i class="fas fa-briefcase"></i> Available Tracks</h2>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <h3><i class="fas fa-pen-fancy"></i> Editorial Track</h3>
-                    <p>Focus on content creation, blog writing, and editorial processes in psychology communication.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Blog writing and editing</li>
-                        <li><i class="fas fa-check"></i> Content strategy development</li>
-                        <li><i class="fas fa-check"></i> Research and fact-checking</li>
-                        <li><i class="fas fa-check"></i> Psychology communication skills</li>
-                    </ul>
+        <div class="programs-grid">
+            <div class="program-card">
+                <h3><i class="fas fa-palette"></i> Visual Storytelling Internship</h3>
+                <p class="program-subtitle">For artists, illustrators, and aspiring animators</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Independently create a short animated video in collaboration with a writer on a mental health/psychology script</li>
+                    <li><i class="fas fa-check"></i> Collaborate with a group of writers to illustrate a children's book on a psychological/emotional theme</li>
+                    <li><i class="fas fa-check"></i> Learn about storyboarding, visual emotion, and how art can effectively communicate mental health topics</li>
+                    <li><i class="fas fa-check"></i> Final books will be published on our website, and select titles will be published and sold on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
+                </ul>
+                <div class="perfect-for">
+                    <i class="fas fa-bullseye"></i> Perfect for creative students who want to use art for advocacy, grow their storytelling skills, and gain an academic edge in applications and resumes.
                 </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-palette"></i> Art Track</h3>
-                    <p>Combine artistic skills with psychological concepts to create meaningful visual content.</p>
-                    <ul>
-                        <li><i class="fas fa-check"></i> Digital art and illustration</li>
-                        <li><i class="fas fa-check"></i> Animation and motion graphics</li>
-                        <li><i class="fas fa-check"></i> Visual storytelling techniques</li>
-                        <li><i class="fas fa-check"></i> Art therapy concepts</li>
-                    </ul>
+            </div>
+
+            <div class="program-card">
+                <h3><i class="fas fa-pen-fancy"></i> Editorial & Creative Writing Internship</h3>
+                <p class="program-subtitle">For writers, bloggers, and storytellers</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Write a solo blog article and short script on a real-world mental health or emotional issue</li>
+                    <li><i class="fas fa-check"></i> Then, team up with artists to co-author a children's book on a psychological topic</li>
+                    <li><i class="fas fa-check"></i> Explore clarity, tone, and impactful narrative techniques</li>
+                    <li><i class="fas fa-check"></i> Final books will be published on our website, and top works will be published on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
+                </ul>
+                <div class="perfect-for">
+                    <i class="fas fa-bullseye"></i> Perfect for passionate writers who want to explore psychology, connect with real readers, and gain an academic edge in applications and resumes.
+                </div>
+            </div>
+
+            <div class="program-card">
+                <h3><i class="fas fa-brain"></i> Psychology Research & Literature Review Internship</h3>
+                <p class="program-subtitle">For curious, driven future researchers</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Learn real research methods and write your own literature review on a psychological topic of your choice</li>
+                    <li><i class="fas fa-check"></i> Refine your final draft into a research paper with help from experienced student mentors and professionals in the field</li>
+                    <li><i class="fas fa-check"></i> Final papers will be published on our website, and we can help support official research journal submissions if applicable</li>
+                </ul>
+                <div class="perfect-for">
+                    <i class="fas fa-bullseye"></i> Ideal for students interested in psychology, neuroscience, or gaining an academic edge for college.
+                </div>
+            </div>
+        </div>
+
+        <div class="highlight-box">
+            <h3><i class="fas fa-star"></i> Program Highlights</h3>
+            <div class="program-details">
+                <div class="detail-item">
+                    <i class="fas fa-dollar-sign"></i>
+                    <strong>100% Free</strong>
+                    <span>No cost to participate</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-laptop"></i>
+                    <strong>Fully Virtual</strong>
+                    <span>Work from anywhere</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-globe"></i>
+                    <strong>Worldwide</strong>
+                    <span>Open to high school students globally</span>
+                </div>
+                <div class="detail-item">
+                    <i class="fas fa-users"></i>
+                    <strong>Small Groups</strong>
+                    <span>Only 10-20 students per program</span>
                 </div>
             </div>
         </div>
 
         <div class="program-section">
-            <h2><i class="fas fa-trophy"></i> Final Projects</h2>
-            <p>At the end of your internship, you'll complete one of several final projects to showcase your skills:</p>
-            <div class="programs-grid">
-                <div class="program-card">
-                    <h3><i class="fas fa-blog"></i> Blog Creation</h3>
-                    <p>Research, write, and publish a comprehensive blog article analyzing psychology in creative media.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-paint-brush"></i> Artwork/Animation</h3>
-                    <p>Create original artwork or animation that explores psychological concepts and mental health themes.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-book"></i> Children's Book</h3>
-                    <p>Design and create an educational children's book that teaches psychology concepts in an age-appropriate way.</p>
-                </div>
-                <div class="program-card">
-                    <h3><i class="fas fa-search"></i> Research Project</h3>
-                    <p>Conduct research and create a literature review on a specific topic in psychology and creative arts.</p>
-                </div>
-            </div>
+            <h2><i class="fas fa-chalkboard-teacher"></i> Mentorship & Guidance</h2>
+            <p>
+                Each group will be guided by two experienced student mentors, with occasional visits from a professional in psychology or neuroscience to support your learning. Many students have already expressed interest, but we are only selecting 10-20 participants per program to ensure personalized attention and meaningful collaboration.
+            </p>
         </div>
 
-        <div class="timeline-section">
-            <h3><i class="fas fa-calendar"></i> Program Timeline</h3>
-            <p>Our internship programs are starting this fall! Applications will be released soon.</p>
+        <div class="application-timeline">
+            <h3><i class="fas fa-calendar-alt"></i> Important Dates</h3>
+            <div class="program-details">
+                <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
+                    <i class="fas fa-play-circle"></i>
+                    <strong>Program Start</strong>
+                    <span>Early October 2025</span>
+                </div>
+                <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
+                    <i class="fas fa-clock"></i>
+                    <strong>Duration</strong>
+                    <span>6 weeks | One 45-min session/week + group collaboration</span>
+                </div>
+                <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
+                    <i class="fas fa-certificate"></i>
+                    <strong>Outcomes</strong>
+                    <span>Certificates, published work, leadership growth, & real-world impact</span>
+                </div>
+            </div>
             <div class="coming-soon-badge">
-                <i class="fas fa-clock"></i>
-                Applications Coming Soon
+                <i class="fas fa-exclamation-triangle"></i>
+                Applications Open Mid-August — Limited Spots Available!
             </div>
-        </div>
-
-        <div class="program-section">
-            <h2><i class="fas fa-graduation-cap"></i> What You'll Gain</h2>
-            <ul style="color: var(--text-dark); font-size: 1.1rem; line-height: 1.7;">
-                <li>Professional experience in psychology communication and creative arts</li>
-                <li>Portfolio pieces to showcase your skills</li>
-                <li>Mentorship from experienced FilmPsych team members</li>
-                <li>Certificate of completion for your internship</li>
-                <li>Networking opportunities with professionals in the field</li>
-                <li>Potential for continued involvement with FilmPsych</li>
-            </ul>
         </div>
 
         <div class="notify-section">
             <h3 style="color: var(--primary-purple); margin-bottom: 1rem;">Stay Updated</h3>
             <p style="color: var(--text-dark); margin-bottom: 2rem;">
-                Be the first to know when applications open! Contact us to join our notification list.
+                Follow us and stay tuned for when applications open. These competitive programs fill up quickly!
             </p>
             <a href="index.html#contact" class="notify-btn">
                 <i class="fas fa-bell"></i>
