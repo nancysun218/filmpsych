@@ -30,6 +30,23 @@
             opacity: 0.3;
         }
 
+        .floating-emoji {
+            position: absolute;
+            font-size: 2rem;
+            opacity: 0.1;
+            animation: floatEmoji 8s ease-in-out infinite;
+        }
+
+        .floating-emoji:nth-child(1) { top: 20%; left: 10%; animation-delay: 0s; }
+        .floating-emoji:nth-child(2) { top: 60%; right: 15%; animation-delay: 2s; }
+        .floating-emoji:nth-child(3) { top: 40%; left: 80%; animation-delay: 4s; }
+        .floating-emoji:nth-child(4) { bottom: 30%; left: 20%; animation-delay: 6s; }
+
+        @keyframes floatEmoji {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(10deg); }
+        }
+
         .internship-container {
             max-width: 800px;
             margin: 0 auto;
@@ -38,258 +55,427 @@
             z-index: 2;
         }
 
+        .fun-badge {
+            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
+            background-size: 300% 300%;
+            animation: gradientShift 3s ease infinite;
+            padding: 0.8rem 2rem;
+            border-radius: 30px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 700;
+            color: white;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+        }
+
+        @keyframes gradientShift {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
         .internship-title {
-            font-size: 3rem;
+            font-size: 3.5rem;
             font-weight: 700;
             margin-bottom: 1rem;
             line-height: 1.2;
+            text-shadow: 0 4px 8px rgba(0,0,0,0.3);
         }
 
         .internship-subtitle {
-            font-size: 1.3rem;
-            opacity: 0.9;
+            font-size: 1.4rem;
+            opacity: 0.95;
             margin-bottom: 2rem;
-            font-weight: 400;
+            font-weight: 500;
         }
 
         .internship-content {
             background: white;
             margin: -2rem auto 0;
-            max-width: 900px;
-            border-radius: 25px;
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            max-width: 1100px;
+            border-radius: 30px;
+            box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
             position: relative;
             z-index: 3;
             padding: 4rem;
         }
 
         .program-section {
-            margin-bottom: 3rem;
+            margin-bottom: 4rem;
         }
 
         .program-section h2 {
             color: var(--primary-purple);
-            font-size: 2rem;
+            font-size: 2.2rem;
             margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
+            text-align: center;
+            justify-content: center;
         }
 
         .program-section p {
             color: var(--text-dark);
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 1.5rem;
+            font-size: 1.2rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+            text-align: center;
         }
 
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 2rem;
-            margin: 2rem 0;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin: 3rem 0;
         }
 
         .program-card {
-            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
-            padding: 2.5rem;
-            border-radius: 20px;
-            border: 1px solid rgba(177, 156, 217, 0.2);
-            transition: transform 0.3s ease;
-            height: 100%;
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 182, 193, 0.1));
+            padding: 3rem;
+            border-radius: 25px;
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
+        }
+
+        .program-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink), var(--primary-blue));
+            background-size: 300% 300%;
+            animation: borderGlow 4s ease infinite;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        @keyframes borderGlow {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+
+        .program-card::after {
+            content: '';
+            position: absolute;
+            top: 3px;
+            left: 3px;
+            right: 3px;
+            bottom: 3px;
+            background: white;
+            border-radius: 22px;
+            z-index: -1;
         }
 
         .program-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
         }
 
         .program-card h3 {
             color: var(--primary-purple);
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
             display: flex;
             align-items: center;
-            gap: 0.5rem;
-            font-size: 1.4rem;
-            font-weight: 600;
+            gap: 0.8rem;
+            font-size: 1.6rem;
+            font-weight: 700;
         }
 
         .program-card .program-subtitle {
-            color: var(--text-dark);
+            color: var(--primary-pink);
             font-style: italic;
-            margin-bottom: 1.5rem;
-            font-size: 1rem;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .program-card .emoji-header {
+            font-size: 3rem;
+            text-align: center;
+            margin-bottom: 1rem;
         }
 
         .program-card ul {
             list-style: none;
             padding: 0;
-            margin-bottom: 1.5rem;
+            margin-bottom: 2rem;
         }
 
         .program-card li {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 1rem;
-            margin-bottom: 0.8rem;
-            border-radius: 10px;
-            border-left: 4px solid var(--primary-purple);
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.15), rgba(255, 182, 193, 0.15));
+            padding: 1.2rem;
+            margin-bottom: 1rem;
+            border-radius: 15px;
+            border-left: 5px solid var(--primary-purple);
             display: flex;
             align-items: flex-start;
-            gap: 0.8rem;
-            font-size: 0.95rem;
-            line-height: 1.5;
+            gap: 1rem;
+            font-size: 1rem;
+            line-height: 1.6;
+            transition: all 0.3s ease;
+        }
+
+        .program-card li:hover {
+            transform: translateX(5px);
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.25), rgba(255, 182, 193, 0.25));
+        }
+
+        .program-card li i {
+            color: var(--primary-purple);
+            font-size: 1.2rem;
+            margin-top: 0.2rem;
         }
 
         .program-card .perfect-for {
-            background: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
-            padding: 1rem 1.5rem;
-            border-radius: 15px;
+            padding: 1.5rem 2rem;
+            border-radius: 20px;
             font-weight: 600;
             text-align: center;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            box-shadow: 0 10px 30px rgba(177, 156, 217, 0.4);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .program-card .perfect-for::before {
+            content: '✨';
+            position: absolute;
+            top: 10px;
+            right: 15px;
+            font-size: 1.5rem;
+            animation: sparkle 2s ease-in-out infinite;
+        }
+
+        @keyframes sparkle {
+            0%, 100% { opacity: 0.5; transform: scale(1); }
+            50% { opacity: 1; transform: scale(1.2); }
         }
 
         .highlight-box {
-            background: linear-gradient(135deg, var(--light-purple), var(--light-pink));
-            padding: 2.5rem;
-            border-radius: 20px;
-            margin: 3rem 0;
+            background: linear-gradient(135deg, rgba(255, 206, 84, 0.2), rgba(255, 154, 158, 0.2));
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 4rem 0;
             text-align: center;
+            border: 3px dashed var(--primary-purple);
+            position: relative;
+        }
+
+        .highlight-box::before {
+            content: '🎯';
+            position: absolute;
+            top: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: white;
+            padding: 10px;
+            border-radius: 50%;
+            font-size: 2rem;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
         }
 
         .highlight-box h3 {
             color: var(--primary-purple);
-            font-size: 1.8rem;
-            margin-bottom: 1.5rem;
+            font-size: 2rem;
+            margin-bottom: 2rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
         .highlight-box p {
-            font-size: 1.1rem;
-            margin-bottom: 1rem;
+            font-size: 1.2rem;
+            margin-bottom: 1.5rem;
             color: var(--text-dark);
         }
 
         .program-details {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-            gap: 1.5rem;
+            gap: 2rem;
             margin: 2rem 0;
         }
 
         .detail-item {
-            background: rgba(255, 255, 255, 0.8);
-            padding: 1.5rem;
-            border-radius: 15px;
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
             text-align: center;
-            border: 2px solid var(--primary-purple);
+            border: 3px solid var(--primary-purple);
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .detail-item::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(177, 156, 217, 0.1), transparent);
+            transform: rotate(45deg);
+            transition: all 0.6s ease;
+            opacity: 0;
+        }
+
+        .detail-item:hover::before {
+            opacity: 1;
+            top: -100%;
+            left: -100%;
+        }
+
+        .detail-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(177, 156, 217, 0.3);
         }
 
         .detail-item i {
-            font-size: 2rem;
+            font-size: 2.5rem;
             color: var(--primary-purple);
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
         }
 
         .detail-item strong {
             display: block;
             color: var(--primary-purple);
-            font-weight: 600;
-            margin-bottom: 0.5rem;
+            font-weight: 700;
+            margin-bottom: 0.8rem;
+            font-size: 1.1rem;
         }
 
         .application-timeline {
-            background: var(--primary-purple);
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
-            padding: 2rem;
-            border-radius: 20px;
-            margin: 3rem 0;
+            padding: 3rem;
+            border-radius: 25px;
+            margin: 4rem 0;
             text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .application-timeline::before {
+            content: '🚀';
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 3rem;
+            opacity: 0.3;
+            animation: rocket 3s ease-in-out infinite;
+        }
+
+        @keyframes rocket {
+            0%, 100% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
         }
 
         .application-timeline h3 {
-            font-size: 1.8rem;
-            margin-bottom: 1rem;
+            font-size: 2.2rem;
+            margin-bottom: 1.5rem;
             display: flex;
             align-items: center;
             justify-content: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
         }
 
         .coming-soon-badge {
-            background: rgba(255, 255, 255, 0.2);
+            background: rgba(255, 255, 255, 0.25);
             color: white;
-            padding: 1rem 2rem;
-            border-radius: 25px;
-            font-weight: 600;
+            padding: 1.5rem 3rem;
+            border-radius: 30px;
+            font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
-            margin-top: 1rem;
+            gap: 0.8rem;
+            margin-top: 1.5rem;
+            font-size: 1.1rem;
+            animation: pulse 2s ease-in-out infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { box-shadow: 0 0 0 0 rgba(255, 255, 255, 0.4); }
+            50% { box-shadow: 0 0 0 20px rgba(255, 255, 255, 0); }
         }
 
         .notify-section {
             text-align: center;
-            margin-top: 3rem;
+            margin-top: 4rem;
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 182, 193, 0.1));
+            padding: 3rem;
+            border-radius: 25px;
         }
 
         .notify-btn {
             background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
-            padding: 1.2rem 2.5rem;
-            border-radius: 30px;
+            padding: 1.5rem 3rem;
+            border-radius: 35px;
             text-decoration: none;
-            font-weight: 600;
+            font-weight: 700;
             display: inline-flex;
             align-items: center;
-            gap: 0.8rem;
+            gap: 1rem;
             transition: all 0.3s ease;
-            font-size: 1.1rem;
+            font-size: 1.2rem;
+            box-shadow: 0 10px 30px rgba(177, 156, 217, 0.4);
         }
 
         .notify-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transform: translateY(-5px);
+            box-shadow: 0 20px 50px rgba(177, 156, 217, 0.6);
         }
 
         .back-btn {
             background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
-            padding: 1rem 2rem;
+            padding: 1.2rem 2.5rem;
             border-radius: 25px;
             text-decoration: none;
             font-weight: 600;
             display: inline-flex;
             align-items: center;
-            gap: 0.5rem;
+            gap: 0.8rem;
             transition: transform 0.3s ease;
         }
 
         .back-btn:hover {
-            transform: translateY(-2px);
+            transform: translateY(-3px);
         }
 
         @media (max-width: 768px) {
             .internship-title {
-                font-size: 2.2rem;
+                font-size: 2.5rem;
             }
 
             .internship-content {
-                padding: 2rem;
+                padding: 2.5rem;
                 margin: -1rem auto 0;
             }
 
             .programs-grid {
                 grid-template-columns: 1fr;
-                gap: 1.5rem;
+                gap: 2rem;
             }
 
             .program-details {
                 grid-template-columns: 1fr;
-                gap: 1rem;
+                gap: 1.5rem;
+            }
+
+            .program-card {
+                padding: 2rem;
             }
         }
     </style>
@@ -337,134 +523,146 @@
     </nav>
 
     <header class="internship-hero">
+        <div class="floating-emoji">🎨</div>
+        <div class="floating-emoji">✍️</div>
+        <div class="floating-emoji">🧠</div>
+        <div class="floating-emoji">📚</div>
+        
         <div class="internship-container">
-            <h1 class="internship-title">6-Week Internship Programs</h1>
-            <p class="internship-subtitle">Three highly selective programs for creative, driven high school students</p>
+            <div class="fun-badge">
+                🎓 Still Looking for a Meaningful Internship? 🌟
+            </div>
+            <h1 class="internship-title">6-Week Creative Internships</h1>
+            <p class="internship-subtitle">Three highly selective programs for creative, driven students who want to make real impact!</p>
         </div>
     </header>
 
     <main class="internship-content">
         <div class="program-section">
-            <h2><i class="fas fa-graduation-cap"></i> Still Looking for a Meaningful Internship?</h2>
+            <h2><i class="fas fa-rocket"></i> Create, Lead, and Grow! <i class="fas fa-star"></i></h2>
             <p>
-                We know many students are still searching for internships that are actually impactful — ones that let you create, lead, and grow. That's why FilmPsych is launching three highly selective, 6-week internship programs this early October.
+                We know many students are still searching for internships that are actually impactful — ones that let you create, lead, and grow. That's why FilmPsych is launching three highly selective, 6-week internship programs this early October!
             </p>
         </div>
 
         <div class="programs-grid">
             <div class="program-card">
+                <div class="emoji-header">🎨✨</div>
                 <h3><i class="fas fa-palette"></i> Visual Storytelling Internship</h3>
                 <p class="program-subtitle">For artists, illustrators, and aspiring animators</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> Independently create a short animated video in collaboration with a writer on a mental health/psychology script</li>
-                    <li><i class="fas fa-check"></i> Collaborate with a group of writers to illustrate a children's book on a psychological/emotional theme</li>
-                    <li><i class="fas fa-check"></i> Learn about storyboarding, visual emotion, and how art can effectively communicate mental health topics</li>
-                    <li><i class="fas fa-check"></i> Final books will be published on our website, and select titles will be published and sold on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
+                    <li><i class="fas fa-video"></i> Independently create a short animated video in collaboration with a writer on a mental health/psychology script</li>
+                    <li><i class="fas fa-book-open"></i> Collaborate with a group of writers to illustrate a children's book on a psychological/emotional theme</li>
+                    <li><i class="fas fa-palette"></i> Learn about storyboarding, visual emotion, and how art can effectively communicate mental health topics</li>
+                    <li><i class="fas fa-publishing"></i> Final books will be published on our website, and select titles will be published and sold on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
                 </ul>
                 <div class="perfect-for">
-                    <i class="fas fa-bullseye"></i> Perfect for creative students who want to use art for advocacy, grow their storytelling skills, and gain an academic edge in applications and resumes.
+                    <i class="fas fa-bullseye"></i> Perfect for creative students who want to use art for advocacy, grow their storytelling skills, and gain an academic edge in applications and resumes!
                 </div>
             </div>
 
             <div class="program-card">
+                <div class="emoji-header">✍️📖</div>
                 <h3><i class="fas fa-pen-fancy"></i> Editorial & Creative Writing Internship</h3>
                 <p class="program-subtitle">For writers, bloggers, and storytellers</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> Write a solo blog article and short script on a real-world mental health or emotional issue</li>
-                    <li><i class="fas fa-check"></i> Then, team up with artists to co-author a children's book on a psychological topic</li>
-                    <li><i class="fas fa-check"></i> Explore clarity, tone, and impactful narrative techniques</li>
-                    <li><i class="fas fa-check"></i> Final books will be published on our website, and top works will be published on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
+                    <li><i class="fas fa-blog"></i> Write a solo blog article and short script on a real-world mental health or emotional issue</li>
+                    <li><i class="fas fa-users"></i> Team up with artists to co-author a children's book on a psychological topic</li>
+                    <li><i class="fas fa-lightbulb"></i> Explore clarity, tone, and impactful narrative techniques</li>
+                    <li><i class="fas fa-award"></i> Final books will be published on our website, and top works will be published on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
                 </ul>
                 <div class="perfect-for">
-                    <i class="fas fa-bullseye"></i> Perfect for passionate writers who want to explore psychology, connect with real readers, and gain an academic edge in applications and resumes.
+                    <i class="fas fa-bullseye"></i> Perfect for passionate writers who want to explore psychology, connect with real readers, and gain an academic edge in applications and resumes!
                 </div>
             </div>
 
             <div class="program-card">
+                <div class="emoji-header">🧠🔬</div>
                 <h3><i class="fas fa-brain"></i> Psychology Research & Literature Review Internship</h3>
                 <p class="program-subtitle">For curious, driven future researchers</p>
                 <ul>
-                    <li><i class="fas fa-check"></i> Learn real research methods and write your own literature review on a psychological topic of your choice</li>
-                    <li><i class="fas fa-check"></i> Refine your final draft into a research paper with help from experienced student mentors and professionals in the field</li>
-                    <li><i class="fas fa-check"></i> Final papers will be published on our website, and we can help support official research journal submissions if applicable</li>
+                    <li><i class="fas fa-microscope"></i> Learn real research methods and write your own literature review on a psychological topic of your choice</li>
+                    <li><i class="fas fa-edit"></i> Refine your final draft into a research paper with help from experienced student mentors and professionals in the field</li>
+                    <li><i class="fas fa-journal-whills"></i> Final papers will be published on our website, and we can help support official research journal submissions if applicable</li>
+                    <li><i class="fas fa-graduation-cap"></i> Gain hands-on experience with academic research methodologies and scientific writing</li>
                 </ul>
                 <div class="perfect-for">
-                    <i class="fas fa-bullseye"></i> Ideal for students interested in psychology, neuroscience, or gaining an academic edge for college.
+                    <i class="fas fa-bullseye"></i> Ideal for students interested in psychology, neuroscience, or gaining an academic edge for college applications!
                 </div>
             </div>
         </div>
 
         <div class="highlight-box">
-            <h3><i class="fas fa-star"></i> Program Highlights</h3>
+            <h3><i class="fas fa-gift"></i> Why These Programs Rock!</h3>
             <div class="program-details">
                 <div class="detail-item">
                     <i class="fas fa-dollar-sign"></i>
-                    <strong>100% Free</strong>
-                    <span>No cost to participate</span>
+                    <strong>100% FREE!</strong>
+                    <span>No cost to participate 🎉</span>
                 </div>
                 <div class="detail-item">
                     <i class="fas fa-laptop"></i>
                     <strong>Fully Virtual</strong>
-                    <span>Work from anywhere</span>
+                    <span>Work from anywhere in the world 🌍</span>
                 </div>
                 <div class="detail-item">
                     <i class="fas fa-globe"></i>
-                    <strong>Worldwide</strong>
-                    <span>Open to high school students globally</span>
+                    <strong>Global Community</strong>
+                    <span>Open to high school students worldwide 🚀</span>
                 </div>
                 <div class="detail-item">
                     <i class="fas fa-users"></i>
-                    <strong>Small Groups</strong>
-                    <span>Only 10-20 students per program</span>
+                    <strong>Small & Personal</strong>
+                    <span>Only 10-20 students per program 💫</span>
                 </div>
             </div>
         </div>
 
         <div class="program-section">
-            <h2><i class="fas fa-chalkboard-teacher"></i> Mentorship & Guidance</h2>
+            <h2><i class="fas fa-chalkboard-teacher"></i> Amazing Mentorship & Support!</h2>
             <p>
-                Each group will be guided by two experienced student mentors, with occasional visits from a professional in psychology or neuroscience to support your learning. Many students have already expressed interest, but we are only selecting 10-20 participants per program to ensure personalized attention and meaningful collaboration.
+                Each group will be guided by two experienced student mentors, with occasional visits from a professional in psychology or neuroscience to support your learning. Many students have already expressed interest, but we are only selecting 10-20 participants per program to ensure personalized attention and meaningful collaboration! 🌟
             </p>
         </div>
 
         <div class="application-timeline">
-            <h3><i class="fas fa-calendar-alt"></i> Important Dates</h3>
+            <h3><i class="fas fa-calendar-star"></i> Mark Your Calendars!</h3>
             <div class="program-details">
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
                     <i class="fas fa-play-circle"></i>
-                    <strong>Program Start</strong>
-                    <span>Early October 2025</span>
+                    <strong>Program Launch</strong>
+                    <span>Early October 2025 🎊</span>
                 </div>
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
                     <i class="fas fa-clock"></i>
-                    <strong>Duration</strong>
-                    <span>6 weeks | One 45-min session/week + group collaboration</span>
+                    <strong>Time Commitment</strong>
+                    <span>6 weeks | One 45-min session/week + fun group collaboration ⏰</span>
                 </div>
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
-                    <i class="fas fa-certificate"></i>
-                    <strong>Outcomes</strong>
-                    <span>Certificates, published work, leadership growth, & real-world impact</span>
+                    <i class="fas fa-trophy"></i>
+                    <strong>Amazing Outcomes</strong>
+                    <span>Certificates, published work, leadership growth, & real-world impact! 🏆</span>
                 </div>
             </div>
             <div class="coming-soon-badge">
-                <i class="fas fa-exclamation-triangle"></i>
+                <i class="fas fa-fire"></i>
                 Applications Open Mid-August — Limited Spots Available!
             </div>
         </div>
 
         <div class="notify-section">
-            <h3 style="color: var(--primary-purple); margin-bottom: 1rem;">Stay Updated</h3>
-            <p style="color: var(--text-dark); margin-bottom: 2rem;">
-                Follow us and stay tuned for when applications open. These competitive programs fill up quickly!
+            <h3 style="color: var(--primary-purple); margin-bottom: 1rem; font-size: 2rem;">🔔 Don't Miss Out!</h3>
+            <p style="color: var(--text-dark); margin-bottom: 2rem; font-size: 1.2rem;">
+                Follow us and stay tuned for when applications open. These competitive programs fill up FAST! ⚡
             </p>
             <a href="index.html#contact" class="notify-btn">
                 <i class="fas fa-bell"></i>
-                Get Notified About Applications
+                Get Notified About Applications 🚀
             </a>
         </div>
     </main>
 
-    <div style="text-align: center; padding: 2rem 0;">
+    <div style="text-align: center; padding: 3rem 0;">
         <a href="index.html" class="back-btn">
             <i class="fas fa-arrow-left"></i>
             Back to Home
