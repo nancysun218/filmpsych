@@ -10,13 +10,36 @@
     <link rel="stylesheet" href="style.css">
     <style>
         .blog-hero {
-            background: linear-gradient(135deg, rgba(139, 69, 19, 0.9), rgba(255, 140, 0, 0.9)), 
-                        url('attached_assets/scream_header.jpg') center/cover;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 87, 51, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 183, 3, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 140, 0, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 90% 40%, rgba(220, 20, 60, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(255, 99, 71, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 165, 0, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 30% 10%, rgba(255, 69, 0, 0.8) 0%, transparent 50%),
+                url('attached_assets/scream_header.jpg') center/cover;
             color: white;
             padding: 6rem 0 4rem;
             text-align: center;
             position: relative;
             overflow: hidden;
+            animation: colorSwirl 20s ease-in-out infinite;
+        }
+
+        @keyframes colorSwirl {
+            0%, 100% {
+                filter: hue-rotate(0deg) saturate(1);
+            }
+            25% {
+                filter: hue-rotate(30deg) saturate(1.2);
+            }
+            50% {
+                filter: hue-rotate(-20deg) saturate(0.9);
+            }
+            75% {
+                filter: hue-rotate(15deg) saturate(1.1);
+            }
         }
 
         .blog-hero::before {
@@ -283,6 +306,8 @@
 
             <h2>The Scream: A Visual Manifestation of Anxiety</h2>
 
+            <img src="attached_assets/scream front.png" alt="The Scream by Edvard Munch" class="article-image">
+
             <p>"The Scream" by Edvard Munch is a painting that feels like a panic attack frozen in time. The painting depicts a long wooden bridge stretching diagonally across the lower half. Standing near the front of the bridge is a single ghostly figure with a skull face, eyes wide as the opened mouth that represents a screaming or gasping sensation. Their hands are clutched tightly to the sides of their face, their body thin and almost melting. The body appears to dissolve into its surroundings.</p>
 
             <p>In the background, two smaller human figures walk calmly along the bridge, unaware of the central figure's terror. The image is not calm, nor is it peaceful. The feeling of your world collapsing and no one tends to notice — so you're dissolving into the surroundings.</p>
@@ -297,6 +322,8 @@
             <p>The painting expresses isolation in anxiety, as the figure is tense, fearful and alone in their emotion despite being surrounded by others. To capture the moment further, the artist uses color psychology in the environment of the painting. The sky above the figure is imagined as waves of sound and heat like a sunset that burns rather than glows. The landscape twists and wraps since reality is blending under pressure.</p>
 
             <p>The artist uses bold fiery colors from red to yellow color palettes to convey the burning sensation of anxiety. The whole overview of the painting conveys sensory overload of anxiety in isolation of a person. A person's anxiety and fear feels unnoticed — hence the figure screams as it blends into its surroundings as people walk by, not noticing the bridge falling and the sunset burning, which some people also assume represents madness.</p>
+
+            <img src="attached_assets/scream 1.png" alt="Close-up detail of The Scream showing the anxious figure" class="article-image">
 
             <h2>The Psychology of Art Interpretation</h2>
 
