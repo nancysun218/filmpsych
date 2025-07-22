@@ -1185,6 +1185,14 @@ main {
     object-position: center 20%;
 }
 
+.blog-image img[src*="shameless front.png"] {
+    object-position: center 30%;
+}
+
+.blog-image img[src*="kinds front.png"] {
+    object-position: center 70%;
+}
+
 .blog-card:hover .blog-image img {
     transform: scale(1.05);
 }
