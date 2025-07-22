@@ -42,11 +42,13 @@
 
         .blog-text-content {
             flex: 1;
+            min-width: 0;
         }
 
         .blog-header-image {
             flex: 0 0 auto;
-            max-width: 400px;
+            max-width: 450px;
+            width: 450px;
         }
 
         .blog-header-image img {
@@ -54,6 +56,7 @@
             height: auto;
             border-radius: 15px;
             box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            object-fit: contain;
         }
 
         .blog-category-badge {
@@ -334,6 +337,8 @@
             .blog-header-image {
                 flex: none;
                 margin-top: 2rem;
+                max-width: 100%;
+                width: 100%;
             }
 
             .blog-meta-info {
@@ -424,7 +429,7 @@
                 </div>
             </div>
             <div class="blog-header-image">
-                <img src="https://via.placeholder.com/400x300/DC143C/FFFFFF?text=Shameless+Header" alt="Shameless Header">
+                <img src="attached_assets/shameless header.png" alt="Shameless Header">
             </div>
         </div>
     </header>
