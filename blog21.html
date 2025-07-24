@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: The Devil Wears Prada - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, 
+                rgba(0, 0, 0, 0.8), 
+                rgba(139, 69, 19, 0.6), 
+                rgba(255, 215, 0, 0.4)), 
+                url('attached_assets/prada_header.png') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .workplace-analysis-box {
+            background: linear-gradient(135deg, #fff8e1, #f3e5f5);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #8e24aa;
+        }
+
+        .workplace-analysis-box h4 {
+            color: #6a1b9a;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-film"></i> Film Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: The Devil Wears Prada</h1>
+            <p class="blog-subtitle">Exploring organizational behavior and workplace psychology in high-pressure environments.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>July 24, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>12 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Keya Shah</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <blockquote>
+                "By all means, move at a glacial pace — you know how that thrills me."
+            </blockquote>
+
+            <p>Delivered in an icy tone sharp enough to beat Queen Elsa's frost over a hot latte in scorching sun, this iconic line from Miranda Priestly (Meryl Streep) instantly sets the stage in "The Devil Wears Prada." It's a film about the fashion industry's glitz and glamour, but it also serves as an unforeseen masterclass in organizational behavior and workplace psychology. Beneath the couture and chaos is a catastrophic investigation into leadership, culture, identity and the mental acrobatics required to survive in high-pressure environments like Runway magazine.</p>
+
+            <img src="attached_assets/prada 1.png" alt="Miranda Priestly in her office" class="article-image">
+
+            <h2>Miranda Priestly: The Psychology of Tyrannical Leadership</h2>
+
+            <p>Let's begin with the icon herself — Miranda Priestly, the Editor-in-Chief inspired by Anna Wintour, whose Medusa gaze might very well turn even Dwayne "The Rock" Johnson into, well, a rock. Her leadership style is a peculiar combination of transactional, charismatic and threatening. Drawing on Burns' (1978) theory of transactional leadership, Miranda keeps her staff in line with a potent cocktail of fear, conditional rewards (survival) and the constant threat of being professionally vaporized into thin air. Want to stay employed? Don't flinch when she calls your work "an extra-large dose of your own incompetence."</p>
+
+            <p>Yet she's not just a tyrant; she's <em>the</em> tyrant. In line with House's (1977) theory of charismatic leadership, Miranda exerts a magnetic pull, compelling obedience not just through authority but through awe. Her presence is a case study in mystique as motivation. Employees follow not because they're inspired, but because they're mesmerized and a little petrified. The result is a culture of compliance, where collaboration takes a back seat to survival, and nobody dares ask for a day off unless they're actively dying.</p>
+
+            <div class="workplace-analysis-box">
+                <h4><i class="fas fa-briefcase"></i> Leadership Style Analysis:</h4>
+                <p>Miranda's leadership combines elements of transactional and charismatic authority, creating a workplace culture built on fear rather than inspiration. This approach may yield short-term results but often leads to long-term employee burnout and turnover.</p>
+            </div>
+
+            <h3>Andy's Psychological Journey: From Idealism to Transformation</h3>
+
+            <p>Andy Sachs (Anne Hathaway) initially views the fashion world with the same disdain most people reserve for spam emails and root canals. She's a budding journalist tossed into the couture deep end with an onion bagel, and her psychological journey is less runway strut and more existential spiral.</p>
+
+            <p>Andy embodies classic role conflict: aspiring journalist at heart, obedient assistant (read: pushover) by paycheck. As her responsibilities at Runway begin to eclipse her personal values while she slowly morphs into the next Emily Charlton who survives on a cube of cheese — she experiences cognitive dissonance, or the state of holding inconsistent beliefs and behaviors (Festinger, 1957). Her decisions start to betray her self-image. Cue the arguments with her boyfriend, Nate, who embodies every underwhelmed partner in the history of workaholic overcommitment. Her defense, "I didn't have a choice!" becomes less a justification and more a personal alarm bell. In reality, she possessed a choice. But like many employees in toxic workplace cultures, she's temporarily blinded by proximity to power.</p>
+
+            <img src="attached_assets/prada 2.png" alt="Andy's transformation throughout the film" class="article-image">
+
+            <h2>Runway's Organizational Culture: A Psychological Dissection</h2>
+
+            <p>Runway's organizational culture can be dissected through Edgar Schein's (1985) model: artifacts, espoused values and underlying assumptions. Artifacts? Gorgeous habiliment, glossy brick and mortar and an espresso machine that probably costs more than a semester of graduate school. The stated values? Excellence, image and "being ahead of the curve." Not groundbreaking. But it's the invisible assumptions that pack the psychological punch: success means self-sacrifice, perfection is non-negotiable, and personal lives are quaint distractions best ignored.</p>
+
+            <p>This belief system cultivates a high-performance, low-compassion workplace. Burnout isn't a bug — it's a feature. As Nigel quips, "Let me know when your whole life goes up in smoke ... It means it's time for a promotion." There's no room for vulnerability here; there's just impeccable posture and round-the-clock availability, even during dinners with your dad.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-building"></i> Organizational Culture Components:</h4>
+                <ul>
+                    <li><strong>Artifacts:</strong> Luxury fashion, pristine office space, high-end equipment</li>
+                    <li><strong>Espoused Values:</strong> Excellence, cutting-edge innovation, perfectionism</li>
+                    <li><strong>Underlying Assumptions:</strong> Personal sacrifice equals success, vulnerability is weakness</li>
+                </ul>
+            </div>
+
+            <h3>Social Learning Theory in Action</h3>
+
+            <p>Andy's transformation from cerulean-polyester outsider to a chic Chanel insider can be explained by Bandura's (1977) social learning theory (minus the Bobo doll, of course). She mirrors her colleagues' behavior and style, absorbing Runway norms through observational learning. Each nod of approval from Miranda becomes a psychological treat, reinforcing her new identity; one that's no longer size 6.</p>
+
+            <p>Andy's evolution is less about clothes and more about conformity.</p>
+
+            <h2>The Paris Breaking Point: Burnout in Designer Clothing</h2>
+
+            <p>By the time Andy lands in Paris, she's checked every box in the Maslach Burnout Inventory: emotional exhaustion, depersonalization and dwindling sense of personal accomplishment. It's glamour with a side of existential crisis. The result? Deep dissatisfaction dressed in Dior. Ultimately, Andy walks away — not with a grand exit scene, but with quiet conviction. This moment aligns with self-determination theory (Deci & Ryan, 1985), which posits that true fulfillment comes from autonomy, competence and relatedness. While Andy gains competence at Runway, she loses autonomy and connection. While leaving, she reclaims her agency and rewrites her narrative.</p>
+
+            <p>Her final words to Miranda "I couldn't do what you did" aren't a rebuke. They're a declaration of identity. In the end, "The Devil Wears Prada" reminds us that no job is worth losing your sense of self. Even if it comes with cheques, celebrities and couture.</p>
+
+            <h2>What's the Takeaway?</h2>
+
+            <p>As younger generations now enter the corporate world with aspiration and perhaps the most sense of work-life balance and mental health awareness seen in decades, here's what leaders and employees can learn: Miranda's empire is a cautionary tale — proof that fear may produce results but rarely inspires greatness. A true leader doesn't just command; they cultivate intrapreneurs and visionaries to truly succeed. They understand that loyalty cannot be extracted through intimidation and excellence cannot thrive in a culture where humanity is considered a weakness.</p>
+
+            <p>For employees, Andy's transformation is more than a makeover; it's a mirror. It asks, at what cost do you climb? Whose definition of success are you chasing? And when you arrive, will you still recognize yourself? The runway may glitter, but only those who walk it with integrity leave footprints worth following.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-lightbulb"></i> Key Psychological Insights:</h4>
+                <ul>
+                    <li>Fear-based leadership creates compliance, not commitment</li>
+                    <li>Cognitive dissonance can lead to compromising personal values</li>
+                    <li>Toxic workplace cultures normalize unhealthy behaviors</li>
+                    <li>True fulfillment requires autonomy, competence and meaningful relationships</li>
+                    <li>Professional success shouldn't come at the cost of personal identity</li>
+                </ul>
+            </div>
+
+            <p>"The Devil Wears Prada" serves as both entertainment and education, offering viewers a lens through which to examine their own workplace dynamics and personal boundaries. In a world where the line between ambition and self-destruction can blur as easily as foundation on a humid day, Andy's journey reminds us that sometimes the most courageous thing you can do is walk away — even from paradise, if it's not truly yours.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
