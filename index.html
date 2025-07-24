@@ -289,6 +289,130 @@
             font-weight: 600;
         }
 
+        /* Final Projects Styling */
+        .final-projects-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .program-projects {
+            background: white;
+            padding: 2rem;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.3);
+            transition: transform 0.3s ease;
+        }
+
+        .program-projects:hover {
+            transform: translateY(-5px);
+        }
+
+        .program-projects.editorial {
+            border-top: 4px solid #1565C0;
+        }
+
+        .program-projects.visual {
+            border-top: 4px solid #FFB74D;
+        }
+
+        .program-projects.research {
+            border-top: 4px solid #9C27B0;
+        }
+
+        .program-projects h3 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-align: center;
+            justify-content: center;
+        }
+
+        .program-projects.editorial h3 {
+            color: #1565C0;
+        }
+
+        .program-projects.visual h3 {
+            color: #FF8A65;
+        }
+
+        .program-projects.research h3 {
+            color: #9C27B0;
+        }
+
+        .project-options {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .project-option {
+            background: var(--light-purple);
+            padding: 1rem 1.2rem;
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            transition: all 0.3s ease;
+            border-left: 4px solid var(--primary-purple);
+        }
+
+        .program-projects.editorial .project-option {
+            background: rgba(21, 101, 192, 0.1);
+            border-left-color: #1565C0;
+        }
+
+        .program-projects.visual .project-option {
+            background: rgba(255, 183, 77, 0.1);
+            border-left-color: #FFB74D;
+        }
+
+        .program-projects.research .project-option {
+            background: rgba(156, 39, 176, 0.1);
+            border-left-color: #9C27B0;
+        }
+
+        .project-option:hover {
+            transform: translateX(5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .project-option i {
+            font-size: 1.2rem;
+            color: var(--primary-purple);
+            width: 20px;
+        }
+
+        .program-projects.editorial .project-option i {
+            color: #1565C0;
+        }
+
+        .program-projects.visual .project-option i {
+            color: #FF8A65;
+        }
+
+        .program-projects.research .project-option i {
+            color: #9C27B0;
+        }
+
+        .project-option span {
+            font-weight: 600;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        @media (max-width: 768px) {
+            .final-projects-container {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+        }
+
     </style>
 </head>
 
@@ -2405,24 +2529,74 @@
                 </div>
 
                 <div class="program-section">
-                    <h2><i class="fas fa-trophy"></i> Final Projects</h2>
-                    <p>At the end of your internship, you'll complete one of several final projects to showcase your skills:</p>
-                    <div class="programs-grid">
-                        <div class="program-card">
-                            <h3><i class="fas fa-blog"></i> Blog Creation</h3>
-                            <p>Research, write, and publish a comprehensive blog article analyzing psychology in creative media.</p>
+                    <h2><i class="fas fa-trophy"></i> Final Projects by Program</h2>
+                    <p>At the end of your internship, you'll complete one of several final projects based on your program:</p>
+                    
+                    <div class="final-projects-container">
+                        <div class="program-projects editorial">
+                            <h3><i class="fas fa-pen-fancy"></i> Editorial & Creative Writing</h3>
+                            <div class="project-options">
+                                <div class="project-option">
+                                    <i class="fas fa-blog"></i>
+                                    <span>Research Blog Article</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-file-alt"></i>
+                                    <span>Script</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-book"></i>
+                                    <span>Children's Book</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Mental Health Guide</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="program-card">
-                            <h3><i class="fas fa-paint-brush"></i> Artwork/Animation</h3>
-                            <p>Create original artwork or animation that explores psychological concepts and mental health themes.</p>
+
+                        <div class="program-projects visual">
+                            <h3><i class="fas fa-palette"></i> Visual Storytelling</h3>
+                            <div class="project-options">
+                                <div class="project-option">
+                                    <i class="fas fa-search"></i>
+                                    <span>Research</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-book"></i>
+                                    <span>Children's Book</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-heart"></i>
+                                    <span>Mental Health Guide</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-video"></i>
+                                    <span>Psychology/Mental Health Videos</span>
+                                </div>
+                            </div>
                         </div>
-                        <div class="program-card">
-                            <h3><i class="fas fa-book"></i> Children's Book</h3>
-                            <p>Design and create an educational children's book that teaches psychology concepts inan age-appropriate way.</p>
-                        </div>
-                        <div class="program-card">
-                            <h3><i class="fas fa-search"></i> Research Project</h3>
-                            <p>Conduct research and create a literature review on a specific topic in psychology and creative arts.</p>
+
+                        <div class="program-projects research">
+                            <h3><i class="fas fa-brain"></i> Psychology Research</h3>
+                            <div class="project-options">
+                                <div class="project-option">
+                                    <i class="fas fa-file-medical"></i>
+                                    <span>Literature Review</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-book-open"></i>
+                                    <span>Publication</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-users"></i>
+                                    <span>Webinars & Q&A with Professionals</span>
+                                </div>
+                                <div class="project-option">
+                                    <i class="fas fa-edit"></i>
+                                    <span>Peer Editing</span>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
