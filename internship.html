@@ -92,7 +92,7 @@
         .internship-content {
             background: white;
             margin: -2rem auto 0;
-            max-width: 1100px;
+            max-width: 1200px;
             border-radius: 30px;
             box-shadow: 0 25px 80px rgba(0, 0, 0, 0.15);
             position: relative;
@@ -125,34 +125,158 @@
 
         .programs-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(380px, 1fr));
             gap: 3rem;
             margin: 3rem 0;
         }
 
-        .program-card {
-            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 182, 193, 0.1));
-            padding: 3rem;
-            border-radius: 25px;
+        /* Editorial Program Card */
+        .program-card.editorial {
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(59, 130, 246, 0.1));
             border: 3px solid transparent;
             background-clip: padding-box;
             position: relative;
-            transition: all 0.4s ease;
-            overflow: hidden;
         }
 
-        .program-card::before {
+        .program-card.editorial::before {
             content: '';
             position: absolute;
             top: 0;
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, var(--primary-purple), var(--primary-pink), var(--primary-blue));
+            background: linear-gradient(45deg, #1e3a8a, #3b82f6, #60a5fa);
             background-size: 300% 300%;
             animation: borderGlow 4s ease infinite;
             border-radius: 25px;
             z-index: -1;
+        }
+
+        .program-card.editorial h3 {
+            color: #1e3a8a;
+        }
+
+        .program-card.editorial .program-subtitle {
+            color: #3b82f6;
+        }
+
+        .program-card.editorial li {
+            border-left: 5px solid #1e3a8a;
+            background: linear-gradient(135deg, rgba(30, 58, 138, 0.15), rgba(59, 130, 246, 0.15));
+        }
+
+        .program-card.editorial li i {
+            color: #1e3a8a;
+        }
+
+        .program-card.editorial .perfect-for {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        }
+
+        .program-card.editorial .deadline-badge {
+            background: linear-gradient(135deg, #1e3a8a, #3b82f6);
+        }
+
+        /* Visual Storytelling Program Card */
+        .program-card.visual {
+            background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(249, 115, 22, 0.1));
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        .program-card.visual::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #fb923c, #f97316, #ec4899);
+            background-size: 300% 300%;
+            animation: borderGlow 4s ease infinite;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        .program-card.visual h3 {
+            color: #ea580c;
+        }
+
+        .program-card.visual .program-subtitle {
+            color: #f97316;
+        }
+
+        .program-card.visual li {
+            border-left: 5px solid #ea580c;
+            background: linear-gradient(135deg, rgba(251, 146, 60, 0.15), rgba(249, 115, 22, 0.15));
+        }
+
+        .program-card.visual li i {
+            color: #ea580c;
+        }
+
+        .program-card.visual .perfect-for {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+        }
+
+        .program-card.visual .deadline-badge {
+            background: linear-gradient(135deg, #ea580c, #f97316);
+        }
+
+        /* Research Program Card */
+        .program-card.research {
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(168, 85, 247, 0.1));
+            border: 3px solid transparent;
+            background-clip: padding-box;
+            position: relative;
+        }
+
+        .program-card.research::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(45deg, #9333ea, #a855f7, #c084fc);
+            background-size: 300% 300%;
+            animation: borderGlow 4s ease infinite;
+            border-radius: 25px;
+            z-index: -1;
+        }
+
+        .program-card.research h3 {
+            color: #7c3aed;
+        }
+
+        .program-card.research .program-subtitle {
+            color: #9333ea;
+        }
+
+        .program-card.research li {
+            border-left: 5px solid #7c3aed;
+            background: linear-gradient(135deg, rgba(147, 51, 234, 0.15), rgba(168, 85, 247, 0.15));
+        }
+
+        .program-card.research li i {
+            color: #7c3aed;
+        }
+
+        .program-card.research .perfect-for {
+            background: linear-gradient(135deg, #7c3aed, #9333ea);
+        }
+
+        .program-card.research .deadline-badge {
+            background: linear-gradient(135deg, #7c3aed, #9333ea);
+        }
+
+        .program-card {
+            padding: 3rem;
+            border-radius: 25px;
+            position: relative;
+            transition: all 0.4s ease;
+            overflow: hidden;
         }
 
         @keyframes borderGlow {
@@ -178,8 +302,16 @@
             box-shadow: 0 30px 60px rgba(0, 0, 0, 0.2);
         }
 
+        .program-image {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 15px;
+            margin-bottom: 1.5rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+
         .program-card h3 {
-            color: var(--primary-purple);
             margin-bottom: 1rem;
             display: flex;
             align-items: center;
@@ -189,17 +321,24 @@
         }
 
         .program-card .program-subtitle {
-            color: var(--primary-pink);
             font-style: italic;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             font-size: 1.1rem;
             font-weight: 600;
         }
 
-        .program-card .emoji-header {
-            font-size: 3rem;
+        .deadline-badge {
+            color: white;
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            font-weight: 700;
             text-align: center;
-            margin-bottom: 1rem;
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
         }
 
         .program-card ul {
@@ -209,11 +348,9 @@
         }
 
         .program-card li {
-            background: linear-gradient(135deg, rgba(177, 156, 217, 0.15), rgba(255, 182, 193, 0.15));
             padding: 1.2rem;
             margin-bottom: 1rem;
             border-radius: 15px;
-            border-left: 5px solid var(--primary-purple);
             display: flex;
             align-items: flex-start;
             gap: 1rem;
@@ -224,24 +361,21 @@
 
         .program-card li:hover {
             transform: translateX(5px);
-            background: linear-gradient(135deg, rgba(177, 156, 217, 0.25), rgba(255, 182, 193, 0.25));
         }
 
         .program-card li i {
-            color: var(--primary-purple);
             font-size: 1.2rem;
             margin-top: 0.2rem;
         }
 
         .program-card .perfect-for {
-            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
             padding: 1.5rem 2rem;
             border-radius: 20px;
             font-weight: 600;
             text-align: center;
             font-size: 1rem;
-            box-shadow: 0 10px 30px rgba(177, 156, 217, 0.4);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
             position: relative;
             overflow: hidden;
         }
@@ -541,49 +675,67 @@
         <div class="program-section">
             <h2><i class="fas fa-rocket"></i> Create, Lead, and Grow! <i class="fas fa-star"></i></h2>
             <p>
-                We know many students are still searching for internships that are actually impactful — ones that let you create, lead, and grow. That's why FilmPsych is launching three highly selective, 6-week internship programs this early October!
+                We know many students are still searching for internships that are actually impactful — ones that let you create, lead, and grow. That's why FilmPsych is launching three highly selective, 6-week internship programs!
             </p>
         </div>
 
         <div class="programs-grid">
-            <div class="program-card">
-                <div class="emoji-header">🎨✨</div>
-                <h3><i class="fas fa-palette"></i> Visual Storytelling Internship</h3>
-                <p class="program-subtitle">For artists, illustrators, and aspiring animators</p>
-                <ul>
-                    <li><i class="fas fa-video"></i> Independently create a short animated video in collaboration with a writer on a mental health/psychology script</li>
-                    <li><i class="fas fa-book-open"></i> Collaborate with a group of writers to illustrate a children's book on a psychological/emotional theme</li>
-                    <li><i class="fas fa-palette"></i> Learn about storyboarding, visual emotion, and how art can effectively communicate mental health topics</li>
-                    <li><i class="fas fa-publishing"></i> Final books will be published on our website, and select titles will be published and sold on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
-                </ul>
-                <div class="perfect-for">
-                    <i class="fas fa-bullseye"></i> Perfect for creative students who want to use art for advocacy, grow their storytelling skills, and gain an academic edge in applications and resumes!
+            <div class="program-card editorial">
+                <img src="attached_assets/editorial.png" alt="Editorial & Creative Writing" class="program-image">
+                <div class="deadline-badge">
+                    <i class="fas fa-calendar-check"></i> Application Deadline: August 31, 2025
                 </div>
-            </div>
-
-            <div class="program-card">
-                <div class="emoji-header">✍️📖</div>
                 <h3><i class="fas fa-pen-fancy"></i> Editorial & Creative Writing Internship</h3>
                 <p class="program-subtitle">For writers, bloggers, and storytellers</p>
+                <p style="font-weight: 600; color: #1e3a8a; margin-bottom: 1.5rem;">
+                    <i class="fas fa-clock"></i> Program Dates: October 5 - November 23, 2025
+                </p>
                 <ul>
                     <li><i class="fas fa-blog"></i> Write a solo blog article and short script on a real-world mental health or emotional issue</li>
                     <li><i class="fas fa-users"></i> Team up with artists to co-author a children's book on a psychological topic</li>
                     <li><i class="fas fa-lightbulb"></i> Explore clarity, tone, and impactful narrative techniques</li>
-                    <li><i class="fas fa-award"></i> Final books will be published on our website, and top works will be published on Amazon Kindle, with proceeds going toward our 501(c)(3) nonprofit and its impacts</li>
+                    <li><i class="fas fa-award"></i> Final books will be published on our website, and top works will be published on Amazon Kindle</li>
                 </ul>
                 <div class="perfect-for">
-                    <i class="fas fa-bullseye"></i> Perfect for passionate writers who want to explore psychology, connect with real readers, and gain an academic edge in applications and resumes!
+                    <i class="fas fa-bullseye"></i> Perfect for passionate writers who want to explore psychology, connect with real readers, and gain an academic edge!
                 </div>
             </div>
 
-            <div class="program-card">
-                <div class="emoji-header">🧠🔬</div>
+            <div class="program-card visual">
+                <img src="attached_assets/visual storytelling.png" alt="Visual Storytelling" class="program-image">
+                <div class="deadline-badge">
+                    <i class="fas fa-calendar-check"></i> Application Deadline: August 31, 2025
+                </div>
+                <h3><i class="fas fa-palette"></i> Visual Storytelling Internship</h3>
+                <p class="program-subtitle">For artists, illustrators, and aspiring animators</p>
+                <p style="font-weight: 600; color: #ea580c; margin-bottom: 1.5rem;">
+                    <i class="fas fa-clock"></i> Program Dates: October 12 - November 23, 2025
+                </p>
+                <ul>
+                    <li><i class="fas fa-video"></i> Independently create a short animated video in collaboration with a writer on a mental health/psychology script</li>
+                    <li><i class="fas fa-book-open"></i> Collaborate with a group of writers to illustrate a children's book on a psychological/emotional theme</li>
+                    <li><i class="fas fa-palette"></i> Learn about storyboarding, visual emotion, and how art can effectively communicate mental health topics</li>
+                    <li><i class="fas fa-publishing"></i> Final books will be published on our website, and select titles will be published and sold on Amazon Kindle</li>
+                </ul>
+                <div class="perfect-for">
+                    <i class="fas fa-bullseye"></i> Perfect for creative students who want to use art for advocacy, grow their storytelling skills, and gain an academic edge!
+                </div>
+            </div>
+
+            <div class="program-card research">
+                <img src="attached_assets/research.png" alt="Psychology Research" class="program-image">
+                <div class="deadline-badge">
+                    <i class="fas fa-hourglass-half"></i> Applications Coming Late November 2025
+                </div>
                 <h3><i class="fas fa-brain"></i> Psychology Research & Literature Review Internship</h3>
                 <p class="program-subtitle">For curious, driven future researchers</p>
+                <p style="font-weight: 600; color: #7c3aed; margin-bottom: 1.5rem;">
+                    <i class="fas fa-clock"></i> Program Dates: February - March 2026
+                </p>
                 <ul>
                     <li><i class="fas fa-microscope"></i> Learn real research methods and write your own literature review on a psychological topic of your choice</li>
-                    <li><i class="fas fa-edit"></i> Refine your final draft into a research paper with help from experienced student mentors and professionals in the field</li>
-                    <li><i class="fas fa-journal-whills"></i> Final papers will be published on our website, and we can help support official research journal submissions if applicable</li>
+                    <li><i class="fas fa-edit"></i> Refine your final draft into a research paper with help from experienced student mentors and professionals</li>
+                    <li><i class="fas fa-journal-whills"></i> Final papers will be published on our website, and we can help support official research journal submissions</li>
                     <li><i class="fas fa-graduation-cap"></i> Gain hands-on experience with academic research methodologies and scientific writing</li>
                 </ul>
                 <div class="perfect-for">
@@ -626,38 +778,38 @@
         </div>
 
         <div class="application-timeline">
-            <h3><i class="fas fa-calendar-star"></i> Mark Your Calendars!</h3>
+            <h3><i class="fas fa-calendar-star"></i> Important Dates!</h3>
             <div class="program-details">
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
                     <i class="fas fa-play-circle"></i>
-                    <strong>Program Launch</strong>
-                    <span>Early October 2025 🎊</span>
+                    <strong>Fall Programs Launch</strong>
+                    <span>October 2025 🎊</span>
                 </div>
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
                     <i class="fas fa-clock"></i>
                     <strong>Time Commitment</strong>
-                    <span>6 weeks | One 45-min session/week + fun group collaboration ⏰</span>
+                    <span>6 weeks | One 45-min session/week + collaboration ⏰</span>
                 </div>
                 <div class="detail-item" style="background: rgba(255, 255, 255, 0.9); color: var(--primary-purple);">
                     <i class="fas fa-trophy"></i>
                     <strong>Amazing Outcomes</strong>
-                    <span>Certificates, published work, leadership growth, & real-world impact! 🏆</span>
+                    <span>Certificates, published work, leadership growth! 🏆</span>
                 </div>
             </div>
             <div class="coming-soon-badge">
                 <i class="fas fa-fire"></i>
-                Applications Open Mid-August — Limited Spots Available!
+                Fall Applications Now Open — Limited Spots Available!
             </div>
         </div>
 
         <div class="notify-section">
-            <h3 style="color: var(--primary-purple); margin-bottom: 1rem; font-size: 2rem;">🔔 Don't Miss Out!</h3>
+            <h3 style="color: var(--primary-purple); margin-bottom: 1rem; font-size: 2rem;">🔔 Ready to Apply?</h3>
             <p style="color: var(--text-dark); margin-bottom: 2rem; font-size: 1.2rem;">
-                Follow us and stay tuned for when applications open. These competitive programs fill up FAST! ⚡
+                Don't miss out on these competitive programs! Applications for Editorial & Visual Storytelling are open now, while Research applications open in late November. ⚡
             </p>
             <a href="index.html#contact" class="notify-btn">
-                <i class="fas fa-bell"></i>
-                Get Notified About Applications 🚀
+                <i class="fas fa-rocket"></i>
+                Apply Now or Get Updates 🚀
             </a>
         </div>
     </main>
