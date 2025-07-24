@@ -37,25 +37,6 @@
             z-index: 2;
         }
 
-        .fun-badge {
-            background: linear-gradient(45deg, #ff6b6b, #feca57, #48dbfb, #ff9ff3);
-            background-size: 300% 300%;
-            animation: gradientShift 3s ease infinite;
-            padding: 0.8rem 2rem;
-            border-radius: 30px;
-            display: inline-block;
-            margin-bottom: 1rem;
-            font-weight: 700;
-            color: white;
-            text-shadow: 0 2px 4px rgba(0,0,0,0.3);
-        }
-
-        @keyframes gradientShift {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
         .internship-title {
             font-size: 3.5rem;
             font-weight: 700;
@@ -89,7 +70,7 @@
             margin: 3rem 0;
         }
 
-        /* Editorial Program Card */
+        /* Editorial Program Card - Navy/Blue */
         .program-card.editorial {
             background: linear-gradient(135deg, rgba(30, 58, 138, 0.1), rgba(59, 130, 246, 0.1));
             border: 3px solid transparent;
@@ -119,9 +100,9 @@
             background: linear-gradient(135deg, #1e3a8a, #3b82f6);
         }
 
-        /* Visual Storytelling Program Card */
+        /* Visual Storytelling Program Card - Yellow/Orange/Pink */
         .program-card.visual {
-            background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(249, 115, 22, 0.1));
+            background: linear-gradient(135deg, rgba(251, 146, 60, 0.1), rgba(236, 72, 153, 0.1));
             border: 3px solid transparent;
             background-clip: padding-box;
             position: relative;
@@ -134,7 +115,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            background: linear-gradient(45deg, #fb923c, #f97316, #ec4899);
+            background: linear-gradient(45deg, #fbbf24, #f97316, #ec4899);
             background-size: 300% 300%;
             animation: borderGlow 4s ease infinite;
             border-radius: 25px;
@@ -146,10 +127,10 @@
         }
 
         .program-card.visual .deadline-badge {
-            background: linear-gradient(135deg, #ea580c, #f97316);
+            background: linear-gradient(135deg, #ea580c, #ec4899);
         }
 
-        /* Research Program Card */
+        /* Research Program Card - Purple */
         .program-card.research {
             background: linear-gradient(135deg, rgba(147, 51, 234, 0.1), rgba(168, 85, 247, 0.1));
             border: 3px solid transparent;
@@ -280,34 +261,6 @@
             border: 2px dashed #7c3aed;
         }
 
-        .notify-section {
-            text-align: center;
-            margin-top: 4rem;
-            background: linear-gradient(135deg, rgba(177, 156, 217, 0.1), rgba(255, 182, 193, 0.1));
-            padding: 3rem;
-            border-radius: 25px;
-        }
-
-        .notify-btn {
-            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
-            color: white;
-            padding: 1.5rem 3rem;
-            border-radius: 35px;
-            text-decoration: none;
-            font-weight: 700;
-            display: inline-flex;
-            align-items: center;
-            gap: 1rem;
-            transition: all 0.3s ease;
-            font-size: 1.2rem;
-            box-shadow: 0 10px 30px rgba(177, 156, 217, 0.4);
-        }
-
-        .notify-btn:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 20px 50px rgba(177, 156, 217, 0.6);
-        }
-
         .back-btn {
             background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
             color: white;
@@ -390,11 +343,8 @@
 
     <header class="internship-hero">
         <div class="internship-container">
-            <div class="fun-badge">
-                🎓 Internship Programs 🌟
-            </div>
-            <h1 class="internship-title">6-Week Creative Internships</h1>
-            <p class="internship-subtitle">Three highly selective programs for creative, driven students</p>
+            <h1 class="internship-title">Internship Programs</h1>
+            <p class="internship-subtitle">Professional development opportunities in psychology and creative arts</p>
         </div>
     </header>
 
@@ -407,7 +357,7 @@
                     <i class="fas fa-calendar-check"></i> Application Deadline: August 31
                 </div>
                 <div class="program-dates">
-                    <i class="fas fa-clock"></i> Program Dates: October 5 - November 23
+                    <i class="fas fa-clock"></i> Program: October 5 - November 23
                 </div>
             </div>
 
@@ -418,7 +368,7 @@
                     <i class="fas fa-calendar-check"></i> Application Deadline: August 31
                 </div>
                 <div class="program-dates">
-                    <i class="fas fa-clock"></i> Program Dates: October 12 - November 23
+                    <i class="fas fa-clock"></i> Program: October 12 - November 23
                 </div>
             </div>
 
@@ -426,23 +376,12 @@
                 <img src="attached_assets/research.png" alt="Psychology Research" class="program-image">
                 <h3><i class="fas fa-brain"></i> Psychology Research Program</h3>
                 <div class="coming-soon-note">
-                    <i class="fas fa-hourglass-half"></i> Applications Coming Late November
+                    <i class="fas fa-hourglass-half"></i> Applications come out late November
                 </div>
                 <div class="program-dates">
-                    <i class="fas fa-clock"></i> Program Dates: February - March
+                    <i class="fas fa-clock"></i> Program: February - March
                 </div>
             </div>
-        </div>
-
-        <div class="notify-section">
-            <h3 style="color: var(--primary-purple); margin-bottom: 1rem; font-size: 2rem;">🔔 Ready to Apply?</h3>
-            <p style="color: var(--text-dark); margin-bottom: 2rem; font-size: 1.2rem;">
-                Don't miss out on these competitive programs! Contact us to apply or get updates.
-            </p>
-            <a href="index.html#contact" class="notify-btn">
-                <i class="fas fa-rocket"></i>
-                Apply Now or Get Updates 🚀
-            </a>
         </div>
     </main>
 
