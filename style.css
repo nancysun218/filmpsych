@@ -2446,10 +2446,12 @@ main {
 .method-info .contact-link {
     color: var(--primary-purple);
     font-weight: 600;
-    font-size: 1.1rem;
+    font-size: 1rem;
     text-decoration: none;
     margin-bottom: 0.5rem;
     display: block;
+    word-break: break-word;
+    overflow-wrap: break-word;
 }
 
 .method-info .contact-link:hover {
@@ -2843,20 +2845,20 @@ main {
 
 .contact-cta {
     background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
-    padding: 3rem;
+    padding: 2rem;
     border-radius: 25px;
     text-align: center;
     color: white;
 }
 
 .contact-cta h3 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
+    font-size: 1.8rem;
+    margin-bottom: 0.8rem;
 }
 
 .contact-cta p {
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
     opacity: 0.9;
 }
 
