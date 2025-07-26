@@ -2293,6 +2293,34 @@ main {
         max-width: 250px;
         justify-content: center;
     }
+
+    .primary-contact-card {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-details-secondary {
+        flex-direction: column;
+        gap: 1.5rem;
+        text-align: center;
+    }
+
+    .social-platforms {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .social-platform-card {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .platform-content h4,
+    .platform-content p,
+    .platform-content span {
+        text-align: center;
+    }
 }
 
 
@@ -2338,16 +2366,16 @@ main {
 }
 
 /* Contact Section Styles */
-.main-contact-info {
+.contact-overview {
     margin-bottom: 4rem;
 }
 
-.contact-header {
+.contact-intro {
     text-align: center;
     margin-bottom: 3rem;
 }
 
-.contact-header h2 {
+.contact-intro h2 {
     color: var(--primary-purple);
     font-size: 2.5rem;
     margin-bottom: 1rem;
@@ -2355,6 +2383,109 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+}
+
+.contact-intro p {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+    opacity: 0.8;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.primary-contact-section {
+    background: white;
+    padding: 3rem;
+    border-radius: 25px;
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.primary-contact-card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+}
+
+.method-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.method-icon.email {
+    background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+}
+
+.method-icon.phone {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
+}
+
+.method-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.method-info h3 {
+    color: var(--primary-purple);
+    font-size: 1.3rem;
+    margin-bottom: 0.5rem;
+}
+
+.method-info .contact-link {
+    color: var(--primary-purple);
+    font-weight: 600;
+    font-size: 1.1rem;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.method-info .contact-link:hover {
+    text-decoration: underline;
+}
+
+.method-info p {
+    color: var(--text-dark);
+    opacity: 0.7;
+    font-size: 0.95rem;
+    margin: 0;
+}
+
+.contact-details-secondary {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    flex-wrap: wrap;
+    padding-top: 2rem;
+    border-top: 1px solid rgba(177, 156, 217, 0.2);
+}
+
+.detail-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-dark);
+}
+
+.detail-item i {
+    color: var(--primary-purple);
+    font-size: 1.1rem;
+}
+
+.detail-item strong {
+    color: var(--primary-purple);
 }
 
 .contact-header p {
@@ -2502,6 +2633,78 @@ main {
     align-items: center;
     justify-content: center;
     gap: 0.5rem;
+}
+
+.social-platforms {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.social-platform-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    transition: transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.social-platform-card:hover {
+    transform: translateY(-5px);
+}
+
+.platform-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.social-platform-card.instagram .platform-icon {
+    background: linear-gradient(135deg, #405de6, #5851db, #833ab4, #c13584, #e1306c, #fd1d1d);
+}
+
+.social-platform-card.tiktok .platform-icon {
+    background: linear-gradient(135deg, #ff0050, #000);
+}
+
+.social-platform-card.youtube .platform-icon {
+    background: linear-gradient(135deg, #ff0000, #cc0000);
+}
+
+.platform-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.platform-content h4 {
+    color: var(--primary-purple);
+    font-size: 1.3rem;
+    margin-bottom: 0.2rem;
+    text-align: left;
+}
+
+.platform-content p {
+    color: var(--text-dark);
+    font-weight: 600;
+    margin-bottom: 0.3rem;
+    text-align: left;
+}
+
+.platform-content span {
+    color: var(--text-dark);
+    opacity: 0.7;
+    font-size: 0.9rem;
+    text-align: left;
 }
 
 .social-media-section p {
