@@ -1585,6 +1585,17 @@ main {
     background: white;
 }
 
+/* Video Editors Grid */
+.video-editors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2.5rem;
+}
+
+.video-editors-grid .member-card {
+    background: white;
+}
+
 /* Artists Grid */
 .artists-grid {
     display: grid;
