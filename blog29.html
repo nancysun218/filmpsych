@@ -1,0 +1,519 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Understanding Aphasia Through the Story of Mimi from The Baby-Sitters Club - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.95), rgba(221, 160, 221, 0.95), rgba(176, 196, 222, 0.95));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #fff0f5, #f0e6fa);
+            border-left: 4px solid #dda0dd;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #333;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #fff5f8, #ffe8f0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffb6c1;
+        }
+
+        .psychology-insight h4 {
+            color: #c71585;
+            margin-bottom: 1rem;
+        }
+
+        .neuroscience-box {
+            background: linear-gradient(135deg, #e8f4ff, #d4e8ff);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #4169e1;
+        }
+
+        .neuroscience-box h4 {
+            color: #2a4a9e;
+            margin-bottom: 1rem;
+        }
+
+        .recovery-box {
+            background: linear-gradient(135deg, #e8ffe8, #d4f5d4);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #27ae60;
+        }
+
+        .recovery-box h4 {
+            color: #1e8449;
+            margin-bottom: 1rem;
+        }
+
+        .character-box {
+            background: linear-gradient(135deg, #fff8e7, #fff0cc);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .character-box h4 {
+            color: #d68910;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> TV Psychology
+                </div>
+                <h1 class="blog-title">Understanding Aphasia Through the Story of Mimi from The Baby-Sitters Club</h1>
+                <p class="blog-subtitle">Exploring the neuroscience and psychology behind language loss, recovery, and the enduring power of human connection.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Dec. 31, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Nainika Tumu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/mimi header.png" alt="Mimi from The Baby-Sitters Club" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction</h2>
+
+            <p>Aphasia can feel distant and clinical when discussed in textbooks, but it becomes deeply human through the story of Mimi in <em>The Baby-Sitters Club</em>. Mimi, Claudia Kishi's beloved grandmother, brings a face and a life to a disorder that affects millions. Her gentle presence, her patience, and her struggles help readers understand what it means when the brain loses its ability to use language while the person inside remains whole.</p>
+
+            <p>Exploring the neuroscience and psychology behind aphasia through Mimi's journey reveals how language shapes identity, how the brain recovers after injury, and how love and patience can support healing in ways that medicine alone cannot.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-brain"></i> What Is Aphasia?</h4>
+                <p><strong>Definition:</strong> Aphasia is a language disorder that results from damage to areas of the brain responsible for language processing. It affects a person's ability to speak, understand speech, read, or write, but it does not affect intelligence.</p>
+                <p>Aphasia most commonly occurs after a stroke but can also result from brain injury, tumors, or progressive neurological conditions.</p>
+            </div>
+
+            <h2>How the Brain Processes Language and What Happens in Aphasia</h2>
+
+            <p>Language lives across many interconnected areas of the brain. There are regions that help us understand meaning, others that control the production of words, and still others that support memory and attention. In many people, these regions sit within the left side of the brain. When a person has a stroke that affects these areas, the pathways that support language can become damaged. Aphasia is the result of this damage. It involves difficulty speaking, understanding, reading, or writing.</p>
+
+            <div class="neuroscience-box">
+                <h4><i class="fas fa-brain"></i> Key Brain Regions Involved in Language</h4>
+                <ul>
+                    <li><strong>Broca's Area:</strong> Located in the left frontal lobe, responsible for speech production and articulation</li>
+                    <li><strong>Wernicke's Area:</strong> Located in the left temporal lobe, responsible for language comprehension</li>
+                    <li><strong>Arcuate Fasciculus:</strong> The neural pathway connecting Broca's and Wernicke's areas</li>
+                    <li><strong>Motor Cortex:</strong> Controls the muscles used for speech production</li>
+                </ul>
+            </div>
+
+            <p>Mimi's stroke in the series is a classic example of how suddenly this disruption can occur. One moment she is a strong and steady figure in Claudia's life, and the next she must relearn skills that once came effortlessly. Her loss of smooth speech and her need to search for words reflect the struggle of a brain trying to make new connections after an injury. The reader sees that while her spirit is unchanged, her ability to turn thoughts into language becomes fragile.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-user-circle"></i> Mimi's Experience</h4>
+                <p>In real life and in Mimi's story, the brain does not lose everything at once. Some pathways remain open. Mimi can still understand much of what Claudia says. She remembers her granddaughter's love of art, and she reacts with warmth and humor. These remaining connections come from areas of the brain that were not damaged by the stroke.</p>
+                <p>Because of this, Mimi shows that aphasia does not erase a person. Instead, it reshapes the way they communicate.</p>
+            </div>
+
+            <p>Another important part of language function involves the motor systems that coordinate the muscles used for speech. Injury in these regions can make speaking slow or effortful. Mimi often pauses, repeats words, or becomes frustrated when she cannot express herself. This reflects how the brain must coordinate memory, attention, and motor planning together. When one part becomes injured, the entire process becomes more difficult.</p>
+
+            <h2>The Psychological Experience of Living with Aphasia</h2>
+
+            <p>Aphasia changes communication, but it also changes daily life. Mimi's personality remains warm and thoughtful, yet she must confront challenges that can feel isolating. People with aphasia often experience frustration when they cannot find the right word. They may feel embarrassed when others speak quickly or fail to understand their needs. Through Mimi, readers see how these moments unfold gently but realistically. She becomes tired more easily. She avoids long conversations. She relies on familiar routines and trusted people.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-heart"></i> The Power of Social Support</h4>
+                <p>Psychologists note that social support is one of the most powerful protective factors for people with aphasia. Claudia's patient listening and encouragement give Mimi the confidence to keep practicing her skills.</p>
+                <p>The Kishi family adapts by speaking slowly, waiting for Mimi to finish, and celebrating her successes. This kind of environment helps people with aphasia maintain emotional stability and a sense of dignity. It also reduces anxiety, which in turn improves the ability to communicate.</p>
+            </div>
+
+            <p>Mimi's story also highlights the grief that can accompany loss of language. Before her stroke, she enjoyed telling stories and offering guidance. Afterward, she must accept that communication comes with effort. Many people with aphasia go through a similar journey. They must rebuild their sense of identity without losing who they are. Mimi models this resilience. She laughs with Claudia, learns new routines, and finds joy in small victories.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-lightbulb"></i> Emotional Memory Remains Strong</h4>
+                <p>Emotional memory remains strong in people with aphasia. This is why Mimi still expresses affection through actions such as a gentle smile or a supportive presence. These nonverbal cues come from brain regions that are often unaffected by stroke.</p>
+                <p>Through Mimi, readers learn that connection does not rely solely on perfect speech. Love and understanding can pass through gestures, facial expressions, and shared experiences.</p>
+            </div>
+
+            <h2>Relearning Language and Building New Brain Pathways</h2>
+
+            <p>One of the most inspiring elements of Mimi's journey is her steady progress. Her improvement mirrors what neurologists call brain plasticity. This is the brain's ability to create new connections when old pathways are damaged. With practice, repetition, and supportive therapy, many people can regain skills that once seemed lost.</p>
+
+            <div class="recovery-box">
+                <h4><i class="fas fa-seedling"></i> Brain Plasticity and Recovery</h4>
+                <p><strong>Definition:</strong> Neuroplasticity is the brain's ability to reorganize itself by forming new neural connections throughout life. This allows the neurons (nerve cells) in the brain to compensate for injury and adjust their activities in response to new situations or changes in their environment.</p>
+                <p>Recovery from aphasia depends on many factors, including the extent of brain damage, the person's age, overall health, and access to speech therapy and social support.</p>
+            </div>
+
+            <p>Speech therapy is often central to recovery. Therapists use exercises that strengthen understanding, vocabulary, and articulation. Mimi's sessions are not described in full detail in the books, but her improvement suggests that she benefits from structured practice and meaningful conversation at home. Activities like reading together, naming familiar objects, and engaging in daily routines help stimulate the brain. Claudia's patience plays a major role in reinforcing these new skills.</p>
+
+            <p>Another part of recovery involves retraining attention and memory. Aphasia can make it harder to focus, especially in noisy or stressful situations. Mimi manages this by moving slowly, choosing quiet moments, and staying near family members who understand her rhythm. These strategies align with real-life therapy approaches that encourage people to control their environment in ways that support communication.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-chart-line"></i> Mimi's Progress</h4>
+                <p>Over time, the brain finds alternate routes for language. These new pathways may not function as smoothly as the original ones, but they can still support meaningful speech. Mimi never becomes exactly the same as she was before the stroke, yet she grows stronger and more confident as her story unfolds.</p>
+                <p>This reflects the reality that recovery is a long process filled with gradual improvements rather than sudden breakthroughs.</p>
+            </div>
+
+            <h2>Lessons from Mimi's Story</h2>
+
+            <p>Mimi's journey in <em>The Baby-Sitters Club</em> offers readers of all ages a compassionate window into the experience of living with aphasia. Her story teaches us that:</p>
+
+            <ul>
+                <li><strong>Language loss does not diminish a person's worth or identity.</strong> Mimi remains the same loving, wise grandmother even when her words come slowly.</li>
+                <li><strong>Patience and understanding are powerful medicine.</strong> The Kishi family's support demonstrates how loved ones can actively participate in recovery.</li>
+                <li><strong>The brain has remarkable capacity for healing.</strong> With time, practice, and encouragement, new pathways can form to support communication.</li>
+                <li><strong>Connection transcends words.</strong> Love, presence, and nonverbal communication remain powerful even when speech is impaired.</li>
+            </ul>
+
+            <p>Through Mimi, readers learn that behind every clinical diagnosis is a human story full of struggle, resilience, and hope. Her gentle presence reminds us that the most important things we share with others often go beyond words.</p>
+
+            <div class="references-section">
+                <h4><i class="fas fa-book"></i> References</h4>
+                <ul>
+                    <li><a href="https://en.wikipedia.org/wiki/Aphasia" target="_blank">"Aphasia." Wikipedia, Wikimedia Foundation</a></li>
+                    <li><a href="https://my.clevelandclinic.org/health/diseases/5502-aphasia" target="_blank">"Aphasia." Cleveland Clinic</a></li>
+                    <li><a href="https://medlineplus.gov/aphasia.html" target="_blank">"Aphasia." MedlinePlus, U.S. National Library of Medicine</a></li>
+                    <li><a href="https://www.mayoclinic.org/diseases-conditions/aphasia/symptoms-causes/syc-20369518" target="_blank">"Aphasia." Mayo Clinic</a></li>
+                    <li><a href="https://www.verywellhealth.com/expressive-aphasia-8622957" target="_blank">"Expressive Aphasia." Verywell Health</a></li>
+                </ul>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
