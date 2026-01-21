@@ -446,39 +446,33 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Auto-scrolling blogs carousel
-    const blogsGrid = document.getElementById('blogs-container');
-    if (blogsGrid) {
-        let scrollSpeed = 1;
-        let scrollDirection = 1;
-        let isHovered = false;
-        let animationId;
+    // Auto-scrolling homepage blog carousel
+    const homepageCarousel = document.getElementById('homepage-blog-carousel');
+    if (homepageCarousel) {
+        let autoSlideInterval;
+        let isCarouselHovered = false;
 
-        function autoScroll() {
-            if (!isHovered && blogsGrid) {
-                blogsGrid.scrollLeft += scrollSpeed * scrollDirection;
-                
-                // Check if we've reached the end or beginning
-                const maxScroll = blogsGrid.scrollWidth - blogsGrid.clientWidth;
-                if (blogsGrid.scrollLeft >= maxScroll) {
-                    scrollDirection = -1;
-                } else if (blogsGrid.scrollLeft <= 0) {
-                    scrollDirection = 1;
+        function startAutoSlide() {
+            autoSlideInterval = setInterval(() => {
+                if (!isCarouselHovered) {
+                    nextSlide();
                 }
-            }
-            animationId = requestAnimationFrame(autoScroll);
+            }, 3000);
         }
 
         // Pause on hover
-        blogsGrid.addEventListener('mouseenter', () => {
-            isHovered = true;
-        });
+        const carouselContainer = homepageCarousel.closest('.blog-carousel-container');
+        if (carouselContainer) {
+            carouselContainer.addEventListener('mouseenter', () => {
+                isCarouselHovered = true;
+            });
 
-        blogsGrid.addEventListener('mouseleave', () => {
-            isHovered = false;
-        });
+            carouselContainer.addEventListener('mouseleave', () => {
+                isCarouselHovered = false;
+            });
+        }
 
-        // Start auto-scroll
-        autoScroll();
+        // Start auto-slide
+        startAutoSlide();
     }
 });
