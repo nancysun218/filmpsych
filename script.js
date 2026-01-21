@@ -446,33 +446,4 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Auto-scrolling homepage blog carousel
-    const homepageCarousel = document.getElementById('homepage-blog-carousel');
-    if (homepageCarousel) {
-        let autoSlideInterval;
-        let isCarouselHovered = false;
-
-        function startAutoSlide() {
-            autoSlideInterval = setInterval(() => {
-                if (!isCarouselHovered) {
-                    nextSlide();
-                }
-            }, 3000);
-        }
-
-        // Pause on hover
-        const carouselContainer = homepageCarousel.closest('.blog-carousel-container');
-        if (carouselContainer) {
-            carouselContainer.addEventListener('mouseenter', () => {
-                isCarouselHovered = true;
-            });
-
-            carouselContainer.addEventListener('mouseleave', () => {
-                isCarouselHovered = false;
-            });
-        }
-
-        // Start auto-slide
-        startAutoSlide();
-    }
 });
