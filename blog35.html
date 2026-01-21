@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind Black Swan: Perfectionism, Archetypes, and Duality - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(20, 20, 20, 0.95), rgba(40, 40, 40, 0.9), rgba(10, 10, 10, 0.95));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="feathers" width="20" height="20" patternUnits="userSpaceOnUse"><path d="M10 0 Q15 10 10 20 Q5 10 10 0" fill="rgba(255,255,255,0.03)"/></pattern></defs><rect width="100" height="100" fill="url(%23feathers)"/></svg>');
+            opacity: 0.5;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 350px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+            border-left: 4px solid #e8e8e8;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #f0f0f0;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #f8f0f8, #f0e8f0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #9b59b6;
+        }
+
+        .psychology-insight h4 {
+            color: #8e44ad;
+            margin-bottom: 1rem;
+        }
+
+        .archetype-box {
+            background: linear-gradient(135deg, #1a1a2e, #2d2d44);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e8e8e8;
+            color: #f0f0f0;
+        }
+
+        .archetype-box h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .archetype-box ul {
+            color: #e0e0e0;
+        }
+
+        .white-swan-box {
+            background: linear-gradient(135deg, #ffffff, #f5f5f5);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #e0e0e0;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        }
+
+        .white-swan-box h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .black-swan-box {
+            background: linear-gradient(135deg, #1a1a1a, #0d0d0d);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #333;
+            color: #f0f0f0;
+        }
+
+        .black-swan-box h4 {
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        .character-box {
+            background: linear-gradient(135deg, #2d2d2d, #1a1a1a);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #c0c0c0;
+            color: #f0f0f0;
+        }
+
+        .character-box h4 {
+            color: #e0e0e0;
+            margin-bottom: 1rem;
+        }
+
+        .duality-box {
+            background: linear-gradient(90deg, #ffffff 0%, #ffffff 50%, #1a1a1a 50%, #1a1a1a 100%);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .duality-box h4 {
+            color: #333;
+            margin-bottom: 1rem;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .duality-box p {
+            color: #333;
+            text-shadow: 1px 1px 2px rgba(255,255,255,0.8);
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #2d1a1a, #1a0d0d);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #8b0000;
+            color: #f0e0e0;
+        }
+
+        .warning-box h4 {
+            color: #ff6b6b;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-film"></i> Film Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind Black Swan: Perfectionism, Archetypes, and Duality</h1>
+                <p class="blog-subtitle">Exploring Carl Jung's archetypes, the destruction of perfectionism, and the dark transformation of identity through Darren Aronofsky's psychological thriller.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jan. 13, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Shareen Zubedi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blackswan header.png" alt="Black Swan" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction: The Price of Perfection</h2>
+
+            <p>The film revolves around Nina Sayers, a dedicated ballerina radiating femininity and dedication in the field of ballet. Her passion for ballet rules every single facet of her life.</p>
+
+            <p>So when her company decides to replace their old prima ballerina for their opening production of <em>Swan Lake</em>, Nina is the first choice. This film particularly delves deep into the dark side of perfectionism and obsession. Nina spends every waking second practicing, working on ways to improve, to be perfect.</p>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Content Warning</h4>
+                <p>This article discusses themes of self-harm, psychological distress, and obsessive behaviors depicted in the film.</p>
+            </div>
+
+            <p>She also exhibits self-harm tendencies throughout the film, going to severe lengths to reach perfection. This destructive pursuit of flawlessness becomes the catalyst for her psychological unraveling.</p>
+
+            <h2>Carl Jung's Archetypes</h2>
+
+            <p>We are introduced to two other significant characters in the film: Thomas Leroy and Lily. Through them, we encounter <strong>Carl Jung's archetypes</strong>.</p>
+
+            <div class="archetype-box">
+                <h4><i class="fas fa-masks-theater"></i> What Is an Archetype?</h4>
+                <p>An archetype is an original concept that precedes and forms the structure of physical manifestations. It is a set of symbols representing aspects of the human psyche derived from collective human experience.</p>
+                <p><strong>Jung identified four main archetypes:</strong></p>
+                <ul>
+                    <li><strong>The Self:</strong> The unified whole of consciousness and unconsciousness of an individual</li>
+                    <li><strong>The Anima/Animus:</strong> The feminine (anima) and masculine (animus) archetypes representing unconscious opposite-sex images that shape our interactions</li>
+                    <li><strong>The Persona:</strong> The social mask we use to interact with others</li>
+                    <li><strong>The Shadow:</strong> Our unconscious aspects of personality—hidden desires, weaknesses, and instincts</li>
+                </ul>
+            </div>
+
+            <h2>The White Swan and The Black Swan</h2>
+
+            <div class="white-swan-box">
+                <h4><i class="fas fa-dove"></i> The White Swan: Innocence and Purity</h4>
+                <p>In the film, Nina portrays the White Swan perfectly—a symbol of innocence and purity. This represents her conscious self: controlled, graceful, and technically flawless. The White Swan embodies everything Nina has been trained to be.</p>
+            </div>
+
+            <div class="black-swan-box">
+                <h4><i class="fas fa-feather-alt"></i> The Black Swan: Passion and Darkness</h4>
+                <p>However, she struggles to portray the Black Swan, which represents sensuality, darkness, and raw passion. The Black Swan requires Nina to access parts of herself she has long suppressed—her shadow self.</p>
+            </div>
+
+            <p>With this competition, Nina must strive hard to be able to perform both the White and Black Swan—a challenge that forces her to confront the duality within herself.</p>
+
+            <h2>The Shadow Archetype</h2>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-user-secret"></i> Nina's Repressed Self</h4>
+                <p>The shadow represents Nina's repressed desires and dark impulses, which she projects onto Lily. However, Nina is confronted by her shadow in small, subtle ways throughout the film:</p>
+                <ul>
+                    <li>Stealing Beth's (the previous prima ballerina's) lipstick</li>
+                    <li>Constantly scratching her shoulders, revealing self-harm tendencies</li>
+                    <li>Aggressive impulses that surface unexpectedly</li>
+                </ul>
+                <p>These behaviors unveil layers of the shadow archetype—the parts of herself Nina refuses to acknowledge.</p>
+            </div>
+
+            <h2>The Persona Archetype</h2>
+
+            <p>The persona archetype is the social mask we use to interact with others. This is present in the film through the way Nina presents herself: a pure and graceful ballerina.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-theater-masks"></i> The Mother-Daughter Dynamic</h4>
+                <p>This desperate presentation of a perfect and elegant ballerina reveals another complex layer: a struggling mother-daughter relationship. Nina's submissiveness, obedience, people-pleasing tendencies, and obsession with perfection make much more sense when we understand that this persona is a substitute for genuine self-expression.</p>
+                <p>Her mother's controlling nature has shaped Nina into someone who performs perfection rather than authentically experiencing life.</p>
+            </div>
+
+            <h2>The Role of Duality</h2>
+
+            <p>The film presents the role of duality through Nina's character, showing the conflict between:</p>
+
+            <ul>
+                <li><strong>Perfection vs. Freedom:</strong> Nina's conflicting desire for technical perfection and her repressed desires for freedom and passion</li>
+                <li><strong>Control vs. Release:</strong> The rigid discipline of ballet versus the wild abandon required for the Black Swan</li>
+                <li><strong>Innocence vs. Sensuality:</strong> The White Swan's purity versus the Black Swan's seductive power</li>
+            </ul>
+
+            <h2>Thomas Leroy: The Animus</h2>
+
+            <p>Thomas Leroy plays a significant role in the film. He acts as the <strong>Animus</strong>—the masculine archetype within Nina's psyche.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-user-tie"></i> The Catalyst for Transformation</h4>
+                <p>By seducing her and then rejecting her, Thomas urges Nina to find her own sensuality and become the Black Swan. He issues a challenge for her to find her darker self to make the Black Swan come alive.</p>
+                <p>Nina's relationship with Thomas becomes increasingly complex as the film progresses, with Thomas pushing her physical boundaries and convincing Nina that there's no other way to achieve the performance she needs.</p>
+            </div>
+
+            <h2>The Liberation of Desire</h2>
+
+            <p>As the film progresses, Nina and Lily slowly get closer when Lily invites her for a night out. Tempted to break free from her mother's control, as well as Leroy's insistence that she "touch herself" in order to loosen up, Nina lets Lily slip a disinhibiting drug into her cocktail. Afterward, the two end up having passionate sex.</p>
+
+            <div class="black-swan-box">
+                <h4><i class="fas fa-fire"></i> The Awakening</h4>
+                <p>This scene highlights Nina's repressed desires and passions that had been hidden away, suppressed for the sake of perfectionism. With her immense passion unleashed, she finally embodies the Black Swan.</p>
+            </div>
+
+            <h2>The Destruction of Self</h2>
+
+            <p>However, this transformation begins to take a toll on her. As she faces more and more pressure, Nina becomes increasingly aggressive—even with her mother—as if unleashing her shadow archetype.</p>
+
+            <p>With the liberation of the shadow comes a price: she begins to experience hallucinations frequently, especially toward the end of the film. In a fit of rage and passion, she takes a shard of glass and kills her rival, Lily—or so she believes.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-feather"></i> The Ultimate Price</h4>
+                <p>The film incredibly captures the destruction of perfectionism. The drive to succeed led to the death of the self and the death of innocence. Nina's transformation into the Black Swan is complete, but at the cost of everything she once was.</p>
+                <p>In the end, the question remains: Was the perfect performance worth the sacrifice of one's sanity, identity, and life?</p>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
