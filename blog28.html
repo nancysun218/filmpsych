@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: K-pop Demon Hunters - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(255, 20, 147, 0.9), rgba(138, 43, 226, 0.9), rgba(0, 191, 255, 0.9));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #ffe4ec, #e8d4f0);
+            border-left: 4px solid #ff1493;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #333;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #fff0f5, #ffe4ec);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff1493;
+        }
+
+        .psychology-insight h4 {
+            color: #c71585;
+            margin-bottom: 1rem;
+        }
+
+        .character-box {
+            background: linear-gradient(135deg, #e8f4ff, #d4e8ff);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #4169e1;
+        }
+
+        .character-box h4 {
+            color: #2a4a9e;
+            margin-bottom: 1rem;
+        }
+
+        .defense-box {
+            background: linear-gradient(135deg, #fff8e7, #fff0cc);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .defense-box h4 {
+            color: #d68910;
+            margin-bottom: 1rem;
+        }
+
+        .growth-box {
+            background: linear-gradient(135deg, #e8ffe8, #d4f5d4);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #27ae60;
+        }
+
+        .growth-box h4 {
+            color: #1e8449;
+            margin-bottom: 1rem;
+        }
+
+        .reflection-box {
+            background: linear-gradient(135deg, #f0f7ee, #e3f2e1);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #27ae60;
+        }
+
+        .reflection-box h4 {
+            color: #27ae60;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-film"></i> Film Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: K-pop Demon Hunters</h1>
+                <p class="blog-subtitle">Exploring identity, self-concept, ego defense mechanisms, and unconditional regard through the animated journey of Rumi and Huntrix.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Dec. 27, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>14 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Joanna Loo</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/kpop header.png" alt="K-pop Demon Hunters" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>The Film: K-pop Demon Hunters</h2>
+
+            <p><em>K-pop Demon Hunters</em>, an animated film produced by Sony Pictures Animation, narrates the journey and struggles of Huntrix, a world-renowned K-pop girl group that also secretly doubles as demon hunters. This group consists of three members—Rumi, Mira, and Zoey—who have trained together since they were children to fulfill their ultimate duty.</p>
+
+            <p>Their task is sealing the Honmoon, the mystical barrier that protects the human world from the demon realm and its lord, Gwi-Ma. However, Rumi has a grave secret: she is part-demon, her mother having been a hunter and her father a demon. She has kept this fact hidden her entire life.</p>
+
+            <p>Her efforts to maintain the delicate balance between her identities begin spiraling when she loses her voice right before Huntrix seals the Honmoon, and a new demon boy band—the Saja Boys—comes into the spotlight and competes for the fans' attention.</p>
+
+            <h2>A First Glimpse Into the Character: Rumi</h2>
+
+            <p>Rumi has made it her absolute purpose to accomplish what all other demon hunters have done in the past: seal the Honmoon. She wants to carry out her responsibility and, more personally, free herself of her visible association with the demon race—her patterns.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-brain"></i> Self-Concept</h4>
+                <p><strong>Definition:</strong> An individual's perception of themselves.</p>
+                <p>Rumi looks down on all demons, and that includes herself. Her demon patterns are forever a reminder of what she truly is, and covering them up isn't enough to forget them. The markings have spread farther over her body as the years went by, and the spread seems to accelerate whenever she tries to ignore or expresses disdain towards her demon identity.</p>
+            </div>
+
+            <p>When she falls short—her voice failing right before the promotion for their new single "Golden," which would have sealed the Honmoon—she falls apart. She unzips her jacket to inspect her throat and gasps in horror when she sees that the markings have spread up her neck. Rumi values her voice above everything, as her singing connects her fans and enables the strengthening of the Honmoon; without her voice, she believes she has failed.</p>
+
+            <blockquote>
+                "How am I supposed to fix the world, fix me, when I don't have my voice? Why now, when I'm so close? Why?"
+            </blockquote>
+
+            <h2>A New Perspective: Jinu Begins to Reform Rumi's Mindset</h2>
+
+            <p>Jinu, the leader of the Saja Boys, is the catalyst for change in Rumi and later her greatest confidant. He was the one who suggested the creation of a demon boy band to counteract Huntrix to Gwi-Ma, but he holds no loyalty to the demon lord. In fact, Jinu holds great contempt towards him, as Gwi-Ma plagues his mind with memories of his past wrongdoings and belittles him for his impotency.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-user-circle"></i> Jinu's Transformation</h4>
+                <p>His perception of Rumi changes once he catches sight of her demon patterns mid-fight. He immediately softens towards her, patching up the rip in her clothing so that the markings are no longer exposed. From then on, Jinu expresses interest in Rumi and tries to contact her.</p>
+            </div>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-brain"></i> Belief Perseverance</h4>
+                <p><strong>Definition:</strong> The tendency to hold onto one's initial beliefs even after they have been shown to be false.</p>
+                <p>Rumi initially rejected Jinu's every effort at cooperation. Based on simple logic, Jinu was no different from all other demons who attacked innocent humans and served their overlord Gwi-Ma. It was her duty as a demon hunter to eliminate him from the scene; therefore, the first time they rendezvoused, she repeatedly swung her sword at him despite his clear lack of hostility.</p>
+            </div>
+
+            <p>Jinu tries to calm her down, joking about her choo-choo-train pajama pants and telling her he just wanted to talk about her patterns. He even reveals his guilty past to her—a clear show of vulnerability that he hopes will garner some of her trust—and explains his own shame towards his demon markings.</p>
+
+            <p>Rumi hesitates for a second but raises her sword back to his throat. She refuses to believe she can connect with, let alone relate to, a demon.</p>
+
+            <blockquote>
+                "You know you can tell me. I'll understand. I'm the only one who can."<br>
+                "I'm nothing like you."
+            </blockquote>
+
+            <div class="growth-box">
+                <h4><i class="fas fa-seedling"></i> Cognitive Restructuring</h4>
+                <p><strong>Definition:</strong> Replacing negative thought patterns and beliefs with more positive and realistic ones.</p>
+                <p>As Rumi and Jinu share more conversations, she finds herself more willing to open up to him. Jinu was the only person she could share her darkest, most shameful secret with, and she knew that Jinu felt the same for her. Once she learned about his regrets and his personal vendetta against Gwi-Ma, she decided that he, too, deserved the freedom that he desired; after all, they weren't so different in their goals—they wanted to be free of their shame and get their revenge.</p>
+            </div>
+
+            <p>Rumi confides in him that she had suppressed her demon-half for so long, so much so that the shame grew and grew and destroyed the very instrument that was supposed to make her succeed: her voice. But it was through Jinu, a demon and former enemy, that allowed her voice—and above all, her own judgment of herself—to heal.</p>
+
+            <blockquote>
+                "I spent my whole life keeping this secret, this shame of what I am… But since I've met you and the more I talk to you, I don't understand it, but somehow, my voice has healed."
+            </blockquote>
+
+            <h2>Rumi's Ego Defense Mechanisms</h2>
+
+            <p>Ego defense mechanisms, developed by Sigmund Freud and later refined by Anna Freud, are unconscious strategies used by the ego to protect itself from anxiety and perceived threats. Anna Freud defined these mechanisms as tools used to decrease conflict within the self, specifically between the superego—our moral conscience—and id—our basic instincts and desires.</p>
+
+            <div class="defense-box">
+                <h4><i class="fas fa-shield-alt"></i> Defense Mechanism: Suppression</h4>
+                <p><strong>Definition:</strong> An individual consciously chooses to block out ideas or impulses that are undesirable.</p>
+                <p>Rumi has been taught to deny her demon heritage her entire life. In a flashback, we see a scene from Rumi's childhood: Rumi rolls up her sleeve to ask Celine about her demonic patterns, to which Celine swiftly conceals them back under the fabric.</p>
+            </div>
+
+            <blockquote>
+                "Celine, do hunters kill all demons?"<br>
+                "Yes."<br>
+                "So everything that has patterns?"<br>
+                "Cover those up… You're not one of them, Rumi."
+            </blockquote>
+
+            <p>It was Celine's teachings that led Rumi to suppress her ties towards demons. She trained Rumi to be strong, to make sure her faults and fears were never seen. Thus, as Rumi grew older, she developed a fierce loathing towards all demons and made it her life's goal to seal the Honmoon—with the expectation that it would rid her of her patterns.</p>
+
+            <p>As her demonic markings spread, she covered up with more clothes. She hunted demons mercilessly alongside Zoey and Mira because it was her duty to do so. Whenever her friends asked her to go to the bathhouse with them, she always declined, because she knew that would mean showing her patterns and revealing the truth to her friends.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-quote-left"></i> Others Notice Her Walls</h4>
+                <p>The suppression of her problems and emotions is even outright mentioned by the other characters. When the Huntrix trio visited the doctor's office for tonics to fix Rumi's voice, the doctor made an inspection of her character and noted that she had "lots of walls up," to which Zoey and Mira chipped in by saying she was "emotionally closed off" and a "workaholic."</p>
+            </div>
+
+            <div class="defense-box">
+                <h4><i class="fas fa-exchange-alt"></i> Defense Mechanism: Projection</h4>
+                <p><strong>Definition:</strong> An individual attributes their own unacceptable feelings or thoughts to someone else.</p>
+                <p>Ever since the group came up with the song "Takedown," Mira has begun to pick up on Rumi's suspicious behavior. Rumi, as a result of her visits with Jinu and her changing mindset towards her identity as a half-demon, has grown reluctant to embrace her own hateful attitude towards demons.</p>
+            </div>
+
+            <p>Mira, tired of Rumi's secrecy and distance, finally confronts Rumi as they prepare to hunt a horde of demons on a train. Rumi reaches her breaking point and lashes out, saying:</p>
+
+            <blockquote>
+                "Not everything is about your insecurities, Mira!"
+            </blockquote>
+
+            <p>The whole group immediately goes silent. Even Zoey, who had been standing guard farther behind and not interjecting in the conversation, comes to a halt.</p>
+
+            <p>Rumi's words were unprecedented. They were blurted out with little to no relevance to the conversation and were more a reflection of Rumi's own internal conflict. This was an instance of projection, in which Rumi displaced her own inner turmoil over her identity onto Mira as an attempt to defend herself.</p>
+
+            <h2>Rumi's Fall and Rebuilding</h2>
+
+            <p>After Jinu's betrayal—in which he breaks his promise to let Huntrix win the Idol Awards by sending demon doppelgangers of Mira and Zoey to reveal Rumi's patterns on stage—Rumi breaks down and almost succumbs to her devastation.</p>
+
+            <p>Her friends' trust in her is shattered. Mira and Zoey now know she is a demon, and as per their duty as demon hunters, they have no choice but to deem her a threat. The Honmoon is broken and the Saja Boys are now channeling all their musical power into luring possessed fans towards Gwi-Ma. And Jinu—the only person she was able to trust and share her secret with—had destroyed everything she knew.</p>
+
+            <p>Not even Celine, her trusted mentor who had known about her demonic heritage her entire life, could look her in the eyes. When Rumi appeared before Celine, dropping to her knees and begging her mentor to kill her before she is consumed by her demon-half, Celine refused. She couldn't bring herself to even console Rumi because of her demonic patterns.</p>
+
+            <div class="growth-box">
+                <h4><i class="fas fa-sun"></i> Posttraumatic Growth</h4>
+                <p><strong>Definition:</strong> Positive psychological changes experienced as a result of struggling with a highly challenging life circumstance.</p>
+                <p>Yet in spite of everything—Jinu's betrayal, Mira and Zoey's raised weapons against her, the broken Honmoon and the peak of Gwi-Ma's power, and Celine's final rejection—Rumi went face-to-face with Gwi-Ma and the Saja Boys.</p>
+            </div>
+
+            <p>Rumi and Gwi-Ma speak to one another, with Gwi-Ma belittling her for her failures:</p>
+
+            <blockquote>
+                "And the Honmoon is gone."<br>
+                "It is. So we can make a new one."
+            </blockquote>
+
+            <p>Rumi begins to sing, her voice ringing clear in the desolate, demon-ridden stadium. It's a song from the heart, intended to break the spell Gwi-Ma had cast over the fans and her friends. She leaves her demon markings exposed for everyone to see; she sings about her vulnerability, her regrets for not trusting her friends to be by her side; she sings to create a new Honmoon, one that would be built upon acceptance and trust.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-music"></i> A Song of Transformation</h4>
+                <p>This is an incredible change from what Rumi and the rest of Huntrix had tried to do originally. Every previous song they had made discussed power, superiority, and confidence. "Takedown" was almost literally born from hatred towards the Saja Boys. But this song—the song that Rumi was singing in the stadium alone—is made with the intention of something entirely different: it's a representation of her positive growth.</p>
+            </div>
+
+            <h2>Jinu's Redemption: Altruism</h2>
+
+            <div class="character-box">
+                <h4><i class="fas fa-heart"></i> Altruism</h4>
+                <p><strong>Definition:</strong> The selfless concern for the well-being of others.</p>
+                <p>Jinu's only act of selflessness in his entire life was sacrificing himself to save Rumi.</p>
+            </div>
+
+            <p>Four hundred years ago, when he was still human, he abandoned his mother and sister after making a deal with Gwi-Ma to live a lavish life in the palace. Jinu had lived with that guilt for the rest of his immortal life.</p>
+
+            <p>He didn't want to make the same mistake with Rumi. Rumi, who had accepted the wrongdoings of his past and shared her own struggles with him; Rumi, who was the first genuinely kind voice he had heard in centuries and the first person to ever express hope in him. The bond they shared had allowed him some reprieve from Gwi-Ma's unrelenting cruelty and emotional manipulation.</p>
+
+            <p>Thus, he gave up his life for her, shielding her body from Gwi-Ma's fiery attack using his own.</p>
+
+            <blockquote>
+                "You gave me my soul back. And now… I give it to you."
+            </blockquote>
+
+            <h2>Unconditional Regard</h2>
+
+            <div class="reflection-box">
+                <h4><i class="fas fa-star"></i> Unconditional Regard</h4>
+                <p><strong>Definition:</strong> An individual is accepted and loved as they are without judgment.</p>
+                <p>Jinu was the first person to ever accept all of Rumi—not just her charismatic, presentable facade, but her aggression, her suppression and denial of her identity, and most importantly, the demon she kept concealed.</p>
+            </div>
+
+            <p>Mira and Zoey were the second. Once Rumi begins to sing, her voice breaks through Gwi-Ma's mind control and Mira and Zoey return to their senses. They see Rumi, smiling and still trying to fix the Honmoon, and they join in the song. Mira and Zoey's acceptance of her and Rumi's love for them creates a new Honmoon—one that, once sealed, doesn't erase Rumi's patterns like she thought, but instead makes them glow iridescent.</p>
+
+            <blockquote>
+                "I'll find your harmony. The song we couldn't write. This is what it sounds like!"
+            </blockquote>
+
+            <h2>A Final Farewell for the Character: Rumi</h2>
+
+            <p>Rumi's journey in <em>K-pop Demon Hunters</em> is a powerful exploration of identity, self-acceptance, and the healing power of authentic connection. Her story demonstrates that suppressing parts of ourselves—even the parts we're ashamed of—only causes them to grow stronger. It's only through vulnerability, trust, and the unconditional regard of others that we can truly integrate all aspects of who we are.</p>
+
+            <p>The film reminds us that our perceived flaws and differences aren't weaknesses to be hidden—they're integral parts of our identity that, when accepted, can become our greatest strengths.</p>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
