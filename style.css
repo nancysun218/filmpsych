@@ -606,6 +606,112 @@ main {
     font-weight: 500;
 }
 
+.role-section {
+    margin-bottom: 1.5rem;
+    padding-bottom: 1.5rem;
+    border-bottom: 1px solid rgba(138, 99, 210, 0.1);
+}
+
+.role-section:last-child {
+    margin-bottom: 0;
+    padding-bottom: 0;
+    border-bottom: none;
+}
+
+.role-section h4 {
+    color: var(--primary-purple);
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.role-section h4 i {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.team-members-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 1rem;
+}
+
+.team-member-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 0.75rem;
+    background: linear-gradient(135deg, rgba(138, 99, 210, 0.05), rgba(255, 154, 158, 0.05));
+    border-radius: 12px;
+    transition: transform 0.2s ease;
+}
+
+.team-member-card:hover {
+    transform: translateY(-3px);
+}
+
+.team-member-card.placeholder-card {
+    opacity: 0.6;
+}
+
+.member-placeholder {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary-purple), var(--secondary-pink));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.5rem;
+}
+
+.member-placeholder i {
+    color: white;
+    font-size: 1.5rem;
+}
+
+.member-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 0.5rem;
+    border: 2px solid var(--primary-purple);
+}
+
+.member-name {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-dark);
+    line-height: 1.2;
+}
+
+.member-role {
+    font-size: 0.7rem;
+    color: var(--primary-purple);
+    margin-top: 0.25rem;
+}
+
+.hiring-section {
+    background: linear-gradient(135deg, rgba(76, 175, 80, 0.1), rgba(139, 195, 74, 0.1));
+    padding: 1rem;
+    border-radius: 12px;
+    border: 1px dashed rgba(76, 175, 80, 0.3);
+}
+
+.hiring-section h4 {
+    color: #2e7d32;
+}
+
+.hiring-text {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 0.75rem;
+}
+
 .btn-outline-small {
     display: inline-block;
     padding: 0.5rem 1.25rem;
@@ -3789,6 +3895,45 @@ footer {
 
     .homepage-blogs-section .section-subtitle {
         font-size: 0.9rem;
+    }
+
+    .team-members-grid {
+        grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+        gap: 0.75rem;
+    }
+
+    .team-member-card {
+        padding: 0.5rem;
+    }
+
+    .member-placeholder,
+    .member-photo {
+        width: 50px;
+        height: 50px;
+    }
+
+    .member-placeholder i {
+        font-size: 1.2rem;
+    }
+
+    .member-name {
+        font-size: 0.75rem;
+    }
+
+    .member-role {
+        font-size: 0.6rem;
+    }
+
+    .role-section h4 {
+        font-size: 0.9rem;
+    }
+
+    .hiring-section {
+        padding: 0.75rem;
+    }
+
+    .hiring-text {
+        font-size: 0.8rem;
     }
 }
 
