@@ -1,0 +1,556 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind The Great Gatsby: The Illusion of Happiness - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(26, 54, 54, 0.95), rgba(45, 80, 70, 0.9), rgba(20, 40, 35, 0.95));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 90% 50%, rgba(80, 200, 120, 0.15) 0%, transparent 40%);
+            opacity: 0.8;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 350px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+        }
+
+        .blog-category-badge {
+            background: rgba(80, 200, 120, 0.25);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #1a3636, #2d5046);
+            border-left: 4px solid #50c878;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #f0f0f0;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #50c878;
+        }
+
+        .psychology-insight h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .green-light-box {
+            background: linear-gradient(135deg, #1a3636, #2d5046);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #50c878;
+            color: #f0f0f0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .green-light-box::after {
+            content: '';
+            position: absolute;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 30px;
+            height: 30px;
+            background: #50c878;
+            border-radius: 50%;
+            box-shadow: 0 0 20px #50c878, 0 0 40px #50c878, 0 0 60px #50c878;
+            opacity: 0.8;
+        }
+
+        .green-light-box h4 {
+            color: #90EE90;
+            margin-bottom: 1rem;
+        }
+
+        .brain-box {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #2196f3;
+        }
+
+        .brain-box h4 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .factor-box {
+            background: linear-gradient(135deg, #fff8e1, #ffecb3);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ffc107;
+        }
+
+        .factor-box h4 {
+            color: #ff8f00;
+            margin-bottom: 1rem;
+        }
+
+        .gatsby-quote {
+            background: linear-gradient(135deg, #1a3636, #0d1f1f);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #50c878;
+            color: #f0f0f0;
+            text-align: center;
+            font-style: italic;
+            font-size: 1.2rem;
+        }
+
+        .gatsby-quote .attribution {
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #90EE90;
+            font-style: normal;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e91e63;
+        }
+
+        .warning-box h4 {
+            color: #c2185b;
+            margin-bottom: 1rem;
+        }
+
+        .takeaway-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #50c878;
+        }
+
+        .takeaway-box h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-book"></i> Literature Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind The Great Gatsby: The Illusion of Happiness</h1>
+                <p class="blog-subtitle">Exploring affective forecasting error through the tragic pursuit of Jay Gatsby's green light.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jan. 15, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Jayden Mafi</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/gatsby header.png" alt="The Great Gatsby" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction: Chasing the Dream</h2>
+
+            <p>At some point in life, nearly everyone has chased a dream. It could be the perfect moment, the perfect person, or even the perfect future. Many chase happiness in this perfect reality they dream of. But what if this happiness is just a trick that your brain is playing on you?</p>
+
+            <p>Imagine chasing a dream with such determination that you lose sight of all else, only to realize that the happiness you expected to attain was simply a mirage. That's the story of Jay Gatsby, a man who built an empire on dreams and desire.</p>
+
+            <div class="green-light-box">
+                <h4><i class="fas fa-lightbulb"></i> The Green Light</h4>
+                <p>To Gatsby, the faint glow of the green light from Daisy Buchanan's dock wasn't just a beacon across the bay—it was a symbol of hope, desire, and belief that his dream would bring him happiness. We all have our green lights, but sometimes, the closer we get to our dreams, the further they drift from reality.</p>
+            </div>
+
+            <p><em>The Great Gatsby</em> is a story about <strong>affective forecasting error</strong>—our brain's tendency to exaggerate how future events will make us feel. Let's break down how this psychological phenomenon shaped Gatsby's tragic fate.</p>
+
+            <h2>What Is Affective Forecasting Error?</h2>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-brain"></i> Defining the Concept</h4>
+                <p>Affective forecasting error, primarily publicized by psychologists <strong>Timothy Wilson</strong> and <strong>Daniel Gilbert</strong>, is a psychological concept that describes people's tendency to misjudge future emotions.</p>
+                <p>Maybe you think that getting accepted into your dream school will make you happier than anything, or that breaking up with someone will leave you devastated forever.</p>
+            </div>
+
+            <p>Research shows that people almost always overestimate the intensity and duration of future emotions. When you try to predict how you'll feel after a future event, your brain conducts what is referred to as a <strong>mental simulation</strong>—the process of playing out scenarios in one's mind in an attempt to experience events before they happen.</p>
+
+            <div class="brain-box">
+                <h4><i class="fas fa-cogs"></i> The Brain Regions Involved</h4>
+                <p>This process involves several brain regions:</p>
+                <ul>
+                    <li><strong>The Prefrontal Cortex:</strong> Responsible for planning and imagining the future</li>
+                    <li><strong>The Limbic System:</strong> Processes emotions and attaches feelings to our mental simulations</li>
+                </ul>
+                <p>When the brain tries to simulate future emotions, it usually gets the picture wrong.</p>
+            </div>
+
+            <h2>The Five Factors Behind Forecasting Errors</h2>
+
+            <h3>1. Focalism</h3>
+
+            <div class="factor-box">
+                <h4><i class="fas fa-search"></i> The Spotlight Effect on Dreams</h4>
+                <p>Events do not take place exactly as we imagine them. When we envision specific events in our future, our brain focuses mostly on the most extravagant aspects of a situation and often omits small details that may hold significant importance.</p>
+                <p>For example, you may think that getting your dream job will make you happy all the time, but you might not consider the possible long hours, difficult coworkers, or unexpected challenges. Even our most vivid mental previews are built on incomplete information.</p>
+            </div>
+
+            <div class="gatsby-quote">
+                "There must have been moments even that afternoon when Daisy tumbled short of his dreams—not through her own fault, but because of the colossal vitality of his illusion."
+                <div class="attribution">— F. Scott Fitzgerald, <em>The Great Gatsby</em></div>
+            </div>
+
+            <p>Gatsby's fantasy had grown larger than life, becoming bigger than Daisy herself. His brain had created a future so joyful that no reality could match it.</p>
+
+            <h3>2. Impact Bias</h3>
+
+            <div class="factor-box">
+                <h4><i class="fas fa-chart-line"></i> Overestimating Emotional Intensity</h4>
+                <p>When imagining future emotions, we almost always overestimate the duration and intensity of an emotion or feeling. Gatsby believed that being with Daisy would grant him lasting happiness. But it didn't occur to him that emotions fade and that life keeps moving forward.</p>
+            </div>
+
+            <h3>3. Availability Heuristic</h3>
+
+            <div class="factor-box">
+                <h4><i class="fas fa-memory"></i> Misleading Memories</h4>
+                <p>When your brain tries to imagine a future event, it pulls memories from similar past experiences. The problem is, we don't always remember the past accurately. The memories we rely on are often not the best ones to use as a base for our predictions.</p>
+                <p>An ideal base for a prediction would usually be a typical experience. For example, if you want to imagine your next dental appointment, the most useful memory would be a standard check-up, not the one time you needed emergency root canal surgery.</p>
+            </div>
+
+            <h3>4. Projection Bias</h3>
+
+            <div class="factor-box">
+                <h4><i class="fas fa-user-clock"></i> Assuming Permanence</h4>
+                <p>This occurs when we assume that our future selves will be the same and feel the same way as we do now. Gatsby spent five years dreaming about Daisy with his original romantic obsession, but he failed to realize that people change.</p>
+                <p>When the moment of their reunion finally arrived, he expected her to feel the way he had felt, but she didn't.</p>
+            </div>
+
+            <div class="gatsby-quote">
+                "'Can't repeat the past?' He cried incredulously. 'Why of course you can!'"
+                <div class="attribution">— Jay Gatsby</div>
+            </div>
+
+            <p>Gatsby's words encapsulate his denial—his refusal to move on from an emotion from five years ago, ignoring the fact that people grow, change, and move on.</p>
+
+            <h2>Real-World Implications</h2>
+
+            <p>Affective forecasting error shows up in everyday life. When your brain convinces you that getting into your dream school will make you happy forever, or that a bad grade will ruin your future, it's creating a distorted version of your reality.</p>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> The Psychological Consequences</h4>
+                <p>When someone achieves their long-awaited goal and still feels unfulfilled, it can lead to:</p>
+                <ul>
+                    <li>Feelings of disappointment and emptiness</li>
+                    <li>Anxiety about future goals</li>
+                    <li>Depression from unmet expectations</li>
+                    <li>Reluctance to try new things due to fear of disappointment</li>
+                </ul>
+            </div>
+
+            <h2>Gatsby's Tragic Lesson</h2>
+
+            <p>Gatsby's story is an example of how our minds can deceive us. His dream, built on an imaginary future, was shaped by affective forecasting error. He believed that reaching his dream would bring lasting happiness, but like many of us today, he misjudged how he'd truly feel.</p>
+
+            <div class="takeaway-box">
+                <h4><i class="fas fa-key"></i> The Takeaway</h4>
+                <p>We've internalized the beliefs that success will bring peace or that failure will ruin us. Just like Gatsby, we all stare at our own green lights across the bay: the perfect partner, job, or future, convinced that reaching them will complete us.</p>
+                <p>Understanding affective forecasting error doesn't mean we should stop dreaming—it means we should approach our dreams with realistic expectations and appreciate the journey as much as the destination.</p>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
