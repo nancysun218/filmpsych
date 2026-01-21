@@ -484,58 +484,144 @@ main {
     box-shadow: 0 8px 25px rgba(255, 105, 180, 0.4);
 }
 
-/* Features Section */
-.features-section {
-    padding: 5rem 0;
+/* Teams Section */
+.teams-section {
+    padding: 4rem 0;
     background: rgba(255, 255, 255, 0.5);
-    margin: 4rem -2rem;
+    margin: 3rem -2rem;
 }
 
-.features-section h2 {
+.teams-section > .container > h2 {
     text-align: center;
     color: var(--primary-purple);
-    font-size: 2.5rem;
-    margin-bottom: 3rem;
+    font-size: 2.2rem;
+    margin-bottom: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
 }
 
-.features-grid {
+.teams-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     gap: 2rem;
 }
 
-.feature-card {
+.team-category-card {
     background: white;
-    padding: 2.5rem 2rem;
+    padding: 2rem;
     border-radius: 20px;
     box-shadow: 0 10px 30px var(--shadow-light);
-    text-align: center;
     transition: transform 0.3s ease;
     border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
-.feature-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 20px 40px var(--shadow-medium);
+.team-category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px var(--shadow-medium);
 }
 
-.feature-icon {
-    width: 80px;
-    height: 80px;
-    background: linear-gradient(135deg, var(--primary-blue), var(--primary-purple));
-    border-radius: 50%;
+.team-category-card.coming-soon-card {
+    background: linear-gradient(135deg, rgba(138, 99, 210, 0.03), rgba(255, 154, 158, 0.03));
+    border: 2px dashed rgba(138, 99, 210, 0.3);
+}
+
+.team-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.team-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, var(--primary-purple), var(--secondary-pink));
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto 1.5rem;
     color: white;
-    font-size: 2rem;
+    font-size: 1.3rem;
 }
 
-.feature-card h3 {
+.team-header h3 {
     color: var(--primary-purple);
-    margin-bottom: 1rem;
-    font-size: 1.3rem;
+    font-size: 1.4rem;
+    margin: 0;
+}
+
+.coming-soon-badge {
+    background: linear-gradient(135deg, var(--secondary-pink), var(--primary-purple));
+    color: white;
+    padding: 0.3rem 0.8rem;
+    border-radius: 20px;
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
+.team-roles {
+    padding-left: 0.5rem;
+}
+
+.role-item {
+    margin-bottom: 1.25rem;
+}
+
+.role-item:last-child {
+    margin-bottom: 0;
+}
+
+.role-item h4 {
+    color: var(--primary-purple);
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.role-item h4 i {
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+.role-item p {
+    color: #666;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    margin-bottom: 0.5rem;
+}
+
+.coming-soon-text {
+    color: var(--primary-purple);
+    font-style: italic;
+    font-size: 0.9rem !important;
+}
+
+.help-cta {
+    color: var(--secondary-pink) !important;
+    font-weight: 500;
+}
+
+.btn-outline-small {
+    display: inline-block;
+    padding: 0.5rem 1.25rem;
+    border: 2px solid var(--primary-purple);
+    color: var(--primary-purple);
+    border-radius: 25px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    margin-top: 0.75rem;
+}
+
+.btn-outline-small:hover {
+    background: var(--primary-purple);
+    color: white;
 }
 
 /* Mission Section */
