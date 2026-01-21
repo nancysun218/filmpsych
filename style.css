@@ -1149,10 +1149,28 @@ main {
     }
 }
 
+.blogs-grid-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
 .blogs-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-    gap: 2.5rem;
+    display: flex;
+    gap: 2rem;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding: 1rem 0 2rem;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.blogs-grid::-webkit-scrollbar {
+    display: none;
+}
+
+.blogs-grid .blog-card {
+    flex: 0 0 380px;
+    min-width: 380px;
 }
 
 .blog-card {

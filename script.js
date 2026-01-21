@@ -445,4 +445,40 @@ document.addEventListener('DOMContentLoaded', function() {
             }, 150);
         });
     });
+
+    // Auto-scrolling blogs carousel
+    const blogsGrid = document.getElementById('blogs-container');
+    if (blogsGrid) {
+        let scrollSpeed = 1;
+        let scrollDirection = 1;
+        let isHovered = false;
+        let animationId;
+
+        function autoScroll() {
+            if (!isHovered && blogsGrid) {
+                blogsGrid.scrollLeft += scrollSpeed * scrollDirection;
+                
+                // Check if we've reached the end or beginning
+                const maxScroll = blogsGrid.scrollWidth - blogsGrid.clientWidth;
+                if (blogsGrid.scrollLeft >= maxScroll) {
+                    scrollDirection = -1;
+                } else if (blogsGrid.scrollLeft <= 0) {
+                    scrollDirection = 1;
+                }
+            }
+            animationId = requestAnimationFrame(autoScroll);
+        }
+
+        // Pause on hover
+        blogsGrid.addEventListener('mouseenter', () => {
+            isHovered = true;
+        });
+
+        blogsGrid.addEventListener('mouseleave', () => {
+            isHovered = false;
+        });
+
+        // Start auto-scroll
+        autoScroll();
+    }
 });
