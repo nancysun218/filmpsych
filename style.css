@@ -3710,3 +3710,127 @@ footer {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
     object-fit: cover;
 }
+
+/* Responsive: Carousel and Teams Section */
+@media (max-width: 768px) {
+    .infinite-carousel-wrapper {
+        margin: 1rem -1rem;
+        padding: 0 1rem;
+    }
+
+    .infinite-carousel-track {
+        gap: 1rem;
+        animation: infiniteScroll 30s linear infinite;
+    }
+
+    .carousel-card {
+        flex: 0 0 180px;
+        width: 180px;
+        border-radius: 10px;
+    }
+
+    .carousel-card img {
+        height: 100px;
+    }
+
+    .carousel-card-content {
+        padding: 0.5rem;
+    }
+
+    .carousel-card-content h4 {
+        font-size: 0.75rem;
+    }
+
+    .carousel-card-content p {
+        font-size: 0.65rem;
+    }
+
+    .teams-section {
+        padding: 2.5rem 0;
+        margin: 2rem -1rem;
+    }
+
+    .teams-section > .container > h2 {
+        font-size: 1.6rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .teams-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .team-category-card {
+        padding: 1.5rem;
+    }
+
+    .team-header h3 {
+        font-size: 1.2rem;
+    }
+
+    .team-icon {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+
+    .role-item h4 {
+        font-size: 0.9rem;
+    }
+
+    .role-item p {
+        font-size: 0.85rem;
+    }
+
+    .homepage-blogs-section .section-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .homepage-blogs-section .section-subtitle {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .carousel-card {
+        flex: 0 0 150px;
+        width: 150px;
+    }
+
+    .carousel-card img {
+        height: 85px;
+    }
+
+    .carousel-card-content {
+        padding: 0.4rem;
+    }
+
+    .carousel-card-content h4 {
+        font-size: 0.7rem;
+    }
+
+    .carousel-card-content p {
+        font-size: 0.6rem;
+    }
+
+    .teams-section > .container > h2 {
+        font-size: 1.4rem;
+        flex-direction: column;
+        gap: 0.5rem;
+    }
+
+    .team-category-card {
+        padding: 1.25rem;
+    }
+
+    .team-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .coming-soon-badge {
+        margin-left: 0;
+    }
+}
