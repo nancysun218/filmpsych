@@ -232,7 +232,7 @@ main {
 
 .three-col-card {
     position: relative;
-    min-height: 400px;
+    min-height: 100vh;
     background-size: cover;
     background-position: center;
     display: flex;
