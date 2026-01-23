@@ -790,6 +790,16 @@ main {
     color: white;
 }
 
+.flip-btn-tertiary .flip-btn-front {
+    background: #0096C7;
+    color: white;
+}
+
+.flip-btn-tertiary .flip-btn-back {
+    background: #0077A3;
+    color: white;
+}
+
 /* Teams Section */
 .teams-section {
     padding: 5rem 0;
