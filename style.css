@@ -738,7 +738,7 @@ main {
 }
 
 .flip-btn:hover .flip-btn-inner {
-    transform: rotateY(180deg);
+    transform: rotateY(-180deg);
 }
 
 .flip-btn-front,
