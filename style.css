@@ -216,13 +216,18 @@ main {
 /* Three Column Feature Section */
 .three-col-section {
     padding: 0;
+    margin: 0;
     background: var(--background-light);
+    width: 100%;
 }
 
 .three-col-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 .three-col-card {
