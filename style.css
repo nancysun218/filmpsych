@@ -723,26 +723,9 @@ main {
     color: white;
 }
 
-/* Flip Button Styles */
-.flip-btn {
-    perspective: 1000px;
-    display: inline-block;
-}
-
-.flip-btn-inner {
+/* Ripple Button Styles */
+.ripple-btn {
     position: relative;
-    width: 100%;
-    height: 100%;
-    transition: transform 0.6s;
-    transform-style: preserve-3d;
-}
-
-.flip-btn:hover .flip-btn-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-btn-front,
-.flip-btn-back {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -753,50 +736,48 @@ main {
     font-weight: 600;
     font-size: 1rem;
     text-decoration: none;
-    backface-visibility: hidden;
-    -webkit-backface-visibility: hidden;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.flip-btn-front {
-    position: relative;
+.ripple-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
 }
 
-.flip-btn-back {
+.ripple-btn:active {
+    transform: translateY(0);
+}
+
+.ripple-btn .ripple {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    transform: rotateY(180deg);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: scale(0);
+    animation: ripple-animation 0.6s linear;
+    pointer-events: none;
 }
 
-.flip-btn-primary .flip-btn-front {
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+.ripple-btn-primary {
     background: var(--primary-purple);
     color: white;
 }
 
-.flip-btn-primary .flip-btn-back {
-    background: var(--secondary-purple);
-    color: white;
-}
-
-.flip-btn-secondary .flip-btn-front {
+.ripple-btn-secondary {
     background: var(--sage-green);
     color: white;
 }
 
-.flip-btn-secondary .flip-btn-back {
-    background: #7a9b76;
-    color: white;
-}
-
-.flip-btn-tertiary .flip-btn-front {
+.ripple-btn-tertiary {
     background: #0096C7;
-    color: white;
-}
-
-.flip-btn-tertiary .flip-btn-back {
-    background: #0077A3;
     color: white;
 }
 
