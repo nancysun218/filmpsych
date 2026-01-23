@@ -347,6 +347,15 @@ main {
     color: #FFFFFF !important;
 }
 
+.hero-tagline {
+    font-size: 0.9rem;
+    opacity: 0.9;
+    margin-top: 0.5rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
 /* Hero 2026 Section */
 .hero-2026 {
     padding: 4rem 0 3rem;
