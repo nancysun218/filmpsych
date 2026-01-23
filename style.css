@@ -553,12 +553,12 @@ main {
 .hero-badge {
     display: inline-flex;
     align-items: center;
-    gap: 0.5rem;
+    gap: 0.6rem;
     background: rgba(255, 255, 255, 0.9);
     color: var(--primary-purple);
-    padding: 0.5rem 1.5rem;
+    padding: 0.7rem 1.8rem;
     border-radius: 25px;
-    font-size: 0.9rem;
+    font-size: 1.15rem;
     font-weight: 600;
     margin-bottom: 2rem;
     box-shadow: 0 4px 15px var(--shadow-light);
