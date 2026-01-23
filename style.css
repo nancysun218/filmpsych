@@ -281,6 +281,14 @@ main {
     list-style: none;
     padding: 0;
     margin: 0;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.three-col-card:hover .three-col-content ul {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 .three-col-content ul li {
