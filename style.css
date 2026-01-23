@@ -138,12 +138,14 @@ h1, h2, h3 {
     font-size: 0.9rem;
 }
 
-.nav-link:hover,
-.nav-link.active {
-    background: linear-gradient(135deg, var(--primary-pink), var(--primary-purple));
-    color: white;
+.nav-link:hover {
+    color: var(--primary-purple);
     transform: translateY(-2px);
-    box-shadow: 0 4px 15px rgba(177, 156, 217, 0.3);
+}
+
+.nav-link.active {
+    color: var(--primary-purple);
+    font-weight: 600;
 }
 
 /* Dropdown */
