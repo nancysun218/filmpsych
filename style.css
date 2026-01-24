@@ -3190,7 +3190,7 @@ main {
     right: 0;
     bottom: 0;
     background: url('attached_assets/homepage_1.png') center center / cover no-repeat;
-    opacity: 0.25;
+    opacity: 0.92;
     pointer-events: none;
     z-index: 0;
 }
