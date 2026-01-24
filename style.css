@@ -9296,20 +9296,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('attached_assets/internship_hero.png') center center / cover no-repeat;
-    opacity: 0.70;
+    background: linear-gradient(135deg, #5D4E8C 0%, #4A3D73 50%, #3D3260 100%);
     z-index: 0;
-}
-
-.internship-hero::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: linear-gradient(135deg, rgba(93, 78, 140, 0.5) 0%, rgba(123, 104, 166, 0.45) 50%, rgba(155, 139, 196, 0.4) 100%);
-    z-index: 1;
 }
 
 .internship-hero .container {
