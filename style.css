@@ -9285,10 +9285,9 @@ footer {
 /* Internship Hero */
 .internship-hero {
     position: relative;
-    padding: 180px 0 150px;
+    padding: 120px 0 80px;
     text-align: center;
     overflow: hidden;
-    min-height: 500px;
 }
 
 .internship-hero-bg {
@@ -9300,8 +9299,6 @@ footer {
     background: url('attached_assets/internship_hero.png') center center / cover no-repeat;
     opacity: 0.70;
     z-index: 0;
-    transform: rotate(-90deg) scale(1.5);
-    transform-origin: center center;
 }
 
 .internship-hero::after {
