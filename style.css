@@ -1932,6 +1932,107 @@ main {
     }
 }
 
+/* Research Page Styles */
+.semester-badge {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    background: linear-gradient(135deg, #7B68A6 0%, #9B8BC4 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    margin-left: 15px;
+    font-weight: 500;
+    vertical-align: middle;
+}
+
+.research-mentors-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.mentor-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid #E8E0F0;
+}
+
+.mentor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #9B8BC4;
+}
+
+.mentor-icon {
+    width: 55px;
+    height: 55px;
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.mentor-icon i {
+    font-size: 1.4rem;
+    color: #4CAF50;
+}
+
+.mentor-card span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+    display: block;
+}
+
+.mentor-card-coming {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    border-style: dashed;
+}
+
+.mentor-card-coming span {
+    color: #9B8BC4;
+    font-style: italic;
+}
+
+.mentor-card-coming .mentor-icon {
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+}
+
+.mentor-card-coming .mentor-icon i {
+    color: #9B8BC4;
+}
+
+@media (max-width: 1200px) {
+    .research-mentors-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .research-mentors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .semester-badge {
+        display: block;
+        margin: 10px auto 0;
+        width: fit-content;
+    }
+}
+
+@media (max-width: 480px) {
+    .research-mentors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
