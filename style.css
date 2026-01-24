@@ -426,13 +426,24 @@ main {
 
 /* Hero 2026 Background Image */
 .hero-2026-bg {
-    background: url('attached_assets/home page 1.png') center center / cover no-repeat;
     position: relative;
     padding-top: 150px;
     padding-bottom: 150px;
 }
 
 .hero-2026-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('attached_assets/homepage 1.png') center center / cover no-repeat;
+    opacity: 0.7;
+    pointer-events: none;
+}
+
+.hero-2026-bg::after {
     content: '';
     position: absolute;
     top: 0;
