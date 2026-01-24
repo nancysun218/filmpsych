@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     
     // Scroll Animation Observer
-    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item');
+    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item, .team-card, .studio-department, .artist-team, .writer-card, .manager-card, .media-member-card, .mini-card, .department-header');
     
     const observerOptions = {
         root: null,
