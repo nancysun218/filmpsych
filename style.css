@@ -678,7 +678,7 @@ main {
 /* Upcoming Programs Section */
 .upcoming-programs-section {
     padding: 80px 0;
-    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    background: linear-gradient(135deg, #4B3C73 0%, #5D4E8C 50%, #6B5A9E 100%);
 }
 
 .programs-grid {
