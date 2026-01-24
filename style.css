@@ -9826,3 +9826,66 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* Research Mentorship - Images with Pink Border */
+.mentorship-content-with-images {
+    display: flex;
+    align-items: flex-start;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.mentorship-image-left,
+.mentorship-image-right {
+    flex: 0 0 320px;
+}
+
+.mentorship-image-left img,
+.mentorship-image-right img {
+    width: 100%;
+    height: auto;
+    border: 4px solid #FFD1DC;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.12);
+}
+
+.mentorship-content-with-images .program-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+@media (max-width: 1200px) {
+    .mentorship-content-with-images {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .mentorship-image-left,
+    .mentorship-image-right {
+        flex: 0 0 280px;
+    }
+    
+    .mentorship-content-with-images .program-content {
+        flex: 1 1 100%;
+        order: -1;
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .mentorship-content-with-images {
+        flex-direction: column;
+    }
+    
+    .mentorship-image-left,
+    .mentorship-image-right {
+        flex: 1 1 100%;
+        max-width: 400px;
+    }
+    
+    .mentorship-content-with-images .program-content {
+        order: 0;
+    }
+}
