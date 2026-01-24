@@ -514,6 +514,94 @@ main {
     }
 }
 
+/* Start a FilmPsych Chapter Section */
+.chapter-section {
+    position: relative;
+    padding: 100px 0;
+    background-image: url('attached_assets/homepage 11.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.chapter-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(93, 78, 140, 0.6);
+    z-index: 1;
+}
+
+.chapter-section .container {
+    position: relative;
+    z-index: 2;
+}
+
+.chapter-content {
+    text-align: center;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.chapter-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapter-content h2 i {
+    margin-right: 12px;
+    color: #C9BFE0;
+}
+
+.chapter-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.95);
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-btn {
+    display: inline-block;
+    padding: 16px 40px;
+    background: white;
+    color: #7B68A6;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.chapter-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    background: #F3F0F9;
+}
+
+@media (max-width: 768px) {
+    .chapter-section {
+        padding: 60px 0;
+    }
+    
+    .chapter-content h2 {
+        font-size: 2rem;
+    }
+    
+    .chapter-content p {
+        font-size: 1rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
