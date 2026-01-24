@@ -1329,8 +1329,9 @@ main {
 }
 
 .team-card-photo-placeholder i {
-    font-size: 4rem;
-    color: #9B8BC4;
+    font-size: 5rem;
+    color: #7B68A6;
+    opacity: 0.7;
 }
 
 .team-card-name {
