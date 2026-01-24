@@ -787,13 +787,13 @@ main {
     text-align: center;
     font-family: 'Playfair Display', serif;
     font-size: 1.1rem;
-    color: #7B68A6;
+    color: #FFD1DC;
     font-style: italic;
 }
 
 .remote-note i {
     margin-right: 8px;
-    color: #9B8BC4;
+    color: #FFE4EC;
 }
 
 @media (max-width: 992px) {
