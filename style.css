@@ -435,6 +435,22 @@ main {
     border-radius: 50%;
 }
 
+.five-col-description {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: rgba(255, 255, 255, 0.95);
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+    margin: 0;
+}
+
+.five-col-card:hover .five-col-description {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
