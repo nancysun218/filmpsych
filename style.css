@@ -9,21 +9,26 @@
 :root {
     --primary-purple: #7B68A6;
     --secondary-purple: #9B8BC4;
-    --light-purple: #E8E4F0;
-    --sage-green: #8FAE8B;
-    --light-sage: #D4E4D1;
-    --pretty-blue: #6B9BC3;
-    --light-blue: #D8E8F3;
-    --off-white: #FAFAF8;
-    --cream: #F5F4F0;
+    --light-purple: #E8E0F0;
+    --sage-green: #9B8BC4;
+    --light-sage: #E8E0F0;
+    --pretty-blue: #A594C9;
+    --light-blue: #F0EBF7;
+    --off-white: #FAF9FC;
+    --cream: #F5F3F9;
     --white: #FFFFFF;
     --text-dark: #2D2D2D;
     --text-medium: #5A5A5A;
     --text-light: #7A7A7A;
-    --shadow-light: rgba(0, 0, 0, 0.04);
-    --shadow-medium: rgba(0, 0, 0, 0.08);
-    --shadow-heavy: rgba(0, 0, 0, 0.12);
-    --secondary-pink: #C4A6B8;
+    --shadow-light: rgba(123, 104, 166, 0.04);
+    --shadow-medium: rgba(123, 104, 166, 0.08);
+    --shadow-heavy: rgba(123, 104, 166, 0.12);
+    --secondary-pink: #B89AC9;
+    --deep-purple: #5D4E8C;
+    --soft-lavender: #C9BFE0;
+    --pale-purple: #F3F0F9;
+    --primary-blue: #7B68A6;
+    --primary-pink: #B89AC9;
 }
 
 body {
