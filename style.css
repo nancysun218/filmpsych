@@ -8278,7 +8278,7 @@ footer {
 .shortfilms-hero-title {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     margin-bottom: 1.5rem;
     text-shadow: 2px 4px 12px rgba(0, 0, 0, 0.4);
 }
