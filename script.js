@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     
     // Scroll Animation Observer
-    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item, .team-card, .studio-department, .artist-team, .writer-card, .manager-card, .media-member-card, .mini-card, .department-header, .mentor-card, .advisor-card, .spotlight-card');
+    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item, .team-card, .studio-department, .artist-team, .writer-card, .manager-card, .media-member-card, .mini-card, .department-header, .mentor-card, .advisor-card, .spotlight-card, .universe-card, .create-card');
     
     const observerOptions = {
         root: null,
@@ -452,6 +452,17 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+// Navigate to section helper
+function navigateToSection(sectionId) {
+    event.preventDefault();
+    const targetSection = document.getElementById(sectionId);
+    if (targetSection) {
+        document.querySelectorAll('.section').forEach(s => s.classList.remove('active'));
+        targetSection.classList.add('active');
+        window.scrollTo(0, 0);
+    }
+}
 
 // Slideshow functionality
 let slideshowIndices = {};
