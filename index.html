@@ -2000,6 +2000,51 @@
                     <p class="creative-works-tagline">From children's books to short films, poetry to research publications, FilmPsych's creative works translate psychology into accessible, human stories.</p>
                 </div>
             </div>
+
+            <!-- Featured & Upcoming Projects Section -->
+            <div class="container featured-projects-section">
+                <div class="section-header">
+                    <h2><i class="fas fa-star"></i> Featured & Upcoming Projects</h2>
+                    <p class="section-subtitle">Spotlight on our most anticipated creative works</p>
+                </div>
+
+                <!-- Primary Spotlight Card -->
+                <div class="spotlight-card">
+                    <div class="spotlight-slideshow">
+                        <div class="slideshow-container" id="bearbottlesSlideshow">
+                            <div class="slide active">
+                                <img src="attached_assets/bearbottles1.jpeg" alt="The Bear with Bottles for a Heart - Page 1">
+                            </div>
+                            <div class="slide">
+                                <img src="attached_assets/bearbottles2.png" alt="The Bear with Bottles for a Heart - Page 2">
+                            </div>
+                            <div class="slide">
+                                <img src="attached_assets/bearbottles3.png" alt="The Bear with Bottles for a Heart - Page 3">
+                            </div>
+                        </div>
+                        <button class="slideshow-btn prev-btn" onclick="changeSlide(-1, 'bearbottlesSlideshow')">
+                            <i class="fas fa-chevron-left"></i>
+                        </button>
+                        <button class="slideshow-btn next-btn" onclick="changeSlide(1, 'bearbottlesSlideshow')">
+                            <i class="fas fa-chevron-right"></i>
+                        </button>
+                        <div class="slideshow-dots" id="bearbottlesDots">
+                            <span class="dot active" onclick="goToSlide(0, 'bearbottlesSlideshow')"></span>
+                            <span class="dot" onclick="goToSlide(1, 'bearbottlesSlideshow')"></span>
+                            <span class="dot" onclick="goToSlide(2, 'bearbottlesSlideshow')"></span>
+                        </div>
+                    </div>
+                    <div class="spotlight-content">
+                        <span class="spotlight-badge">Upcoming Children's Book</span>
+                        <h3 class="spotlight-title">The Bear with Bottles for a Heart</h3>
+                        <p class="spotlight-description">Our first original children's book uses gentle storytelling and illustration to explore emotional resilience for young readers.</p>
+                        <div class="spotlight-status">
+                            <i class="fas fa-book"></i>
+                            <span>Coming March 2026 — Available on Amazon Kindle and in paperback</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </section>
 
         <!-- Advisors & Professionals Section -->

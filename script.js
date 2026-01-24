@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', function() {
     const sections = document.querySelectorAll('.section');
     
     // Scroll Animation Observer
-    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item, .team-card, .studio-department, .artist-team, .writer-card, .manager-card, .media-member-card, .mini-card, .department-header, .mentor-card, .advisor-card');
+    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item, .team-card, .studio-department, .artist-team, .writer-card, .manager-card, .media-member-card, .mini-card, .department-header, .mentor-card, .advisor-card, .spotlight-card');
     
     const observerOptions = {
         root: null,
@@ -452,3 +452,59 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 
 });
+
+// Slideshow functionality
+let slideshowIndices = {};
+
+function changeSlide(direction, slideshowId) {
+    const slideshow = document.getElementById(slideshowId);
+    const slides = slideshow.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById(slideshowId.replace('Slideshow', 'Dots'));
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+    
+    if (!slideshowIndices[slideshowId]) {
+        slideshowIndices[slideshowId] = 0;
+    }
+    
+    slides[slideshowIndices[slideshowId]].classList.remove('active');
+    if (dots[slideshowIndices[slideshowId]]) {
+        dots[slideshowIndices[slideshowId]].classList.remove('active');
+    }
+    
+    slideshowIndices[slideshowId] += direction;
+    
+    if (slideshowIndices[slideshowId] >= slides.length) {
+        slideshowIndices[slideshowId] = 0;
+    }
+    if (slideshowIndices[slideshowId] < 0) {
+        slideshowIndices[slideshowId] = slides.length - 1;
+    }
+    
+    slides[slideshowIndices[slideshowId]].classList.add('active');
+    if (dots[slideshowIndices[slideshowId]]) {
+        dots[slideshowIndices[slideshowId]].classList.add('active');
+    }
+}
+
+function goToSlide(index, slideshowId) {
+    const slideshow = document.getElementById(slideshowId);
+    const slides = slideshow.querySelectorAll('.slide');
+    const dotsContainer = document.getElementById(slideshowId.replace('Slideshow', 'Dots'));
+    const dots = dotsContainer ? dotsContainer.querySelectorAll('.dot') : [];
+    
+    if (!slideshowIndices[slideshowId]) {
+        slideshowIndices[slideshowId] = 0;
+    }
+    
+    slides[slideshowIndices[slideshowId]].classList.remove('active');
+    if (dots[slideshowIndices[slideshowId]]) {
+        dots[slideshowIndices[slideshowId]].classList.remove('active');
+    }
+    
+    slideshowIndices[slideshowId] = index;
+    
+    slides[slideshowIndices[slideshowId]].classList.add('active');
+    if (dots[slideshowIndices[slideshowId]]) {
+        dots[slideshowIndices[slideshowId]].classList.add('active');
+    }
+}
