@@ -8921,13 +8921,13 @@ footer {
 /* Research Program Section */
 .research-program-section {
     padding: 80px 0;
-    background: var(--off-white);
+    background: linear-gradient(135deg, #4B3C73 0%, #5D4E8C 50%, #6B5A9E 100%);
 }
 
 .research-program-section .section-header h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2.2rem;
-    color: var(--primary-purple);
+    color: #FFD1DC;
     text-align: center;
 }
 
@@ -8943,7 +8943,7 @@ footer {
 
 .program-description {
     font-size: 1.15rem;
-    color: var(--text-dark);
+    color: #FFE4EC;
     line-height: 1.8;
     margin-bottom: 2rem;
 }
@@ -8973,9 +8973,9 @@ footer {
 
 .program-note {
     font-size: 0.95rem;
-    color: var(--text-medium);
+    color: #5D4E8C;
     font-style: italic;
-    background: var(--light-purple);
+    background: #FFE4EC;
     padding: 1rem 1.5rem;
     border-radius: 12px;
     display: inline-block;
@@ -8983,7 +8983,7 @@ footer {
 
 .program-note i {
     margin-right: 0.5rem;
-    color: var(--primary-purple);
+    color: #7B68A6;
 }
 
 /* Partner Journals Section */
