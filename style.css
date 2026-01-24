@@ -648,11 +648,25 @@ main {
     margin-bottom: 15px;
 }
 
+.program-card:nth-child(1) h3,
+.program-card:nth-child(1) p {
+    color: #1E3A5F;
+}
+
+.program-card:nth-child(2) h3,
+.program-card:nth-child(2) p {
+    color: #4A3A6B;
+}
+
+.program-card:nth-child(3) h3,
+.program-card:nth-child(3) p {
+    color: #5A7A5A;
+}
+
 .program-card p {
     font-family: 'Playfair Display', serif;
     font-size: 1rem;
     line-height: 1.7;
-    color: #555;
 }
 
 .program-note {
