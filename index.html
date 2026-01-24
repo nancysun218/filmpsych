@@ -3098,39 +3098,28 @@
         </section>
 
         <!-- Blogs Section -->
-        <section id="blogs" class="section">
-            <div class="floating-patterns">
-                <div class="pattern-element spiral-1"></div>
-                <div class="pattern-element spiral-3"></div>
-                <div class="pattern-element spiral-6"></div>
-                <div class="pattern-element triangle-1"></div>
-                <div class="pattern-element square-1"></div>
-                <div class="pattern-element pulse-1"></div>
-                <div class="pattern-element pulse-3"></div>
-            </div>
-            <div class="container"></div>
-            <div class="section-header">
-                <h1><i class="fas fa-blog"></i> Our Blogs</h1>
-                <p class="section-subtitle">Exploring psychology through creative mediums</p>
-            </div>
-            <div class="blog-header-image">
-                <img src="attached_assets/website image 2_1749614729417.jpg" alt="Blog Header" class="blog-section-image">
-            </div>
-            <div class="blog-filter-section">
-                <div class="filter-dropdown">
-                    <label for="blog-filter"><i class="fas fa-filter"></i> Sort by:</label>
-                    <select id="blog-filter">
-                        <option value="latest">Latest to Oldest</option>
-                        <option value="oldest">Oldest to Latest</option>
-                    </select>
+        <section id="blogs" class="section blogs-section">
+            <div class="blogs-hero">
+                <div class="blogs-hero-bg" style="background-image: url('attached_assets/blogarticles.png');"></div>
+                <div class="blogs-hero-overlay"></div>
+                <div class="blogs-hero-content">
+                    <h1 class="blogs-hero-title">Blog Articles</h1>
+                    <p class="blogs-hero-subtitle">Youth-led writing that makes psychology accessible through stories, reflections, and research-informed insight.</p>
+                    <div class="blogs-search-container">
+                        <div class="blogs-search-bar">
+                            <i class="fas fa-search"></i>
+                            <input type="text" id="blog-search" placeholder="Search articles...">
+                        </div>
+                        <div class="filter-dropdown">
+                            <label for="blog-filter"><i class="fas fa-filter"></i> Sort:</label>
+                            <select id="blog-filter">
+                                <option value="latest">Latest to Oldest</option>
+                                <option value="oldest">Oldest to Latest</option>
+                            </select>
+                        </div>
+                    </div>
+                    <p class="blogs-note">All pieces are edited for clarity and reviewed for accuracy when needed.</p>
                 </div>
-            </div>
-            <div class="blogs-featured">
-                <div class="spiral-decoration"></div>
-                <div class="spiral-decoration"></div>
-                <div class="spiral-decoration"></div>
-                <div class="spiral-decoration"></div>
-                <div class="spiral-decoration"></div>
             </div>
             <div class="blogs-grid" id="blogs-container">
                 <article class="blog-card" data-date="2026-01-20">
@@ -3955,8 +3944,20 @@
                                 </div>
                             </article>
             </div>
-            <div class="blog-footer-image">
-                <img src="attached_assets/blog_1.jpg" alt="Blog Footer" class="blog-section-image">
+            <div class="blogs-cta-section">
+                <div class="blogs-cta-content">
+                    <div class="blogs-cta-text">
+                        <h2>Want to write for FilmPsych?</h2>
+                        <p>Submit your work or join our editorial and storytelling teams. We welcome essays, reflections, viewpoints, and psychology-informed creative writing.</p>
+                        <div class="blogs-cta-buttons">
+                            <a href="#submit" class="btn-primary" onclick="navigateToSection('submit')"><i class="fas fa-paper-plane"></i> Submit Your Work</a>
+                            <a href="#join" class="btn-secondary" onclick="navigateToSection('join')"><i class="fas fa-users"></i> Join Our Team</a>
+                        </div>
+                    </div>
+                    <div class="blogs-cta-image">
+                        <img src="attached_assets/blogarticles_1.png" alt="Write for FilmPsych">
+                    </div>
+                </div>
             </div>
         </section>
 
