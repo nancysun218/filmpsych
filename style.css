@@ -10005,9 +10005,9 @@ footer {
 
 .sel-slide img {
     width: 100%;
-    height: 70vh;
-    min-height: 500px;
-    max-height: 700px;
+    height: 85vh;
+    min-height: 600px;
+    max-height: 900px;
     object-fit: cover;
     display: block;
 }
