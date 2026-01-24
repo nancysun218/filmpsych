@@ -82,8 +82,8 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Handle hero button clicks
-    const heroButtons = document.querySelectorAll('.hero-buttons .btn');
+    // Handle hero button clicks and nav-trigger buttons
+    const heroButtons = document.querySelectorAll('.hero-buttons .btn, .nav-trigger');
     heroButtons.forEach(button => {
         button.addEventListener('click', function(e) {
             e.preventDefault();
@@ -104,6 +104,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 if (targetNavLink) {
                     targetNavLink.classList.add('active');
                 }
+                
+                // Scroll to top
+                window.scrollTo({ top: 0, behavior: 'smooth' });
             }
         });
     });
