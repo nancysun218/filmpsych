@@ -834,8 +834,8 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('attached_assets/about_3.png') center center / cover no-repeat;
-    opacity: 0.63;
+    background: url('attached_assets/about_hero.jpg') center center / cover no-repeat;
+    opacity: 0.70;
     z-index: 0;
 }
 
