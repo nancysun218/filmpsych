@@ -4,6 +4,29 @@ document.addEventListener('DOMContentLoaded', function() {
     const navLinks = document.querySelectorAll('.nav-link');
     const sections = document.querySelectorAll('.section');
     
+    // Scroll Animation Observer
+    const scrollElements = document.querySelectorAll('.section-header, .five-col-card, .program-card, .impact-stat-card, .sneakpeaks-collage, .chapter-content, .internship-photos-row, .about-intro, .impact-stat, .blog-card, .team-member, .submit-box, .requirement-card, .faq-item');
+    
+    const observerOptions = {
+        root: null,
+        rootMargin: '0px',
+        threshold: 0.15
+    };
+    
+    const scrollObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('animated');
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+    
+    scrollElements.forEach(el => {
+        el.classList.add('scroll-animate');
+        scrollObserver.observe(el);
+    });
+    
     // Ripple effect for buttons
     document.querySelectorAll('.ripple-btn').forEach(button => {
         button.addEventListener('click', function(e) {
