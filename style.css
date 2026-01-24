@@ -1026,7 +1026,7 @@ main {
 .impact-title {
     font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
-    color: white;
+    color: #FFD1DC;
     text-align: center;
     margin-bottom: 60px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
@@ -1180,6 +1180,96 @@ main {
     .impact-grid {
         grid-template-columns: 1fr;
         gap: 25px;
+    }
+}
+
+/* Donate Section */
+.donate-section {
+    padding: 100px 0;
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+}
+
+.donate-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.donate-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #5D4E8C;
+    margin-bottom: 1.5rem;
+}
+
+.donate-text h2 i {
+    margin-right: 15px;
+    color: #9B8BC4;
+}
+
+.donate-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    line-height: 1.8;
+    color: #555;
+    margin-bottom: 2rem;
+}
+
+.donate-btn {
+    display: inline-block;
+    padding: 18px 40px;
+    background: linear-gradient(135deg, #E87C9E 0%, #D4668A 100%);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 25px rgba(232, 124, 158, 0.35);
+}
+
+.donate-btn i {
+    margin-right: 10px;
+}
+
+.donate-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 35px rgba(232, 124, 158, 0.45);
+}
+
+.donate-image img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 15px 50px rgba(123, 104, 166, 0.25);
+    object-fit: cover;
+    max-height: 450px;
+}
+
+@media (max-width: 992px) {
+    .donate-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+    
+    .donate-image {
+        order: -1;
+    }
+    
+    .donate-text h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .donate-section {
+        padding: 60px 0;
+    }
+    
+    .donate-text h2 {
+        font-size: 1.8rem;
     }
 }
 
