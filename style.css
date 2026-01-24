@@ -439,7 +439,12 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(0, 0, 0, 0.3);
+    background: linear-gradient(
+        135deg,
+        rgba(123, 104, 166, 0.45) 0%,
+        rgba(90, 70, 130, 0.5) 50%,
+        rgba(139, 169, 134, 0.35) 100%
+    );
     pointer-events: none;
 }
 
