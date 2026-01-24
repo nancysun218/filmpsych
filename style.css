@@ -1651,6 +1651,183 @@ main {
     }
 }
 
+/* Content Managers Grid */
+.content-managers-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.manager-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid transparent;
+}
+
+.manager-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.manager-icon {
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.manager-icon i {
+    font-size: 1.8rem;
+}
+
+.manager-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.manager-focus {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #666;
+    padding: 8px 16px;
+    background: #F8F5FC;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* Manager Card Themes */
+.manager-books {
+    border-left-color: #FF9AA2;
+}
+
+.manager-books .manager-icon {
+    background: linear-gradient(135deg, #FFE5E8 0%, #FFCCD2 100%);
+}
+
+.manager-books .manager-icon i {
+    color: #E85A71;
+}
+
+.manager-films {
+    border-left-color: #A0D2DB;
+}
+
+.manager-films .manager-icon {
+    background: linear-gradient(135deg, #E0F4F7 0%, #C5E8ED 100%);
+}
+
+.manager-films .manager-icon i {
+    color: #4A9BA8;
+}
+
+.manager-writing {
+    border-left-color: #C7B3E5;
+}
+
+.manager-writing .manager-icon {
+    background: linear-gradient(135deg, #F0E8F8 0%, #DFD0F0 100%);
+}
+
+.manager-writing .manager-icon i {
+    color: #8B6BB5;
+}
+
+/* Media Team Grid */
+.media-team-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.media-member-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 15px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid #E8E0F0;
+}
+
+.media-member-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #9B8BC4;
+}
+
+.media-member-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #F5F0FF 0%, #E8E0F0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.media-member-icon i {
+    font-size: 1.2rem;
+    color: #7B68A6;
+}
+
+.media-member-card span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.media-member-hiring {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    border-style: dashed;
+}
+
+.media-member-hiring span {
+    color: #9B8BC4;
+    font-style: italic;
+}
+
+.media-member-hiring .media-member-icon {
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+}
+
+@media (max-width: 1200px) {
+    .content-managers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    
+    .media-team-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .content-managers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .media-team-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .media-team-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
