@@ -2186,12 +2186,36 @@ main {
 
 /* Featured Projects Section */
 .featured-projects-section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(180deg, #F8F5FC 0%, #FFFFFF 100%);
 }
 
 .featured-projects-section .section-header {
     margin-bottom: 50px;
+}
+
+.featured-projects-section .section-header h2 {
+    color: #5D4E8C;
+}
+
+.featured-projects-section .section-header h2 i {
+    color: #FFD1DC;
+}
+
+.sneakpeek-note {
+    position: absolute;
+    top: 15px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(255, 255, 255, 0.95);
+    color: #9B8BC4;
+    padding: 8px 20px;
+    border-radius: 20px;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-style: italic;
+    z-index: 15;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
 }
 
 .spotlight-card {
@@ -2402,8 +2426,16 @@ main {
 
 /* Explore Our Creative Universe Section */
 .explore-universe-section {
-    padding: 80px 20px;
-    background: white;
+    padding: 100px 20px;
+    background: linear-gradient(180deg, #FFFFFF 0%, #F8F5FC 100%);
+}
+
+.explore-universe-section .section-header h2 {
+    color: #5D4E8C;
+}
+
+.explore-universe-section .section-header h2 i {
+    color: #9B8BC4;
 }
 
 .universe-grid {
@@ -2482,7 +2514,7 @@ main {
 
 /* Create With Us Section */
 .create-with-us-section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #5D4E8C 0%, #7B68A6 100%);
 }
 
@@ -2574,7 +2606,7 @@ main {
 
 /* Creative CTA Section */
 .creative-cta-section {
-    padding: 80px 20px;
+    padding: 100px 20px;
     background: linear-gradient(135deg, #FFD1DC 0%, #FFBCD0 50%, #E8E0F0 100%);
     text-align: center;
 }
