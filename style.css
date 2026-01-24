@@ -952,6 +952,237 @@ main {
     }
 }
 
+/* You Can Make an Impact Section */
+.impact-section {
+    position: relative;
+    padding: 100px 0;
+    background: linear-gradient(135deg, #5D4E8C 0%, #7B68A6 50%, #9B8BC4 100%);
+    overflow: hidden;
+}
+
+.impact-floating-shapes {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.impact-sparkle {
+    position: absolute;
+    color: rgba(255, 255, 255, 0.3);
+    font-size: 1.5rem;
+    animation: sparkleFloat 4s ease-in-out infinite;
+}
+
+.sparkle-1 { top: 10%; left: 5%; animation-delay: 0s; }
+.sparkle-2 { top: 20%; right: 8%; animation-delay: 1s; }
+.sparkle-3 { bottom: 15%; left: 10%; animation-delay: 2s; }
+.sparkle-4 { bottom: 25%; right: 5%; animation-delay: 0.5s; }
+
+@keyframes sparkleFloat {
+    0%, 100% { opacity: 0.3; transform: translateY(0) scale(1); }
+    50% { opacity: 0.8; transform: translateY(-10px) scale(1.2); }
+}
+
+.impact-shape {
+    position: absolute;
+    border-radius: 50%;
+    opacity: 0.1;
+    background: white;
+}
+
+.shape-1 {
+    width: 200px;
+    height: 200px;
+    top: -50px;
+    right: -50px;
+    animation: shapeFloat 8s ease-in-out infinite;
+}
+
+.shape-2 {
+    width: 150px;
+    height: 150px;
+    bottom: -30px;
+    left: 5%;
+    animation: shapeFloat 6s ease-in-out infinite reverse;
+}
+
+.shape-3 {
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    animation: shapeFloat 7s ease-in-out infinite;
+}
+
+@keyframes shapeFloat {
+    0%, 100% { transform: translate(0, 0); }
+    50% { transform: translate(20px, -20px); }
+}
+
+.impact-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 60px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.impact-title i {
+    margin-right: 15px;
+    color: #FFD1DC;
+}
+
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+}
+
+.impact-card {
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 20px;
+    padding: 35px 25px;
+    text-align: center;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.15);
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.impact-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, #7B68A6, #9B8BC4, #5D4E8C);
+}
+
+.impact-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 50px rgba(0, 0, 0, 0.2);
+}
+
+.impact-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 1.8rem;
+    color: #5D4E8C;
+    transition: all 0.3s ease;
+}
+
+.impact-card:hover .impact-icon {
+    background: linear-gradient(135deg, #7B68A6 0%, #5D4E8C 100%);
+    color: white;
+    transform: scale(1.1);
+}
+
+.impact-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #5D4E8C;
+    margin-bottom: 15px;
+}
+
+.impact-card p {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: #555;
+    margin-bottom: 20px;
+}
+
+.impact-link {
+    display: inline-block;
+    padding: 10px 24px;
+    background: linear-gradient(135deg, #7B68A6 0%, #5D4E8C 100%);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.impact-link i {
+    margin-right: 6px;
+}
+
+.impact-link:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 20px rgba(123, 104, 166, 0.4);
+}
+
+.impact-links-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.impact-pill {
+    display: block;
+    padding: 10px 16px;
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    color: #5D4E8C;
+    font-family: 'Playfair Display', serif;
+    font-size: 0.85rem;
+    font-weight: 500;
+    text-decoration: none;
+    border-radius: 25px;
+    transition: all 0.3s ease;
+    border: 1px solid #E8E0F0;
+}
+
+.impact-pill i {
+    margin-right: 8px;
+    color: #9B8BC4;
+}
+
+.impact-pill:hover {
+    background: linear-gradient(135deg, #7B68A6 0%, #5D4E8C 100%);
+    color: white;
+    transform: translateX(5px);
+}
+
+.impact-pill:hover i {
+    color: white;
+}
+
+@media (max-width: 1200px) {
+    .impact-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .impact-section {
+        padding: 60px 0;
+    }
+    
+    .impact-title {
+        font-size: 2rem;
+        margin-bottom: 40px;
+    }
+    
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
