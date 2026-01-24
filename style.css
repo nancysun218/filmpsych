@@ -9443,19 +9443,19 @@ footer {
 .flip-card-front {
     background: white;
     border: 3px solid #D4AF37;
+    position: relative;
+    overflow: hidden;
 }
 
 .flip-card-front img {
-    width: 80px;
-    height: 80px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
     object-fit: cover;
-    border-radius: 50%;
-    margin-bottom: 0.5rem;
-}
-
-.flip-card-front .outcome-emoji {
-    font-size: 2.5rem;
-    margin-bottom: 0.5rem;
+    opacity: 0.35;
+    z-index: 0;
 }
 
 .flip-card-front .outcome-number {
@@ -9463,6 +9463,8 @@ footer {
     font-size: 2.5rem;
     color: #D4AF37;
     font-weight: 700;
+    position: relative;
+    z-index: 1;
 }
 
 .flip-card-front h4 {
@@ -9470,6 +9472,9 @@ footer {
     color: var(--text-dark);
     text-align: center;
     margin: 0;
+    position: relative;
+    z-index: 1;
+    font-weight: 600;
 }
 
 .flip-card-back {
