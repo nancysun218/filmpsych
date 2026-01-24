@@ -554,3 +554,45 @@ function goToSlide(index, slideshowId) {
         dots[slideshowIndices[slideshowId]].classList.add('active');
     }
 }
+
+// SEL Slideshow functionality
+document.addEventListener('DOMContentLoaded', function() {
+    const selSlideshow = document.querySelector('.sel-slideshow');
+    if (!selSlideshow) return;
+    
+    const slides = selSlideshow.querySelectorAll('.sel-slide');
+    const dotsContainer = selSlideshow.querySelector('.sel-dots');
+    const prevBtn = selSlideshow.querySelector('.sel-prev');
+    const nextBtn = selSlideshow.querySelector('.sel-next');
+    
+    let currentSlide = 0;
+    
+    // Create dots
+    slides.forEach((_, index) => {
+        const dot = document.createElement('span');
+        dot.classList.add('sel-dot');
+        if (index === 0) dot.classList.add('active');
+        dot.addEventListener('click', () => goToSlide(index));
+        dotsContainer.appendChild(dot);
+    });
+    
+    const dots = dotsContainer.querySelectorAll('.sel-dot');
+    
+    function goToSlide(index) {
+        slides[currentSlide].classList.remove('active');
+        dots[currentSlide].classList.remove('active');
+        
+        currentSlide = index;
+        if (currentSlide >= slides.length) currentSlide = 0;
+        if (currentSlide < 0) currentSlide = slides.length - 1;
+        
+        slides[currentSlide].classList.add('active');
+        dots[currentSlide].classList.add('active');
+    }
+    
+    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
+    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
+    
+    // Auto-advance every 5 seconds
+    setInterval(() => goToSlide(currentSlide + 1), 5000);
+});
