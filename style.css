@@ -835,7 +835,7 @@ main {
     right: 0;
     bottom: 0;
     background: url('attached_assets/about_3.png') center center / cover no-repeat;
-    opacity: 0.77;
+    opacity: 0.63;
     z-index: 0;
 }
 
@@ -2077,7 +2077,7 @@ main {
     background-image: url('attached_assets/image_1769251133348.png');
     background-size: cover;
     background-position: center;
-    opacity: 0.77;
+    opacity: 0.63;
     z-index: 1;
 }
 
@@ -9228,7 +9228,7 @@ footer {
     right: 0;
     bottom: 0;
     background: url('attached_assets/programs_hero.png') center center / cover no-repeat;
-    opacity: 0.77;
+    opacity: 0.63;
     z-index: 0;
 }
 
