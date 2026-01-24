@@ -602,6 +602,136 @@ main {
     }
 }
 
+/* Upcoming Programs Section */
+.upcoming-programs-section {
+    padding: 80px 0;
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+}
+
+.programs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    margin-bottom: 50px;
+}
+
+.program-card {
+    background: white;
+    border-radius: 20px;
+    padding: 35px 30px;
+    box-shadow: 0 8px 32px rgba(123, 104, 166, 0.12);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(155, 139, 196, 0.15);
+}
+
+.program-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 16px 48px rgba(123, 104, 166, 0.2);
+}
+
+.program-timing {
+    display: inline-block;
+    background: linear-gradient(135deg, #9B8BC4 0%, #7B68A6 100%);
+    color: white;
+    padding: 6px 16px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 18px;
+    font-family: 'Inter', sans-serif;
+}
+
+.program-card h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #5D4E8C;
+    margin-bottom: 15px;
+}
+
+.program-card p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+.program-note {
+    color: #7B68A6;
+    font-size: 0.95rem;
+    margin-top: 12px;
+}
+
+.sponsor-badge {
+    margin-top: 18px;
+    padding: 12px 18px;
+    background: linear-gradient(135deg, #FFF4E6 0%, #FFE8CC 100%);
+    border: 1px solid #E6C89A;
+    border-radius: 12px;
+    color: #9B6B3D;
+    font-size: 0.9rem;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+}
+
+.sponsor-badge i {
+    margin-right: 8px;
+    color: #D4A053;
+}
+
+.internship-photos-row {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    margin-bottom: 25px;
+}
+
+.internship-photo {
+    width: calc(33.333% - 20px);
+    max-width: 350px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(123, 104, 166, 0.15);
+    background: white;
+    padding: 8px;
+}
+
+.remote-note {
+    text-align: center;
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    color: #7B68A6;
+    font-style: italic;
+}
+
+.remote-note i {
+    margin-right: 8px;
+    color: #9B8BC4;
+}
+
+@media (max-width: 992px) {
+    .programs-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .programs-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .internship-photos-row {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .internship-photo {
+        width: 90%;
+        max-width: 400px;
+        height: 180px;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
