@@ -556,45 +556,65 @@ function goToSlide(index, slideshowId) {
 }
 
 // SEL Full-Width Slideshow functionality
-document.addEventListener('DOMContentLoaded', function() {
-    const selSlideshow = document.querySelector('.sel-slideshow-fullwidth');
-    if (!selSlideshow) return;
-    
-    const slides = selSlideshow.querySelectorAll('.sel-slide');
-    const dotsContainer = selSlideshow.querySelector('.sel-dots-fullwidth');
-    const prevBtn = selSlideshow.querySelector('.sel-prev-arrow');
-    const nextBtn = selSlideshow.querySelector('.sel-next-arrow');
-    
-    if (!slides.length || !dotsContainer || !prevBtn || !nextBtn) return;
-    
-    let currentSlide = 0;
-    
-    // Create dots
-    slides.forEach((_, index) => {
-        const dot = document.createElement('span');
-        dot.classList.add('sel-dot');
-        if (index === 0) dot.classList.add('active');
-        dot.addEventListener('click', () => goToSlide(index));
-        dotsContainer.appendChild(dot);
-    });
-    
-    const dots = dotsContainer.querySelectorAll('.sel-dot');
-    
-    function goToSlide(index) {
-        slides[currentSlide].classList.remove('active');
-        if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+(function() {
+    function initSELSlideshow() {
+        const selSlideshow = document.querySelector('.sel-slideshow-fullwidth');
+        if (!selSlideshow) return;
         
-        currentSlide = index;
-        if (currentSlide >= slides.length) currentSlide = 0;
-        if (currentSlide < 0) currentSlide = slides.length - 1;
+        const slides = Array.from(selSlideshow.querySelectorAll('.sel-slide'));
+        const dotsContainer = selSlideshow.querySelector('.sel-dots-fullwidth');
+        const prevBtn = selSlideshow.querySelector('.sel-prev-arrow');
+        const nextBtn = selSlideshow.querySelector('.sel-next-arrow');
         
-        slides[currentSlide].classList.add('active');
-        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        if (slides.length === 0) return;
+        
+        let currentSlide = 0;
+        
+        // Create dots
+        if (dotsContainer) {
+            dotsContainer.innerHTML = '';
+            slides.forEach(function(_, index) {
+                const dot = document.createElement('span');
+                dot.className = 'sel-dot' + (index === 0 ? ' active' : '');
+                dot.onclick = function() { goToSlide(index); };
+                dotsContainer.appendChild(dot);
+            });
+        }
+        
+        function goToSlide(index) {
+            slides[currentSlide].classList.remove('active');
+            var dots = dotsContainer ? dotsContainer.querySelectorAll('.sel-dot') : [];
+            if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
+            
+            currentSlide = index;
+            if (currentSlide >= slides.length) currentSlide = 0;
+            if (currentSlide < 0) currentSlide = slides.length - 1;
+            
+            slides[currentSlide].classList.add('active');
+            if (dots[currentSlide]) dots[currentSlide].classList.add('active');
+        }
+        
+        if (prevBtn) {
+            prevBtn.onclick = function(e) {
+                e.preventDefault();
+                goToSlide(currentSlide - 1);
+            };
+        }
+        
+        if (nextBtn) {
+            nextBtn.onclick = function(e) {
+                e.preventDefault();
+                goToSlide(currentSlide + 1);
+            };
+        }
+        
+        // Auto-advance every 3 seconds
+        setInterval(function() { goToSlide(currentSlide + 1); }, 3000);
     }
     
-    prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
-    nextBtn.addEventListener('click', () => goToSlide(currentSlide + 1));
-    
-    // Auto-advance every 5 seconds
-    setInterval(() => goToSlide(currentSlide + 1), 5000);
-});
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initSELSlideshow);
+    } else {
+        initSELSlideshow();
+    }
+})();
