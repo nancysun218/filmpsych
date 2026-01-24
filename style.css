@@ -87,7 +87,7 @@ body {
     --light-sage: #E8E0F0;
     --pretty-blue: #A594C9;
     --light-blue: #F0EBF7;
-    --off-white: #FAF9FC;
+    --off-white: #FAF8F5;
     --cream: #F5F3F9;
     --white: #FFFFFF;
     --text-dark: #2D2D2D;
@@ -821,7 +821,7 @@ main {
 
 /* About Page Styles */
 .about-hero {
-    background: linear-gradient(135deg, rgba(93, 78, 140, 0.85) 0%, rgba(123, 104, 166, 0.8) 50%, rgba(155, 139, 196, 0.75) 100%), url('attached_assets/about 3.png');
+    background: linear-gradient(135deg, rgba(93, 78, 140, 0.85) 0%, rgba(123, 104, 166, 0.8) 50%, rgba(155, 139, 196, 0.75) 100%), url('attached_assets/about_3.png');
     background-size: cover;
     background-position: center;
     padding: 80px 0;
@@ -3189,8 +3189,8 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: url('attached_assets/homepage 1.png') center center / cover no-repeat;
-    opacity: 0.7;
+    background: url('attached_assets/homepage_1.png') center center / cover no-repeat;
+    opacity: 0.3;
     pointer-events: none;
 }
 
@@ -8208,4 +8208,27 @@ footer {
 .no-results p {
     font-size: 1.2rem;
     color: #7B68A6;
+}
+
+/* Start a Chapter Section Background */
+#start-chapter {
+    position: relative;
+}
+
+#start-chapter::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('attached_assets/homepage_11.png') center center / cover no-repeat;
+    opacity: 0.15;
+    pointer-events: none;
+    z-index: 0;
+}
+
+#start-chapter > * {
+    position: relative;
+    z-index: 1;
 }
