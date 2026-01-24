@@ -819,6 +819,139 @@ main {
     }
 }
 
+/* About Page Styles */
+.about-hero {
+    background: linear-gradient(135deg, #5D4E8C 0%, #7B68A6 50%, #9B8BC4 100%);
+    padding: 80px 0;
+    text-align: center;
+}
+
+.about-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    color: white;
+    margin-bottom: 1.5rem;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.about-hero-subtitle {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 800px;
+    margin: 0 auto;
+    line-height: 1.8;
+}
+
+.about-section-block {
+    padding: 80px 0;
+    background: white;
+}
+
+.about-section-alt {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+}
+
+.about-two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.about-two-col-reverse {
+    direction: rtl;
+}
+
+.about-two-col-reverse > * {
+    direction: ltr;
+}
+
+.about-col-text h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.2rem;
+    color: #5D4E8C;
+    margin-bottom: 1.5rem;
+}
+
+.about-col-text h2 i {
+    margin-right: 12px;
+    color: #9B8BC4;
+}
+
+.about-col-text p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #444;
+    margin-bottom: 1.2rem;
+}
+
+.about-btn {
+    display: inline-block;
+    margin-top: 1.5rem;
+    padding: 14px 32px;
+    background: linear-gradient(135deg, #7B68A6 0%, #5D4E8C 100%);
+    color: white;
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    box-shadow: 0 6px 20px rgba(123, 104, 166, 0.3);
+}
+
+.about-btn i {
+    margin-right: 8px;
+}
+
+.about-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 28px rgba(123, 104, 166, 0.4);
+}
+
+.about-section-img {
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 12px 40px rgba(123, 104, 166, 0.2);
+    object-fit: cover;
+    max-height: 400px;
+}
+
+@media (max-width: 992px) {
+    .about-two-col {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .about-two-col-reverse {
+        direction: ltr;
+    }
+    
+    .about-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 60px 0;
+    }
+    
+    .about-section-block {
+        padding: 50px 0;
+    }
+    
+    .about-col-text h2 {
+        font-size: 1.8rem;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
