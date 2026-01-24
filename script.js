@@ -555,15 +555,17 @@ function goToSlide(index, slideshowId) {
     }
 }
 
-// SEL Slideshow functionality
+// SEL Full-Width Slideshow functionality
 document.addEventListener('DOMContentLoaded', function() {
-    const selSlideshow = document.querySelector('.sel-slideshow');
+    const selSlideshow = document.querySelector('.sel-slideshow-fullwidth');
     if (!selSlideshow) return;
     
     const slides = selSlideshow.querySelectorAll('.sel-slide');
-    const dotsContainer = selSlideshow.querySelector('.sel-dots');
-    const prevBtn = selSlideshow.querySelector('.sel-prev');
-    const nextBtn = selSlideshow.querySelector('.sel-next');
+    const dotsContainer = selSlideshow.querySelector('.sel-dots-fullwidth');
+    const prevBtn = selSlideshow.querySelector('.sel-prev-arrow');
+    const nextBtn = selSlideshow.querySelector('.sel-next-arrow');
+    
+    if (!slides.length || !dotsContainer || !prevBtn || !nextBtn) return;
     
     let currentSlide = 0;
     
@@ -580,14 +582,14 @@ document.addEventListener('DOMContentLoaded', function() {
     
     function goToSlide(index) {
         slides[currentSlide].classList.remove('active');
-        dots[currentSlide].classList.remove('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.remove('active');
         
         currentSlide = index;
         if (currentSlide >= slides.length) currentSlide = 0;
         if (currentSlide < 0) currentSlide = slides.length - 1;
         
         slides[currentSlide].classList.add('active');
-        dots[currentSlide].classList.add('active');
+        if (dots[currentSlide]) dots[currentSlide].classList.add('active');
     }
     
     prevBtn.addEventListener('click', () => goToSlide(currentSlide - 1));
