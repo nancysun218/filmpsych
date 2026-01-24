@@ -6,6 +6,22 @@
     box-sizing: border-box;
 }
 
+/* Prevent white flash on load */
+html {
+    background-color: #5D4E8C;
+}
+
+body {
+    opacity: 0;
+    animation: bodyFadeIn 0.4s ease forwards;
+}
+
+@keyframes bodyFadeIn {
+    to {
+        opacity: 1;
+    }
+}
+
 /* Typing Animation */
 .typing-text {
     overflow: hidden;
