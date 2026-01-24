@@ -604,7 +604,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: rgba(93, 78, 140, 0.6);
+    background: rgba(75, 60, 115, 0.7);
     z-index: 1;
 }
 
@@ -955,7 +955,7 @@ main {
 }
 
 .about-section-alt {
-    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    background: linear-gradient(135deg, #E8E0F0 0%, #D8CCE8 100%);
 }
 
 .about-two-col {
@@ -1062,7 +1062,7 @@ main {
 .impact-section {
     position: relative;
     padding: 100px 0;
-    background: linear-gradient(135deg, #5D4E8C 0%, #7B68A6 50%, #9B8BC4 100%);
+    background: linear-gradient(135deg, #4A3D75 0%, #5D4E8C 50%, #7B68A6 100%);
     overflow: hidden;
 }
 
@@ -3237,13 +3237,13 @@ main {
     border-radius: 50%;
     opacity: 0;
     box-shadow: 0 0 20px 8px rgba(255, 255, 255, 1), 0 0 40px 16px rgba(255, 220, 180, 0.9);
-    animation: sparkle-float 6s ease-in-out infinite;
+    animation: sparkle-float 2.5s ease-in-out infinite;
 }
 
 .hero-2026-bg .sparkle.large {
-    width: 14px;
-    height: 14px;
-    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 1), 0 0 50px 20px rgba(255, 220, 180, 0.9);
+    width: 16px;
+    height: 16px;
+    box-shadow: 0 0 30px 12px rgba(255, 255, 255, 1), 0 0 60px 25px rgba(255, 220, 180, 1);
 }
 
 .hero-2026-bg .sparkle:nth-child(1) { left: 5%; top: 15%; animation-delay: 0s; }
@@ -3274,19 +3274,19 @@ main {
 @keyframes sparkle-float {
     0%, 100% {
         opacity: 0;
-        transform: translateY(0) scale(0.5);
+        transform: translateY(0) scale(0.6);
     }
-    20% {
+    15% {
         opacity: 1;
-        transform: translateY(-10px) scale(1.2);
+        transform: translateY(-8px) scale(1.4);
     }
-    40% {
-        opacity: 0.8;
-        transform: translateY(-25px) scale(1);
+    35% {
+        opacity: 0.9;
+        transform: translateY(-20px) scale(1.1);
     }
-    60% {
+    55% {
         opacity: 1;
-        transform: translateY(-15px) scale(1.3);
+        transform: translateY(-12px) scale(1.5);
     }
     80% {
         opacity: 0.7;
@@ -6909,7 +6909,7 @@ footer {
 /* Homepage Impact Section */
 .homepage-impact-section {
     padding: 5rem 0;
-    background: var(--light-purple);
+    background: linear-gradient(135deg, #E8E0F0 0%, #DED4EC 100%);
     margin: 4rem -2rem;
 }
 
