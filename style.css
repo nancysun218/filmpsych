@@ -441,9 +441,9 @@ main {
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(123, 104, 166, 0.45) 0%,
-        rgba(90, 70, 130, 0.5) 50%,
-        rgba(139, 169, 134, 0.35) 100%
+        rgba(90, 70, 120, 0.25) 0%,
+        rgba(60, 40, 90, 0.3) 50%,
+        rgba(100, 80, 130, 0.2) 100%
     );
     pointer-events: none;
 }
@@ -451,6 +451,60 @@ main {
 .hero-2026-bg .hero-content {
     position: relative;
     z-index: 2;
+}
+
+/* Sparkle Animation */
+.hero-2026-bg .sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.hero-2026-bg .sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    opacity: 0;
+    animation: sparkle-float 8s ease-in-out infinite;
+}
+
+.hero-2026-bg .sparkle:nth-child(1) { left: 10%; top: 20%; animation-delay: 0s; }
+.hero-2026-bg .sparkle:nth-child(2) { left: 25%; top: 60%; animation-delay: 1.5s; }
+.hero-2026-bg .sparkle:nth-child(3) { left: 40%; top: 30%; animation-delay: 3s; }
+.hero-2026-bg .sparkle:nth-child(4) { left: 55%; top: 70%; animation-delay: 0.5s; }
+.hero-2026-bg .sparkle:nth-child(5) { left: 70%; top: 15%; animation-delay: 2s; }
+.hero-2026-bg .sparkle:nth-child(6) { left: 85%; top: 50%; animation-delay: 4s; }
+.hero-2026-bg .sparkle:nth-child(7) { left: 15%; top: 80%; animation-delay: 2.5s; }
+.hero-2026-bg .sparkle:nth-child(8) { left: 60%; top: 40%; animation-delay: 5s; }
+.hero-2026-bg .sparkle:nth-child(9) { left: 90%; top: 25%; animation-delay: 1s; }
+.hero-2026-bg .sparkle:nth-child(10) { left: 35%; top: 85%; animation-delay: 3.5s; }
+.hero-2026-bg .sparkle:nth-child(11) { left: 5%; top: 45%; animation-delay: 6s; }
+.hero-2026-bg .sparkle:nth-child(12) { left: 75%; top: 75%; animation-delay: 4.5s; }
+
+@keyframes sparkle-float {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(0) scale(0.5);
+    }
+    25% {
+        opacity: 0.6;
+        transform: translateY(-15px) scale(1);
+    }
+    50% {
+        opacity: 0.3;
+        transform: translateY(-30px) scale(0.8);
+    }
+    75% {
+        opacity: 0.5;
+        transform: translateY(-20px) scale(1.1);
+    }
 }
 
 .hero-title-white {
@@ -903,18 +957,18 @@ main {
 }
 
 .ripple-btn-primary {
-    background: var(--primary-purple);
+    background: linear-gradient(135deg, #6B5B95 0%, #8B7BAF 100%);
     color: white;
 }
 
 .ripple-btn-secondary {
-    background: var(--sage-green);
-    color: white;
+    background: linear-gradient(135deg, #9B8FB8 0%, #C4B8D9 100%);
+    color: #3D3356;
 }
 
 .ripple-btn-tertiary {
-    background: #0096C7;
-    color: white;
+    background: linear-gradient(135deg, #E8A87C 0%, #F2C094 100%);
+    color: #5C4033;
 }
 
 /* Teams Section */
