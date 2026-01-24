@@ -1279,6 +1279,154 @@ main {
     }
 }
 
+/* Team Cards Grid Styles */
+.team-section {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+}
+
+.team-cards-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.team-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px 25px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border: 2px solid transparent;
+}
+
+.team-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.team-card-photo {
+    width: 140px;
+    height: 160px;
+    margin: 0 auto 20px;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #EDE7F6;
+}
+
+.team-card-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.team-card-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+}
+
+.team-card-photo-placeholder i {
+    font-size: 4rem;
+    color: #9B8BC4;
+}
+
+.team-card-name {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.25rem;
+    color: #333;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+.team-card-position {
+    font-family: 'Playfair Display', serif;
+    font-size: 0.9rem;
+    color: #666;
+    line-height: 1.5;
+}
+
+/* Pastel Colors by Position */
+.team-card-founder {
+    background: linear-gradient(135deg, #FFF0F5 0%, #FFE4EC 100%);
+    border-color: #FFB6C1;
+}
+
+.team-card-director {
+    background: linear-gradient(135deg, #E8F4FD 0%, #D1E9FA 100%);
+    border-color: #87CEEB;
+}
+
+.team-card-partnerships {
+    background: linear-gradient(135deg, #F0FFF0 0%, #E0FFE0 100%);
+    border-color: #98FB98;
+}
+
+.team-card-events {
+    background: linear-gradient(135deg, #FFF8E7 0%, #FFEFD5 100%);
+    border-color: #FFD700;
+}
+
+.team-card-programs {
+    background: linear-gradient(135deg, #F5F0FF 0%, #E8E0F5 100%);
+    border-color: #DDA0DD;
+}
+
+.team-card-chapters {
+    background: linear-gradient(135deg, #E0FFFF 0%, #D0F5F5 100%);
+    border-color: #40E0D0;
+}
+
+.team-card-media {
+    background: linear-gradient(135deg, #FFF5EE 0%, #FFE4D5 100%);
+    border-color: #FFA07A;
+}
+
+.team-card-marketing {
+    background: linear-gradient(135deg, #F0F8FF 0%, #E6F0FA 100%);
+    border-color: #6495ED;
+}
+
+.team-card-visual {
+    background: linear-gradient(135deg, #FFFAF0 0%, #FFF0DB 100%);
+    border-color: #F0E68C;
+}
+
+.team-card-editorial {
+    background: linear-gradient(135deg, #F8F0FF 0%, #EFE0FF 100%);
+    border-color: #BA55D3;
+}
+
+@media (max-width: 1200px) {
+    .team-cards-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .team-cards-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 576px) {
+    .team-cards-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    
+    .team-card {
+        padding: 25px 20px;
+    }
+    
+    .team-card-photo {
+        width: 120px;
+        height: 140px;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
