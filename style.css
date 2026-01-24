@@ -10142,14 +10142,18 @@ footer {
 
 .heart-cards-grid {
     display: flex;
-    justify-content: center;
-    gap: 3rem;
+    justify-content: space-evenly;
+    align-items: center;
     flex-wrap: wrap;
+    gap: 3rem;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
 }
 
 .heart-flip-card {
-    width: 280px;
-    height: 260px;
+    width: 320px;
+    height: 300px;
     perspective: 1000px;
 }
 
@@ -10157,7 +10161,7 @@ footer {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 0.6s;
+    transition: transform 0.7s;
     transform-style: preserve-3d;
 }
 
@@ -10180,78 +10184,56 @@ footer {
 }
 
 .heart-shape {
-    position: relative;
-    width: 240px;
-    height: 220px;
-    background: #E91E63;
+    width: 300px;
+    height: 280px;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 2.5rem 1.5rem 1.5rem;
     text-align: center;
+    padding: 3rem 2rem 2rem;
     box-sizing: border-box;
+    -webkit-mask-image: url('attached_assets/heart_shape.png');
+    mask-image: url('attached_assets/heart_shape.png');
+    -webkit-mask-size: contain;
+    mask-size: contain;
+    -webkit-mask-repeat: no-repeat;
+    mask-repeat: no-repeat;
+    -webkit-mask-position: center;
+    mask-position: center;
 }
 
-.heart-shape::before,
-.heart-shape::after {
-    content: '';
-    position: absolute;
-    width: 130px;
-    height: 200px;
+.heart-front-style {
+    background: #FFD1DC;
+}
+
+.heart-back-style {
     background: #E91E63;
-    border-radius: 130px 130px 0 0;
-    top: -95px;
 }
 
-.heart-shape::before {
-    left: 5px;
-    transform: rotate(-45deg);
-    transform-origin: bottom right;
-}
-
-.heart-shape::after {
-    right: 5px;
-    transform: rotate(45deg);
-    transform-origin: bottom left;
-}
-
-.heart-front .heart-shape {
-    background: #FFD1DC;
-}
-
-.heart-front .heart-shape::before,
-.heart-front .heart-shape::after {
-    background: #FFD1DC;
-}
-
-.heart-front .heart-shape h3 {
-    position: relative;
-    z-index: 1;
+.heart-shape h3 {
     color: var(--deep-purple);
     font-family: 'Playfair Display', serif;
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     font-weight: 700;
     margin: 0;
     line-height: 1.4;
+    padding: 0 1rem;
 }
 
-.heart-back .heart-shape p {
-    position: relative;
-    z-index: 1;
+.heart-shape p {
     color: white;
-    font-size: 0.85rem;
+    font-size: 0.9rem;
     line-height: 1.5;
     margin: 0;
+    padding: 0 1rem;
 }
 
 .heart-examples {
-    position: relative;
-    z-index: 1;
     display: block;
     margin-top: 0.5rem;
-    font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.85);
+    font-size: 0.8rem;
+    color: rgba(255, 255, 255, 0.9);
     font-style: italic;
 }
 
@@ -10259,24 +10241,35 @@ footer {
     .heart-cards-grid {
         gap: 2rem;
     }
+    
+    .heart-flip-card {
+        width: 280px;
+        height: 260px;
+    }
+    
+    .heart-shape {
+        width: 260px;
+        height: 240px;
+    }
 }
 
 @media (max-width: 768px) {
     .heart-flip-card {
-        width: 240px;
-        height: 220px;
+        width: 260px;
+        height: 240px;
     }
     
     .heart-shape {
-        width: 200px;
-        height: 180px;
-        padding: 2rem 1rem 1rem;
+        width: 240px;
+        height: 220px;
+        padding: 2.5rem 1.5rem 1.5rem;
     }
     
-    .heart-shape::before,
-    .heart-shape::after {
-        width: 110px;
-        height: 170px;
-        top: -80px;
+    .heart-shape h3 {
+        font-size: 1.1rem;
+    }
+    
+    .heart-shape p {
+        font-size: 0.8rem;
     }
 }
