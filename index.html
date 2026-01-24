@@ -5150,7 +5150,7 @@
 
             <!-- Full-Width Slideshow Section -->
             <div class="sel-slideshow-section">
-                <div class="sel-slideshow-fullwidth">
+                <div class="sel-slideshow-fullwidth" id="selSlideshow">
                     <div class="sel-slide active">
                         <img src="attached_assets/sel_program_1.jpg" alt="SEL Program Activity">
                     </div>
@@ -5166,11 +5166,42 @@
                     <div class="sel-slide">
                         <img src="attached_assets/sel_program_5.jpg" alt="SEL Program Activity">
                     </div>
-                    <button class="sel-arrow sel-prev-arrow"><i class="fas fa-chevron-left"></i></button>
-                    <button class="sel-arrow sel-next-arrow"><i class="fas fa-chevron-right"></i></button>
-                    <div class="sel-dots-fullwidth"></div>
+                    <button class="sel-arrow sel-prev-arrow" id="selPrev" type="button"><i class="fas fa-chevron-left"></i></button>
+                    <button class="sel-arrow sel-next-arrow" id="selNext" type="button"><i class="fas fa-chevron-right"></i></button>
+                    <div class="sel-dots-fullwidth" id="selDots">
+                        <span class="sel-dot active" data-index="0"></span>
+                        <span class="sel-dot" data-index="1"></span>
+                        <span class="sel-dot" data-index="2"></span>
+                        <span class="sel-dot" data-index="3"></span>
+                        <span class="sel-dot" data-index="4"></span>
+                    </div>
                 </div>
             </div>
+            <script>
+            (function(){
+                var current = 0;
+                var slides = document.querySelectorAll('#selSlideshow .sel-slide');
+                var dots = document.querySelectorAll('#selDots .sel-dot');
+                var total = slides.length;
+                
+                function show(n) {
+                    slides[current].classList.remove('active');
+                    dots[current].classList.remove('active');
+                    current = (n + total) % total;
+                    slides[current].classList.add('active');
+                    dots[current].classList.add('active');
+                }
+                
+                document.getElementById('selPrev').onclick = function() { show(current - 1); };
+                document.getElementById('selNext').onclick = function() { show(current + 1); };
+                
+                dots.forEach(function(dot, i) {
+                    dot.onclick = function() { show(i); };
+                });
+                
+                setInterval(function() { show(current + 1); }, 3000);
+            })();
+            </script>
 
             <!-- What We Focus On Section -->
             <div class="sel-focus-section">
