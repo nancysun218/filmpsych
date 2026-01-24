@@ -88,11 +88,15 @@ h1, h2, h3 {
     display: flex;
     align-items: center;
     gap: 0.5rem;
+    text-decoration: none;
 }
 
-.nav-logo i {
-    color: var(--primary-purple);
-    font-size: 1.5rem;
+.nav-logo-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+    background: white;
 }
 
 .nav-logo h1 {
