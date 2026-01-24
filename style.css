@@ -4875,6 +4875,28 @@ footer {
     margin-top: 3rem;
 }
 
+.homepage-impact-grid-5 {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+@media (max-width: 1200px) {
+    .homepage-impact-grid-5 {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .homepage-impact-grid-5 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .homepage-impact-grid-5 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .impact-stat-card {
     background: var(--white);
     padding: 2.5rem 2rem;
