@@ -7423,7 +7423,7 @@ footer {
     opacity: 0.35;
     top: 0;
     bottom: 0;
-    width: 45%;
+    width: 55%;
     overflow: hidden;
 }
 
@@ -7433,6 +7433,14 @@ footer {
 
 .storybook-decoration.right {
     right: 0;
+}
+
+.storybook-decoration.left .storybook-decor-img {
+    object-position: right center;
+}
+
+.storybook-decoration.right .storybook-decor-img {
+    object-position: left center;
 }
 
 .storybook-decor-img {
@@ -7545,6 +7553,32 @@ footer {
     position: relative;
     border-radius: 20px;
     overflow: hidden;
+    background: #F5EDE4;
+    min-height: 350px;
+}
+
+.featured-book-slideshow .slideshow-container {
+    height: 350px;
+}
+
+.featured-book-slideshow .slide {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.featured-book-slideshow .slide.active {
+    opacity: 1;
+}
+
+.featured-book-slideshow .slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
     background: #F5EDE4;
 }
 
@@ -7827,7 +7861,7 @@ footer {
 /* Responsive Styles */
 @media (max-width: 1024px) {
     .storybook-decoration {
-        width: 35%;
+        width: 50%;
         opacity: 0.25;
     }
 
