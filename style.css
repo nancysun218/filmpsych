@@ -1427,6 +1427,230 @@ main {
     }
 }
 
+/* Creative Production Studio Styles */
+.team-cards-centered {
+    justify-content: center;
+}
+
+.studio-department {
+    margin-bottom: 60px;
+}
+
+.department-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 30px;
+    padding-bottom: 15px;
+    border-bottom: 3px solid #E8E0F0;
+}
+
+.department-header i {
+    font-size: 1.8rem;
+    color: #7B68A6;
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+    padding: 15px;
+    border-radius: 50%;
+}
+
+.department-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.8rem;
+    color: #5D4E8C;
+    margin: 0;
+}
+
+/* Artist Team Groups */
+.artist-team {
+    background: white;
+    border-radius: 20px;
+    padding: 25px 30px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+}
+
+.artist-team:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.artist-team-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    width: fit-content;
+}
+
+.artist-team-header i {
+    font-size: 1.2rem;
+}
+
+.artist-team-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.2rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Team Color Themes */
+.team-zen-den {
+    background: linear-gradient(135deg, #E8F5E9 0%, #C8E6C9 100%);
+    color: #2E7D32;
+}
+
+.team-lilies {
+    background: linear-gradient(135deg, #FCE4EC 0%, #F8BBD9 100%);
+    color: #AD1457;
+}
+
+.team-noodles {
+    background: linear-gradient(135deg, #FFF3E0 0%, #FFE0B2 100%);
+    color: #E65100;
+}
+
+.team-silly {
+    background: linear-gradient(135deg, #E3F2FD 0%, #BBDEFB 100%);
+    color: #1565C0;
+}
+
+.team-five {
+    background: linear-gradient(135deg, #F3E5F5 0%, #E1BEE7 100%);
+    color: #7B1FA2;
+}
+
+.artist-team-members {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.mini-card {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #F8F5FC;
+    padding: 12px 20px;
+    border-radius: 30px;
+    transition: all 0.3s ease;
+}
+
+.mini-card:hover {
+    background: #E8E0F0;
+    transform: translateX(5px);
+}
+
+.mini-card-icon {
+    width: 32px;
+    height: 32px;
+    background: linear-gradient(135deg, #9B8BC4 0%, #7B68A6 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.mini-card-icon i {
+    font-size: 0.9rem;
+    color: white;
+}
+
+.mini-card span {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #333;
+    font-weight: 500;
+}
+
+/* Writers Grid */
+.writers-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+}
+
+.writer-card {
+    background: white;
+    border-radius: 16px;
+    padding: 25px 20px;
+    text-align: center;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: all 0.3s ease;
+    border: 2px solid #E8E0F0;
+}
+
+.writer-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border-color: #9B8BC4;
+}
+
+.writer-icon {
+    width: 50px;
+    height: 50px;
+    background: linear-gradient(135deg, #F5F0FF 0%, #E8E0F0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 15px;
+}
+
+.writer-icon i {
+    font-size: 1.3rem;
+    color: #7B68A6;
+}
+
+.writer-card span {
+    font-family: 'Playfair Display', serif;
+    font-size: 1rem;
+    color: #333;
+    font-weight: 600;
+}
+
+.writer-card-coming-soon {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    border-style: dashed;
+}
+
+.writer-card-coming-soon span {
+    color: #9B8BC4;
+    font-style: italic;
+}
+
+@media (max-width: 1200px) {
+    .writers-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .writers-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .artist-team-members {
+        flex-direction: column;
+    }
+    
+    .department-header h2 {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .writers-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .artist-team {
+        padding: 20px;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
