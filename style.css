@@ -990,8 +990,8 @@ main {
 }
 
 .ripple-btn-tertiary {
-    background: linear-gradient(135deg, #E8A87C 0%, #F2C094 100%);
-    color: #5C4033;
+    background: linear-gradient(135deg, #4A5568 0%, #5A6A7A 100%);
+    color: white;
 }
 
 /* Teams Section */
