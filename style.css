@@ -3203,9 +3203,9 @@ main {
     bottom: 0;
     background: linear-gradient(
         135deg,
-        rgba(90, 70, 120, 0.25) 0%,
-        rgba(60, 40, 90, 0.3) 50%,
-        rgba(100, 80, 130, 0.2) 100%
+        rgba(60, 45, 90, 0.55) 0%,
+        rgba(40, 25, 70, 0.6) 50%,
+        rgba(70, 55, 100, 0.5) 100%
     );
     pointer-events: none;
 }
@@ -8213,22 +8213,26 @@ footer {
 /* Start a Chapter Section Background */
 #start-chapter {
     position: relative;
+    overflow: visible !important;
 }
 
-#start-chapter::before {
-    content: '';
+#start-chapter .floating-patterns {
+    display: none;
+}
+
+#start-chapter .chapter-bg-image {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
     background: url('attached_assets/homepage_11.png') center center / cover no-repeat;
-    opacity: 0.15;
+    opacity: 0.2;
     pointer-events: none;
     z-index: 0;
 }
 
-#start-chapter > * {
+#start-chapter > .container {
     position: relative;
     z-index: 1;
 }
