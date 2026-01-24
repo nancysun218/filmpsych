@@ -3899,6 +3899,19 @@ footer {
     }
 }
 
+@keyframes infiniteScrollReverse {
+    0% {
+        transform: translateX(-50%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+.infinite-carousel-track.reverse {
+    animation: infiniteScrollReverse 40s linear infinite;
+}
+
 .carousel-card {
     flex: 0 0 220px;
     width: 220px;
