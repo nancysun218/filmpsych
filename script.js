@@ -23,31 +23,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
     
-    // Handle dropdown toggle clicks
-    document.querySelectorAll('.dropdown-toggle').forEach(toggle => {
-        toggle.addEventListener('click', function(e) {
-            e.preventDefault();
-            e.stopPropagation();
-            
-            const dropdown = this.closest('.dropdown');
-            const isActive = dropdown.classList.contains('active');
-            
-            // Close all dropdowns first
+    // Dropdowns now work on hover via CSS - no click toggle needed
+    // Close all dropdowns when any link inside is clicked
+    document.querySelectorAll('.dropdown-content a').forEach(link => {
+        link.addEventListener('click', function() {
+            // Remove active class from all dropdowns to ensure they close
             document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-            
-            // Toggle dropdown - show if it wasn't active, hide if it was
-            if (!isActive) {
-                dropdown.classList.add('active');
-                console.log('Dropdown activated'); // Debug log
-            }
         });
-    });
-    
-    // Close dropdowns when clicking outside
-    document.addEventListener('click', function(e) {
-        if (!e.target.closest('.dropdown')) {
-            document.querySelectorAll('.dropdown').forEach(d => d.classList.remove('active'));
-        }
     });
 
     // Handle navigation clicks
