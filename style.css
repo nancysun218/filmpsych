@@ -8196,3 +8196,16 @@ footer {
         font-size: 1rem;
     }
 }
+
+/* No results message */
+.no-results {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+.no-results p {
+    font-size: 1.2rem;
+    color: #7B68A6;
+}

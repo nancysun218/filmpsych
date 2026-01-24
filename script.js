@@ -297,22 +297,42 @@ window.addEventListener('scroll', function() {
     }
 });
 
-// Blog filtering functionality
+// Blog filtering and search functionality
 function initializeBlogFiltering() {
     const blogFilter = document.getElementById('blog-filter');
+    const blogSearch = document.getElementById('blog-search');
     const blogsContainer = document.getElementById('blogs-container');
     
-    if (!blogFilter || !blogsContainer) return;
+    if (!blogsContainer) return;
     
     // Store original blog cards
     const originalBlogCards = Array.from(blogsContainer.querySelectorAll('.blog-card'));
+    let currentSearchTerm = '';
     
-    function sortBlogs(sortType) {
-        let sortedCards = [...originalBlogCards];
+    function filterAndSortBlogs() {
+        let filteredCards = [...originalBlogCards];
         
+        // Apply search filter
+        if (currentSearchTerm) {
+            const searchLower = currentSearchTerm.toLowerCase();
+            filteredCards = filteredCards.filter(card => {
+                const title = card.querySelector('h3')?.textContent.toLowerCase() || '';
+                const content = card.querySelector('.blog-content p:not(.blog-meta)')?.textContent.toLowerCase() || '';
+                const category = card.querySelector('.blog-category')?.textContent.toLowerCase() || '';
+                const author = card.querySelector('.blog-meta')?.textContent.toLowerCase() || '';
+                
+                return title.includes(searchLower) || 
+                       content.includes(searchLower) || 
+                       category.includes(searchLower) ||
+                       author.includes(searchLower);
+            });
+        }
+        
+        // Apply sort
+        const sortType = blogFilter?.value || 'latest';
         switch(sortType) {
             case 'latest':
-                sortedCards.sort((a, b) => {
+                filteredCards.sort((a, b) => {
                     const dateA = new Date(a.dataset.date);
                     const dateB = new Date(b.dataset.date);
                     return dateB - dateA;
@@ -320,7 +340,7 @@ function initializeBlogFiltering() {
                 break;
                 
             case 'oldest':
-                sortedCards.sort((a, b) => {
+                filteredCards.sort((a, b) => {
                     const dateA = new Date(a.dataset.date);
                     const dateB = new Date(b.dataset.date);
                     return dateA - dateB;
@@ -328,10 +348,15 @@ function initializeBlogFiltering() {
                 break;
         }
         
-        // Clear container and add sorted cards with animation
+        // Clear container and add filtered/sorted cards with animation
         blogsContainer.innerHTML = '';
         
-        sortedCards.forEach((card, index) => {
+        if (filteredCards.length === 0) {
+            blogsContainer.innerHTML = '<div class="no-results"><p>No articles found matching your search.</p></div>';
+            return;
+        }
+        
+        filteredCards.forEach((card, index) => {
             card.style.opacity = '0';
             card.style.transform = 'translateY(20px)';
             blogsContainer.appendChild(card);
@@ -340,17 +365,27 @@ function initializeBlogFiltering() {
                 card.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
-            }, index * 100);
+            }, index * 50);
+        });
+    }
+    
+    // Handle search input
+    if (blogSearch) {
+        blogSearch.addEventListener('input', function() {
+            currentSearchTerm = this.value.trim();
+            filterAndSortBlogs();
         });
     }
     
     // Handle filter change
-    blogFilter.addEventListener('change', function() {
-        sortBlogs(this.value);
-    });
+    if (blogFilter) {
+        blogFilter.addEventListener('change', function() {
+            filterAndSortBlogs();
+        });
+    }
     
     // Initialize with latest posts first
-    sortBlogs('latest');
+    filterAndSortBlogs();
 }
 
 // Blog Carousel Functionality
