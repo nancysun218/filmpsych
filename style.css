@@ -555,11 +555,6 @@ main {
     padding: 8px;
 }
 
-.sneakpeak-img[alt="Project Sneakpeak 19"] {
-    object-fit: cover;
-    object-position: center top;
-}
-
 .sneakpeak-img:hover {
     transform: translateY(-8px) scale(1.02);
     box-shadow: 0 16px 40px rgba(123, 104, 166, 0.25);
