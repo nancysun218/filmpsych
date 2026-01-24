@@ -9151,8 +9151,9 @@ footer {
 }
 
 .collaborate-btn.partner-btn {
-    background: var(--light-pink);
-    color: var(--deep-purple);
+    background: #FFE4EC;
+    color: #5D4E8C;
+    border: 2px solid rgba(255, 209, 220, 0.8);
 }
 
 .collaborate-btn.partner-btn:hover {
