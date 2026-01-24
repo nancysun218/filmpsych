@@ -2033,6 +2033,109 @@ main {
     }
 }
 
+/* Advisors & Professionals Styles */
+.advisors-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.advisor-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    gap: 25px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    border-left: 5px solid #7B68A6;
+}
+
+.advisor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 45px rgba(0, 0, 0, 0.12);
+}
+
+.advisor-photo {
+    width: 120px;
+    height: 140px;
+    border-radius: 16px;
+    overflow: hidden;
+    flex-shrink: 0;
+    background: #EDE7F6;
+}
+
+.advisor-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.advisor-photo-placeholder {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #E8E0F0 0%, #D4C5E8 100%);
+}
+
+.advisor-photo-placeholder i {
+    font-size: 3rem;
+    color: #9B8BC4;
+}
+
+.advisor-info {
+    flex: 1;
+}
+
+.advisor-info h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.4rem;
+    color: #5D4E8C;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+.advisor-bio {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.7;
+    margin: 0;
+}
+
+.advisor-card-coming {
+    background: linear-gradient(135deg, #F8F5FC 0%, #EDE7F6 100%);
+    border-left-style: dashed;
+}
+
+.advisor-card-coming .advisor-info h3 {
+    color: #9B8BC4;
+    font-style: italic;
+}
+
+.advisor-card-coming .advisor-bio {
+    color: #9B8BC4;
+    font-style: italic;
+}
+
+@media (max-width: 992px) {
+    .advisors-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 576px) {
+    .advisor-card {
+        flex-direction: column;
+        text-align: center;
+    }
+    
+    .advisor-photo {
+        margin: 0 auto;
+    }
+}
+
 @media (max-width: 1200px) {
     .five-col-grid {
         grid-template-columns: repeat(3, 1fr);
