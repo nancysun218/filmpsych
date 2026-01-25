@@ -11210,7 +11210,7 @@ footer {
 
 .flower {
     position: absolute;
-    animation: flowerFloat 15s ease-in-out infinite, flowerSpin 4s linear infinite;
+    animation: flowerFloat 6s ease-in-out infinite, flowerSpin 2s linear infinite;
     filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.3));
 }
 
@@ -11218,16 +11218,16 @@ footer {
     font-size: 18px;
 }
 
-.flower-1 { left: 5%; animation-delay: 0s; animation-duration: 14s, 3s; }
-.flower-2 { left: 15%; animation-delay: 2s; animation-duration: 16s, 5s; }
-.flower-3 { left: 25%; animation-delay: 4s; animation-duration: 13s, 4s; }
-.flower-4 { left: 35%; animation-delay: 1s; animation-duration: 15s, 6s; }
-.flower-5 { left: 50%; animation-delay: 3s; animation-duration: 17s, 3.5s; }
-.flower-6 { left: 60%; animation-delay: 5s; animation-duration: 14s, 4.5s; }
-.flower-7 { left: 70%; animation-delay: 0.5s; animation-duration: 16s, 5.5s; }
-.flower-8 { left: 80%; animation-delay: 2.5s; animation-duration: 15s, 3.8s; }
-.flower-9 { left: 90%; animation-delay: 4.5s; animation-duration: 13s, 4.2s; }
-.flower-10 { left: 95%; animation-delay: 1.5s; animation-duration: 18s, 5.2s; }
+.flower-1 { left: 5%; animation-delay: 0s; animation-duration: 5s, 1.5s; }
+.flower-2 { left: 15%; animation-delay: 0.8s; animation-duration: 6s, 2s; }
+.flower-3 { left: 25%; animation-delay: 1.6s; animation-duration: 5.5s, 1.8s; }
+.flower-4 { left: 35%; animation-delay: 0.4s; animation-duration: 6.5s, 2.2s; }
+.flower-5 { left: 50%; animation-delay: 1.2s; animation-duration: 7s, 1.6s; }
+.flower-6 { left: 60%; animation-delay: 2s; animation-duration: 5s, 2s; }
+.flower-7 { left: 70%; animation-delay: 0.2s; animation-duration: 6s, 2.4s; }
+.flower-8 { left: 80%; animation-delay: 1s; animation-duration: 5.5s, 1.7s; }
+.flower-9 { left: 90%; animation-delay: 1.8s; animation-duration: 5s, 1.9s; }
+.flower-10 { left: 95%; animation-delay: 0.6s; animation-duration: 7s, 2.2s; }
 
 .flower-1 i { font-size: 16px; color: #FF69B4; }
 .flower-2 i { font-size: 22px; color: #FFB6C1; }
