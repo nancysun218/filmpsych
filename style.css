@@ -7782,27 +7782,26 @@ footer {
 .leaf {
     position: absolute;
     top: -50px;
-    color: #7B68A6;
-    opacity: 0.4;
     animation: falling linear infinite;
+    filter: drop-shadow(0 2px 4px rgba(93, 155, 122, 0.4));
 }
 
 .leaf i {
-    font-size: 1.2rem;
+    font-size: 1.5rem;
 }
 
-.leaf-1 { left: 5%; animation-duration: 5s; animation-delay: 0s; }
-.leaf-2 { left: 15%; animation-duration: 4s; animation-delay: 0.8s; color: #9B8BC4; }
-.leaf-3 { left: 25%; animation-duration: 6s; animation-delay: 0.4s; }
-.leaf-4 { left: 35%; animation-duration: 4.5s; animation-delay: 1.2s; color: #5D9B7A; }
-.leaf-5 { left: 45%; animation-duration: 5.5s; animation-delay: 0.2s; }
-.leaf-6 { left: 55%; animation-duration: 3.5s; animation-delay: 1.6s; color: #9B8BC4; }
-.leaf-7 { left: 65%; animation-duration: 6s; animation-delay: 1s; }
-.leaf-8 { left: 75%; animation-duration: 4s; animation-delay: 0.6s; color: #5D9B7A; }
-.leaf-9 { left: 85%; animation-duration: 5s; animation-delay: 1.4s; }
-.leaf-10 { left: 92%; animation-duration: 4.5s; animation-delay: 0.3s; color: #9B8BC4; }
-.leaf-11 { left: 10%; animation-duration: 6.5s; animation-delay: 2s; }
-.leaf-12 { left: 80%; animation-duration: 5.5s; animation-delay: 2.4s; color: #5D9B7A; }
+.leaf-1 { left: 5%; animation-duration: 5s; animation-delay: 0s; color: #4CAF50; }
+.leaf-2 { left: 15%; animation-duration: 4s; animation-delay: 0.8s; color: #8BC34A; }
+.leaf-3 { left: 25%; animation-duration: 6s; animation-delay: 0.4s; color: #2E7D32; }
+.leaf-4 { left: 35%; animation-duration: 4.5s; animation-delay: 1.2s; color: #66BB6A; }
+.leaf-5 { left: 45%; animation-duration: 5.5s; animation-delay: 0.2s; color: #43A047; }
+.leaf-6 { left: 55%; animation-duration: 3.5s; animation-delay: 1.6s; color: #81C784; }
+.leaf-7 { left: 65%; animation-duration: 6s; animation-delay: 1s; color: #388E3C; }
+.leaf-8 { left: 75%; animation-duration: 4s; animation-delay: 0.6s; color: #A5D6A7; }
+.leaf-9 { left: 85%; animation-duration: 5s; animation-delay: 1.4s; color: #4CAF50; }
+.leaf-10 { left: 92%; animation-duration: 4.5s; animation-delay: 0.3s; color: #69F0AE; }
+.leaf-11 { left: 10%; animation-duration: 6.5s; animation-delay: 2s; color: #2E7D32; }
+.leaf-12 { left: 80%; animation-duration: 5.5s; animation-delay: 2.4s; color: #76FF03; }
 
 @keyframes falling {
     0% {
@@ -7811,13 +7810,13 @@ footer {
         opacity: 0;
     }
     10% {
-        opacity: 0.5;
+        opacity: 1;
     }
     50% {
         transform: translateX(30px) rotate(180deg);
     }
     90% {
-        opacity: 0.3;
+        opacity: 1;
     }
     100% {
         top: 100%;
@@ -11122,12 +11121,12 @@ footer {
 
 .flower {
     position: absolute;
-    color: rgba(255, 182, 193, 0.7);
     animation: flowerFloat 15s ease-in-out infinite, flowerSpin 4s linear infinite;
+    filter: drop-shadow(0 2px 4px rgba(255, 105, 180, 0.3));
 }
 
 .flower i {
-    font-size: 12px;
+    font-size: 18px;
 }
 
 .flower-1 { left: 5%; animation-delay: 0s; animation-duration: 14s, 3s; }
@@ -11141,9 +11140,16 @@ footer {
 .flower-9 { left: 90%; animation-delay: 4.5s; animation-duration: 13s, 4.2s; }
 .flower-10 { left: 95%; animation-delay: 1.5s; animation-duration: 18s, 5.2s; }
 
-.flower-1 i, .flower-3 i, .flower-5 i, .flower-7 i, .flower-9 i { font-size: 10px; }
-.flower-2 i, .flower-4 i, .flower-6 i { font-size: 14px; }
-.flower-8 i, .flower-10 i { font-size: 8px; }
+.flower-1 i { font-size: 16px; color: #FF69B4; }
+.flower-2 i { font-size: 22px; color: #FFB6C1; }
+.flower-3 i { font-size: 14px; color: #FFFFFF; }
+.flower-4 i { font-size: 20px; color: #FF1493; }
+.flower-5 i { font-size: 18px; color: #FFC0CB; }
+.flower-6 i { font-size: 24px; color: #FF69B4; }
+.flower-7 i { font-size: 15px; color: #FFFFFF; }
+.flower-8 i { font-size: 12px; color: #FFB6C1; }
+.flower-9 i { font-size: 20px; color: #FF1493; }
+.flower-10 i { font-size: 16px; color: #FFC0CB; }
 
 @keyframes flowerFloat {
     0% {
@@ -11152,10 +11158,10 @@ footer {
         transform: translateX(0) rotate(0deg);
     }
     10% {
-        opacity: 0.8;
+        opacity: 1;
     }
     90% {
-        opacity: 0.8;
+        opacity: 1;
     }
     100% {
         top: 105%;
