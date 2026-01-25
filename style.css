@@ -11239,6 +11239,388 @@ footer {
         transform: translateY(-130px) scale(0.5);
     }
 }
+
+/* ======================= */
+/* CHAPTERS PAGE STYLES */
+/* ======================= */
+
+.chapters-hero {
+    position: relative;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+    overflow: hidden;
+}
+
+.chapters-hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('attached_assets/homepage_11.png') center/cover no-repeat;
+    opacity: 0.7;
+    z-index: 0;
+}
+
+.chapters-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(30, 40, 80, 0.85) 0%, rgba(75, 50, 120, 0.8) 50%, rgba(50, 60, 130, 0.85) 100%);
+    z-index: 1;
+}
+
+.chapters-sparkles {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    z-index: 2;
+}
+
+.chapter-sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: white;
+    border-radius: 50%;
+    animation: chapterSparkle 2s ease-in-out infinite;
+}
+
+.chapter-sparkle.sparkle-1 { top: 15%; left: 10%; animation-delay: 0s; }
+.chapter-sparkle.sparkle-2 { top: 25%; left: 85%; animation-delay: 0.4s; }
+.chapter-sparkle.sparkle-3 { top: 60%; left: 20%; animation-delay: 0.8s; }
+.chapter-sparkle.sparkle-4 { top: 40%; left: 75%; animation-delay: 1.2s; }
+.chapter-sparkle.sparkle-5 { top: 70%; left: 90%; animation-delay: 0.6s; }
+.chapter-sparkle.sparkle-6 { top: 80%; left: 5%; animation-delay: 1s; }
+
+@keyframes chapterSparkle {
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.5); }
+}
+
+.chapters-hero .container {
+    position: relative;
+    z-index: 3;
+}
+
+.chapters-breadcrumb {
+    display: inline-block;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 8px 20px;
+    border-radius: 30px;
+    font-size: 0.85rem;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 20px;
+    backdrop-filter: blur(5px);
+}
+
+.chapters-breadcrumb i {
+    margin-right: 8px;
+}
+
+.chapters-hero-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.chapters-hero-subtitle {
+    font-size: 1.2rem;
+    color: rgba(255, 255, 255, 0.95);
+    max-width: 700px;
+    margin: 0 auto;
+    line-height: 1.7;
+}
+
+/* Chapters Content Area */
+.chapters-content {
+    background: linear-gradient(180deg, #f0f2f8 0%, #e8ecf5 100%);
+}
+
+/* Flip Cards Section */
+.chapters-intro-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    margin-bottom: 60px;
+    padding-top: 20px;
+}
+
+.flip-card-container {
+    perspective: 1000px;
+}
+
+.flip-card {
+    width: 100%;
+    height: 320px;
+    cursor: pointer;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    box-shadow: 0 10px 30px rgba(30, 40, 80, 0.15);
+}
+
+.flip-card-front {
+    background: linear-gradient(135deg, #2a3a70 0%, #4a3a90 50%, #3a4a8a 100%);
+    color: white;
+}
+
+.flip-icon {
+    width: 80px;
+    height: 80px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    backdrop-filter: blur(10px);
+}
+
+.flip-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.flip-card-front h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.flip-hint {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin-top: auto;
+}
+
+.flip-hint i {
+    margin-right: 5px;
+    animation: rotateHint 2s ease-in-out infinite;
+}
+
+@keyframes rotateHint {
+    0%, 100% { transform: rotate(0deg); }
+    50% { transform: rotate(180deg); }
+}
+
+.flip-card-back {
+    background: white;
+    color: #333;
+    transform: rotateY(180deg);
+    text-align: left;
+    justify-content: flex-start;
+    padding-top: 35px;
+    overflow-y: auto;
+}
+
+.flip-card-back p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+    color: #444;
+}
+
+.flip-note {
+    font-style: italic;
+    color: #5a4a8a;
+    border-left: 3px solid #4a3a90;
+    padding-left: 15px;
+}
+
+.flip-list {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+.flip-list li {
+    padding: 8px 0;
+    font-size: 0.9rem;
+    color: #444;
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.flip-list li i {
+    color: #4a3a90;
+    margin-top: 3px;
+}
+
+/* Chapters Cards */
+.chapters-cards .chapter-card {
+    border-top: 4px solid #3a4a8a;
+    transition: all 0.3s ease;
+}
+
+.chapters-cards .chapter-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 40px rgba(30, 40, 80, 0.2);
+}
+
+.card-icon.navy {
+    background: linear-gradient(135deg, #2a3a70 0%, #4a3a90 100%);
+    color: white;
+}
+
+/* Chapters Buttons */
+.chapters-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 30px 0 40px;
+    flex-wrap: wrap;
+}
+
+.chapter-action-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-weight: 600;
+    font-size: 1rem;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.guide-btn {
+    background: linear-gradient(135deg, #4a3a90 0%, #6a5ab0 100%);
+    color: white;
+}
+
+.guide-btn:hover {
+    background: linear-gradient(135deg, #5a4aa0 0%, #7a6ac0 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(74, 58, 144, 0.4);
+}
+
+.register-btn {
+    background: linear-gradient(135deg, #2a3a70 0%, #3a4a8a 100%);
+    color: white;
+}
+
+.register-btn:hover {
+    background: linear-gradient(135deg, #3a4a80 0%, #4a5a9a 100%);
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(42, 58, 112, 0.4);
+}
+
+/* Chapter Steps */
+.chapters-steps-section h2 {
+    color: #2a3a70;
+}
+
+.chapters-steps .chapter-step {
+    border-top: 3px solid #4a3a90;
+    transition: all 0.3s ease;
+}
+
+.chapters-steps .chapter-step:hover {
+    transform: translateY(-5px) scale(1.02);
+}
+
+.chapters-steps .step-number {
+    background: linear-gradient(135deg, #2a3a70 0%, #4a3a90 100%);
+}
+
+/* Chapter FAQ */
+.chapters-faq h2 {
+    color: #2a3a70;
+}
+
+.chapter-faq-item {
+    border-left: 4px solid #4a3a90;
+    transition: all 0.3s ease;
+}
+
+.chapter-faq-item:hover {
+    background: rgba(74, 58, 144, 0.05);
+    transform: translateX(5px);
+}
+
+.chapter-faq-item h4 {
+    color: #2a3a70;
+}
+
+/* CTA Navy */
+.cta-navy {
+    background: linear-gradient(135deg, #2a3a70 0%, #4a3a90 50%, #3a4a8a 100%);
+}
+
+.cta-navy .cta-btn {
+    background: white;
+    color: #2a3a70;
+}
+
+.cta-navy .cta-btn:hover {
+    background: rgba(255, 255, 255, 0.9);
+    transform: translateY(-3px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .chapters-intro-section {
+        grid-template-columns: 1fr;
+    }
+    
+    .flip-card {
+        height: 280px;
+    }
+    
+    .chapters-hero-title {
+        font-size: 2.5rem;
+    }
+    
+    .chapters-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .chapter-action-btn {
+        width: 100%;
+        max-width: 300px;
+        justify-content: center;
+    }
+}
 .hero-sage { background: linear-gradient(135deg, #9BC4A8 0%, #6B9A7A 100%); }
 .hero-coral { background: linear-gradient(135deg, #FF8A80 0%, #E85D52 100%); }
 .hero-lavender { background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%); }
