@@ -11420,7 +11420,8 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, #FF9A8B 0%, #FF6B8A 50%, #FF8E72 100%);
+    background: url('attached_assets/image_1769328393899.png') center/cover no-repeat;
+    opacity: 0.85;
     z-index: 0;
 }
 
@@ -11430,7 +11431,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 138, 0.3) 0%, rgba(255, 154, 139, 0.2) 100%);
+    background: linear-gradient(135deg, rgba(255, 107, 138, 0.6) 0%, rgba(255, 154, 139, 0.5) 50%, rgba(255, 142, 114, 0.6) 100%);
     z-index: 1;
 }
 
