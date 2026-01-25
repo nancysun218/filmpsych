@@ -11431,7 +11431,7 @@ footer {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(255, 107, 138, 0.6) 0%, rgba(255, 154, 139, 0.5) 50%, rgba(255, 142, 114, 0.6) 100%);
+    background: linear-gradient(135deg, rgba(180, 70, 90, 0.75) 0%, rgba(200, 100, 100, 0.7) 50%, rgba(180, 90, 70, 0.75) 100%);
     z-index: 1;
 }
 
