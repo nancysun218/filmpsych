@@ -12693,11 +12693,6 @@ footer {
     color: #1e3a5f !important;
 }
 
-.hero-support-bg .container {
-    position: relative;
-    z-index: 2;
-}
-
 /* Support Page Impact Banner Light Pink Title */
 .support-impact-title {
     color: #FFB6C1 !important;
