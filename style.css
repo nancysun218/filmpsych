@@ -11107,6 +11107,71 @@ footer {
         transform: scale(1.3);
     }
 }
+
+/* Floating Flowers Animation for About Hero */
+.floating-flowers {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.flower {
+    position: absolute;
+    color: rgba(255, 182, 193, 0.7);
+    animation: flowerFloat 15s ease-in-out infinite, flowerSpin 4s linear infinite;
+}
+
+.flower i {
+    font-size: 12px;
+}
+
+.flower-1 { left: 5%; animation-delay: 0s; animation-duration: 14s, 3s; }
+.flower-2 { left: 15%; animation-delay: 2s; animation-duration: 16s, 5s; }
+.flower-3 { left: 25%; animation-delay: 4s; animation-duration: 13s, 4s; }
+.flower-4 { left: 35%; animation-delay: 1s; animation-duration: 15s, 6s; }
+.flower-5 { left: 50%; animation-delay: 3s; animation-duration: 17s, 3.5s; }
+.flower-6 { left: 60%; animation-delay: 5s; animation-duration: 14s, 4.5s; }
+.flower-7 { left: 70%; animation-delay: 0.5s; animation-duration: 16s, 5.5s; }
+.flower-8 { left: 80%; animation-delay: 2.5s; animation-duration: 15s, 3.8s; }
+.flower-9 { left: 90%; animation-delay: 4.5s; animation-duration: 13s, 4.2s; }
+.flower-10 { left: 95%; animation-delay: 1.5s; animation-duration: 18s, 5.2s; }
+
+.flower-1 i, .flower-3 i, .flower-5 i, .flower-7 i, .flower-9 i { font-size: 10px; }
+.flower-2 i, .flower-4 i, .flower-6 i { font-size: 14px; }
+.flower-8 i, .flower-10 i { font-size: 8px; }
+
+@keyframes flowerFloat {
+    0% {
+        top: -5%;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg);
+    }
+    10% {
+        opacity: 0.8;
+    }
+    90% {
+        opacity: 0.8;
+    }
+    100% {
+        top: 105%;
+        opacity: 0;
+        transform: translateX(50px) rotate(360deg);
+    }
+}
+
+@keyframes flowerSpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
 .hero-sage { background: linear-gradient(135deg, #9BC4A8 0%, #6B9A7A 100%); }
 .hero-coral { background: linear-gradient(135deg, #FF8A80 0%, #E85D52 100%); }
 .hero-lavender { background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%); }
