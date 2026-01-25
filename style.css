@@ -11172,6 +11172,73 @@ footer {
         transform: rotate(360deg);
     }
 }
+
+/* Popping Hearts Animation for Programs Hero */
+.popping-hearts {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.pop-heart {
+    position: absolute;
+    animation: heartPop 3s ease-out infinite;
+    opacity: 0;
+}
+
+.pop-heart i {
+    font-size: 14px;
+    color: rgba(255, 105, 140, 0.8);
+    filter: drop-shadow(0 0 3px rgba(255, 105, 140, 0.5));
+}
+
+.heart-1 { left: 8%; bottom: 10%; animation-delay: 0s; }
+.heart-2 { left: 18%; bottom: 15%; animation-delay: 0.5s; }
+.heart-3 { left: 28%; bottom: 8%; animation-delay: 1s; }
+.heart-4 { left: 38%; bottom: 20%; animation-delay: 1.5s; }
+.heart-5 { left: 48%; bottom: 12%; animation-delay: 0.3s; }
+.heart-6 { left: 58%; bottom: 18%; animation-delay: 0.8s; }
+.heart-7 { left: 68%; bottom: 10%; animation-delay: 1.3s; }
+.heart-8 { left: 78%; bottom: 15%; animation-delay: 1.8s; }
+.heart-9 { left: 88%; bottom: 8%; animation-delay: 0.6s; }
+.heart-10 { left: 95%; bottom: 20%; animation-delay: 1.1s; }
+.heart-11 { left: 5%; bottom: 25%; animation-delay: 2s; }
+.heart-12 { left: 55%; bottom: 5%; animation-delay: 2.3s; }
+
+.heart-1 i, .heart-4 i, .heart-7 i, .heart-10 i { font-size: 12px; color: rgba(255, 150, 180, 0.9); }
+.heart-2 i, .heart-5 i, .heart-8 i, .heart-11 i { font-size: 16px; color: rgba(229, 115, 155, 0.85); }
+.heart-3 i, .heart-6 i, .heart-9 i, .heart-12 i { font-size: 10px; color: rgba(255, 182, 193, 0.9); }
+
+@keyframes heartPop {
+    0% {
+        opacity: 0;
+        transform: translateY(0) scale(0.3);
+    }
+    20% {
+        opacity: 1;
+        transform: translateY(-20px) scale(1.2);
+    }
+    40% {
+        transform: translateY(-40px) scale(1);
+    }
+    60% {
+        opacity: 0.8;
+        transform: translateY(-70px) scale(1.1);
+    }
+    80% {
+        opacity: 0.4;
+        transform: translateY(-100px) scale(0.9);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-130px) scale(0.5);
+    }
+}
 .hero-sage { background: linear-gradient(135deg, #9BC4A8 0%, #6B9A7A 100%); }
 .hero-coral { background: linear-gradient(135deg, #FF8A80 0%, #E85D52 100%); }
 .hero-lavender { background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%); }
