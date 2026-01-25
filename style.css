@@ -13056,7 +13056,7 @@ footer {
 /* PARTNERSHIPS PAGE STYLES */
 /* ======================= */
 .partnerships-section {
-    background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+    background: #f8f7f4;
     min-height: 100vh;
     position: relative;
     overflow: hidden;
@@ -13078,14 +13078,14 @@ footer {
     animation: floatPartner 8s ease-in-out infinite;
 }
 
-.floating-handshake:nth-child(1) { top: 10%; left: 5%; color: #667eea; animation-delay: 0s; }
-.floating-handshake:nth-child(2) { top: 20%; right: 10%; color: #f093fb; animation-delay: 1s; font-size: 1.5rem; }
-.floating-handshake:nth-child(3) { top: 40%; left: 8%; color: #4facfe; animation-delay: 2s; font-size: 2.5rem; }
-.floating-handshake:nth-child(4) { top: 60%; right: 5%; color: #43e97b; animation-delay: 3s; }
-.floating-handshake:nth-child(5) { top: 75%; left: 12%; color: #fa709a; animation-delay: 4s; font-size: 1.8rem; }
-.floating-handshake:nth-child(6) { bottom: 20%; right: 15%; color: #667eea; animation-delay: 5s; font-size: 2.2rem; }
-.floating-handshake:nth-child(7) { bottom: 35%; left: 3%; color: #00f2fe; animation-delay: 6s; }
-.floating-handshake:nth-child(8) { top: 15%; left: 40%; color: #f5576c; animation-delay: 7s; font-size: 1.6rem; }
+.floating-handshake:nth-child(1) { top: 10%; left: 5%; color: #1e3a5f; animation-delay: 0s; }
+.floating-handshake:nth-child(2) { top: 20%; right: 10%; color: #f8b4c4; animation-delay: 1s; font-size: 1.5rem; }
+.floating-handshake:nth-child(3) { top: 40%; left: 8%; color: #2c4a6e; animation-delay: 2s; font-size: 2.5rem; }
+.floating-handshake:nth-child(4) { top: 60%; right: 5%; color: #ffccd5; animation-delay: 3s; }
+.floating-handshake:nth-child(5) { top: 75%; left: 12%; color: #1e3a5f; animation-delay: 4s; font-size: 1.8rem; }
+.floating-handshake:nth-child(6) { bottom: 20%; right: 15%; color: #f8b4c4; animation-delay: 5s; font-size: 2.2rem; }
+.floating-handshake:nth-child(7) { bottom: 35%; left: 3%; color: #2c4a6e; animation-delay: 6s; }
+.floating-handshake:nth-child(8) { top: 15%; left: 40%; color: #ffccd5; animation-delay: 7s; font-size: 1.6rem; }
 
 @keyframes floatPartner {
     0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.6; }
@@ -13096,7 +13096,7 @@ footer {
     position: relative;
     padding: 100px 20px 80px;
     text-align: center;
-    background: radial-gradient(ellipse at center, rgba(102, 126, 234, 0.2) 0%, transparent 70%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
 }
 
 .partnerships-hero-overlay {
@@ -13137,12 +13137,13 @@ footer {
 .partnerships-title .title-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f8b4c4 0%, #ffccd5 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
+    color: #1e3a5f;
     animation: pulse 2s ease-in-out infinite;
 }
 
@@ -13186,7 +13187,7 @@ footer {
 
 .stat-item i {
     font-size: 1.3rem;
-    color: #667eea;
+    color: #f8b4c4;
 }
 
 .stat-divider {
@@ -13201,27 +13202,28 @@ footer {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 2.5rem;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #f8b4c4 0%, #ffccd5 100%);
+    color: #1e3a5f;
     font-size: 1.1rem;
     font-weight: 600;
     border-radius: 50px;
     text-decoration: none;
     transition: all 0.3s ease;
-    box-shadow: 0 10px 40px rgba(102, 126, 234, 0.4);
+    box-shadow: 0 10px 40px rgba(248, 180, 196, 0.4);
 }
 
 .partnerships-cta-btn:hover {
     transform: translateY(-3px) scale(1.02);
-    box-shadow: 0 15px 50px rgba(102, 126, 234, 0.5);
+    box-shadow: 0 15px 50px rgba(248, 180, 196, 0.5);
 }
 
 .library-partners-section {
     margin-top: 4rem;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: #fff;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(30, 58, 95, 0.1);
+    box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
 }
 
 .section-badge {
@@ -13236,18 +13238,18 @@ footer {
 }
 
 .library-badge {
-    background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
     color: #fff;
 }
 
 .healthcare-badge {
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
-    color: #fff;
+    background: linear-gradient(135deg, #f8b4c4 0%, #ffccd5 100%);
+    color: #1e3a5f;
 }
 
 .org-badge {
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-    color: #1a1a2e;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: #fff;
 }
 
 .library-content {
@@ -13288,13 +13290,13 @@ footer {
 .library-info h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #fff;
+    color: #1e3a5f;
     margin-bottom: 1rem;
 }
 
 .library-description {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: #4a5568;
     line-height: 1.7;
     margin-bottom: 2rem;
 }
@@ -13310,45 +13312,46 @@ footer {
     align-items: center;
     gap: 1rem;
     padding: 1.25rem 1.5rem;
-    background: rgba(79, 172, 254, 0.1);
+    background: rgba(30, 58, 95, 0.05);
     border-radius: 15px;
-    border: 1px solid rgba(79, 172, 254, 0.2);
+    border: 1px solid rgba(30, 58, 95, 0.1);
     transition: all 0.3s ease;
 }
 
 .library-item:hover {
-    background: rgba(79, 172, 254, 0.2);
+    background: rgba(248, 180, 196, 0.2);
     transform: translateX(10px);
 }
 
 .library-item i {
     font-size: 1.5rem;
-    color: #4facfe;
+    color: #1e3a5f;
 }
 
 .library-details h4 {
     font-size: 1.1rem;
-    color: #fff;
+    color: #1e3a5f;
     margin-bottom: 0.25rem;
 }
 
 .library-details span {
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #718096;
 }
 
 .healthcare-partners-section {
     margin-top: 4rem;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: #fff;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(30, 58, 95, 0.1);
+    box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
     text-align: center;
 }
 
 .healthcare-description {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: #4a5568;
     line-height: 1.7;
     max-width: 700px;
     margin: 0 auto 2.5rem;
@@ -13362,9 +13365,9 @@ footer {
 
 .healthcare-card {
     padding: 2.5rem 2rem;
-    background: linear-gradient(145deg, rgba(240, 147, 251, 0.1) 0%, rgba(245, 87, 108, 0.1) 100%);
+    background: linear-gradient(145deg, rgba(248, 180, 196, 0.15) 0%, rgba(255, 204, 213, 0.15) 100%);
     border-radius: 20px;
-    border: 1px solid rgba(240, 147, 251, 0.2);
+    border: 1px solid rgba(248, 180, 196, 0.3);
     transition: all 0.4s ease;
     position: relative;
     overflow: hidden;
@@ -13377,7 +13380,7 @@ footer {
     left: 0;
     right: 0;
     height: 4px;
-    background: linear-gradient(90deg, #f093fb, #f5576c);
+    background: linear-gradient(90deg, #1e3a5f, #2c4a6e);
     transform: scaleX(0);
     transition: transform 0.4s ease;
 }
@@ -13388,13 +13391,13 @@ footer {
 
 .healthcare-card:hover {
     transform: translateY(-10px);
-    box-shadow: 0 20px 50px rgba(240, 147, 251, 0.2);
+    box-shadow: 0 20px 50px rgba(30, 58, 95, 0.15);
 }
 
 .healthcare-icon {
     width: 70px;
     height: 70px;
-    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -13407,39 +13410,40 @@ footer {
 .healthcare-card h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.4rem;
-    color: #fff;
+    color: #1e3a5f;
     margin-bottom: 0.75rem;
 }
 
 .healthcare-card .location {
     font-size: 0.95rem;
-    color: rgba(255, 255, 255, 0.6);
+    color: #718096;
 }
 
 .healthcare-card .location i {
-    color: #f5576c;
+    color: #f8b4c4;
     margin-right: 0.5rem;
 }
 
 .organizational-partners-section {
     margin-top: 4rem;
     padding: 3rem;
-    background: rgba(255, 255, 255, 0.03);
+    background: #fff;
     border-radius: 30px;
-    border: 1px solid rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(30, 58, 95, 0.1);
+    box-shadow: 0 10px 40px rgba(30, 58, 95, 0.08);
     text-align: center;
 }
 
 .org-content h2 {
     font-family: 'Playfair Display', serif;
     font-size: 2rem;
-    color: #fff;
+    color: #1e3a5f;
     margin-bottom: 1rem;
 }
 
 .org-description {
     font-size: 1.1rem;
-    color: rgba(255, 255, 255, 0.75);
+    color: #4a5568;
     line-height: 1.7;
     max-width: 700px;
     margin: 0 auto 2.5rem;
@@ -13450,9 +13454,9 @@ footer {
     align-items: center;
     gap: 2rem;
     padding: 2.5rem;
-    background: linear-gradient(145deg, rgba(67, 233, 123, 0.1) 0%, rgba(56, 249, 215, 0.1) 100%);
+    background: linear-gradient(145deg, rgba(30, 58, 95, 0.05) 0%, rgba(44, 74, 110, 0.05) 100%);
     border-radius: 20px;
-    border: 1px solid rgba(67, 233, 123, 0.3);
+    border: 1px solid rgba(30, 58, 95, 0.15);
     text-align: left;
 }
 
@@ -13460,13 +13464,13 @@ footer {
     width: 80px;
     height: 80px;
     min-width: 80px;
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
+    background: linear-gradient(135deg, #f8b4c4 0%, #ffccd5 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 2rem;
-    color: #1a1a2e;
+    color: #1e3a5f;
 }
 
 .org-cta-text {
@@ -13476,13 +13480,13 @@ footer {
 .org-cta-text h3 {
     font-family: 'Playfair Display', serif;
     font-size: 1.5rem;
-    color: #fff;
+    color: #1e3a5f;
     margin-bottom: 0.5rem;
 }
 
 .org-cta-text p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: #4a5568;
     line-height: 1.6;
 }
 
@@ -13491,8 +13495,8 @@ footer {
     align-items: center;
     gap: 0.75rem;
     padding: 1rem 2rem;
-    background: linear-gradient(135deg, #43e97b 0%, #38f9d7 100%);
-    color: #1a1a2e;
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
+    color: #fff;
     font-size: 1rem;
     font-weight: 600;
     border-radius: 50px;
@@ -13503,15 +13507,14 @@ footer {
 
 .become-partner-btn:hover {
     transform: scale(1.05);
-    box-shadow: 0 10px 30px rgba(67, 233, 123, 0.3);
+    box-shadow: 0 10px 30px rgba(30, 58, 95, 0.3);
 }
 
 .contact-footer {
     margin-top: 4rem;
     padding: 2.5rem;
-    background: rgba(102, 126, 234, 0.1);
+    background: linear-gradient(135deg, #1e3a5f 0%, #2c4a6e 100%);
     border-radius: 20px;
-    border: 1px solid rgba(102, 126, 234, 0.2);
     display: flex;
     align-items: center;
     justify-content: center;
@@ -13522,43 +13525,43 @@ footer {
 .contact-icon {
     width: 60px;
     height: 60px;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: linear-gradient(135deg, #f8b4c4 0%, #ffccd5 100%);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
-    color: #fff;
+    color: #1e3a5f;
 }
 
 .contact-info p {
     font-size: 1rem;
-    color: rgba(255, 255, 255, 0.7);
+    color: rgba(255, 255, 255, 0.8);
     margin-bottom: 0.25rem;
 }
 
 .contact-info a {
     font-size: 1.25rem;
-    color: #667eea;
+    color: #f8b4c4;
     text-decoration: none;
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
 .contact-info a:hover {
-    color: #764ba2;
+    color: #ffccd5;
 }
 
 .response-time {
     display: block;
     font-size: 0.9rem;
-    color: rgba(255, 255, 255, 0.5);
+    color: rgba(255, 255, 255, 0.6);
     margin-top: 0.5rem;
 }
 
 .response-time i {
     margin-right: 0.5rem;
-    color: #43e97b;
+    color: #f8b4c4;
 }
 
 @media (max-width: 992px) {
