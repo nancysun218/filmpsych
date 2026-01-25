@@ -12596,6 +12596,18 @@ footer {
     background-repeat: no-repeat;
 }
 
+.hero-support-bg .page-hero-title {
+    color: #1e3a5f !important;
+}
+
+.hero-support-bg .page-hero-subtitle {
+    color: #1e3a5f !important;
+}
+
+.hero-support-bg .breadcrumb-label {
+    color: #1e3a5f !important;
+}
+
 /* Support Page Impact Banner Light Pink Title */
 .support-impact-title {
     color: #FFB6C1 !important;
