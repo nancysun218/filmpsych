@@ -12586,6 +12586,20 @@ footer {
 .hero-coral { background: linear-gradient(135deg, #FF8A80 0%, #E85D52 100%); }
 .hero-lavender { background: linear-gradient(135deg, var(--secondary-purple) 0%, var(--primary-purple) 100%); }
 .hero-pink { background: linear-gradient(135deg, #FFB6C1 0%, #E893A0 100%); }
+
+/* Support Page Hero with Background Image */
+.hero-support-bg {
+    background: linear-gradient(135deg, rgba(248, 180, 196, 0.85) 0%, rgba(255, 204, 213, 0.8) 100%),
+                url('attached_assets/image_1769337782787.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Support Page Impact Banner Light Pink Title */
+.support-impact-title {
+    color: #FFB6C1 !important;
+}
 .hero-gold { background: linear-gradient(135deg, #FFD700 0%, #DAA520 100%); }
 .hero-purple { background: linear-gradient(135deg, var(--primary-purple) 0%, var(--deep-purple) 100%); }
 .hero-rose { background: linear-gradient(135deg, #FF6B95 0%, #E84A73 100%); }
