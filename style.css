@@ -2078,7 +2078,7 @@ main {
     bottom: 0;
     background-image: url('attached_assets/image_1769251133348.png');
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     opacity: 0.63;
     z-index: 1;
 }
@@ -2090,7 +2090,7 @@ main {
     left: 0;
     right: 0;
     bottom: 0;
-    background: linear-gradient(135deg, rgba(93, 78, 140, 0.35) 0%, rgba(123, 104, 166, 0.3) 50%, rgba(155, 139, 196, 0.25) 100%);
+    background: linear-gradient(135deg, rgba(40, 30, 70, 0.6) 0%, rgba(60, 45, 100, 0.55) 50%, rgba(80, 60, 120, 0.5) 100%);
     z-index: 2;
 }
 
