@@ -9,7 +9,7 @@
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="style.css?v=20260125links2">
+    <link rel="stylesheet" href="style.css?v=20260125links3">
     <style>
         /* Chapter and Internship Section Styles */
         .chapter-hero-content, .internship-hero-content {
@@ -1062,7 +1062,7 @@
                     </div>
                     
                     <div class="view-all-blogs">
-                        <a href="#blogs" class="btn btn-primary nav-trigger" data-section="blogs">
+                        <a href="#blogs" class="btn btn-primary nav-trigger" data-section="blogs" onclick="event.preventDefault(); document.querySelectorAll('.section').forEach(s => s.classList.remove('active')); document.getElementById('blogs').classList.add('active'); window.scrollTo({top: 0, behavior: 'smooth'});">
                             <i class="fas fa-book-open"></i>
                             View All Publications
                         </a>
