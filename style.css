@@ -11331,9 +11331,72 @@ footer {
     font-family: 'Playfair Display', serif;
     font-size: 3.5rem;
     font-weight: 700;
-    color: white;
+    color: #ffffff !important;
     margin-bottom: 20px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+/* Materials Provided Section */
+.chapters-materials-section {
+    background: linear-gradient(135deg, rgba(42, 58, 112, 0.08) 0%, rgba(74, 58, 144, 0.08) 100%);
+    border: 2px solid rgba(74, 58, 144, 0.2);
+    border-radius: 20px;
+    padding: 40px;
+    text-align: center;
+    margin: 40px 0 50px;
+}
+
+.materials-icon {
+    width: 70px;
+    height: 70px;
+    background: linear-gradient(135deg, #4a3a90 0%, #6a5ab0 100%);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+}
+
+.materials-icon i {
+    font-size: 1.8rem;
+    color: white;
+}
+
+.chapters-materials-section h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.6rem;
+    color: #2a3a70;
+    margin-bottom: 15px;
+}
+
+.chapters-materials-section p {
+    color: #555;
+    max-width: 700px;
+    margin: 0 auto 25px;
+    line-height: 1.7;
+}
+
+.materials-list {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.material-tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: linear-gradient(135deg, #2a3a70 0%, #4a3a90 100%);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.material-tag i {
+    font-size: 0.85rem;
 }
 
 .chapters-hero-subtitle {
