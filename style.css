@@ -11335,6 +11335,91 @@ footer {
     }
 }
 
+/* Golden Dancing Stars for Submit Page */
+.golden-stars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: 1;
+}
+
+.golden-star {
+    position: absolute;
+    animation: starDance 2s ease-in-out infinite, starGlow 1s ease-in-out infinite alternate;
+}
+
+.golden-star i {
+    font-size: 24px;
+    color: #FFD700;
+    filter: drop-shadow(0 0 10px #FFD700) drop-shadow(0 0 20px #FFA500);
+}
+
+.star-1 { left: 5%; top: 10%; animation-delay: 0s; }
+.star-2 { left: 15%; top: 30%; animation-delay: 0.3s; }
+.star-3 { left: 25%; top: 60%; animation-delay: 0.6s; }
+.star-4 { left: 10%; top: 80%; animation-delay: 0.15s; }
+.star-5 { left: 40%; top: 15%; animation-delay: 0.45s; }
+.star-6 { left: 50%; top: 50%; animation-delay: 0.75s; }
+.star-7 { left: 60%; top: 85%; animation-delay: 0.2s; }
+.star-8 { left: 75%; top: 20%; animation-delay: 0.5s; }
+.star-9 { left: 85%; top: 45%; animation-delay: 0.8s; }
+.star-10 { left: 90%; top: 70%; animation-delay: 0.1s; }
+.star-11 { left: 95%; top: 25%; animation-delay: 0.4s; }
+.star-12 { left: 35%; top: 75%; animation-delay: 0.7s; }
+.star-13 { left: 70%; top: 55%; animation-delay: 0.25s; }
+.star-14 { left: 20%; top: 45%; animation-delay: 0.55s; }
+.star-15 { left: 80%; top: 90%; animation-delay: 0.85s; }
+
+.star-1 i, .star-5 i, .star-9 i, .star-13 i { font-size: 28px; }
+.star-2 i, .star-6 i, .star-10 i, .star-14 i { font-size: 20px; }
+.star-3 i, .star-7 i, .star-11 i, .star-15 i { font-size: 32px; }
+.star-4 i, .star-8 i, .star-12 i { font-size: 18px; }
+
+@keyframes starDance {
+    0% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) rotate(0deg) scale(0.3);
+    }
+    15% {
+        opacity: 1;
+        transform: translateY(-10px) translateX(5px) rotate(45deg) scale(1.2);
+    }
+    30% {
+        transform: translateY(5px) translateX(-8px) rotate(90deg) scale(1);
+    }
+    45% {
+        transform: translateY(-15px) translateX(10px) rotate(135deg) scale(1.3);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(8px) translateX(-5px) rotate(180deg) scale(1.1);
+    }
+    75% {
+        transform: translateY(-5px) translateX(8px) rotate(270deg) scale(0.9);
+    }
+    90% {
+        opacity: 0.5;
+        transform: translateY(10px) translateX(-3px) rotate(315deg) scale(0.7);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(0) translateX(0) rotate(360deg) scale(0.3);
+    }
+}
+
+@keyframes starGlow {
+    0% {
+        filter: drop-shadow(0 0 8px #FFD700) drop-shadow(0 0 15px #FFA500);
+    }
+    100% {
+        filter: drop-shadow(0 0 15px #FFD700) drop-shadow(0 0 30px #FFA500) drop-shadow(0 0 45px #FFD700);
+    }
+}
+
 /* ======================= */
 /* CHAPTERS PAGE STYLES */
 /* ======================= */
