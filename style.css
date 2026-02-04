@@ -13951,3 +13951,36 @@ footer {
         display: none;
     }
 }
+
+/* Hot Pink Funding Button */
+.funding-cta-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: linear-gradient(135deg, #ff1493, #ff69b4);
+    color: white;
+    padding: 0.6rem 1.2rem;
+    border-radius: 25px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    text-decoration: none;
+    margin-top: 1rem;
+    box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+    transition: all 0.3s ease;
+    animation: pulse-glow 2s ease-in-out infinite;
+}
+
+.funding-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(255, 20, 147, 0.5);
+    background: linear-gradient(135deg, #ff69b4, #ff1493);
+}
+
+@keyframes pulse-glow {
+    0%, 100% {
+        box-shadow: 0 4px 15px rgba(255, 20, 147, 0.4);
+    }
+    50% {
+        box-shadow: 0 4px 25px rgba(255, 20, 147, 0.6);
+    }
+}
