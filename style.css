@@ -9592,12 +9592,13 @@ footer {
 
 .flip-card-front h4 {
     font-size: 0.9rem;
-    color: var(--text-dark);
+    color: #F5D77A;
     text-align: center;
     margin: 0;
     position: relative;
     z-index: 1;
     font-weight: 600;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
 }
 
 .flip-card-back {
