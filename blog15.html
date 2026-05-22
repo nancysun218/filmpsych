@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Shameless - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(220, 20, 60, 0.9), rgba(255, 69, 0, 0.9), rgba(255, 140, 0, 0.8));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+            min-width: 0;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 450px;
+            width: 450px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            object-fit: contain;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .bipolar-symptoms {
+            background: linear-gradient(135deg, #ffeaa7, #fab1a0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e17055;
+        }
+
+        .bipolar-symptoms h4 {
+            color: #d63031;
+            margin-bottom: 1rem;
+        }
+
+        .symptom-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .symptom-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border-left: 3px solid #e17055;
+        }
+
+        .symptom-title {
+            font-weight: 600;
+            color: #d63031;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .floating-blog-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 15px;
+            opacity: 0.08;
+            animation: floatBlogImage 15s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .floating-image.img-1 {
+            width: 120px;
+            height: 80px;
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-image.img-2 {
+            width: 100px;
+            height: 150px;
+            top: 60%;
+            right: 8%;
+            animation-delay: 4s;
+        }
+
+        .floating-image.img-3 {
+            width: 140px;
+            height: 90px;
+            top: 35%;
+            left: 85%;
+            animation-delay: 8s;
+        }
+
+        .floating-image.img-4 {
+            width: 110px;
+            height: 110px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 12s;
+        }
+
+        .floating-image.img-5 {
+            width: 130px;
+            height: 85px;
+            top: 45%;
+            right: 2%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatBlogImage {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.08;
+            }
+            25% {
+                transform: translateY(-20px) rotate(2deg) scale(1.05);
+                opacity: 0.12;
+            }
+            50% {
+                transform: translateY(15px) rotate(-1deg) scale(0.95);
+                opacity: 0.15;
+            }
+            75% {
+                transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+                opacity: 0.1;
+            }
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+                max-width: 100%;
+                width: 100%;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+
+            .inline-image {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-blog-images">
+        <img src="https://via.placeholder.com/120x80/DC143C/FFFFFF?text=Chaos" alt="" class="floating-image img-1">
+        <img src="https://via.placeholder.com/100x150/FF4500/FFFFFF?text=Family" alt="" class="floating-image img-2">
+        <img src="https://via.placeholder.com/140x90/FF8C00/FFFFFF?text=Drama" alt="" class="floating-image img-3">
+        <img src="https://via.placeholder.com/110x110/DC143C/FFFFFF?text=Bipolar" alt="" class="floating-image img-4">
+        <img src="https://via.placeholder.com/130x85/FF4500/FFFFFF?text=Mental" alt="" class="floating-image img-5">
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> TV Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: Shameless</h1>
+                <p class="blog-subtitle">Exploring bipolar disorder through Ian Gallagher's journey in the chaotic world of the Gallaghers.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>July 20, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>15 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Zuyan Muzzamil</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/shameless_header.png" alt="Shameless Header">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>Picture this: you're perched on the edge of the Gallagher kitchen floor, laundry baskets strewn about and Ian Gallagher—your unlikely hero—bursting through the front door, teetering on the razor's edge of euphoria and desperation. If "Shameless U.S." is our chaotic canvas, bipolar disorder is the vivid palette of colors—some so bright they blind you, others so dark they swallow you whole. In this article, we'll dive deep into how the show brings bipolar disorder to life, exploring the science, the storytelling and the indomitable spirit of those who live with it—Shameless style.</p>
+
+            <h2>The High-Energy Hype: Mania on Screen</h2>
+
+            <p>When Ian's manic, it's like watching a runaway train fueled by adrenaline, questionable impulse control, and superb soundtrack choices. He's energetic ("let's break into a rich guy's house at 2 a.m.!"), charismatic ("trust me, I've got this"), and so sure of himself that every reckless plan feels destined for triumph—until it isn't. Clinically, mania is defined by an abnormally elevated mood lasting at least one week, paired with increased activity or energy, inflated self-esteem, decreased need for sleep, and often, risky behavior.</p>
+
+            <img src="attached_assets/blogphotos/shameless_1.png" alt="Ian Gallagher during a manic episode" class="article-image">
+
+            <p>Ian's whirlwind romances, late-night escapades, and sudden career pivots (remember that paintball thing?) perfectly capture the DSM-5 criteria without sacrificing drama.</p>
+
+            <div class="bipolar-symptoms">
+                <h4><i class="fas fa-exclamation-triangle"></i> Manic Episode Characteristics</h4>
+                <ul class="symptom-list">
+                    <li>
+                        <div class="symptom-title">Elevated or Irritable Mood</div>
+                        Abnormally high energy and mood lasting at least one week (or requiring hospitalization)
+                    </li>
+                    <li>
+                        <div class="symptom-title">Decreased Need for Sleep</div>
+                        Feeling rested after only 2-3 hours of sleep without feeling tired
+                    </li>
+                    <li>
+                        <div class="symptom-title">Grandiosity</div>
+                        Inflated self-esteem or belief in having special powers or abilities
+                    </li>
+                    <li>
+                        <div class="symptom-title">Risky Behavior</div>
+                        Engaging in activities with potentially harmful consequences (excessive spending, sexual indiscretions, reckless driving)
+                    </li>
+                </ul>
+            </div>
+
+            <p>Yet, "Shameless" avoids sensationalizing manic episodes as mere "fun times." We witness the crash that follows—the guilt, the confusion, the exhaustion. In one haunting montage, Ian wanders the streets at dawn, literally running on fumes. He's euphoric and utterly alone. That contrast is crucial: mania doesn't wear a party hat forever. It's a storm that rages and then leaves devastation in its wake.</p>
+
+            <h2>The Icy Descent: Understanding Depressive Lows</h2>
+
+            <p>But then the pendulum swings. When Ian's depressive, the screen feels heavier—colors muted, energy drained. He withdraws from Mickey and his family, his typical spark reduced to embers. Depression in bipolar disorder isn't just sadness; it's a profound disruption of energy, motivation, and self-worth that can last weeks or months.</p>
+
+            <img src="attached_assets/blogphotos/shameless_2.png" alt="Ian Gallagher during a depressive episode" class="article-image">
+
+            <p>Ian's spiral hits home because it's so unremarkable: he simply stops showing up. Family gatherings feel like navigating a minefield of concern and frustration. Lip, Fiona, and the rest can't fix it with tough love or a pep talk; they can only stand by helplessly. The show deftly illustrates how loved ones often struggle to "get it"—because on the surface, Ian can seem fine, or worse, just "being difficult."</p>
+
+            <h2>Beyond the Diagnosis: The Human Story</h2>
+
+            <p>Medical definitions matter, but bipolar disorder is lived experience. "Shameless U.S." gives us a character who's neither victim nor villain, but deeply human. Ian's relationships—especially with Mickey—highlight how mood swings can ripple through intimacy: manic passion can feel like perfect love, depressive withdrawal like complete rejection. The show doesn't shy away from sexuality, substance use or identity exploration, reflecting the complex reality many with bipolar disorder face.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-heart"></i> The Reality of Treatment</h4>
+                <p>Importantly, Shameless shows treatment as an ongoing journey, not a one-and-done fix. We see Ian grappling with the side effects of medication—weight gain, grogginess, and often that dull "flat" feeling that sometimes comes with mood stabilizers. Therapy sessions happen off-screen, but their benefit echoes in his growing self-awareness, his willingness to ask for help, his gradual acceptance of a less "dramatic" life.</p>
+            </div>
+
+            <h2>Science Meets Shameless: The Biology Behind the Madness</h2>
+
+            <p>Let's unpack a bit of neuroscientific magic. Bipolar disorder involves dysregulation in neural circuits governing mood, reward, and executive function. The prefrontal cortex and limbic system (think decision-making and emotional processing) miscommunicate, hence the roller-coaster in Ian's behavior. Neurotransmitters like dopamine and serotonin bounce around erratically—high during mania, low during depression. Modern treatments—lithium, anticonvulsants, antipsychotics—work by tamping down those chemical surges and shoring up mood stability.</p>
+
+            <p>Genetics also play a starring role: first-degree relatives of people with bipolar disorder have a significantly higher risk. While the Gallaghers aren't a textbook genetic case study, Shameless hints at inherited resilience (and dysfunction). And environment counts too: chronic stress, trauma and substance misuse can exacerbate bipolar symptoms—famously embodied by the Gallaghers' relentless financial, legal and emotional turmoil.</p>
+
+            <h3>The Neurochemistry of Mood Swings</h3>
+
+            <p>Research shows that during manic episodes, there's often increased dopamine activity in the brain's reward circuits, which can explain the intense pleasure-seeking behaviors and inflated sense of capability. Conversely, during depressive episodes, these same circuits become underactive, leading to anhedonia—the inability to feel pleasure from activities that were once enjoyable.</p>
+
+            <h2>The Art of Balance: Coping and Community</h2>
+
+            <p>If Shameless teaches us anything, it's that nobody thrives in isolation. Ian's breakthroughs happen when he leans on others: Mickey's steadfast loyalty, Lip's tough-but-loving nudges, Fiona's fierce protectiveness. Peer support groups, online forums, friend circles—these "Gallagher-style" safety nets are vital in real life too. Exercise, regular sleep routines, mindfulness, and creative outlets all help smooth out the peaks and valleys.</p>
+
+            <p>Perhaps most importantly, Shameless portrays treatment as multifaceted. It's not just about popping pills; it's therapy, lifestyle changes, support systems, and ongoing self-awareness. Ian learns to recognize his triggers, to reach out when he's struggling, and to accept help—a lesson that extends far beyond the screen.</p>
+
+            <img src="attached_assets/blogphotos/shameless_3.png" alt="Ian Gallagher in recovery and treatment" class="article-image">
+
+            <p>Shameless doesn't sugarcoat relapse: even after periods of stability, Ian stumbles. But each setback is framed not as failure, but rather as a part of a chronic condition—manageable, not curable. That perspective empowers viewers who may see their own struggles mirrored on screen.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-users"></i> The Power of Support Systems</h4>
+                <p>The Gallagher family's chaotic but unwavering support demonstrates how crucial social connections are for managing bipolar disorder. Research consistently shows that individuals with strong support systems have better treatment outcomes and lower rates of relapse.</p>
+            </div>
+
+            <h2>Why Shameless's Approach Matters</h2>
+
+            <p>Television often reduces mental illness to clichés: the "tortured genius," the "manic pixie dream girl," the "dangerous lunatic." Shameless obliterates those tropes by weaving bipolar disorder into a larger, messy tapestry of family, poverty, love, and survival. Ian Gallagher isn't defined solely by his diagnosis; it's one thread in a brilliantly chaotic tapestry.</p>
+
+            <p>By showing both the high-octane mania and the soul-crushing lows with equal weight, the show fosters empathy. We laugh, we cringe, we ache alongside Ian—and in doing so, we learn that bipolar disorder is neither a gimmick nor a tragedy, but a human reality deserving of understanding, research, and respect.</p>
+
+            <h3>Breaking Down Stigma</h3>
+
+            <p>The show's unflinching portrayal helps combat the stigma that often surrounds mental illness. By presenting Ian as a fully realized character—flawed, lovable, frustrating, and human—Shameless challenges viewers to see beyond the diagnosis to the person underneath.</p>
+
+            <blockquote>
+                "Mental illness is not a choice, but recovery is a choice. And it's a choice that has to be made every single day." - This perspective, embodied by Ian's journey, reminds us that living with bipolar disorder is an ongoing process of daily choices and commitment to wellness.
+            </blockquote>
+
+            <h2>A Final Toast: To Madness and Meaning</h2>
+
+            <p>So next time you settle in for Shameless, watch Ian through a new lens: not just as a combustible force of plot momentum, but as a window into the enigmatic world of bipolar disorder. Appreciate the scientific accuracy dancing beneath the show's irreverent humor, the grace notes of genuine emotion threaded into its riotous soundtrack. And remember: in life—as in Shameless—the path to balance is rarely straight, but it's always worth pursuing.</p>
+
+            <p>Here's to Ian Gallagher, and to everyone out there balancing on the bipolar tightrope, proving every day that the instability of mood can coexist with the stability of hope. Cheers—whether you're riding high or riding low, you're never truly alone.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-phone"></i> Resources for Support</h4>
+                <p>If you or someone you know is struggling with bipolar disorder, help is available:</p>
+                <ul>
+                    <li>National Alliance on Mental Illness (NAMI): 1-800-950-NAMI (6264)</li>
+                    <li>Crisis Text Line: Text "HOME" to 741741</li>
+                    <li>Substance Abuse and Mental Health Services Administration: 1-800-662-4357</li>
+                    <li>Your healthcare provider or local mental health services</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
