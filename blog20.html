@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: The Scream - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 87, 51, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(255, 183, 3, 0.8) 0%, transparent 50%),
+                radial-gradient(circle at 40% 80%, rgba(255, 140, 0, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 90% 40%, rgba(220, 20, 60, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 10% 90%, rgba(255, 99, 71, 0.7) 0%, transparent 50%),
+                radial-gradient(circle at 70% 70%, rgba(255, 165, 0, 0.6) 0%, transparent 40%),
+                radial-gradient(circle at 30% 10%, rgba(255, 69, 0, 0.8) 0%, transparent 50%),
+                url('attached_assets/blogphotos/the_scream_1.png') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+            animation: colorSwirl 20s ease-in-out infinite;
+        }
+
+        @keyframes colorSwirl {
+            0%, 100% {
+                filter: hue-rotate(0deg) saturate(1);
+            }
+            25% {
+                filter: hue-rotate(30deg) saturate(1.2);
+            }
+            50% {
+                filter: hue-rotate(-20deg) saturate(0.9);
+            }
+            75% {
+                filter: hue-rotate(15deg) saturate(1.1);
+            }
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .art-analysis-box {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .art-analysis-box h4 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-palette"></i> Art Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: The Scream</h1>
+            <p class="blog-subtitle">Anxiety portrayed in the painting by Edvard Munch.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>July 22, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>6 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Trish Shrivastava</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>A girl on her way home stops by a local art gallery. She lingers on the walls full of paintings, stopping at the sight of a particular painting: a sloth sobbing underneath an apple tree. She feels an emotional sense of being understood. The unusual visual of a sloth underneath a tree signifies her experience of not belonging in a place where she should have belonged — and the red apples on the tree speaking for her expectations of finding love.</p>
+
+            <p>Many of us feel emotionally connected to art, whether it be poetry, music, movies, TV shows or paintings. Paintings such as the sloth underneath the apple tree speak to one's mind. How? Your brain is wired to find meaning behind whatever it perceives, creating your own story around the art. You have mirror neurons, which means you see emotions in art, and your brain reacts like you're indulging in it too. Your brain will connect visual expressions with relatable experiences, felt emotions and memories. This explains the concept of color psychology — as certain colors affect mood. Black may represent isolation, with dark shades personifying sorrow, while light ones may associate themselves with calmer feelings.</p>
+
+            <h2>The Scream: A Visual Manifestation of Anxiety</h2>
+
+            <img src="attached_assets/blogphotos/the_scream_front.png" alt="The Scream by Edvard Munch" class="article-image">
+
+            <p style="text-align: center; font-style: italic; color: #666; margin-top: 0.5rem; font-size: 0.9rem;"><strong>Edvard Munch: The Scream</strong> The Scream, tempera and casein on cardboard by Edvard Munch, 1893; in the National Gallery, Oslo</p>
+
+            <p>"The Scream" by Edvard Munch is a painting that feels like a panic attack frozen in time. The painting depicts a long wooden bridge stretching diagonally across the lower half. Standing near the front of the bridge is a single ghostly figure with a skull face, eyes wide as the opened mouth that represents a screaming or gasping sensation. Their hands are clutched tightly to the sides of their face, their body thin and almost melting. The body appears to dissolve into its surroundings.</p>
+
+            <p>In the background, two smaller human figures walk calmly along the bridge, unaware of the central figure's terror. The image is not calm, nor is it peaceful. The feeling of your world collapsing and no one tends to notice — so you're dissolving into the surroundings.</p>
+
+            <div class="art-analysis-box">
+                <h4><i class="fas fa-eye"></i> Visual Elements of Anxiety:</h4>
+                <p>The painting masterfully uses visual metaphors to represent the internal experience of anxiety — the dissolving figure represents how anxiety can make us feel like we're losing our grip on reality, while the oblivious passersby represent the isolation that often accompanies mental health struggles.</p>
+            </div>
+
+            <h3>Isolation in Anxiety</h3>
+
+            <p>The painting expresses isolation in anxiety, as the figure is tense, fearful and alone in their emotion despite being surrounded by others. To capture the moment further, the artist uses color psychology in the environment of the painting. The sky above the figure is imagined as waves of sound and heat like a sunset that burns rather than glows. The landscape twists and wraps since reality is blending under pressure.</p>
+
+            <p>The artist uses bold fiery colors from red to yellow color palettes to convey the burning sensation of anxiety. The whole overview of the painting conveys sensory overload of anxiety in isolation of a person. A person's anxiety and fear feels unnoticed — hence the figure screams as it blends into its surroundings as people walk by, not noticing the bridge falling and the sunset burning, which some people also assume represents madness.</p>
+
+            <img src="attached_assets/blogphotos/the_scream_1.png" alt="Close-up detail of The Scream showing the anxious figure" class="article-image">
+
+            <h2>The Psychology of Art Interpretation</h2>
+
+            <p>When we look at "The Scream," we're not just observing a painting — we're engaging in a complex psychological process. Our brains automatically search for patterns and meaning, drawing connections between the visual elements and our own emotional experiences. This is why the painting resonates so deeply with viewers across different cultures and time periods.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-brain"></i> Mirror Neurons and Art:</h4>
+                <p>Mirror neurons fire both when we perform an action and when we observe others performing the same action. When viewing "The Scream," these neurons may activate as if we ourselves are experiencing the anxiety depicted, creating an immediate emotional connection to the artwork.</p>
+            </div>
+
+            <h3>Color Psychology in The Scream</h3>
+
+            <p>Munch's strategic use of color enhances the psychological impact of the piece. The swirling oranges and reds in the sky create a sense of unease and burning intensity, while the cooler blues and greens of the water below suggest a stark contrast between the figure's internal turmoil and the external world's apparent calm.</p>
+
+            <p>These color choices aren't accidental — they tap into our subconscious associations with different hues. Warm colors like red and orange are often associated with danger, intensity and emotional heat, while the figure's pale, almost translucent appearance suggests a loss of vitality and presence.</p>
+
+            <h2>Personal Interpretation and Meaning</h2>
+
+            <p>What do you think? Is the figure's anxiety regarding the world collapsing going unnoticed, or is it just mad? Do you have your own theories? How does it make you feel? Your perspective is what signifies and finds meaning in art such as paintings.</p>
+
+            <p>The beauty of "The Scream" lies not just in its technical execution, but in its ability to serve as a mirror for our own experiences with anxiety, isolation and the feeling of being misunderstood. Each viewer brings their own psychological landscape to the interpretation, making the artwork a deeply personal experience despite its universal themes.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-question-circle"></i> Questions for Reflection:</h4>
+                <ul>
+                    <li>What emotions does "The Scream" evoke in you personally?</li>
+                    <li>How do you interpret the relationship between the screaming figure and the oblivious passersby?</li>
+                    <li>What aspects of your own experience with anxiety or isolation do you see reflected in the painting?</li>
+                </ul>
+            </div>
+
+            <p>Art has the unique power to externalize our internal experiences, giving form to feelings that might otherwise remain unnamed or unacknowledged. "The Scream" continues to resonate because it captures something universally human — the experience of feeling overwhelmed, isolated and misunderstood in moments of psychological distress.</p>
+
+            <p>Through Munch's masterpiece, we're reminded that art can serve not only as a form of expression but as a tool for understanding and processing our own mental health experiences. In recognizing ourselves in "The Scream," we find both validation for our struggles and connection to the broader human experience of psychological complexity.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
