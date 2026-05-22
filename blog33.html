@@ -1,0 +1,561 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Lie in April: PTSD and the Portrayal of Trauma Recovery - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(135, 206, 235, 0.95), rgba(255, 182, 193, 0.9), rgba(152, 251, 152, 0.95));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 300px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: _2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #e8f4f8, #fce4ec);
+            border-left: 4px solid #87ceeb;
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+            color: #333;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #e8f6ff, #d4edff);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .psychology-insight h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+        }
+
+        .dsm-box {
+            background: linear-gradient(135deg, #e8f4f8, #d4e8f0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .dsm-box h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff5f5, #ffe8e8);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e74c3c;
+        }
+
+        .warning-box h4 {
+            color: #c0392b;
+            margin-bottom: 1rem;
+        }
+
+        .critique-box {
+            background: linear-gradient(135deg, #fff8e7, #fff0cc);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .critique-box h4 {
+            color: #d68910;
+            margin-bottom: 1rem;
+        }
+
+        .strength-box {
+            background: linear-gradient(135deg, #e8f8f5, #d5f4e6);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #27ae60;
+        }
+
+        .strength-box h4 {
+            color: #1e8449;
+            margin-bottom: 1rem;
+        }
+
+        .character-box {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e91e63;
+        }
+
+        .character-box h4 {
+            color: #c2185b;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> Anime Psychology
+                </div>
+                <h1 class="blog-title">Your Lie in April: PTSD and the Portrayal of Trauma Recovery</h1>
+                <p class="blog-subtitle">Analyzing the critically acclaimed anime's depiction of childhood trauma, PTSD symptoms, and the complexities of healing through music and connection.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jan. 10, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>11 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Shreyas Jay</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/ylia_header.png" alt="Your Lie in April manga cover" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction: A Beloved Yet Controversial Anime</h2>
+
+            <p><em>Your Lie in April</em> (2014) has received critical acclaim since its release, landing itself inside the top 100 anime on MyAnimeList, the world's largest anime ranking forum. Following the story of a traumatized pianist, Arima Kousei, and his journey to recovery while being pushed by an enthusiastic violinist, Kaori Miyazono, the anime has often been cited as one of the most heartbreaking anime out there.</p>
+
+            <p>Yet, even though its massive popularity is undeniable, the anime has also received a plethora of criticism for its portrayal of mental health, abuse, and many other dark themes. Specifically, the light-heartedness with which these themes are discussed has been the subject of disapproval for hundreds of thousands of fans and critics around the world.</p>
+
+            <p>However, is <em>Your Lie in April</em>'s portrayal of mental health really that bad? In this blog, we'll take a deep dive into both the good and the bad, analyzing whether the dark topics that this show discusses are truly done justice or not.</p>
+
+            <h2>Your Lie in April: Plot Summary</h2>
+
+            <div class="character-box">
+                <h4><i class="fas fa-users"></i> The Main Characters</h4>
+                <ul>
+                    <li><strong>Kousei Arima:</strong> A former piano prodigy who quit playing after a traumatic childhood</li>
+                    <li><strong>Kaori Miyazono:</strong> A free-spirited violinist who enters Kousei's life</li>
+                    <li><strong>Tsubaki Sawabe:</strong> Kousei's childhood friend and athlete</li>
+                    <li><strong>Ryota Watari:</strong> Kousei's best friend who is popular with girls</li>
+                </ul>
+            </div>
+
+            <p><em>Your Lie in April</em> follows the story of Kousei, an ex-pianist who quit despite being incredibly successful and well-known as a child. The show starts with our main character in high school. At this time, Kousei has given up playing the piano altogether and sticks strictly to transcribing pieces. His best friends, Tsubaki Sawabe and Ryota Watari, are both into sports, and from the beginning, their dynamic revolves around teasing Kousei.</p>
+
+            <p>Eventually, the three main characters meet Kaori, a violinist who claims to have a crush on Ryota. While the four of them become closer and closer, Kaori continually pushes Kousei to pick up the piano once more.</p>
+
+            <p>Eventually, Kousei agrees to duet with Kaori and slowly but surely gets back into piano. However, as the show progresses, we see the real reason he quit piano: the trauma his mother imparted on him. As a child, Kousei was abused by his mother and forced into playing the piano. Following her death due to a chronic illness, Kousei gave up the piano altogether and began moving on until Kaori began to drag him back in.</p>
+
+            <p>Midway through the show, it is revealed that Kaori has been diagnosed with a terminal illness and must undergo surgery with a low chance of survival. Finally, as the show comes to an end, it's revealed that all along, Kaori had a crush on Kousei and only got close to the group to get him back into playing the piano.</p>
+
+            <h2>Your Lie in April and Post-Traumatic Stress Disorder</h2>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Content Warning</h4>
+                <p>This section discusses themes of childhood abuse and trauma.</p>
+            </div>
+
+            <div class="dsm-box">
+                <h4><i class="fas fa-clipboard-list"></i> What Is PTSD?</h4>
+                <p><strong>Post-Traumatic Stress Disorder (PTSD)</strong> is a mental health disorder that results from experiencing a traumatic event. Common symptoms include:</p>
+                <ul>
+                    <li>Frequent flashbacks to the traumatic event</li>
+                    <li>Persistent anxiety</li>
+                    <li>Avoidance of any stimuli that may serve as a reminder of the traumatic event</li>
+                    <li>Intrusive thoughts and nightmares</li>
+                    <li>Emotional numbness or hypervigilance</li>
+                </ul>
+            </div>
+
+            <p>In Kousei's case, the traumatic event that he experienced was the constant abuse his mother put him through to "improve" his piano skills. His constant avoidance of playing the piano, his persistent flashbacks to his mother's abuse whenever he steps up on stage, and the frequent visions and dreams of being back under his mother's control are all symptoms commonly seen in people with PTSD, meaning that he almost certainly has some form of it.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-music"></i> Kousei's Unique Symptom</h4>
+                <p>One of the most prominent themes throughout this show is Kousei's inability to hear the notes he plays, causing him to hear only the thump of the keys rather than the music itself. This causes him to mess up countless times in both practice and performances, making music competitions and duets with Kaori near impossible.</p>
+                <p>This, too, is a symptom that stems from his past trauma. It represents a form of <strong>dissociation</strong>—a psychological defense mechanism where the mind disconnects from experiences associated with trauma. As the show concludes, he regains the ability to hear notes, symbolizing his recovery from PTSD.</p>
+            </div>
+
+            <p>Overall, the portrayal of PTSD in <em>Your Lie in April</em> is, for the most part, realistic. It captures symptoms that most people with the disorder face in the real world and manages to portray them in a way that makes us understand their true horror. From his frequent breakdowns to his visions and flashbacks, the show does a good job in its portrayal of PTSD.</p>
+
+            <p>However, the main critique of the show is not in Kousei's experience with the disorder, but rather in how he "got better."</p>
+
+            <h2>Your Lie in April's Shortcomings</h2>
+
+            <div class="critique-box">
+                <h4><i class="fas fa-exclamation-circle"></i> The Problem with Kousei's "Recovery"</h4>
+                <p>The main shortcoming of <em>Your Lie in April</em> is found in Kousei's recovery process and his friends' questionable "treatment" decisions.</p>
+            </div>
+
+            <p>For one, Kaori, although unaware of Kousei's trauma, decided that the solution to helping Kousei would be to push him headfirst directly into confronting the source: playing the piano.</p>
+
+            <p>This is an approach that almost certainly would not work in the real world, as pushing someone to confront years of trauma all at once is bound to cause more harm than healing. In the real world, treating someone with PTSD often does involve <strong>exposure therapy</strong>—a slow process in which one is gradually exposed to bits and pieces of trauma. Exposure therapy is meant to be tedious and slow to ensure that the patient is safe and comfortable at each step before proceeding to the next.</p>
+
+            <p>Conversely, what Kaori did was thrust Kousei all at once into playing the piano. While the show touches on how this solution may have backfired initially, it seems to adopt a "try it enough times and it'll work" mentality. Towards the end of the show, it appears that Kousei has completely healed due to being pushed into playing the piano enough times, which, for obvious reasons, is a harmful portrayal of the healing process from PTSD.</p>
+
+            <div class="critique-box">
+                <h4><i class="fas fa-comment-slash"></i> Avoiding Difficult Words</h4>
+                <p>Another major shortcoming in this show is its refusal to acknowledge its darker themes for what they are:</p>
+                <ul>
+                    <li>The show never uses the word "abuse" to describe what Kousei's mother did to him, often choosing to dance around the subject instead</li>
+                    <li>Towards the end, the show attempts to justify her actions, claiming it was "all out of love"</li>
+                    <li>The show never explicitly states that Kousei has PTSD, even though it is heavily implied</li>
+                </ul>
+                <p>It feels as if the show tries to avoid its dark themes to maintain a light-hearted _front.</p>
+            </div>
+
+            <p>The "lighthearted anime" front that <em>Your Lie in April</em> tries to maintain feels off, as the show is inherently quite dark. By trying to maintain this front, <em>Your Lie in April</em> loses much of the emotional impact it could have had if it had just focused on portraying these very serious topics in ways that highlighted their severity. This is by far the biggest critique of <em>Your Lie in April</em>: a show that tries to portray complex mental health topics shouldn't intentionally lessen their impact and make them seem less serious than they are.</p>
+
+            <h2>Your Lie in April's Strengths</h2>
+
+            <div class="strength-box">
+                <h4><i class="fas fa-heart"></i> The Power of Social Connection</h4>
+                <p>While <em>Your Lie in April</em> falls short in many ways, there are also things it excels at—specifically, its portrayal of the impact social connection has on mental well-being.</p>
+            </div>
+
+            <p>Kaori, although she pushes Kousei headfirst into his trauma, slowly takes time to understand him, and eventually, the two of them form a real bond that transcends the stage they share. Tsubaki and Ryota spending more time with Kousei towards the end of the show also demonstrates the importance of connection, and the show takes time to build that connection in a way that feels natural.</p>
+
+            <p>Kousei's bonds with his friends strengthen over time, and as they do, so does his mental health. For all the harmful stereotypes <em>Your Lie in April</em> pushes, its portrayal of friendship and the importance of social connection is one of the areas where the show excels.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-balance-scale"></i> Final Thoughts</h4>
+                <p>Even though <em>Your Lie in April</em> is incredibly popular, it's important to address the flaws the anime exhibits, especially when discussing its portrayal of mental health and the healing journey. The show has many overbearing flaws that make it difficult to recommend as an accurate portrayal of PTSD, yet its emphasis on social connection is important, as it highlights the true effect a strong social support system has on someone's well-being.</p>
+                <p>What are your thoughts? Have you ever seen the show, and if you have, did you think it was a good portrayal or not?</p>
+            </div>
+
+            <div class="references-section">
+                <h4><i class="fas fa-book"></i> References</h4>
+                <ul>
+                    <li><a href="https://www.apa.org/ptsd-guideline/treatments/prolonged-exposure" target="_blank">"Prolonged Exposure Therapy." American Psychological Association</a></li>
+                </ul>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
