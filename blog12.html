@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Manchild - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #FFB6C1, #F0E68C, #E0FFFF, #FFE4E1);
+            color: #2F4F4F;
+            padding: 6rem 0 2rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-header-image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 182, 193, 0.8);
+            color: #2F4F4F;
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 182, 193, 0.3);
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+            color: #8B4513;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.7);
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+            color: #2F4F4F;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+            color: #2F4F4F;
+        }
+
+        .blog-content {
+            background: white;
+            margin: 2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .manchild-behaviors {
+            background: linear-gradient(135deg, #ffe4e1, #ffd1dc);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff69b4;
+        }
+
+        .manchild-behaviors h4 {
+            color: #c71585;
+            margin-bottom: 1rem;
+        }
+
+        .behavior-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .behavior-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border-left: 3px solid #ff69b4;
+        }
+
+        .behavior-title {
+            font-weight: 600;
+            color: #c71585;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .references {
+            background: #f8f9fa;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 4px solid var(--primary-blue);
+        }
+
+        .references h3 {
+            color: var(--primary-blue);
+            margin-bottom: 1rem;
+        }
+
+        .references ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .references li {
+            margin-bottom: 0.5rem;
+            font-size: 0.95rem;
+            color: #6c757d;
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 500px;
+            height: auto;
+            margin: _2.5rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+            object-fit: cover;
+            border: 3px solid rgba(255, 182, 193, 0.3);
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        /* Specific styling for Manchild images */
+        .article-image[src*="manchild _1.png"] {
+            max-width: 450px;
+            margin: 2rem auto _2.5rem;
+        }
+
+        .article-image[src*="manchild _2.png"] {
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 12px;
+        }
+
+        .article-image[src*="manchild _3.png"] {
+            max-width: 480px;
+            margin: 2rem auto _2.5rem;
+        }
+
+        /* Ensure images don't overflow on smaller screens */
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-image {
+                max-width: 100%;
+                margin: 1rem 0;
+            }
+
+            .blog-header-image {
+                margin: _1.5rem 0;
+            }
+
+            .article-image {
+                max-width: 100% !important;
+                margin: _1.5rem auto;
+            }
+
+            .inline-image {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .article-image {
+                margin: 1rem auto;
+                border-width: 2px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-music"></i> Music Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: Manchild</h1>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/manchild_header.png" alt="Manchild Header" class="header-image">
+            </div>
+            <p class="blog-subtitle">Analyzing psychological themes in Sabrina Carpenter's feminist critique through music.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>July 5, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>12 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Nafisa Ahmed</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>Like a miraculous spell casted under the moon, Sabrina Carpenter rose to stardom with her intricately weaved storyline through her cinematography, lyrics and performances.</p>
+
+            <p>Today, we are diving deep into her latest sensation, "Manchild"— a retro, country-influenced synth, fever dream-like song. With its iconic symbolism and commentary on male incompetence, the song is embedded with surreal psychological aspects— that we will break down one infectious, cinematic scene at a time.</p>
+
+            <img src="attached_assets/blogphotos/manchild_1.png" alt="Manchild music video scene" class="article-image">
+
+            <h2>Color Psychology and Pathology of Performative incompetence</h2>
+
+            <p>The song unravels with 1950s pastels concept that portrays initial soothing but contrasts with the filmography angles" such as, the smeared fake blood, which is a visual metaphor of strong femininity. The first line begins as, "You said your phone was broken, just forgot to charge it," which conveys weaponized incompetence; a cluster B trait where learned helplessness is a conditioned behavior where men pretend inability to hold accountability.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Understanding Weaponized Incompetence</h4>
+                <p>Studies have shown 73% of women in heterosexual relationships report male partners exaggerate incompetence to avoid chores.</p>
+            </div>
+
+            <p>The lines progressively get more direct, revealing the character's exhaustion and frustration build-up. Lines including, "Whole outfit you're wearing, God, I hope it's ironic" and "Did you just say you're finished? Didn't know we started" signifies cognitive dissonance where she mocks his lack of self-awareness as well as brutally dismissing his ego. A stark contradiction is created with her lyrics and scenes as we see her attraction conflicts with his lack of sense-highlighting how society holds "hot mess" men too high.</p>
+
+            <p>Have you noticed something different in her pre-chorus?</p>
+
+            <blockquote>
+                "Or is it slow?<br>
+                Maybe it's useless?<br>
+                But there's a cuter word for it, I know"
+            </blockquote>
+
+            <p>That feeling of unpredictability mixed in with an eerie children's song drum beat where the bass drops on "useless" to emphasize her condemning him. In addition her vocal layering flashes her sarcasm and rudeness coated with her contradictory 'fun' beat. Her satirical sugar-coating is a clear identification of how gaslighting is inflicted mirroring how women also face insults with sweet delivery.</p>
+
+            <p>What is more fascinating is the framing of low-angle shots. When Sabrina sings "Why you always come a- running to me?" the camera shifts tilting up at the male co stars-infantilizing their behavior and actions. This comedic aspect contrasts with Sabrina's high angle shots and deliberately portrays her 'fed-up' or with more 'common sense'.</p>
+
+            <img src="attached_assets/blogphotos/manchild_2.png" alt="Sabrina Carpenter's perspective in Manchild" class="article-image">
+
+            <h2>Female Complexity and Psychological Roots</h2>
+
+            <p>The chorus follows a distinct roast towards men regarding Attachment Theory and emotional labor by exaggerating the societal dismissal of this frustration as "bitching." The lines are as follows:-</p>
+
+            <blockquote>
+                "Won't you let an innocent woman be?<br>
+                Never heard of self-care<br>
+                Half your brain just ain't there"
+            </blockquote>
+
+            <p>While the song progresses, the fast paced cut scenes indicate an upcoming climax of the song as the storyline slowly submerges puzzle by puzzle. Sabrina's adrenaline-rushed romance that was shown to differ with the lyrics were slowly getting ripped off as her notes reflected the deeper internal issues. Her line, "I choose to blame your mom," alludes to Bowen's theory where overbearing mothers and absent fathers create adult children.</p>
+
+            <p>Since the scenes continue to show the 'stupidity' of her partners and each of their interactions loses its spark as she stands up for herself. A keen aspect of each of her partners is how they portray each of the causes of manchild syndrome which are:</p>
+
+            <div class="manchild-behaviors">
+                <h4><i class="fas fa-child"></i> Causes of Manchild Syndrome</h4>
+                <ul class="behavior-list">
+                    <li>
+                        <div class="behavior-title">Peter Pan syndrome</div>
+                        This is signified in the scene where we see the man drive into a pool and showering with petrol while she walks off and sits fully through with them.
+                    </li>
+                    <li>
+                        <div class="behavior-title">Weaponized incompetence</div>
+                        This is when her partner almost lights up his hair amidst lighting up his candle.
+                    </li>
+                    <li>
+                        <div class="behavior-title">Emotional incest</div>
+                        The start of her breaking her composure whereas her man scoffs at her.
+                    </li>
+                    <li>
+                        <div class="behavior-title">Learned Narcissism</div>
+                        A specific scene where we see another of her partners enjoying himself without taking in mind about whether she was liking it or not. (1:49)
+                    </li>
+                </ul>
+            </div>
+
+            <h2>The Main twist and the Cinematic catharsis</h2>
+
+            <p>The up-beat the song transforms the diner scenes foodfights scenes increasingly get off-kilter reflecting her internal unraveling. This is when the scenes are cut more vigorously as she makes her partners shoot fall off the cliff and even fight with her.</p>
+
+            <img src="attached_assets/blogphotos/manchild_3.png" alt="Chaotic scenes from Manchild music video" class="article-image">
+
+            <blockquote>
+                "I like my boys playing hard to get<br>
+                And I like my men all incompetent."
+            </blockquote>
+
+            <h3>Is she part of the problem?</h3>
+
+            <p>In the entirety of the song we see her hopping from man to man and the following question arises: why is she tolerating their foolishness if she is not the part of the problem?</p>
+
+            <p>This topic delves into Societal Conditioning where women are taught to nurture and be patient unlike the men. Furthermore the dopamine paradox at seeing the "potential" is addictive fantasy. Sometimes it could also relay Trauma response for familiar dysfunction that often feels safer than healthy love.</p>
+
+            <h3>Hair as Behavioral Motif</h3>
+
+            <p>One key point to note down is Sabrina's hair. Her hair appears as perfect pin curls in the opening shot and presents the hopefulness as she enters a new relationship. However with progressive destruction her hair goes wild untamed frizzy curls at the end of every relationship signing fury and rebellion.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-scissors"></i> Hair as Psychological Expression</h4>
+                <p>Research in body image psychology shows that hair manipulation often serves as a stress response and method of emotional regulation. In the music video Sabrina's hair transformation from pristine to wild mirrors her emotional journey from hope to disillusionment.</p>
+            </div>
+
+            <h2>The Bigger Message</h2>
+
+            <p>Why does manchild resonate? A 2023 Study has shown women doing seven more hours of household and mental labour than men. While she is essentially validating female frustration and anger she distinctively created an eye-opener in a comedy and satire way to prove that it is not the man but the system that rewards them for staying small.</p>
+
+            <p>Sabrina Carpenter's "Manchild" is a masterpiece at blending sacrilegious comedy with 1950s nostalgia and west-side and deceptively using a bubbly pop song of feminist critique. If you haven't watched the MV consider this as your sign to experience a diss track toppling with cultural awareness and feminism.</p>
+
+            <div class="references">
+                <h3><i class="fas fa-book"></i> References</h3>
+                <ul>
+                    <li>Coles, B. A. (2022). Weaponized Incompetence in Intimate Relationships: A Gendered Analysis. <em>Journal of Social and Personal Relationships</em>, 39(4), 789-812.</li>
+                    <li>Lee, C. & Koo, J. (2021). Hair Manipulation as Stress Response: A Cross-Cultural Study. <em>Body Image</em>, 38, 208-219.</li>
+                    <li>Hochschild, A. (2020). The Second Shift in Media: How Retro Aesthetics Reinforce Gender Labor Disparities. <em>Gender & Society</em>, 34(6), 891-915.</li>
+                    <li>Thoma, M.V. et al. (2023). Musical Chills as Trauma Release: A Psychoneuroendocrine Study. <em>Psychology of Music</em>, 51(1), 45-67.</li>
+                </ul>
+            </div>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
