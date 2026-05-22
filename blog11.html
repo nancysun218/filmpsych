@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Gossip Girl - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/blogphotos/gossip_header.png') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .identity-diffusion-box {
+            background: linear-gradient(135deg, #fff9c4, #f0e68c);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #daa520;
+        }
+
+        .identity-diffusion-box h4 {
+            color: #b8860b;
+            margin-bottom: 1rem;
+        }
+
+        .identity-diffusion-box ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .identity-diffusion-box li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(184, 134, 11, 0.2);
+        }
+
+        .identity-diffusion-box li:before {
+            content: "💭";
+            margin-right: 0.5rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> TV Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: Gossip Girl</h1>
+                <p class="blog-subtitle">Exploring identity diffusion through Serena van der Woodsen's character.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>July 3, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>7 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Isabelle Quek</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/gossip_header.png" alt="Gossip Girl Header">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>As we grow, we begin forming our own thoughts and opinions. Some of us, however, are lost in conclusions while others explore different perspectives and often, we end up following peer pressure and become easily influenced. This could be a symptom of identity diffusion, a psychological theory that we will explore through the lens of "it" girl Serena van der Woodsen in the popular teen drama series "Gossip Girl."</p>
+
+            <h2>Welcome to the Upper East Side</h2>
+
+            <p>Set in New York City's Upper East Side, the series follows the lives of wealthy high school students who are being exposed by an anonymous blogger called Gossip Girl. The story emerges with Serena and her unexpected return to the city, bringing up old rivalries and secrets. As her friends, Blair Waldorf, Nate Archibald, Chuck Bass and "lonely boy" outsider Dan Humphrey get caught in the drama, relationships, betrayals and scandals unfold.</p>
+
+            <img src="attached_assets/blogphotos/gossip_1.png" alt="Gossip Girl main characters" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" onerror="this.style.display='none'">
+
+            <h2>Understanding Identity Diffusion</h2>
+
+            <p>Identity diffusion, in the context of Erik Erikson's theory of psychosocial development and James Marcia's identity statuses, refers to a stage where an individual has not explored potential identities and made commitments yet. It's characterized by a lack of self-clarity—individuals in this stage may feel aimless with a fragmented sense of self, easily influenced and struggling with healthy relationships.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-brain"></i> What is Identity Diffusion?</h4>
+                <p>Identity diffusion occurs when a person hasn't yet explored different aspects of their identity or made firm commitments to specific roles, values, or beliefs. Unlike other identity statuses, individuals in diffusion haven't actively searched for their identity nor have they committed to particular choices about their future.</p>
+            </div>
+
+            <h3>Serena's Identity Crisis</h3>
+
+            <p>In "Gossip Girl," Serena's identity is usually characterized as "carefree" and "rebellious," which clashes with her Upper East Side upbringing and the myriad expectations placed upon her. This internal conflict has led to a constant search for identity in her relationships, experiences and external validation. For example, when with Dan, she was the down-to-earth "nice rich girl" who doesn't seem to care about status and downplays her privilege. However, when Blair is around, she is often more passive and apologetic, trying to avoid conflict with Blair over attention, power and relationships. With her family, especially her mother Lily, she tries to be the "good daughter" since her mother expects her to uphold a certain social image, although she ends up rebelling or feeling frustrated. And lastly to Gossip Girl, she is portrayed as the glamorous, reckless and mysterious everyone loves and wants to become, leading her to struggle with the pressure of that public image and often either rebel against it or lean to it. Therefore, her personality and choices are often inconsistent and unpredictable and her inability to define her true self contributes to her chaotic relationships, shifting personalities and ongoing search for identity throughout the series.</p>
+
+            <img src="attached_assets/blogphotos/gossip_2.png" alt="Serena's identity struggles" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);" onerror="this.style.display='none'">
+
+            <h2>The Impact of External Pressures</h2>
+
+            <p>Individuals experiencing identity diffusion may struggle to find their place in society. Not only can this make it difficult to form and maintain healthy relationships, it can also lead to inconsistency in actions, lack of direction and difficulty making secure decisions. It can also lead to feelings of emptiness, low self-esteem and difficulty regulating emotions, potentially contributing to mental health issues.</p>
+
+            <img src="attached_assets/blogphotos/gossip_3.png" alt="Upper East Side lifestyle and pressures" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+            <h2>Conclusion</h2>
+
+            <p>In conclusion, "Gossip Girl" has well portrayed the depiction of Serena's struggle with self identity due to her low self esteem and society's expectations of her. If you've experienced similar emotions or would like to discuss the topic further, leave a comment below.</p>
+
+            <p>Remember to always sympathize with others who are struggling with their self identity as you can never truly know what they may be going through.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://filmspsychologee.com" target="_blank">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
