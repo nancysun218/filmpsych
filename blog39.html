@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Abby Littman Through a Psychological Lens - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(255, 182, 193, 0.9), rgba(255, 105, 180, 0.85), rgba(199, 21, 133, 0.9));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 70% 30%, rgba(255, 255, 255, 0.15) 0%, transparent 40%);
+            opacity: 0.8;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 350px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.25);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: _2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            border-left: 4px solid #e91e63;
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+            color: #880e4f;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #2196f3;
+        }
+
+        .psychology-insight h4 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .bdd-box {
+            background: linear-gradient(135deg, #fce4ec, #f8bbd9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #e91e63;
+        }
+
+        .bdd-box h4 {
+            color: #c2185b;
+            margin-bottom: 1rem;
+        }
+
+        .brain-box {
+            background: linear-gradient(135deg, #e8eaf6, #c5cae9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #5c6bc0;
+        }
+
+        .brain-box h4 {
+            color: #3949ab;
+            margin-bottom: 1rem;
+        }
+
+        .media-box {
+            background: linear-gradient(135deg, #fff3e0, #ffe0b2);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff9800;
+        }
+
+        .media-box h4 {
+            color: #e65100;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f44336;
+        }
+
+        .warning-box h4 {
+            color: #c62828;
+            margin-bottom: 1rem;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #4caf50;
+        }
+
+        .conclusion-box h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .inline-image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .inline-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .inline-image figcaption {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> TV Psychology
+                </div>
+                <h1 class="blog-title">Abby Littman Through a Psychological Lens</h1>
+                <p class="blog-subtitle">Understanding body dysmorphia and eating disorders through one of Ginny and Georgia's most complex teen characters.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jan. 20, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>12 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Nainika Tumu</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/abby_header.png" alt="Abby Littman" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction</h2>
+
+            <p>Abby Littman is one of the most complex teen characters in <em>Ginny and Georgia</em>. Beneath her sarcastic wit and confident presence lies a series of behaviors that point toward deeper psychological struggles.</p>
+
+            <p>By examining her patterns through the lens of psychology, we can better understand the mechanics of body dysmorphia and eating disorders, and how these conditions operate beneath the surface.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/abby_front.png" alt="Abby Littman from Ginny and Georgia">
+                <figcaption>Abby Littman, one of the most complex teen characters in Ginny and Georgia</figcaption>
+            </figure>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Content Warning</h4>
+                <p>This article discusses body dysmorphic disorder, eating disorders, and related mental health topics. If you or someone you know is struggling, please reach out to a mental health professional or the National Eating Disorders Association helpline.</p>
+            </div>
+
+            <h2>Body Dysmorphic Disorder in Action</h2>
+
+            <div class="bdd-box">
+                <h4><i class="fas fa-mirror"></i> What Is Body Dysmorphic Disorder?</h4>
+                <p>Body Dysmorphic Disorder, or BDD, involves a persistent and intrusive preoccupation with perceived flaws in appearance. These flaws are often unnoticeable to others or appear minor, yet they dominate the individual's thoughts and behaviors.</p>
+            </div>
+
+            <p>For Abby, casual scenes often reveal her checking her reflection repeatedly or adjusting her posture and clothing in subtle but deliberate ways.</p>
+
+            <div class="brain-box">
+                <h4><i class="fas fa-brain"></i> The Neuroscience Behind BDD</h4>
+                <p>The human brain contains a region called the <strong>visual processing network</strong> that works closely with emotional regulation areas. In individuals with BDD, there can be heightened activation in visual detail processing regions, meaning minor imperfections become magnified.</p>
+                <p>In practical terms, this means a small blemish or a perceived lack of symmetry can dominate thoughts for hours.</p>
+            </div>
+
+            <p>These patterns are not simply vanity but are part of a neurological loop between perception, attention, and emotional response. Individuals may also engage in grooming, camouflage, or repeated comparisons to others. These behaviors often begin in adolescence and may include mirror avoidance or constantly seeking reassurance.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/abby_header.png" alt="Body Dysmorphic Disorder illustration">
+                <figcaption>Body Dysmorphic Disorder: The distorted perception of self</figcaption>
+            </figure>
+
+            <h2>Compulsive Body Checking and Emotional Relief</h2>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-search"></i> Understanding Body Checking</h4>
+                <p>Compulsive body checking is a recognized behavior connected to both BDD and certain eating disorders. It manifests as:</p>
+                <ul>
+                    <li>Repeatedly weighing oneself</li>
+                    <li>Pinching or measuring body parts</li>
+                    <li>Mirror checking throughout the day</li>
+                    <li>Comparing one's shape with others</li>
+                </ul>
+                <p>These actions may temporarily ease anxiety yet strengthen dissatisfaction over time.</p>
+            </div>
+
+            <h2>The Link Between BDD and Disordered Eating</h2>
+
+            <p>Eating disorders such as bulimia nervosa and restrictive eating often develop alongside BDD. The two share common psychological drivers, including perfectionism and heightened self-monitoring.</p>
+
+            <p>When Abby skips meals or pushes food around on her plate, she engages in a form of body control that temporarily reduces anxiety. The <strong>prefrontal cortex</strong>, which is responsible for planning and self-control, can become locked into cycles where eating behavior is tied to an internal standard of appearance.</p>
+
+            <div class="bdd-box">
+                <h4><i class="fas fa-sync-alt"></i> The Reinforcement Cycle</h4>
+                <p>Over time, these behaviors can shift from occasional coping mechanisms to deeply entrenched rituals. This shift is reinforced by the brain's reward system, which releases dopamine during moments of perceived "success" in controlling weight or appearance.</p>
+                <p>Many individuals who struggle with disordered eating also experience distorted body image, and dissatisfaction often fuels restrictive or compensatory behaviors.</p>
+            </div>
+
+            <h2>Media, Idealized Bodies, and Internal Pressure</h2>
+
+            <div class="media-box">
+                <h4><i class="fas fa-mobile-alt"></i> The "Thin Ideal" and Social Media</h4>
+                <p>Media frequently promotes a "thin ideal" as the standard for attractiveness. Exposure to this ideal often leads viewers to compare themselves to unrealistic models and can trigger body dissatisfaction and maladaptive eating behaviors.</p>
+                <p>Social media can amplify this effect. Appearance-focused platforms and trends like "thinspiration" or "fitspiration" encourage social comparison and self-objectification, increasing the risk of negative body image and disordered eating.</p>
+            </div>
+
+            <h2>Social Feedback and Self-Image</h2>
+
+            <p>Adolescence is a period when the brain's social reward system becomes highly sensitive. For someone like Abby, who moves through an environment where comments on appearance are common, social feedback can act as a psychological accelerant.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-comments"></i> The Weight of Words</h4>
+                <p>Compliments or criticisms do not fade quickly from her mental record. Instead, they become reference points for future self-judgment. Research shows that adolescents with body image concerns often develop a stronger link between social approval and self-worth, making them particularly vulnerable to external feedback.</p>
+            </div>
+
+            <h2>Perfectionism as a Cognitive Pattern</h2>
+
+            <p>Perfectionism is not only a personality trait but also a cognitive pattern characterized by rigid internal rules. Abby often seeks control in an unpredictable social landscape by setting exacting appearance standards for herself.</p>
+
+            <div class="brain-box">
+                <h4><i class="fas fa-exclamation-circle"></i> The Error Detection Loop</h4>
+                <p>This tendency can be tied to activity in the <strong>anterior cingulate cortex</strong>, a brain region involved in error detection. When this system is overactive, it produces a constant sense of something being "off," even if no objective flaw exists.</p>
+            </div>
+
+            <h2>Why These Patterns Matter for Abby</h2>
+
+            <p>Adolescents like Abby are still forming cognitive and emotional patterns related to control and identity. Repeated behaviors such as mirror checking or meal avoidance may function like rituals that reduce anxiety in the short term yet deepen those same anxieties over time.</p>
+
+            <p>Understanding the interplay of BDD symptoms, media influence, and disordered eating behaviors clarifies why her actions feel both habitual and psychologically charged.</p>
+
+            <div class="conclusion-box">
+                <h4><i class="fas fa-lightbulb"></i> Final Thoughts</h4>
+                <p>Abby's behavior reveals more than teenage insecurity. Her mirror-focused habits, appearance control, and potential internal pressure reflect recognizable psychological phenomena.</p>
+                <p>By unpacking these underlying mechanisms, viewers can better understand why these behaviors occur and how they relate to broader issues of mental health and representation in media.</p>
+            </div>
+
+            <div class="references-section">
+                <h4><i class="fas fa-book"></i> Sources</h4>
+                <ul>
+                    <li><a href="https://www.mayoclinic.org/diseases-conditions/body-dysmorphic-disorder" target="_blank">Mayo Clinic – Body Dysmorphic Disorder</a></li>
+                    <li><a href="https://www.hopkinsmedicine.org" target="_blank">Johns Hopkins Medicine – BDD</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov" target="_blank">NCBI – BDD and Adolescents</a></li>
+                    <li><a href="https://www.nhs.uk/mental-health" target="_blank">NHS – Body Dysmorphic Disorder</a></li>
+                    <li><a href="https://www.nationaleatingdisorders.org" target="_blank">National Eating Disorders Association</a></li>
+                    <li><a href="https://www.psychologytoday.com" target="_blank">Psychology Today – BDD & Eating Disorders</a></li>
+                    <li><a href="https://www.verywellmind.com" target="_blank">Verywell Mind – Fitspiration & Self-Objectification</a></li>
+                </ul>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
