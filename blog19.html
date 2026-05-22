@@ -1,0 +1,482 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Coraline - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(72, 61, 139, 0.9), rgba(138, 43, 226, 0.9), rgba(75, 0, 130, 0.9));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 450px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            object-fit: contain;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .attachment-theory-box {
+            background: linear-gradient(135deg, #e8f4fd, #f3e5f5);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #6a5acd;
+        }
+
+        .attachment-theory-box h4 {
+            color: #6a5acd;
+            margin-bottom: 1rem;
+        }
+
+        .neglect-warning {
+            background: linear-gradient(135deg, rgba(220, 53, 69, 0.1), rgba(255, 193, 7, 0.1));
+            border-left: 4px solid #dc3545;
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+        }
+
+        .neglect-warning h4 {
+            color: #dc3545;
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 500px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-film"></i> Film Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: Coraline</h1>
+                <p class="blog-subtitle">From the button eyes: the cage made of neglect and maladaptive daydreaming.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>July 22, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>14 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Adeeba Arshad</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/coraline_header.png" alt="Coraline Header">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>We all dreamed of a magical world in our childhoods. But when that magical world takes over our reality, it becomes a psychosocial dissociative disorder known as maladaptive daydreaming. Now, let's examine how emotional neglect experienced in childhood can lead to such an outcome.</p>
+
+            <h2>A Glimpse Into the Film: Coraline</h2>
+
+            <p>"Coraline" is a stop-motion animated film directed by Henry Selick, based on the novel by Neil Gaiman. It follows the story of 11-year-old Coraline Jones, a curious and adventurous girl who has recently moved into the Pink Palace Apartments with her emotionally unavailable and preoccupied parents.</p>
+
+            <p>Coraline tries to reach out to them but is repeatedly ignored. She feels lonely in this new setting. Feeling ignored and lonely, she sets out to explore the world around her and encounters strange neighbors — Mr. Bobinsky, Miss Spink and Miss Forcible. These experiences, although they add color to her world, don't exactly offer the emotional closeness she seeks. Her only friend is Wybie, a clumsy kid whose friendship feels inadequate to fill Coraline's inner needs.</p>
+
+            <img src="attached_assets/blogphotos/coraline_header_and_1.png" alt="Coraline exploring her new home" class="article-image">
+
+            <p>Eventually, Coraline discovers a hidden door that leads to a fantastical "Other World," mirroring her reality but with attentive parents who cook her favorite meals and shower her with love. Initially an enchanting dream, this world slowly swirls into a sinister trap when Coraline is asked to permanently trade her eyes for buttons. What began as a comforting fantasy threads into a psychological trap, one she must escape to reclaim her reality.</p>
+
+            <h2>Understanding the Psychology: Attachment and Daydreaming</h2>
+
+            <h3>Attachment Theory</h3>
+
+            <p>Attachment theory, pioneered by John Bowlby and Mary Ainsworth, suggests that a child's early interactions with caregivers form an internal working model that affects their emotional development and relationships throughout life.</p>
+
+            <div class="attachment-theory-box">
+                <h4><i class="fas fa-heart"></i> Secure vs. Insecure Attachments</h4>
+                <p>When caregivers are warm, responsive and consistently available, children develop secure attachments. They learn to trust others, feel safe exploring the world and believe their needs will be met. In contrast, insecure attachments form when caregivers are neglectful, emotionally distant or inconsistent. These children may struggle with trust, feel unworthy of care or avoid emotional closeness.</p>
+            </div>
+
+            <p>Coraline's cold, inattentive parents form the basis for her insecure attachment, which contributes to her vulnerability to escape into fantasy.</p>
+
+            <h3>Maladaptive Daydreaming</h3>
+
+            <p>Psychologist Eli Somer defines maladaptive daydreaming as an intense, often compulsive escape into fantasy that can take the place of real-life relationships or responsibilities. Unlike healthy imagination, which serves as creative or playful exploration, maladaptive daydreaming becomes excessive, often interfering with everyday functioning.</p>
+
+            <img src="attached_assets/blogphotos/coraline_2.png" alt="Coraline discovering the Other World" class="article-image">
+
+            <h2>Neglect Creeping Into the Narrative</h2>
+
+            <p>Coraline's emotional needs are consistently unmet throughout the story. At the dinner table, her requests for attention are always brushed off. She's taken as a problematic child who's constantly irritating her parents. She's told to count windows or entertain herself while her parents type away on laptops. In these subtle but emotionally powerful scenes, we witness emotional neglect play out in real time.</p>
+
+            <blockquote>
+                "I don't have time for you right now, Coraline."
+            </blockquote>
+
+            <p>She explores the apartments, hoping to fill her empty heart. Miss Spink and Miss Forcible read her fortune in tea leaves. Bobinsky speaks of acrobatic mice. But these eccentric encounters offer no emotional grounding because the comfort and belonging she is looking for is nowhere to be seen.</p>
+
+            <p>In contrast, the Other World offers everything she lacks. Her Other Mother cooks lavish meals. Her Other Father sings her songs and spends quality time with her. She is adored. This world reflects her unmet needs in exaggerated, seductive form — almost like a hyperbole that has consumed her reality.</p>
+
+            <blockquote>
+                "You could stay here forever... if you want to."
+            </blockquote>
+
+            <p>Even Wybie, awkward and clumsy in the real world, becomes silent and obedient in the Other World. He exists only to comfort Coraline, a reflection of how her fantastical world strips others of autonomy to serve her needs.</p>
+
+            <img src="attached_assets/blogphotos/coraline_3.png" alt="The Other Mother with button eyes" class="article-image">
+
+            <p>As the fantasy deepens, it begins to demand a cost. Coraline is told she must sew buttons onto her eyes to stay in the Other World permanently. Her dream has become a trap, and she must escape.</p>
+
+            <blockquote>
+                "Black is traditional, but if you'd prefer pink, or vermillion..."
+            </blockquote>
+
+            <p>The Cat, existing in both worlds, can serve as a metaphor for Coraline's subconscious voice of reason. In the Other World, it speaks, warning her of the trap she's fallen into. It reminds her that not everything that feels nice is good. The Cat helps her navigate back to reality, guiding her toward awareness and autonomy.</p>
+
+            <h2>When Fantasy Replaces Reality</h2>
+
+            <p>Research connects emotional neglect with increased occurrences of immersive and dissociative daydreaming (Bigelsen & Schupak, 2011). Coraline's fantasy initially offers safety, control and affection. But eventually, it becomes parasitic, threatening to consume her sense of self.</p>
+
+            <blockquote>
+                "You know, you could stay here forever, if you want to. There's just one tiny thing we have to do first..."
+            </blockquote>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> The Psychology of Neglect</h4>
+                <p>According to the DSM-5, neglect in childhood is a significant psychosocial factor that contributes to emotional and cognitive vulnerabilities. These vulnerabilities create psychological blind spots, which children attempt to fill through fantasy. Dalenberg (2012) supports this, noting how dissociation and escapism often become coping mechanisms for emotionally neglected children.</p>
+            </div>
+
+            <h2>Real-World Relevance: What Neglect Looks Like</h2>
+
+            <p>In real families, emotional neglect can take many forms: dismissive language, lack of eye contact, absence of affection or failure to notice a child's emotions. Caregivers may not be intentionally abusive but are often too absorbed in work, stress or their own struggles to be emotionally present.</p>
+
+            <p>At school, emotionally neglected children might appear withdrawn, overly imaginative, anxious or disconnected. In relationships, they may crave validation but mistrust intimacy. Mentally, they may retreat into inner worlds when overwhelmed.</p>
+
+            <p>All children daydream, but Coraline's case illustrates how a child can rely on fantasy to such an extent that it replaces reality. Healthy imagination is flexible and creative. Maladaptive daydreaming is compulsive, mentally consuming and is used to avoid difficult feelings or situations. It's an escape from the real world and its problems.</p>
+
+            <h2>Through the Tunnel: A Child's Silent Cry</h2>
+
+            <p>Coraline's journey reminds us how complex and painful childhood neglect can be. No matter how brave or imaginative a child appears, they may feel deeply lonely when deprived of emotional warmth and care.</p>
+
+            <p>Her Other World is not fantasy — it's a psychological expression of unfulfilled needs. And like so many children, Coraline is forced to realize at some point that the comfort of escape is illusory and cannot be substituted for real care.</p>
+
+            <blockquote>
+                "You're not my mother."
+            </blockquote>
+
+            <h2>A Final Note</h2>
+
+            <div class="neglect-warning">
+                <h4><i class="fas fa-heart"></i> Finding Support</h4>
+                <p>Emotional neglect can quietly shape a child's worldview, leading to dissociation and fantasy dependence. "Coraline" reveals how unchecked imagination, born from unmet needs, becomes a double-edged sword — a shelter that slowly becomes a trap.</p>
+            </div>
+
+            <p>If you or someone you know has felt this kind of emotional loneliness, know that these experiences are real and it's OK to feel that way. Healing begins with being seen. Let's raise awareness of emotional neglect and approach one another with empathy and understanding.</p>
+
+            <p>Leave a comment below if this resonated with you or if you'd like to share your thoughts.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#join">Join Us</a>
+                    <a href="index.html#contact">Contact</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Resources</h4>
+                    <a href="start-chapter.html">Start a Chapter</a>
+                    <a href="internship.html">Internships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-tiktok"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
