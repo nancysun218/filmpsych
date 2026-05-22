@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: The Perks of Being a Wallflower - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(177, 156, 217, 0.9), rgba(255, 182, 193, 0.9)), 
+                        url('attached_assets/blogphotos/wallflower.png') center/cover;
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .floating-blog-images {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 1;
+            overflow: hidden;
+        }
+
+        .floating-image {
+            position: absolute;
+            border-radius: 15px;
+            opacity: 0.08;
+            animation: floatBlogImage 15s ease-in-out infinite;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+
+        .floating-image.img-1 {
+            width: 120px;
+            height: 80px;
+            top: 15%;
+            left: 5%;
+            animation-delay: 0s;
+        }
+
+        .floating-image.img-2 {
+            width: 100px;
+            height: 150px;
+            top: 60%;
+            right: 8%;
+            animation-delay: 4s;
+        }
+
+        .floating-image.img-3 {
+            width: 140px;
+            height: 90px;
+            top: 35%;
+            left: 85%;
+            animation-delay: 8s;
+        }
+
+        .floating-image.img-4 {
+            width: 110px;
+            height: 110px;
+            top: 80%;
+            left: 10%;
+            animation-delay: 12s;
+        }
+
+        .floating-image.img-5 {
+            width: 130px;
+            height: 85px;
+            top: 45%;
+            right: 2%;
+            animation-delay: 6s;
+        }
+
+        @keyframes floatBlogImage {
+            0%, 100% {
+                transform: translateY(0px) rotate(0deg) scale(1);
+                opacity: 0.08;
+            }
+            25% {
+                transform: translateY(-20px) rotate(2deg) scale(1.05);
+                opacity: 0.12;
+            }
+            50% {
+                transform: translateY(15px) rotate(-1deg) scale(0.95);
+                opacity: 0.15;
+            }
+            75% {
+                transform: translateY(-10px) rotate(1.5deg) scale(1.02);
+                opacity: 0.1;
+            }
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="floating-blog-images">
+        <img src="attached_assets/blogphotos/wallflower_1.png" alt="" class="floating-image img-1">
+        <img src="attached_assets/blogphotos/wallflower_2.png" alt="" class="floating-image img-2">
+        <img src="attached_assets/blogphotos/wallflower_3.png" alt="" class="floating-image img-3">
+        <img src="attached_assets/blogphotos/wallflower_4.png" alt="" class="floating-image img-4">
+        <img src="attached_assets/blogphotos/wallflower_5.png" alt="" class="floating-image img-5">
+    </div>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-film"></i> Film Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: The Perks of Being a Wallflower</h1>
+            <p class="blog-subtitle">Dissociative amnesia revealed through Perks of Being a Wallflower.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>September 20, 2024</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>8 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Nancy Sun</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>Many of us think that we have control over the things we think about. If you want to think about your math homework, you think about it. If you don't want to think about it, you can think about what to eat for dinner instead. However, random thoughts can pop into our conscious awareness all the time. And sometimes, they're so overwhelming we feel like we have no control over our body. These types of thoughts can't be dismissed as quickly as your math homework. This is usually when a mental breakdown occurs.</p>
+
+            <p>Your brain doesn't want your body to fall apart like this. At the end of the day, your brain has one goal: help you survive. So, what does it do? It puts the memory in a box and tucks it in the very back of your brain. Out of sight, out of mind.</p>
+
+            <p>Today we will discuss this psychiatric disorder called dissociative amnesia through the beautiful coming-of-age story: "Perks of Being a Wallflower," a film that delves into the complexities of adolescence, mental health and trauma.</p>
+
+            <img src="attached_assets/blogphotos/wallflower_1.png" alt="The Perks of Being a Wallflower" class="article-image">
+
+            <h2>The Story Unfolds</h2>
+
+            <p>This film, directed by Stephen Chbosky and based on his novel of the same name, provides a deep and moving portrayal of its protagonist, Charlie Kelmeckis, and his journey through high school, where he matures emotionally, physically, and sexually.</p>
+
+            <p>Charlie is a shy and quiet freshman, who appears to still be struggling with the recent suicide of his best friend, Michael, as revealed in the beginning of the book, where he writes to an unnamed person about the suicide, and the middle of the movie, where he drunkenly tells Sam at a party.</p>
+
+            <p>On his first day, he is harassed and bullied by classmates for being a bookworm and for being super smart – classic movie high school experience.</p>
+
+            <h3>Finding Connection</h3>
+
+            <p>Charlie's life begins to change when he befriends two seniors, Sam and Patrick, who introduce him to new experiences, a close-knit friend group, and a sense of belonging. Through his interactions with them, Charlie starts to open up and live life more fully. He's also introduced to new revelations, including Patrick and school star football player Brad's romantic relationship.</p>
+
+            <p>Charlie also experiences romance himself, through Sam.</p>
+
+            <img src="attached_assets/blogphotos/wallflower_2.png" alt="Charlie and Sam's romantic moment" class="article-image">
+            <p>This tender moment captures the vulnerability and hope that Charlie feels as he opens his heart to love for the first time.</p>
+
+            <p>However, as the story progresses, his moments of joy and love slowly start shifting into emotional pain and confusion. Charlie's deep-rooted trauma starts to surface, through sharp and sudden anxiety attacks and blackouts.</p>
+
+            <h2>The Trauma Surfaces</h2>
+
+            <p>Charlie's anxiety goes back to the first traumatic event in his life, the death of his Aunt Helen by a car accident. She was on her way to get him a surprise for his 7th birthday, and he has always felt it was his fault that she was in the car.</p>
+
+            <p>Initially, Charlie recalls his aunt with fondness, claiming that she was the only person who had shown him affection.</p>
+
+            <img src="attached_assets/blogphotos/wallflower_3.png" alt="Charlie with Aunt Helen" class="inline-image">
+
+            <p>Charlie eventually experiences a breakup with this friend group from a conflict between Sam and Mary Elizabeth, who has become his girlfriend. After the breakup, he enters an isolated state, and his flashbacks of his aunt get worse. Brad and Patrick get into an intense fight, and just as Patrick was being beaten to death, Charlie jumped in and saved him. However, Charlie had no memory of him stepping in. We'll get to this later.</p>
+
+            <p>Patrick has a deep conversation with Charlie, and both the girls forgive him.</p>
+
+            <h3>The Breaking Point</h3>
+
+            <p>The pivotal moment in the story occurs as graduation nears. At Sam's graduation party, Sam and Charlie share a heartfelt moment, where they passionately kiss. However, Sam touches Charlie's inner thigh, and this sexual action triggers Charlie's deep-rooted trauma. After the seniors leave, Charlie begins to have a mental breakdown in his house, filled with traumatic flashbacks of Aunt Helen before her death — touching his thigh and sexually abusing him.</p>
+
+            <p>In distress, Charlie calls his sister, and overwhelmed by guilt and confusion, he says, "What if I wanted her to die?". This line suggests that, on some subconscious level, he feels guilty for Aunt Helen's death, because her death ended the abuse.</p>
+
+            <p>This episode is not just about the resurfacing of painful memories; it also highlights the severe impact of his trauma on his mental state. Charlie's guilt and self-blame are common reactions in individuals who have experienced abuse, where the victim internalizes the trauma and wrongly assumes responsibility.</p>
+
+            <h2>Understanding Dissociative Amnesia</h2>
+
+            <p>In avoidance of these conflicting emotions, Charlie's brain repressed the memory, shedding light on a condition known as dissociative amnesia. Dissociative amnesia is characterized by an inability to recall important autobiographical information, usually of a traumatic or stressful nature, that is inconsistent with ordinary forgetting. This amnesia can be localized (specific to an event or period), selective (only certain aspects of an event), or generalized (affecting the person's entire life history).</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-brain"></i> How Dissociative Amnesia Works:</h4>
+                <p>Dissociative amnesia occurs when the mind blocks out memories that are too painful to handle, effectively protecting the individual from the full impact of the trauma. In Charlie's case, the memories of sexual abuse by his Aunt Helen and his guilt of her death were so traumatic that his mind repressed them, leading to gaps in his memory.</p>
+            </div>
+
+            <p>These repressed memories only surface under significant emotional stress or therapeutic intervention, in which we see around the end of the movie.</p>
+
+            <p>During the film, we see that Charlie's memories of his aunt are fragmented and incomplete. He recalls her as a loving figure, but the traumatic events are buried deep within his subconscious. It is only during his breakdown that he begins to piece together the truth.</p>
+
+            <h3>Dissociative Episodes</h3>
+
+            <p>Additionally, Charlie experiences dissociative amnesia during the fight between Patrick and Brad. This is called a dissociative episode, which occurs as a response to intense stress or trauma, and a person's mind essentially disconnects from their current environment, often as a protective mechanism. This is why Charlie couldn't remember anything that happened when he had stepped in and beat Brad's friends.</p>
+
+            <img src="attached_assets/blogphotos/wallflower_5.png" alt="Charlie during a dissociative episode" class="article-image">
+
+            <p>Dissociation can involve a range of experiences from feeling detached from oneself, losing track of time, to having a sense of unreality. In Charlie's case, the fight triggered his dissociation due to the intense fear and violence he participated in. His history of trauma and abuse also likely made him more susceptible to dissociative responses. This mechanism helps protect the individual from fully experiencing and processing the immediate trauma, but it can lead to gaps in memory and confusion about the events that occurred. In the end, it is all part of the brain's way of protecting you.</p>
+
+            <h2>The Connection to PTSD</h2>
+
+            <p>Dissociative amnesia is often associated with Post-Traumatic Stress Disorder (PTSD), but it is categorized separately under dissociative disorders in the DSM-5 (Diagnostic and Statistical Manual of Mental Disorders, Fifth Edition). While dissociative amnesia is a distinct diagnosis, it can occur in the context of PTSD. PTSD itself involves intrusive memories, flashbacks, and heightened anxiety, and it can also include dissociative symptoms. Individuals with PTSD might experience dissociative amnesia as a way of coping with the overwhelming stress and trauma.</p>
+
+            <p>PTSD, as defined by the DSM-5, can include dissociative symptoms, such as depersonalization (feeling detached from oneself) and derealization (experiencing the world as unreal). Dissociative amnesia can be a part of this presentation in response to severe trauma.</p>
+
+            <h2>Recognizing Dissociation in Others</h2>
+
+            <p>Even if you don't experience dissociative amnesia or dissociation in general, it's still important to practice and develop coping strategies and provide necessary support to those who do, whether it be a friend, family member, or someone you don't even know. First, let's learn how to identify if a person is experiencing dissociation or entering a dissociative state.</p>
+
+            <p>When you are dissociating, you have an out of body experience, almost like you're a character in a video game. However, no matter how hard you try, you just can't seem to get a hold of the controls. However, the character may still move, talk, and perform tasks themselves.</p>
+
+            <h3>Types of Dissociation</h3>
+
+            <p>There are 3 essential types of dissociation, and each type displays different symptoms and signs.</p>
+
+            <img src="attached_assets/blogphotos/wallflower_4.png" alt="Types of dissociation visualization" class="article-image">
+
+            <p>A person who is dissociating in terms of derealization or depersonalization, will most likely appear anxious, as they know they are dissociating. The person's heart will be racing, skin tone will pale, and the person might zone out, or seem absent, as they try to make sense of their perceptions and compose themselves.</p>
+
+            <p>Depersonalization symptoms include feelings that you're seeing your thoughts, feelings or body or parts of your body from the outside. You might also feel that people and your surroundings are not real, like you're living in a movie or a dream.</p>
+
+            <p>Meanwhile, someone with dissociative identity disorder, which involves "switching" to other identities, will experience things differently. DID is a way for the person to escape from a negative experience by switching identities. After the negative experience is over, the person switches back and forgets what had happened. In a dissociative identity shift, the person's mannerisms will change to that of their other identity. For example, into their younger and childish 10-year-old self. You can observe this shift happening commonly in the form of a sudden or repetitive eye flutter, eye blink, eye roll, eye staring, eye twitching, and more.</p>
+
+            <p>Now, with a past dissociative episode, the person who experienced it may have signs of self-harm. However, they just can't seem to recall how they got the injuries. Again, their brain tries to protect them from remembering highly stressful or overwhelming situations by making them psychologically disconnect from that moment. This can also cause the person who experiences dissociation to say inconsistent accounts of events or experiences.</p>
+
+            <p>Sometimes, dissociation isn't readily observable. Someone with DID may have state-dependent awareness and experience internal self-talk, in which they share thoughts between their identity states. When they are doing so, they will most likely appear to stare into space.</p>
+
+            <h2>How to Help</h2>
+
+            <p>If a person is currently experiencing a dissociation episode, use some grounding techniques to help them ease back into reality. Simple tasks like asking them to count or wiggle their toes, and clench and unclench their fists, can help them ground back into the present. Helping them touch something familiar, like a childhood stuffed animal or their phone, can be grounding as well.</p>
+
+            <p>After their episode, try to practice some mindful breathing exercises with them. Offer to listen if they want to talk, or just start a simple conversation to help them adjust back.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Important Reminder:</h4>
+                <p>And always remember that you are not the professional! Never try to fix their condition for them. Rather, be understanding and encourage them to seek help from a mental health professional for proper support.</p>
+            </div>
+
+            <h2>The Film's Impact</h2>
+
+            <p>Perks of Being a Wallflower did a perfect job at depicting what dissociation and dissociative amnesia looks and feels like. It does an amazing job at capturing the raw and scary aspect of trauma and mental health, and using it to paint a brilliant tapestry of friendship, love, and healing.</p>
+
+            <blockquote>
+                "We accept the love we think we deserve."
+            </blockquote>
+
+            <p>This powerful message from the film reminds us that trauma can distort our self-perception, but with proper support and understanding, healing is possible. Charlie's journey shows us that even in the darkest moments, there is hope for recovery and connection.</p>
+
+            <p>I hope you were able to learn some new aspects of psychology today! The intersection of mental health and storytelling provides us with powerful tools for understanding the human experience and fostering empathy for those who struggle with trauma and its aftermath.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
