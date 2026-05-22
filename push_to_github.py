@@ -3,6 +3,7 @@ import base64
 import json
 import urllib.request
 import urllib.error
+import urllib.parse
 import sys
 
 GITHUB_TOKEN = os.environ.get("GITHUB_PAT")
@@ -27,7 +28,8 @@ BINARY_EXTENSIONS = {
 
 
 def get_existing_sha(remote_path):
-    url = f"{BASE_URL}/{remote_path}"
+    encoded = urllib.parse.quote(remote_path, safe="/")
+    url = f"{BASE_URL}/{encoded}"
     req = urllib.request.Request(url, headers=HEADERS, method="GET")
     try:
         with urllib.request.urlopen(req) as resp:
@@ -56,7 +58,8 @@ def upload_file(local_path, remote_path):
     if sha:
         payload["sha"] = sha
 
-    url = f"{BASE_URL}/{remote_path}"
+    encoded = urllib.parse.quote(remote_path, safe="/")
+    url = f"{BASE_URL}/{encoded}"
     data = json.dumps(payload).encode("utf-8")
     req = urllib.request.Request(url, data=data, headers=HEADERS, method="PUT")
 
