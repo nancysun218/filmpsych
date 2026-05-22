@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Yellow Wallpaper: PPD and Its Historic Treatment - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(189, 183, 107, 0.95), rgba(218, 165, 32, 0.9), rgba(139, 119, 42, 0.95));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.08)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.08)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 350px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: _2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.95;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #fdf6e3, #f5e6c8);
+            border-left: 4px solid #b8860b;
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+            color: #333;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #fef9e7, #fcf3cf);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #d4ac0d;
+        }
+
+        .psychology-insight h4 {
+            color: #9a7b0a;
+            margin-bottom: 1rem;
+        }
+
+        .dsm-box {
+            background: linear-gradient(135deg, #e8f4f8, #d4e8f0);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #3498db;
+        }
+
+        .dsm-box h4 {
+            color: #2980b9;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fef5f5, #fce8e8);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #c0392b;
+        }
+
+        .warning-box h4 {
+            color: #a93226;
+            margin-bottom: 1rem;
+        }
+
+        .history-box {
+            background: linear-gradient(135deg, #f5eef8, #e8daef);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #8e44ad;
+        }
+
+        .history-box h4 {
+            color: #7d3c98;
+            margin-bottom: 1rem;
+        }
+
+        .character-box {
+            background: linear-gradient(135deg, #fdf6e3, #f5e6c8);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #b8860b;
+        }
+
+        .character-box h4 {
+            color: #8b6914;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.8rem;
+            font-size: 0.95rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-book"></i> Book Psychology
+                </div>
+                <h1 class="blog-title">The Yellow Wallpaper: PPD and Its Historic Treatment</h1>
+                <p class="blog-subtitle">Exploring postpartum depression and psychosis through Charlotte Perkins Gilman's haunting 1892 short story and the harmful "rest cure" of the Victorian era.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jan. 7, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>10 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Shreyas Jay</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/yellowwallpaper_header.png" alt="The Yellow Wallpaper" onerror="this.style.display='none'">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <h2>Introduction: A Room of One's Own Madness</h2>
+
+            <p>You are stuck in a dark room, with a singular window peering out into the beautiful world below you—a world you are forbidden from exploring. It is this very situation that our main character finds herself in as we begin the story of <em>The Yellow Wallpaper</em> (1892).</p>
+
+            <p><em>The Yellow Wallpaper</em>, by Charlotte Perkins Gilman, is a story told in first-person narration that follows a woman who becomes unwell after giving birth and is confined to her room until she improves. The story, told through the woman's journal entries, begins with her and her husband, John, a renowned physician, moving into a new house in the countryside. Accompanying them is their newborn baby and Jennie, John's sister, who will take care of the baby while the woman is sick.</p>
+
+            <div class="character-box">
+                <h4><i class="fas fa-home"></i> The Setting</h4>
+                <p>The woman is given a rusty Victorian-style attic room with a singular bed and, by far, its most defining aspect: an ugly yellow wallpaper that runs throughout the room. From the very beginning, we can tell that the woman hates the wallpaper, the room she is forced to stay in, and the fact that her husband leaves for work most of the day.</p>
+            </div>
+
+            <p>Furthermore, her husband, John, forbids her from doing many activities she enjoys, such as writing. Instead, he reemphasizes her weakness and states that bed rest is what she needs to recover. This isolation and lack of stimulation sets the stage for her psychological unraveling.</p>
+
+            <h2>The Descent into Madness</h2>
+
+            <p>As the story continues, the viewer can see the slow deterioration in the narrator's mental well-being. What starts off as an innocent desire to go outside eventually becomes an unhealthy obsession with the yellow wallpaper. From following its design to staring at it throughout the day, the author slowly loses herself completely, eventually hallucinating a woman trapped within the wallpaper.</p>
+
+            <blockquote>
+                "I didn't realize for a long time what the thing was that showed behind, that dim sub-pattern, but now I am quite sure it is a woman."
+            </blockquote>
+
+            <p>Bit by bit, she begins tearing at the wallpaper, chewing and scratching the wall to free the woman she sees trapped inside. By the end of the story, the narrator has completely lost touch with reality, crawling around the room and declaring that she has finally "got out" of the wallpaper herself.</p>
+
+            <h2>Postpartum Depression and Postpartum Psychosis</h2>
+
+            <div class="dsm-box">
+                <h4><i class="fas fa-clipboard-list"></i> Postpartum Depression (PPD)</h4>
+                <p><strong>Definition:</strong> Postpartum Depression is a mental disorder affecting roughly one in eight women following childbirth, characterized by persistent sadness, anxiety, and feelings of detachment from the baby.</p>
+                <p>Categorized as a major depressive episode by the DSM-5, PPD is a more severe form of "baby blues"—the common sadness mothers feel after childbirth, characterized by two weeks of immense sadness and depression which usually ameliorates by the third week. PPD, however, is longer-lasting and more severe.</p>
+            </div>
+
+            <p>Due to the necessity of physical and emotional attachment between a mother and her baby for proper growth in infancy, PPD poses a severe risk not only to the mother but also to the baby and its development. Furthermore, PPD can lead to a strain between the mother and her partner as well.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-flask"></i> Causes and Risk Factors</h4>
+                <p>The exact causes of PPD are still unknown, but most theories have pointed to the sudden drop of estrogen and progesterone combined with the stress of caring for the baby, which leads to the onset of the disorder.</p>
+                <p>A meta-analysis found that the risks of experiencing PPD are increased if:</p>
+                <ul>
+                    <li>The baby is a boy</li>
+                    <li>The mother has a history of depression</li>
+                    <li>Epidural anesthesia was used during delivery</li>
+                </ul>
+            </div>
+
+            <p>While more work is being done today to destigmatize the disorder, most cases of PPD still go untreated due to the stigma that has historically been associated with the disorder. Women with PPD have historically been labeled as "bad mothers" and, in some cases, have even lost custody of their children solely due to the disorder. Thus, many women are afraid to seek help, meaning that the actual prevalence of PPD is probably much larger than what we know.</p>
+
+            <div class="warning-box">
+                <h4><i class="fas fa-exclamation-triangle"></i> Postpartum Psychosis (PPP)</h4>
+                <p><strong>Definition:</strong> Postpartum psychosis is a rarer postpartum disorder characterized by the sudden onset of hallucinations and delusions in a mother following childbirth.</p>
+                <p>PPP, while only affecting around 0.1% of new mothers, is a very serious condition that, if left untreated, can cause severe harm to the baby and the mother:</p>
+                <ul>
+                    <li>Women with PPP have the highest postpartum suicide rate at approximately 5%</li>
+                    <li>The highest infanticide rate at 4%</li>
+                </ul>
+                <p><strong>Note:</strong> Although PPP is extremely serious, it isn't officially categorized within the DSM-5, meaning diagnosing and testing PPP is incredibly difficult. Official recognition of PPP is crucial to enhancing future treatment.</p>
+            </div>
+
+            <h2>The Narrator's Diagnosis</h2>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-user-md"></i> Analyzing the Character</h4>
+                <p>In <em>The Yellow Wallpaper</em>, our main character likely suffers from both PPD and PPP:</p>
+                <ul>
+                    <li><strong>PPD symptoms:</strong> Her frequent sadness, feelings of inadequacy, and suicidal thoughts</li>
+                    <li><strong>PPP symptoms:</strong> The appearance of a woman trapped within the wallpaper—a clear hallucination</li>
+                </ul>
+                <p>We can also see how women with postpartum mental health issues were historically not trusted around their babies, as our narrator is barred from being with her baby, who is receiving care from John's sister.</p>
+            </div>
+
+            <p>The narrator's story highlights the effects of untreated PPD and PPP on a mother's well-being. From feelings of inadequacy to contemplating suicide and eventually becoming so infatuated with a wallpaper that she loses herself, her story is a warning against the effects of postpartum disorders when they are left unchecked.</p>
+
+            <h2>The Historical Treatment of PPD and "The Yellow Wallpaper"</h2>
+
+            <p>Historically, women with PPD were subject to mistreatment, and often, doctors and practitioners would practice a policy of house arrest that would exacerbate symptoms rather than make them better.</p>
+
+            <div class="history-box">
+                <h4><i class="fas fa-history"></i> The Rest Cure</h4>
+                <p><em>The Yellow Wallpaper</em> is based on Gilman's own experience with Dr. Silas Weir Mitchell, the leading expert on PPD at the time. Under Mitchell, Gilman was assigned to a treatment known as a strict "rest cure," which involved:</p>
+                <ul>
+                    <li>Complete bed rest with no physical activities</li>
+                    <li>Drawing the blinds closed</li>
+                    <li>Prohibition of reading, writing, or any mental stimulation</li>
+                    <li>Force-feeding to "restore" the patient's strength</li>
+                </ul>
+                <p>This treatment was designed to "calm" women's "overactive" minds—a reflection of the sexist medical beliefs of the era.</p>
+            </div>
+
+            <p>Gilman began to work on her short story following almost three months of living under the rest cure treatment plan, which, for obvious reasons, was not effective. <em>The Yellow Wallpaper</em>, although exaggerated, highlights how the treatment of PPD in the 19th century was incredibly ineffective, and if anything, even more harmful to the mental well-being of women.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-calendar-alt"></i> A Slow Path to Recognition</h4>
+                <p>Progress in understanding postpartum disorders came slowly:</p>
+                <ul>
+                    <li>The term "baby blues" did not officially become recognized until the mid-20th century</li>
+                    <li>Only in the 1980s and 1990s did the distinction between PPD and normal postpartum sadness become clear in medical literature</li>
+                    <li>Postpartum psychosis still lacks official DSM-5 recognition today</li>
+                </ul>
+            </div>
+
+            <h2>A Larger Issue in Psychology</h2>
+
+            <p>PPD is just one example of a larger issue in psychology: a lack of representation for women. While we are focusing on ameliorating this situation today, years of suffering have highlighted the need for us to improve our treatment plans rapidly. Furthermore, the stigma that surrounds PPD to this day needs to be broken down to allow for better treatment and a healthier life for both the mother and the baby.</p>
+
+            <p>Gilman's story remains relevant more than a century after its publication because it speaks to fundamental truths about how society treats women's mental health—truths we are still working to address today.</p>
+
+            <div class="references-section">
+                <h4><i class="fas fa-book"></i> References</h4>
+                <ul>
+                    <li><a href="https://opmed.doximity.com/articles/postpartum-psychosis-and-the-diagnostic-and-statistical-manual-of-mental-disorders" target="_blank">"Postpartum Psychosis and the Diagnostic and Statistical Manual of Mental Disorders." Doximity</a></li>
+                    <li><a href="https://my.clevelandclinic.org/health/diseases/24152-postpartum-psychosis" target="_blank">"Postpartum Psychosis." Cleveland Clinic</a></li>
+                    <li><a href="https://en.wikipedia.org/wiki/Postpartum_depression#History" target="_blank">"Postpartum Depression: History." Wikipedia</a></li>
+                </ul>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Follow Us</h3>
+                    <div class="footer-social">
+                        <a href="https://www.instagram.com/filmpsych_official/" target="_blank"><img src="attached_assets/instragram.png" alt="Instagram"></a>
+                        <a href="https://www.tiktok.com/@filmpsych_official" target="_blank"><img src="attached_assets/tiktok.png" alt="TikTok"></a>
+                        <a href="https://www.youtube.com/@filmpsych_official" target="_blank"><img src="attached_assets/youtube.png" alt="YouTube"></a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
