@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Gilmore Girls - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, #FFB6C1, #F0E68C);
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="75" cy="75" r="1" fill="rgba(255,255,255,0.1)"/><circle cx="50" cy="10" r="0.5" fill="rgba(255,255,255,0.1)"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+            opacity: 0.3;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+            text-align: left;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+            object-fit: contain;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .parentification-symptoms {
+            background: linear-gradient(135deg, #ffe6e6, #f8f9fa);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #ff6b6b;
+        }
+
+        .parentification-symptoms h4 {
+            color: #e74c3c;
+            margin-bottom: 1rem;
+        }
+
+        .parentification-symptoms ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .parentification-symptoms li {
+            padding: 0.5rem 0;
+            border-bottom: 1px solid rgba(231, 76, 60, 0.2);
+        }
+
+        .parentification-symptoms li:before {
+            content: "👧";
+            margin-right: 0.5rem;
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-tv"></i> TV Psychology
+                </div>
+                <h1 class="blog-title">Psychology Behind: Gilmore Girls</h1>
+                <p class="blog-subtitle">Examining the unhealthy parent-child dynamics and parentification in Stars Hollow.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>July 3, 2025</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-clock"></i>
+                        <span>8 min read</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Isabelle Quek</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image">
+                <img src="attached_assets/blogphotos/gilmore_header.png" alt="Gilmore Girls Header">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>As we age, we often long for a close bond with our parents and romanticize such relationships in the media. However, seemingly perfect relationships hide an inside of flaws. One example is parentification: when a child becomes the caregiver instead of receiving support. This dynamic is evident in the beloved fast-talking mother and daughter duo, Lorelai and Rory of "Gilmore Girls."</p>
+
+            <h2>The Gilmore Dynamic</h2>
+
+            <p>Throughout the seven seasons of "Gilmore Girls," we follow Rory and Lorelai through different stages of their life—Rory's coming-of-age to eventual college student and Lorelai as a single working mother. As Lorelai was a teen mom, she had formed a close bond with her daughter and they would consult with one another about everything—from books and movies to boys and personal problems. Lorelai has always turned to Rory for emotional support, but as the show continues, their unhealthy relationship has detrimentally affected adult Rory in the later seasons.</p>
+
+            <img src="attached_assets/blogphotos/gilmore_2.png" alt="Lorelai and Rory Gilmore sharing coffee" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+            <h2>Understanding Parentification</h2>
+
+            <p>Parentification occurs when a child takes on parental roles, often due to the parent's emotional immaturity or absence. Parents often seek emotional and/or practical support from their child. This type of trauma can lead to significant psychological distress and can be considered as a form of emotional abuse. As children carry this emotional burden with them, this might lead them to struggle with anxiety, depression, chronic stress, setting boundaries and managing adult problems. Instead of learning to express and regulate their own emotions, these children have to prioritize managing their parents' emotions first, unable to process their own feelings in a healthy way. Because they are so focused on others' feelings, they may struggle in recognizing their own emotions. This may cause them a stunted emotional and psychological growth.</p>
+
+            <p>In this show, boundaries between Rory and Lorelai's relationship aren't clearly defined. Especially in the early seasons, one such example is during Rory's first day at Chilton. Lorelai overslept and realized they were running late while Rory was ready and waiting for her. When she realized all her good clothes were in the dry cleaners, she carelessly threw on a casual and humiliating outfit which was inappropriate for formal occasions like visiting the headmaster's office at school. Rory had to chastise her mother, repeating things like, "Do you know what happens to people when they're late on their first day?" which is something you'll probably hear your mother say when you're running late for school—or something in the lines of that. In later seasons, we can see Rory's emotional growth regressing as a way of reclaiming her child years after having to act like the parent for so long. This stunted emotional growth can also be shown in "Gilmore Girls: A Year In The Life," where Rory still does some of the actions stated above.</p>
+
+            <img src="attached_assets/blogphotos/gilmore_3.png" alt="Rory's first day at Chilton" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+            <h2>The Real-World Impact</h2>
+
+            <p>Parentification can be displayed more often in the real world than many of us expect. There are other examples of parentification when a child has to take on adult responsibilities like caring for younger siblings or ill parents, managing household duties, providing financial support, etc. While many people think of it as a good thing and often praise the child as responsible, sensible and filial, they often fail to realize that most of them yearn for a normal childhood and would later emotionally regress in adulthood.</p>
+
+            <img src="attached_assets/blogphotos/gilmore_sad.png" alt="The emotional struggles in the Gilmore family" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+            <h2>Conclusion</h2>
+
+            <p>"Gilmore Girls" has clearly shown the unhealthy signs of parentification in Lorelai and Rory's relationship. Their relationship, while often adored by many, will always have some scenes that will make us uncomfortable. If you have experienced similar relationships with your parents or felt this way and would like to discuss this further, leave a comment below. Remember to be kind and learn to sympathize with children experiencing parentification and try to understand their behaviour and thoughts better.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://filmspsychologee.com" target="_blank">
+                            <i class="fas fa-globe"></i> Website
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
