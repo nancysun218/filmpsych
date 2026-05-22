@@ -1,0 +1,526 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Psychology Behind: Dead Poets Society - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            /* Old background: linear-gradient(135deg, #8B0000, #CD853F, #2F4F4F); */
+            background-color: #333; /* Dark background related to the images */
+            color: white;
+            padding: 2rem 0; /* Reduced padding */
+            text-align: left; /* Align text to the left */
+            position: relative;
+            overflow: hidden;
+            display: flex; /* Use flexbox for layout */
+            align-items: center; /* Vertically align items */
+            justify-content: space-between; /* Space between title and image */
+        }
+
+        .blog-header-image {
+            margin: 0; /* Remove default margin */
+            text-align: right; /* Align image to the right */
+            max-width: 40%; /* Limit image width */
+        }
+
+        .header-image {
+            width: 100%;
+            max-width: 100%; /* Make sure image fits container */
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+
+        .blog-container {
+            max-width: 60%; /* Adjust container width */
+            margin: 0 0 0 2rem; /* Add left margin */
+            padding: 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 0.5rem _1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .blog-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: _1.2;
+        }
+
+        .blog-subtitle {
+            font-size: _1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: flex-start; /* Align meta info to the left */
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: _1.8;
+            font-size: _1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: _2.5rem 0 _1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: _1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: _1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: var(--light-purple);
+            border-left: 4px solid var(--primary-purple);
+            padding: _1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: _1.15rem;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: _1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: _1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .freud-theory {
+            background: linear-gradient(135deg, #fff3cd, #ffeaa7);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f39c12;
+        }
+
+        .freud-theory h4 {
+            color: #e67e22;
+            margin-bottom: 1rem;
+        }
+
+        .theory-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .theory-list li {
+            padding: 1rem;
+            margin: 0.5rem 0;
+            background: rgba(255, 255, 255, 0.7);
+            border-radius: 10px;
+            border-left: 3px solid #f39c12;
+        }
+
+        .theory-title {
+            font-weight: 600;
+            color: #e67e22;
+            margin-bottom: 0.5rem;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .article-image {
+            width: 100%;
+            max-width: 400px;
+            margin: 2rem auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+            display: block;
+        }
+
+        .inline-image {
+            float: right;
+            width: 200px;
+            margin: 0 0 1rem 2rem;
+            border-radius: 10px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: _2.2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                padding: 0 1rem;
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .header-image {
+                max-width: 100%;
+                margin: 1rem 0;
+            }
+
+            .blog-header-image {
+                max-width: 40%;
+                margin: 0;
+            }
+
+            .inline-image {
+                float: none;
+                width: 100%;
+                margin: 1rem 0;
+            }
+
+            .blog-hero {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .blog-container {
+                max-width: 100%;
+                margin: 0 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#join" class="nav-link"><i class="fas fa-user-plus"></i> Join</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-category-badge">
+                <i class="fas fa-graduation-cap"></i> Educational Film Psychology
+            </div>
+            <h1 class="blog-title">Psychology Behind: Dead Poets Society</h1>
+            <p class="blog-subtitle">Exploring Freudian theory, conformity, and the struggle for individuality in education.</p>
+            <div class="blog-meta-info">
+                <div class="meta-item">
+                    <i class="fas fa-calendar"></i>
+                    <span>July 6, 2025</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-clock"></i>
+                    <span>12 min read</span>
+                </div>
+                <div class="meta-item">
+                    <i class="fas fa-user"></i>
+                    <span>Shareen Zubedi</span>
+                </div>
+            </div>
+        </div>
+        <div class="blog-header-image">
+            <img src="attached_assets/blogphotos/coraline_header_and_1.png" alt="Metamorphosis Header" class="header-image">
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+            <p>The film "Dead Poets Society" is set in 1959 at Welton Academy, a conservative, all-boys preparatory school. We are introduced to the main character of the film, Neil Perry, who, throughout the story, fights for his passions and his freedom from the constraints of authority.</p>
+
+            <p>Looking at the movie from a psychological lens, we delve deep into the Freudian theory of the conscious and unconscious mind, the ID, ego, and superego playing a major role in the characters' actions throughout the film.</p>
+
+            <h2>The Freudian Framework: Conscious vs. Unconscious Mind</h2>
+
+            <p>Sigmund Freud's theory presents the idea that a large part of our emotions, thoughts, and feelings operate outside of our conscious awareness. Our unconscious mind influences our behavior greatly. This theory is presented repetitively in the movie.</p>
+
+            <div class="freud-theory">
+                <h4><i class="fas fa-brain"></i> Freud's Structural Model in Dead Poets Society</h4>
+                <ul class="theory-list">
+                    <li>
+                        <div class="theory-title">The Superego (Conscious Mind)</div>
+                        Represents societal rules, moral compass, and conformity. Manifested through parental expectations and school authority.
+                    </li>
+                    <li>
+                        <div class="theory-title">The ID (Unconscious Mind)</div>
+                        Represents true feelings, desires, passion, and rebellion. The students' suppressed creative impulses and authentic selves.
+                    </li>
+                    <li>
+                        <div class="theory-title">The Ego (Mediator)</div>
+                        The struggle between conformity and individuality, attempting to balance societal expectations with personal desires.
+                    </li>
+                </ul>
+            </div>
+
+            <p>Studying at a prestigious and conservative school such as Welton Academy, the group of boys have suppressed desires and limited freedom. The conscious mind allows the characters to be influenced by conformity, societal expectations, and a desire for success. The conscious mind is directly interlinked with the superego.</p>
+
+            <h3>Neil Perry: The Tragic Hero</h3>
+
+            <p>Neil's father, Thomas Perry, has planned out Neil's whole future for him. He will go to military school, go to Harvard, and he will become a doctor. Neil's own passions and desires are out of the question. This plan, set by Thomas, is influenced by the superego—the societal expectations and standards.</p>
+
+            <img src="attached_assets/blogphotos/poets_1.png" alt="Neil Perry struggling with his father's expectations" class="article-image">
+
+            <p>However, the unconscious mind represents the true feelings and desires of the boys in the academy. It represents passion and rebellion. Neil's fate at the end of the film is a prime example of the unconscious mind influencing his behavior. His inability to reconcile his passion for acting with his father's expectations is a conflict that deeply disturbs the unconscious mind. His inability to gain autonomy leads to his self-inflicted death, a result of the unconscious mind and his suppressed desires.</p>
+
+            <blockquote>
+                "The powerful play goes on, and you may contribute a verse. What will your verse be?" - This haunting question from the film reminds us of the importance of finding our authentic voice amidst external pressures.
+            </blockquote>
+
+            <h3>Psychological Projection and Authoritative Parenting</h3>
+
+            <p>Mr. Perry's plan for Neil to go to military school and then Harvard to become a doctor is a major example of projection. Throughout the movie, we hear Mr. Perry talk about how he never got such opportunities when he was younger, so Neil must take advantage of the opportunities presented to him, setting his own interests aside. This provides evidence as to how damaging authoritative parenting can be.</p>
+
+            <h2>Todd Anderson: Social Anxiety and Identity Formation</h2>
+
+            <p>Moving on to one of the other main characters in the film, Todd Anderson. He is portrayed as a timid and quiet boy, whose main feature is his shyness. However, his personality goes beyond his shyness and quietness. Todd perfectly represents social anxiety disorder and avoidant personality disorder.</p>
+
+            <img src="attached_assets/blogphotos/poets_2.png" alt="Todd Anderson's transformation and finding his voice" class="article-image">
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-heart"></i> Todd's Psychological Journey</h4>
+                <p><strong>Social Anxiety Manifestations:</strong> His anxiety is especially notable when he is shown to be afraid of presenting his poem in class, as well as his refusal to participate in the dead poets society.</p>
+                <p><strong>Identity Development:</strong> Throughout the film, we see Todd's character develop further. At the start, he was a quiet young boy with the need to fulfill his family's expectations and become like his brother. By the end of the film, we see his identity formation through the expression of poetry and language, growing his own voice.</p>
+            </div>
+
+            <p>Freud's theory is also fitting for his character. Todd's personality faces a clash between superego and id. His personality is controlled and submissive, a result of the superego, until the end of the film when he rebels against the headmaster, which shows the ID—the unconscious, primal desires.</p>
+
+            <h2>John Keating: The Catalyst for Change</h2>
+
+            <p>John Keating is the mentor that allows the students to find their own voices in a world where free thinking is restricted. Mr. Keating presents his unorthodox teachings which do not fit the traditional and conservative values of the school, and as a result, he is looked down upon by other teachers and the headmaster.</p>
+
+            <p>He praises freedom of thought and speech, critical thinking and especially emphasizes the dangers of conformity.</p>
+
+            <h3>Milgram's Obedience Study and Authority</h3>
+
+            <p>Through Keating's unconventional classes, he teaches the students how to express themselves in their own unique ways. Keating's classes and the rebelling boys also allow us to analyze the effect of obedience on all the students at Welton Academy.</p>
+
+            <p>Milgram's study of obedience showed how individuals would perform destructive acts under an authority figure. The film highlights how dangerous it can be to blindly follow authority. Milgram's study on obedience is also reflected in Neil's behavior at the end of the film. He silently accepts his father's decisions, bottling all his feelings up, leading to his suicide.</p>
+
+            <h2>The Four Pillars: Introjection and Conformity</h2>
+
+            <p>The four pillars of Welton Academy are tradition, honor, discipline, and excellence. These are the rigid and conformist values that the school instills onto their students, stifling critical thinking and individuality. These pillars lead to introjection among students.</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-columns"></i> Understanding Introjection</h4>
+                <p>Introjection is the unconscious process when individuals take in external ideas, beliefs, and attitudes, making it a part of their own psyche. Pushing these extremist values onto the students will lead to the turning of self. This is when behaviors that are remotely different from the preached values in Welton Academy will be looked down upon, and students will feel a sense of guilt for straying away from "their" beliefs.</p>
+            </div>
+
+            <h2>Identity, Masculinity, and Erikson's Theory</h2>
+
+            <p>The film also focuses on identity and masculinity among the group of boys. Keating and the boys challenge traditional masculinity and gender roles, encouraging students to express themselves with authenticity. In this way, Keating encourages students to find their "barbaric yawp," a way to freely express themselves and find their unique voice which is core to their identity and masculinity.</p>
+
+            <h3>Case Study: Todd's Transformation</h3>
+
+            <p>Todd Anderson is a prime example, living in the shadows of his brother, he shows low self-worth. Under Keating's guidance, he explores his own voice and selfhood, a symbol of identity. His transformation from a timid, anxious boy to someone who stands on his desk in defiance represents the successful resolution of Erikson's identity vs. role confusion stage.</p>
+
+            <img src="attached_assets/blogphotos/poets_3.png" alt="Students in Keating's unconventional classroom" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+            <img src="attached_assets/blogphotos/poets_4.png" alt="Students standing on desks" class="article-image" style="width: 100%; max-width: 500px; height: auto; margin: 2rem auto; display: block; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.15);">
+
+
+            <h2>The Psychology of Collective Resistance</h2>
+
+            <p>The ending of the film shows how collective resistance and rebellion against authoritative structures can make a difference. When Todd leads the students in standing on their desks as a tribute to Mr. Keating, it represents:</p>
+
+            <ul>
+                <li><strong>Social Identity Theory:</strong> The formation of a group identity based on shared values rather than imposed authority</li>
+                <li><strong>Moral Development:</strong> Students choosing their own moral compass over external authority</li>
+                <li><strong>Collective Efficacy:</strong> The belief that together, they can create meaningful change</li>
+                <li><strong>Symbolic Resistance:</strong> Using non-violent means to express dissent and solidarity</li>
+            </ul>
+
+            <h2>Educational Psychology Implications</h2>
+
+            <p>Dead Poets Society offers valuable insights into educational psychology and the importance of fostering creativity and critical thinking in academic environments:</p>
+
+            <div class="highlight-box">
+                <h4><i class="fas fa-lightbulb"></i> Key Educational Lessons</h4>
+                <p><strong>Student-Centered Learning:</strong> Keating's methods demonstrate the importance of engaging students as active participants rather than passive recipients.</p>
+                <p><strong>Emotional Intelligence:</strong> The film shows how acknowledging and validating students' emotions leads to better learning outcomes.</p>
+                <p><strong>Multiple Intelligences:</strong> Different students excel in different areas—poetry, acting, leadership—challenging traditional academic measures.</p>
+            </div>
+
+            <h2>Modern Relevance: Mental Health in Education</h2>
+
+            <p>The themes explored in Dead Poets Society remain incredibly relevant today, particularly regarding:</p>
+
+            <ul>
+                <li><strong>Academic Pressure:</strong> The intense pressure to succeed academically at the expense of mental health</li>
+                <li><strong>Parental Expectations:</strong> The psychological impact of living up to unrealistic family expectations</li>
+                <li><strong>Identity Development:</strong> The importance of allowing young people to explore their authentic selves</li>
+                <li><strong>Mental Health Awareness:</strong> Recognizing signs of depression, anxiety, and suicidal ideation in academic settings</li>
+            </ul>
+
+            <h2>Conclusion: Finding Your Voice</h2>
+
+            <p>This film presents various psychological concepts, such as conformity, projection, and the conscious and unconscious minds of the students, in a way that encourages us to find our own voice amidst the constant societal pressures placed on us.</p>
+
+            <p>The psychological depth of Dead Poets Society lies in its exploration of the fundamental human need for self-expression and authenticity. Through the lens of Freudian theory, Erikson's developmental stages, and modern understanding of social psychology, the film provides a powerful commentary on the importance of balancing external expectations with internal desires.</p>
+
+            <blockquote>
+                "Carpe Diem. Seize the day, boys. Make your lives extraordinary." - This iconic quote encapsulates the film's central message about the importance of living authentically and pursuing one's passions despite external pressures.
+            </blockquote>
+
+            <p>The film serves as a reminder to pursue your passions bravely and find your own voice. It demonstrates that while the cost of authenticity can be high, the cost of living an inauthentic life—as tragically illustrated through Neil's story—can be even higher. For educators, parents, and students alike, Dead Poets Society remains a powerful testament to the transformative power of education that honors both intellectual growth and emotional development.</p>
+        </article>
+    </main>
+
+    <div class="back-to-blogs">
+        <a href="index.html#blogs" class="back-btn">
+            <i class="fas fa-arrow-left"></i>
+            Back to All Blogs
+        </a>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3><i class="fas fa-brain"></i> FilmPsych</h3>
+                    <p>Exploring psychology through creative arts</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <a href="index.html#about">About Us</a>
+                    <a href="index.html#blogs">Blogs</a>
+                    <a href="index.html#partnerships">Partnerships</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Social Media</h4>
+                    <div class="social-links">
+                        <a href="https://www.tiktok.com/@filmpsychologee" target="_blank">
+                            <i class="fab fa-tiktok"></i> TikTok
+                        </a>
+                        <a href="https://www.instagram.com/film.psychologee/?hl=en" target="_blank">
+                            <i class="fab fa-instagram"></i> Instagram
+                        </a>
+                        <a href="https://www.youtube.com/@filmpsychologeee" target="_blank">
+                            <i class="fab fa-youtube"></i> YouTube
+                        </a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h4>501(c)(3) Status</h4>
+                    <p>FilmPsychologee is a 501(c)(3) non-profit organization supported by LegalZoom.</p>
+                    <p style="margin-top: 8px;">EIN: 39-3027805</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
