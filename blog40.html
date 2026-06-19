@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Peeling the Mask: The Psychological Unravelling in Parasite - FilmPsych</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Fredoka+One:wght@400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .blog-hero {
+            background: linear-gradient(135deg, rgba(15, 25, 15, 0.97), rgba(40, 55, 30, 0.93), rgba(70, 55, 20, 0.9));
+            color: white;
+            padding: 6rem 0 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .blog-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 30% 60%, rgba(255, 200, 80, 0.08) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(100, 180, 80, 0.07) 0%, transparent 40%);
+            opacity: 0.9;
+        }
+
+        .blog-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+            position: relative;
+            z-index: 2;
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+        }
+
+        .blog-text-content {
+            flex: 1;
+        }
+
+        .blog-header-image {
+            flex: 0 0 auto;
+            max-width: 350px;
+        }
+
+        .blog-header-image img {
+            width: 100%;
+            height: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0,0,0,0.4);
+        }
+
+        .blog-category-badge {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 0.5rem 1.5rem;
+            border-radius: 25px;
+            display: inline-block;
+            margin-bottom: 1rem;
+            font-weight: 600;
+            border: 1px solid rgba(255,255,255,0.2);
+        }
+
+        .blog-title {
+            font-size: 2.8rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+            line-height: 1.2;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .blog-subtitle {
+            font-size: 1.3rem;
+            opacity: 0.9;
+            margin-bottom: 2rem;
+            font-weight: 400;
+        }
+
+        .blog-meta-info {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .meta-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        .blog-content {
+            background: white;
+            margin: -2rem auto 0;
+            max-width: 900px;
+            border-radius: 25px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 3;
+        }
+
+        .blog-article {
+            padding: 4rem;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .blog-article h2 {
+            color: var(--primary-purple);
+            font-size: 2rem;
+            margin: 2.5rem 0 1.5rem;
+            font-weight: 600;
+        }
+
+        .blog-article h3 {
+            color: var(--primary-blue);
+            font-size: 1.5rem;
+            margin: 2rem 0 1rem;
+            font-weight: 600;
+        }
+
+        .blog-article p {
+            margin-bottom: 1.5rem;
+            color: var(--text-dark);
+        }
+
+        .blog-article blockquote {
+            background: linear-gradient(135deg, #f3e5f5, #e8f5e9);
+            border-left: 4px solid #6a1b9a;
+            padding: 1.5rem 2rem;
+            margin: 2rem 0;
+            border-radius: 0 15px 15px 0;
+            font-style: italic;
+            font-size: 1.15rem;
+            color: #4a148c;
+        }
+
+        .blog-article ul, .blog-article ol {
+            margin: 1.5rem 0;
+            padding-left: 2rem;
+        }
+
+        .blog-article li {
+            margin-bottom: 0.8rem;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, var(--light-blue), var(--light-purple));
+            padding: 2rem;
+            border-radius: 20px;
+            margin: 2rem 0;
+            border: 1px solid rgba(177, 156, 217, 0.2);
+        }
+
+        .highlight-box h4 {
+            color: var(--primary-purple);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            font-weight: 600;
+        }
+
+        .psychology-insight {
+            background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #2196f3;
+        }
+
+        .psychology-insight h4 {
+            color: #1565c0;
+            margin-bottom: 1rem;
+        }
+
+        .class-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #388e3c;
+        }
+
+        .class-box h4 {
+            color: #1b5e20;
+            margin-bottom: 1rem;
+        }
+
+        .dark-box {
+            background: linear-gradient(135deg, #eceff1, #cfd8dc);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #455a64;
+        }
+
+        .dark-box h4 {
+            color: #263238;
+            margin-bottom: 1rem;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #ffebee, #ffcdd2);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border-left: 5px solid #f44336;
+        }
+
+        .warning-box h4 {
+            color: #c62828;
+            margin-bottom: 1rem;
+        }
+
+        .conclusion-box {
+            background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            border: 2px solid #4caf50;
+        }
+
+        .conclusion-box h4 {
+            color: #2e7d32;
+            margin-bottom: 1rem;
+        }
+
+        .references-section {
+            background: linear-gradient(135deg, #f5f5f5, #ebebeb);
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+        }
+
+        .references-section h4 {
+            color: #555;
+            margin-bottom: 1rem;
+        }
+
+        .references-section ul {
+            list-style: none;
+            padding-left: 0;
+        }
+
+        .references-section li {
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+            color: #666;
+        }
+
+        .references-section a {
+            color: var(--primary-purple);
+            text-decoration: none;
+        }
+
+        .references-section a:hover {
+            text-decoration: underline;
+        }
+
+        .inline-image {
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .inline-image img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.15);
+        }
+
+        .inline-image figcaption {
+            margin-top: 0.8rem;
+            font-size: 0.9rem;
+            color: #666;
+            font-style: italic;
+        }
+
+        .back-to-blogs {
+            text-align: center;
+            padding: 2rem 0;
+        }
+
+        .back-btn {
+            background: linear-gradient(135deg, var(--primary-purple), var(--primary-pink));
+            color: white;
+            padding: 1rem 2rem;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 0.5rem;
+            transition: transform 0.3s ease;
+        }
+
+        .back-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        @media (max-width: 768px) {
+            .blog-title {
+                font-size: 2rem;
+            }
+
+            .blog-article {
+                padding: 2rem;
+            }
+
+            .blog-container {
+                flex-direction: column;
+                padding: 0 1rem;
+                text-align: center;
+            }
+
+            .blog-text-content {
+                text-align: center;
+            }
+
+            .blog-header-image {
+                flex: none;
+                margin-top: 2rem;
+            }
+
+            .blog-meta-info {
+                flex-direction: column;
+                gap: 1rem;
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-brain"></i>
+                <h1>FilmPsych</h1>
+            </div>
+            <button class="nav-toggle" onclick="toggleMobileMenu()">
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link"><i class="fas fa-home"></i> Home</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#about" class="nav-link dropdown-toggle"><i class="fas fa-users"></i> About</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#about"><i class="fas fa-info-circle"></i> About Us</a>
+                        <a href="index.html#board-members"><i class="fas fa-crown"></i> Board Members</a>
+                        <a href="index.html#staff-volunteers"><i class="fas fa-hands-helping"></i> Staff Volunteers</a>
+                        <a href="index.html#animations"><i class="fas fa-share-alt"></i> Socials</a>
+                        <a href="index.html#partnerships"><i class="fas fa-handshake"></i> Partnerships</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#blogs" class="nav-link active"><i class="fas fa-blog"></i> Blogs</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="index.html#join" class="nav-link dropdown-toggle"><i class="fas fa-user-plus"></i> Join</a>
+                    <div class="dropdown-content">
+                        <a href="index.html#join"><i class="fas fa-user-plus"></i> Become a Volunteer</a>
+                        <a href="start-chapter.html"><i class="fas fa-building"></i> Start a Chapter</a>
+                        <a href="internship.html"><i class="fas fa-graduation-cap"></i> Internship Programs</a>
+                    </div>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#contact" class="nav-link"><i class="fas fa-envelope"></i> Contact</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="blog-hero">
+        <div class="blog-container">
+            <div class="blog-text-content">
+                <div class="blog-category-badge">
+                    <i class="fas fa-film"></i> Film Psychology
+                </div>
+                <h1 class="blog-title">Peeling the Mask: The Psychological Unravelling in Parasite</h1>
+                <p class="blog-subtitle">Exploring the psychology of class, deception, and identity through Bong Joon-ho's Oscar-winning masterpiece.</p>
+                <div class="blog-meta-info">
+                    <div class="meta-item">
+                        <i class="fas fa-calendar"></i>
+                        <span>Jun. 19, 2026</span>
+                    </div>
+                    <div class="meta-item">
+                        <i class="fas fa-user"></i>
+                        <span>Kiersten Oh</span>
+                    </div>
+                </div>
+            </div>
+            <div class="blog-header-image" style="flex: 0 0 auto; max-width: 260px; align-self: center;">
+                <img src="attached_assets/blogphotos/parasite_header.jpg" alt="Parasite movie poster" style="width: 100%; height: auto; display: block; object-fit: contain; border-radius: 15px; box-shadow: 0 15px 40px rgba(0,0,0,0.5);">
+            </div>
+        </div>
+    </header>
+
+    <main class="blog-content">
+        <article class="blog-article">
+
+            <blockquote>
+                "You know what kind of plan never fails? No plan at all." — Ki-taek
+            </blockquote>
+
+            <h2>Pretend at the Expense of Collapse</h2>
+
+            <p>Bong Joon-ho's <em>Parasite</em> is often praised for its social commentary on class divide — but underneath its architecture of satire and suspense lies a more intimate, disturbing portrait of psychological erosion. Each character is, in essence, a shell: polished, curated, masked — until the film forces them to confront who they truly are beneath their personas.</p>
+
+            <p>In <em>Parasite</em>, everyone is pretending. The poor pretend to be rich; the rich pretend they are safe. But pretense is costly. It comes with the price of performance, suppression, and detachment from the raw parts of the self. Over time, the performance becomes unsustainable — and when it breaks, what is left is chaos.</p>
+
+            <p>This essay explores how the central characters — the Kims and the Parks — lose their psychological shells. It is a study in adaptive behavior, shame, class-induced trauma, and the invisible labor of self-control. More than a story of social hierarchy, <em>Parasite</em> is about the mind's struggle to stay intact in a world that will not let people be seen for who they truly are.</p>
+
+            <h2>The Kims: Performance as a Survival Mechanism</h2>
+
+            <p>The Kim family — Ki-taek (father), Chung-sook (mother), Ki-woo (son), and Ki-jung (daughter) — begin the film as survivors. They are poor, but resourceful. Their daily life is marked by hypervigilance, improvisation, and emotional detachment, all of which are adaptive behaviors rooted in long-term poverty — often associated with heightened stress reactivity, executive function impairment, and identity diffusion.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/parasite_1.jpg" alt="Ki-jung and Ki-woo in the semi-basement, hunched over their phones">
+                <figcaption>Ki-jung and Ki-woo in their semi-basement home — a life of constant improvisation lived just below the surface.</figcaption>
+            </figure>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-brain"></i> Identity Diffusion and Chronic Scarcity</h4>
+                <p>Over time, individuals living in chronic scarcity begin to define themselves not by who they are, but by what they must become in any given moment. Identity becomes fluid — not out of freedom, but out of necessity. Psychologists refer to this as <strong>identity diffusion</strong>: a state in which the sense of self is fragmented, unstable, and shaped almost entirely by external demands. For the Kims, survival itself becomes the identity.</p>
+            </div>
+
+            <p>When the opportunity to infiltrate the Park household arises, the Kims do not hesitate. Their adaptability — once a tool for getting through the day — becomes a vehicle for deception. Each family member slips seamlessly into a fabricated persona. The transition is so smooth it feels almost natural, which is precisely what makes it so psychologically revealing.</p>
+
+            <h3>Ki-woo (Kevin): The Delusion of Upward Mobility</h3>
+
+            <p>When Ki-woo gets the tutoring job, he crosses a boundary — physical and psychological. He steps into a world that was never meant for him. But instead of resisting the illusion, he leans into it. He changes his name to Kevin, fabricates a university background, and plays the role with increasing confidence.</p>
+
+            <div class="dark-box">
+                <h4><i class="fas fa-mask"></i> Impostor Syndrome — Inverted</h4>
+                <p>This is <strong>impostor syndrome inverted</strong>: rather than feeling like a fraud who doesn't belong, Kevin convinces himself that he truly does. He embodies the psychological defense of <em>identification with the aggressor</em> — a concept rooted in psychoanalytic theory — where he unconsciously adopts the values, mannerisms, and self-perception of the class he is infiltrating. The danger is not that he is pretending. It is that he begins to believe his own fiction. When the line between performance and identity dissolves, the collapse that follows is all the more devastating.</p>
+            </div>
+
+            <p>Ki-woo's brain injury at the film's climax is not incidental — it is symbolic. The organ most responsible for planning, ambition, and self-narrative is literally damaged. His post-recovery fantasy of one day buying the Park house is not a hopeful ending; it is a coping mechanism, a final retreat into delusion when reality has become too fractured to bear.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/parasite_2.jpg" alt="Ki-woo watching from the stairs as two women interact in the garden below">
+                <figcaption>Ki-woo observes from above — always watching the world he longs to enter, never fully belonging to it.</figcaption>
+            </figure>
+
+            <h3>Ki-jung (Jessica): The Art of Emotional Detachment</h3>
+
+            <p>Ki-jung is the most composed and adaptable member of the family. She becomes "Jessica" the art therapist, delivering a performance so convincing it borders on psychopathy — not in the clinical sense, but in her apparent lack of emotional hesitation. She is a study in <strong>compartmentalization</strong>: cutting off parts of herself to become precisely what the environment demands.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-layer-group"></i> Compartmentalization as a Defense</h4>
+                <p>Compartmentalization is a psychological defense mechanism in which a person mentally separates conflicting thoughts, emotions, or identities to avoid the discomfort of holding them simultaneously. Ki-jung does not experience visible moral conflict because she has walled off the parts of herself that might. This is extraordinarily efficient in the short term — and extraordinarily fragile in the long term.</p>
+            </div>
+
+            <p>But her composure is itself a shell. She dies in the final act — not because she was less intelligent than the others, but because emotional repression does not equate to psychological resilience. When the chaos erupts, her practiced detachment offers no armor against physical reality. Her death is the film's most brutal reminder that performance, no matter how perfect, cannot protect the body from the world it has tried so hard to manage.</p>
+
+            <h3>Ki-taek: Shame and the Slow Burn of Rage</h3>
+
+            <p>Ki-taek is the most tragic figure in the film. He starts as an affable, passive father — humiliated by his inability to provide, but always playing his failures off with jokes. He laughs through discomfort, a response deeply characteristic of internalized shame.</p>
+
+            <div class="dark-box">
+                <h4><i class="fas fa-fire"></i> The Psychology of Shame</h4>
+                <p>Shame, unlike guilt, is not about what one has done — it is about who one is. Guilt says, "I did something bad." Shame says, "I <em>am</em> something bad." It corrodes the self from within, and when triggered, often erupts outward as rage. It is one of the most socially corrosive emotions precisely because it is so rarely named aloud.</p>
+            </div>
+
+            <p>The microaggressions from Mr. Park — particularly the repeated, offhanded comments about Ki-taek's "smell" — chip away at this psychological shell with quiet, devastating efficiency. Each comment is delivered casually, as though it barely registers. But for Ki-taek, each one is a small act of dehumanization. Ki-taek's breakdown is slow, quiet, and deeply human. By the end, when he stabs Mr. Park, it is not the result of a single offense. It is the unbearable accumulation of being made to feel invisible, inferior, and less than human — until the self, having nowhere left to retreat, turns outward with devastating finality.</p>
+
+            <h2>The Parks: Detachment, Denial, and the Illusion of Safety</h2>
+
+            <p>While the Kim family embodies the role of scarcity in emotional detachment, the Park family shows a different side of the same coin: how privilege can create its own forms of distance and performance. They may live above ground — literally and socially — but their psychological lives are no less fractured. Their privilege has created a bubble of detachment: a life so curated that they have become emotionally dull, intellectually disengaged, and psychologically unprepared for disruption.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/parasite_3.jpg" alt="The Park family's vast, pristine living room with floor-to-ceiling windows overlooking a manicured garden">
+                <figcaption>The Park house — a world of glass and curated calm, designed to keep the outside from ever getting in.</figcaption>
+            </figure>
+
+            <h3>Mrs. Park: Infantilization and the Need to Be Managed</h3>
+
+            <p>Mrs. Park is portrayed as naïve, overly trusting, and emotionally fragile. She relies heavily on others to manage her home, her children, and even her emotional responses. Her psychological profile leans toward <strong>learned helplessness</strong> — not born from trauma, but from overprotection and emotional outsourcing. She is not incapable; she is simply unused to discomfort. Her wealth has insulated her so thoroughly from stress that her emotional resilience has atrophied.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-shield-alt"></i> Privilege as Emotional Insulation</h4>
+                <p>Psychologists have noted that chronic exposure to comfort and certainty can reduce an individual's capacity for adaptive coping. When difficulties never have to be navigated, the psychological muscles required to navigate them weaken. Mrs. Park is not malicious — but she is complicit. Her inability to perceive the humanity of those who serve her is not cruelty; it is the absence of practice in doing so.</p>
+            </div>
+
+            <p>When the violence erupts during the birthday party, Mrs. Park cannot process it. She faints — her nervous system simply unable to metabolize a reality so far outside the bounds of her curated world. It is the most honest moment she has: the mask of composed motherhood dissolving entirely, leaving only a woman who has never been taught to cope.</p>
+
+            <h3>Mr. Park: Detachment and Dehumanization</h3>
+
+            <p>Mr. Park is the ideal neoliberal patriarch — composed, successful, and emotionally distant. His psychological shell is built on dissociation: he does not see the people who serve him as fully real. His comments about Ki-taek's "smell" — always delivered when he believes he cannot be heard — reflect a deep-seated classist disgust that he has never had to examine. It is not personal to him; it is structural. He has trained himself not to look too closely at the lives beneath his feet.</p>
+
+            <div class="dark-box">
+                <h4><i class="fas fa-eye-slash"></i> Structural Dehumanization</h4>
+                <p>Dehumanization is rarely dramatic. More often, it is quiet and banal — a look that does not quite land on a person, a comment made just outside their earshot, an assumption that their inner life does not require acknowledgment. Mr. Park does not hate Ki-taek. He simply does not fully see him. And that invisibility, accumulated over years, is what ultimately destroys them both.</p>
+            </div>
+
+            <p>But this detachment ultimately costs Mr. Park everything. He cannot anticipate or respond to the humanity in the people around him, because he has long since stopped looking for it. When Ki-taek's rage finally surfaces, Mr. Park's instinctive recoil from the smell — even in that moment of chaos — is the final trigger. He is killed not by a stranger, but by his own blindness.</p>
+
+            <h2>The Cellar: A Metaphor for the Repressed Mind</h2>
+
+            <p>If the Park house is a symbol of upper-class consciousness — orderly, illuminated, and performance-ready — then the hidden basement represents everything the Parks refuse to acknowledge: the unconscious, the shadow self, the truth beneath the performance.</p>
+
+            <div class="psychology-insight">
+                <h4><i class="fas fa-door-closed"></i> The Shadow Self</h4>
+                <p>Carl Jung described the <strong>shadow</strong> as the part of the psyche that the conscious mind refuses to see — the impulses, fears, and truths deemed too ugly or inconvenient to integrate. It does not vanish when suppressed. It waits. In <em>Parasite</em>, the basement is that shadow made architectural.</p>
+            </div>
+
+            <p>Geun-sae, the man living in the basement, is a ghost — not just literally, but psychologically. He embodies repression. He is what happens when someone is ignored long enough that they no longer belong to society, only to memory and fear. Repressed trauma or emotion, when buried too deep for too long, does not disappear — it festers.</p>
+
+            <figure class="inline-image">
+                <img src="attached_assets/blogphotos/parasite_4.jpg" alt="Two people pressed against the wall in the dark basement corridor, terrified">
+                <figcaption>The basement corridor — the film's most literal image of the repressed: what is buried beneath the surface, waiting to erupt.</figcaption>
+            </figure>
+
+            <p>When Geun-sae erupts during the birthday party, he is the return of the repressed: the mind's buried agony breaking through polite surfaces. The scene is particularly haunting — not only because of the violent externalization of that repression, but because it shatters the illusion of order that every character in the film worked so hard to maintain. The basement does not stay buried. It never does.</p>
+
+            <h2>The Final Act: When the Mask Splits</h2>
+
+            <p>What makes <em>Parasite</em> brilliant is not just the twist — it is the psychological implosion. In the film's final act, every mask splits simultaneously:</p>
+
+            <ul>
+                <li>The Kims' fantasy of upward mobility is destroyed beyond recovery.</li>
+                <li>The Parks' illusion of safety is violated at its most intimate moment.</li>
+                <li>Power structures collapse — but not toward justice. Only toward more trauma.</li>
+            </ul>
+
+            <p>Ki-taek, now a fugitive, hides in the very basement that symbolized repression. In doing so, he completes the film's most devastating irony: he becomes the ghost. The man who once laughed off humiliation now lives underground, invisible, a living embodiment of everything the powerful refuse to see.</p>
+
+            <p>Ki-woo, after surviving a traumatic brain injury, writes letters to his father from above — and imagines, in meticulous detail, the day he will buy the Park house and bring his father home. It is a beautiful fantasy, but it is still a fantasy. It is the only coping mechanism he has left: a delusion dressed as a plan, held together by hope that has nowhere else to go.</p>
+
+            <div class="conclusion-box">
+                <h4><i class="fas fa-lightbulb"></i> Conclusion: Parasite as Psychological Mirror</h4>
+                <p><em>Parasite</em> is a masterclass in narrative filmmaking — but more profoundly, it is a mirror held up to a world where survival demands performance, and truth is buried beneath class, shame, and fear. The characters do not simply act; they adapt, mask, suppress, and eventually unravel.</p>
+                <p>The brilliance of Bong Joon-ho's vision lies in its refusal to diagnose. It does not pathologize poverty or villainize wealth. It simply, and devastatingly, shows what happens when human beings are forced to live behind masks for too long. The breakdown is not cinematic. It is psychological. And it is all too real.</p>
+            </div>
+
+            <div class="references-section">
+                <h4><i class="fas fa-book"></i> Sources</h4>
+                <ul>
+                    <li><a href="https://www.apa.org/topics/shame" target="_blank">American Psychological Association – Shame and Emotion</a></li>
+                    <li><a href="https://www.simplypsychology.org/defense-mechanisms.html" target="_blank">Simply Psychology – Defense Mechanisms (Compartmentalization)</a></li>
+                    <li><a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4463837/" target="_blank">NCBI – Poverty, Stress, and Executive Function</a></li>
+                    <li><a href="https://www.psychologytoday.com/us/basics/identity" target="_blank">Psychology Today – Identity Diffusion</a></li>
+                    <li><a href="https://www.verywellmind.com/what-is-learned-helplessness-2795326" target="_blank">Verywell Mind – Learned Helplessness</a></li>
+                    <li><a href="https://www.goodtherapy.org/learn-about-therapy/issues/shame" target="_blank">GoodTherapy – The Psychology of Shame</a></li>
+                    <li><a href="https://www.jungpage.org/learn/articles/analytical-psychology/91-the-shadow" target="_blank">Jung Page – The Shadow Self</a></li>
+                </ul>
+            </div>
+
+            <div class="back-to-blogs">
+                <a href="index.html#blogs" class="back-btn">
+                    <i class="fas fa-arrow-left"></i> Back to All Blogs
+                </a>
+            </div>
+        </article>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>FilmPsych</h3>
+                    <p>Exploring the intricate psychology behind books, films, movies, art pieces, and more.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#blogs">Blogs</a></li>
+                        <li><a href="index.html#join">Join Us</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 FilmPsych. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
